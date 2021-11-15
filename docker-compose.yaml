@@ -21,7 +21,7 @@ services:
     depends_on:
       - db
     command: python manage.py migrate && python manage.py loaddata seed.json &&python manage.py runserver 0.0.0.0:8000
-    enviroments:
+    environment:
       - DATABASE_NAME=capcost
       - DATABASE_USER=user
       - DATABASE_PASSWORD=password
