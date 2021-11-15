@@ -1,0 +1,7 @@
+asgiref
+Django
+django-environ
+mysqlclient
+pycodestyle
+pytz
+sqlparse
