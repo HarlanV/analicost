@@ -1,6 +1,7 @@
 version: '3.3'
 services:
   db:
+    container_name: mysql
     image: mysql:5.7
     restart: always
     environment:
@@ -17,6 +18,7 @@ services:
         target: /data/db
 
   web:
+    container_name: aplicacao
     build: .
     depends_on:
       - db
@@ -27,11 +29,8 @@ services:
       - DATABASE_PASSWORD=password
       - DATABASE_HOST=localhost
       - DATABASE_PORT=3306
-    volumes:
-      - .:/code
     ports:
       - "8000:8000"
-
 
 # Names our volume
 volumes:
