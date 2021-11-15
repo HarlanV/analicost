@@ -1,0 +1,33 @@
+{% extends 'partials/base.html' %}
+{% block title %} Graficos {% endblock %}
+{% block content %}
+
+    <h1> Listagem de Equacoes e Métodos </h1>
+
+    <p>-------------------------------------------------------------</p>
+    <h3> Metodo de GUTHRIE</h3>
+    <p> 1 - Listar os equipamentos</p> 
+    <p> 2 - Pegar o custo de equipamento nas condiçẽos padrões (C0p) e os indicies de inflação </p> 
+
+    <div class="cmath">`Cbm = C0p*(I / (Ib) )*[Fbm + ((Fd*Fp*Fm )-1 )] `</div>
+
+    <p>-------------------------------------------------------------</p>
+    <h3> Metodo de Turton/CAPCOST </h3>
+
+    <div class="cmath">`Cbm = C0p*(I / (Ib) )*[B1 + (B2*Fp*Fm)] = C0p(I/(In))Fbm`</div>
+    onde:
+
+    <p>-------------------------------------------------------------</p>
+    <h3> Legendas</h3>
+    <div class="cmath">` Cbm = "custo do módulo de equipamento/Bare module cost "; `</div>
+    <div class="cmath">` C0p = Cbp = "Custo de compra básico (Aço carbono, P = 1atm, Golfo do mexico)"`</div>
+    <div class="cmath">` I = "Fato de inflação do ano da estimativa de Cbm"`</div>
+    <div class="cmath">` Ib = "Fato de inflação do ano da estimativa de C0p"`</div>
+    <div class="cmath">` Fm = "Fator de material"`</div>
+    <div class="cmath">` Fp = "Fator de pressão (!=1atm)"`</div>
+    <br>
+
+{% endblock %}
+{% block scripts %}
+    
+{% endblock %}

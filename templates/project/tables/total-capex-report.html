@@ -1,0 +1,45 @@
+<div class="justify-content-xl-center">
+    <div class="d-flex justify-content-center">
+        <h3> TOTAL </h3>
+    </div>
+</div>
+<div class="justify-content-xl-center">
+    <table class="table table-centralized">
+        <thead class="thead-light">
+            <tr class="d-flex table-reduced-head justify-content-center">
+                <th class="col-2" scope="col">Purchased Equipment Cost</th>
+                <th class="col-2" scope="col">Bare Module Cost</th>
+                <th class="col-2" scope="col">Base Equipment Cost </th>
+                <th class="col-2" scope="col">Base Bare Module Cost</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="d-flex justify-content-center">
+                <td class="col-2 money" scope="row">{{project.purchased_equip_cost}}</td>
+                <td class="col-2 money" scope="row">{{project.baremodule_cost}}</td>
+                <td class="col-2 money" scope="row">{{project.base_equipment_cost}}</td>
+                <td class="col-2 money" scope="row">{{project.base_baremodule_cost}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-centralized">
+        <thead class="thead-light">
+            <tr class="d-flex table-reduced-head justify-content-center">
+                <th class="col-2" scope="col"> Total Module Cost </th>
+                <th class="col-2" scope="col"> Total Grass Roots Cost </th>
+                <th class="col-2" scope="col"> Total Equipment Cost </th>
+                <th class="col-2" scope="col"> Lang Factor Cost </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="d-flex justify-content-center">
+                <td class="col-2 money" scope="row">{{project.total_module_cost}}</td>
+                <td class="col-2 money" scope="row">{{project.total_grassroot_cost}}</td>
+                <td class="col-2 money" scope="row">{{project.total_equipment_cost}}</td>
+                <td class="col-2 money" scope="row">{{project.total_langfactor}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

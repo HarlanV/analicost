@@ -1,0 +1,31 @@
+
+<h3> TITULO DO GRAFICO </h3>
+<canvas id="myChart" width="400" height="400"></canvas>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: labels,
+        datasets: [{
+            label: 'Fluxo de Caixa',
+            data: data,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+            ],
+            borderColor: [
+                'rgba(75, 192, 192, 1)',
+            ],
+            fill: false,
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>

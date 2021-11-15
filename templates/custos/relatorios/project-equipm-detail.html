@@ -1,0 +1,13 @@
+{% extends 'partials/base.html' %}
+{% block title %} Graficos {% endblock %}
+{% block content %}
+
+{{ dados|json_script:"fluxo-caixa" }}
+<h1> {{type}} </h1>
+<h2> {{custo_bare}} </h2>
+
+
+{% endblock %}
+{% block scripts %}
+    
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'partials/base.html' %}
+{% block title %} Graficos {% endblock %}
+{% block content %}
+
+    <h1> Listagem de Equacoes e Métodos </h1>
+
+    <p>-------------------------------------------------------------</p>
+    <h3> Metodo de GUTHRIE</h3>
+    <p> 1 - Listar os equipamentos</p> 
+    <p> 2 - Pegar o custo de equipamento nas condiçẽos padrões (C0p) e os indicies de inflação </p> 
+
+    <div class="cmath">`C_(bm) = C_(0p)*(I / I_(b) )*[F_(bm) + ((F_(d)*F_(p)*F_(m) )-1 )] `</div>
+
+
+    <p> 3 - Com isso temos que o Ctm equivale ao Cbm, acrescendo 15% como taxas de contigência e 3% para taxas de contratadas  </p> 
+    <div class="cmath">`C_(TM) = sum_(i=1)^n  C_(TM,i) = 1.18 * sum C_(bm,i) `</div>
+
+    <p> 4.1 - Para pequenas a moderadas expansões, CTM = CAPEX  </p> 
+    <div class="cmath">`Cbm = C0p*(I / (Ib) )*[Fbm + ((Fd*Fp*Fm )-1 )] `</div>
+    <p> 4.1 - Para Greenfield os Grass-roots   </p> 
+    <div class="cmath">`C_(GR) = C_(TM) +  0.5 sum C_(bm) `</div>
+
+    <p> 5 - Por fim, esse preço é referente ao Golfo do Mexico. Para corrigir, podemos utilizar o Fafor de localização de Richardson </p> 
+    <p> Obs: esse fator é para a planta inteira, diferente do fator de tropicalização </p> 
+
+
+    <p>-------------------------------------------------------------</p>
+    <h3> Legendas</h3>
+    <div class="cmath">` Cbm = "custo do módulo de equipamento/Bare module cost "; `</div>
+    <div class="cmath">` C0p = Cbp = "Custo de compra básico (Aço carbono, P = 1atm, Golfo do mexico)"`</div>
+    <div class="cmath">` I = "Fato de inflação do ano da estimativa de Cbm"`</div>
+    <div class="cmath">` Ib = "Fato de inflação do ano da estimativa de C0p"`</div>
+    <div class="cmath">` Fm = "Fator de material"`</div>
+    <div class="cmath">` Fp = "Fator de pressão (!=1atm)"`</div>
+    <br>
+
+{% endblock %}
+{% block scripts %}
+    
+{% endblock %}

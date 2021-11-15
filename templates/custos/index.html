@@ -1,0 +1,20 @@
+{% extends 'partials/base.html' %}
+{% block title %} Graficos {% endblock %}
+{% block content %}
+
+{{ dados|json_script:"fluxo-caixa" }}
+<h1> Fluxo de Caixa (criando) </h1>
+<script>
+    var fluxo_caixa = JSON.parse(document.getElementById('fluxo-caixa').textContent);
+    var labels = []
+    var data = fluxo_caixa.map(function(item, indice){
+            labels.push(item.descricao)
+            return item.valor;
+    });
+</script>
+{% include 'graphics/char.html' %}
+
+{% endblock %}
+{% block scripts %}
+    
+{% endblock %}

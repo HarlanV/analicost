@@ -1,0 +1,56 @@
+[
+    {
+        "model": "turtonapp.Dimension",
+        "pk": 1,
+        "fields": {
+            "dimension": "Volume",
+            "symbol": "V",
+            "unity": "m^3"
+        }
+    },
+    {
+        "model": "turtonapp.Dimension",
+        "pk": 2,
+        "fields": {
+            "dimension": "Diametro",
+            "symbol": "D",
+            "unity": "m"
+        }
+    },
+    {
+        "model": "turtonapp.Dimension",
+        "pk": 3,
+        "fields": {
+            "dimension": "Area",
+            "symbol": "A",
+            "unity": "m^2"
+        }
+    },
+    {
+        "model": "turtonapp.Dimension",
+        "pk": 4,
+        "fields": {
+            "dimension": "Potencia",
+            "symbol": "W",
+            "unity": "kW"
+        }
+    },
+    {
+        "model": "turtonapp.Dimension",
+        "pk": 5,
+        "fields": {
+            "dimension": "Fluxo",
+            "symbol": "V.",
+            "unity": "m^3/s"
+        }
+    },
+    {
+        "model": "turtonapp.Dimension",
+        "pk": 6,
+        "fields": {
+            "dimension": "Calor Fornecido",
+            "symbol": "Q",
+            "unity": "kW"
+        }
+    }
+]

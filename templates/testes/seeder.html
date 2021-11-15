@@ -1,0 +1,43 @@
+{% extends 'partials/base.html' %}
+{% block title %} Graficos {% endblock %}
+{% block content %}
+
+{{ dados|json_script:"imprimir" }}
+
+<h1> Pagina de seeder </h1>
+<p id="visual"> Para verificação dos arquivos, favor verificar no console do navegador [TEMPORARIO] </p>
+<script>
+    var dado = JSON.parse(document.getElementById('imprimir').textContent);
+    legendas = [
+        "BareModule",
+        "Cepci",
+        "ComplementConstants",
+        "EquipmentUnity",
+        "MaterialFactor",
+        "PressureFactor",
+        "PurchasedFactor",
+        "dimension",
+        "equipment",
+    ]
+    
+    data = {}
+
+    legendas.forEach(function (arrayItem){
+        data[arrayItem] =  Object.values(dado[arrayItem]);
+    });
+
+    console.log(data)
+    var values = Object.values(dado["dimension"]);
+
+    document.getElementById('visual').innerHTML = JSON.stringify(dado)
+</script>
+
+
+
+
+
+
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

@@ -1,0 +1,101 @@
+
+<h2> CAPITAL COST - CAPEX </h2>
+
+<div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+
+    <div class="btn-group">
+        <button id="addEquipment" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+            aria-expanded="false">
+            New Equipment
+        </button>
+        <div class="dropdown-menu" aria-labelledby="addEquipment">
+            {% for equipment in list_equipments %}
+            <a class="dropdown-item"
+                href="{% url 'turton:equipment' project.project_number equipment.id %}">{{equipment}}</a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="btn-group">
+        <button id="project" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+            aria-expanded="false">
+            Projects
+        </button>
+        <div class="dropdown-menu" aria-labelledby="project">
+            {% for project in list_projects %}
+            <a class="dropdown-item" href="{% url 'turton:project' project %}">{{project}}</a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="btn-group">
+        <a class="btn btn-secondary" href="{% url 'turton:createProject'  %}" role="button">New Project</a>
+        <!--button type="button" href="#" class="btn btn-secondary">Editar Projeto</button-->
+    </div>
+</div>
+
+
+{% for tbl in tables_list %}
+    {% if tbl == "Blender" %}
+        {% include 'project/tables/blender.html'%}
+    {% endif%}
+    {% if tbl == "Centrifuge" %}
+        {% include 'project/tables/centrifuge.html'%}
+    {% endif%}
+    {% if tbl == "Evaporator" %}
+        {% include 'project/tables/evaporator.html'%}
+    {% endif%}
+
+{% endfor %}
+{% include 'project/tables/total-capex-report.html' %}
+
+<script>
+    function removeEquipment(equipment_id) {
+
+        let url = "{% url 'turton:removeEquipment' project.project_number 999 %}".replace(999, equipment_id);
+
+        $.ajax({
+            method: "GET",
+            url: url,
+            success: function (response) {
+                document.location.reload(true);
+            },
+            error: function (error_data) {
+                alert(
+                    "Ops, houve algum erro. Por favor, entre em contato com o seu administrador ou servidor"
+                    )
+                console.log(error_data)
+            },
+        });
+    }
+
+
+    function deletarProjeto() {
+        let url = "{% url 'turton:deleteProject' project.project_number %}"
+        console.log(url)
+
+        $.ajax({
+            method: "GET",
+            url: "{% url 'turton:deleteProject' project.project_number %}",
+            success: function (response) {
+                console.log(response)
+                window.location = "{% url 'turton:index' %}";
+
+            },
+            error: function (error_data) {
+                alert(
+                    "Ops, houve algum erro. Por favor, entre em contato com o seu administrador ou servidor")
+                console.log(error_data)
+            },
+        });
+
+    }
+</script>
+
+
+<button type="button" class="btn btn-danger mb-3" onclick="deletarProjeto()"> Delete Project </button>
+
+
+
+{% block scripts %}
+
+{% endblock %}

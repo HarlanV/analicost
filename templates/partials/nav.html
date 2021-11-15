@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #095700;">
+    <div class="container">
+
+        <a class="navbar-brand" href="{% url 'usuarioapp:home' %}">HOME</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <!--li class="nav-item">
+
+                    <a class="nav-link" href="">Seed</a>
+                </li-->
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Project
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'turton:index' %}">Projetos</a>
+                        <a class="dropdown-item" href="{% url 'capitalcost:capex-report' %}">Relatorio</a>
+                        <a class="dropdown-item" href="#">Variaveis</a>
+                        <a class="dropdown-item" href="#">Utilities</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'capitalcost:index' %}">Financeiro</a>
+                    </div>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tools
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Variaveis</a>
+                        <a class="dropdown-item" href="#">Utilities</a>
+                        <a class="dropdown-item" href="{% url 'usuarioapp:seedCreator' %}">Seed</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'capitalcost:index' %}">Financeiro</a>
+                    </div>
+                </li>
+
+
+
+                <!--li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Opções
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'turton:index' %}">Equipamentos</a>
+                        <a class="dropdown-item" href="#">Variaveis</a>
+                        <a class="dropdown-item" href="{% url 'usuarioapp:equacoes' %}">Equações</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'capitalcost:index' %}">Financeiro</a>
+                    </div>
+                </li-->
+
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,1784 @@
+[
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 1,
+        "fields": {
+            "fbm": 1.12,
+            "calculated": false,
+            "equipment": 1
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 2,
+        "fields": {
+            "fbm": 1.12,
+            "calculated": false,
+            "equipment": 2
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 3,
+        "fields": {
+            "fbm": 1.12,
+            "calculated": false,
+            "equipment": 3
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 4,
+        "fields": {
+            "fbm": 1.34,
+            "calculated": false,
+            "equipment": 3
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 5,
+        "fields": {
+            "fbm": 1.57,
+            "calculated": false,
+            "equipment": 4
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 6,
+        "fields": {
+            "fbm": 1.57,
+            "calculated": false,
+            "equipment": 5
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 7,
+        "fields": {
+            "fbm": 1.57,
+            "calculated": false,
+            "equipment": 6
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 8,
+        "fields": {
+            "fbm": 1.27,
+            "calculated": false,
+            "equipment": 7
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 9,
+        "fields": {
+            "fbm": 2.74,
+            "calculated": false,
+            "equipment": 8
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 10,
+        "fields": {
+            "fbm": 3.83,
+            "calculated": false,
+            "equipment": 9
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 11,
+        "fields": {
+            "fbm": 2.41,
+            "calculated": false,
+            "equipment": 10
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 12,
+        "fields": {
+            "fbm": 3.37,
+            "calculated": false,
+            "equipment": 11
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 13,
+        "fields": {
+            "fbm": 11.45,
+            "calculated": false,
+            "equipment": 12
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 14,
+        "fields": {
+            "fbm": 15.92,
+            "calculated": false,
+            "equipment": 13
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 15,
+        "fields": {
+            "fbm": 9.85,
+            "calculated": false,
+            "equipment": 14
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 16,
+        "fields": {
+            "fbm": 13.88,
+            "calculated": false,
+            "equipment": 15
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 17,
+        "fields": {
+            "fbm": 5.75,
+            "calculated": false,
+            "equipment": 16
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 18,
+        "fields": {
+            "fbm": 8.04,
+            "calculated": false,
+            "equipment": 17
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 19,
+        "fields": {
+            "fbm": 5.04,
+            "calculated": false,
+            "equipment": 18
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 20,
+        "fields": {
+            "fbm": 7,
+            "calculated": false,
+            "equipment": 19
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 21,
+        "fields": {
+            "fbm": 2,
+            "calculated": false,
+            "equipment": 20
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 22,
+        "fields": {
+            "fbm": 1.25,
+            "calculated": false,
+            "equipment": 21
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 23,
+        "fields": {
+            "fbm": 1.25,
+            "calculated": false,
+            "equipment": 22
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 24,
+        "fields": {
+            "fbm": 1.1,
+            "calculated": false,
+            "equipment": 23
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 25,
+        "fields": {
+            "fbm": 1.6,
+            "calculated": false,
+            "equipment": 24
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 26,
+        "fields": {
+            "fbm": 2600,
+            "calculated": false,
+            "equipment": 25
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 27,
+        "fields": {
+            "fbm": 2600,
+            "calculated": false,
+            "equipment": 26
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 28,
+        "fields": {
+            "fbm": 2600,
+            "calculated": false,
+            "equipment": 27
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 29,
+        "fields": {
+            "fbm": 23000,
+            "calculated": false,
+            "equipment": 28
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 30,
+        "fields": {
+            "fbm": 7500,
+            "calculated": false,
+            "equipment": 29
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 31,
+        "fields": {
+            "fbm": 10000,
+            "calculated": false,
+            "equipment": 30
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 32,
+        "fields": {
+            "fbm": 1.6,
+            "calculated": false,
+            "equipment": 31
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 33,
+        "fields": {
+            "fbm": 1.25,
+            "calculated": false,
+            "equipment": 32
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 34,
+        "fields": {
+            "fbm": 1.25,
+            "calculated": false,
+            "equipment": 33
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 35,
+        "fields": {
+            "fbm": 2.86,
+            "calculated": false,
+            "equipment": 34
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 36,
+        "fields": {
+            "fbm": 2.86,
+            "calculated": false,
+            "equipment": 35
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 37,
+        "fields": {
+            "fbm": 2.86,
+            "calculated": false,
+            "equipment": 36
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 38,
+        "fields": {
+            "fbm": 2.86,
+            "calculated": false,
+            "equipment": 37
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 39,
+        "fields": {
+            "fbm": 2.74,
+            "calculated": false,
+            "equipment": 38
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 40,
+        "fields": {
+            "fbm": 2.74,
+            "calculated": false,
+            "equipment": 39
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 41,
+        "fields": {
+            "fbm": 2.74,
+            "calculated": false,
+            "equipment": 40
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 42,
+        "fields": {
+            "fbm": 2.74,
+            "calculated": false,
+            "equipment": 41
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 43,
+        "fields": {
+            "fbm": 4.97,
+            "calculated": false,
+            "equipment": 42
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 44,
+        "fields": {
+            "fbm": 4.97,
+            "calculated": false,
+            "equipment": 43
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 45,
+        "fields": {
+            "fbm": 4.97,
+            "calculated": false,
+            "equipment": 44
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 46,
+        "fields": {
+            "fbm": 4.97,
+            "calculated": false,
+            "equipment": 45
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 47,
+        "fields": {
+            "fbm": 5.75,
+            "calculated": false,
+            "equipment": 46
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 48,
+        "fields": {
+            "fbm": 5.75,
+            "calculated": false,
+            "equipment": 47
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 49,
+        "fields": {
+            "fbm": 5.75,
+            "calculated": false,
+            "equipment": 48
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 50,
+        "fields": {
+            "fbm": 5.75,
+            "calculated": false,
+            "equipment": 49
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 51,
+        "fields": {
+            "fbm": 11.45,
+            "calculated": false,
+            "equipment": 50
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 52,
+        "fields": {
+            "fbm": 11.45,
+            "calculated": false,
+            "equipment": 51
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 53,
+        "fields": {
+            "fbm": 11.45,
+            "calculated": false,
+            "equipment": 52
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 54,
+        "fields": {
+            "fbm": 11.45,
+            "calculated": false,
+            "equipment": 53
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 55,
+        "fields": {
+            "fbm": 1.65,
+            "calculated": false,
+            "equipment": 54
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 56,
+        "fields": {
+            "fbm": 1.65,
+            "calculated": false,
+            "equipment": 55
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 57,
+        "fields": {
+            "fbm": 1.65,
+            "calculated": false,
+            "equipment": 56
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 58,
+        "fields": {
+            "fbm": 1.65,
+            "calculated": false,
+            "equipment": 57
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 59,
+        "fields": {
+            "fbm": 1.65,
+            "calculated": false,
+            "equipment": 58
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 60,
+        "fields": {
+            "fbm": 1.65,
+            "calculated": false,
+            "equipment": 59
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 61,
+        "fields": {
+            "fbm": 1.8,
+            "calculated": false,
+            "equipment": 60
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 62,
+        "fields": {
+            "fbm": 1.65,
+            "calculated": false,
+            "equipment": 61
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 63,
+        "fields": {
+            "fbm": 1.54,
+            "calculated": false,
+            "equipment": 62
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 64,
+        "fields": {
+            "fbm": 2.51,
+            "calculated": false,
+            "equipment": 63
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 65,
+        "fields": {
+            "fbm": 2.51,
+            "calculated": false,
+            "equipment": 64
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 66,
+        "fields": {
+            "fbm": 2.13,
+            "calculated": false,
+            "equipment": 65
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 67,
+        "fields": {
+            "fbm": 2.13,
+            "calculated": false,
+            "equipment": 66
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 68,
+        "fields": {
+            "fbm": 2.81,
+            "calculated": false,
+            "equipment": 67
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 69,
+        "fields": {
+            "fbm": 2.81,
+            "calculated": false,
+            "equipment": 68
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 70,
+        "fields": {
+            "fbm": 2.13,
+            "calculated": false,
+            "equipment": 69
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 71,
+        "fields": {
+            "fbm": 2.51,
+            "calculated": false,
+            "equipment": 70
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 72,
+        "fields": {
+            "fbm": 2.81,
+            "calculated": false,
+            "equipment": 71
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 73,
+        "fields": {
+            "fbm": 2.17,
+            "calculated": false,
+            "equipment": 72
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 74,
+        "fields": {
+            "fbm": 2.17,
+            "calculated": false,
+            "equipment": 73
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 75,
+        "fields": {
+            "fbm": 2.17,
+            "calculated": false,
+            "equipment": 74
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 76,
+        "fields": {
+            "fbm": 2.17,
+            "calculated": false,
+            "equipment": 75
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 77,
+        "fields": {
+            "fbm": 2.9,
+            "calculated": false,
+            "equipment": 76
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 78,
+        "fields": {
+            "fbm": 2.25,
+            "calculated": false,
+            "equipment": 77
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 79,
+        "fields": {
+            "fbm": 2.25,
+            "calculated": false,
+            "equipment": 78
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 80,
+        "fields": {
+            "fbm": 2.9,
+            "calculated": false,
+            "equipment": 79
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 81,
+        "fields": {
+            "fbm": 2.9,
+            "calculated": false,
+            "equipment": 80
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 82,
+        "fields": {
+            "fbm": 3.63,
+            "calculated": false,
+            "equipment": 81
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 83,
+        "fields": {
+            "fbm": 2.81,
+            "calculated": false,
+            "equipment": 82
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 84,
+        "fields": {
+            "fbm": 2.81,
+            "calculated": false,
+            "equipment": 83
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 85,
+        "fields": {
+            "fbm": 3.63,
+            "calculated": false,
+            "equipment": 84
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 86,
+        "fields": {
+            "fbm": 3.63,
+            "calculated": false,
+            "equipment": 85
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 87,
+        "fields": {
+            "fbm": 5.08,
+            "calculated": false,
+            "equipment": 86
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 88,
+        "fields": {
+            "fbm": 3.94,
+            "calculated": false,
+            "equipment": 87
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 89,
+        "fields": {
+            "fbm": 3.94,
+            "calculated": false,
+            "equipment": 88
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 90,
+        "fields": {
+            "fbm": 5.08,
+            "calculated": false,
+            "equipment": 89
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 91,
+        "fields": {
+            "fbm": 5.08,
+            "calculated": false,
+            "equipment": 90
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 92,
+        "fields": {
+            "fbm": 9.66,
+            "calculated": false,
+            "equipment": 91
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 93,
+        "fields": {
+            "fbm": 7.49,
+            "calculated": false,
+            "equipment": 92
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 94,
+        "fields": {
+            "fbm": 7.49,
+            "calculated": false,
+            "equipment": 93
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 95,
+        "fields": {
+            "fbm": 9.66,
+            "calculated": false,
+            "equipment": 94
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 96,
+        "fields": {
+            "fbm": 9.66,
+            "calculated": false,
+            "equipment": 95
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 97,
+        "fields": {
+            "fbm": 14.5,
+            "calculated": false,
+            "equipment": 96
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 98,
+        "fields": {
+            "fbm": 11.25,
+            "calculated": false,
+            "equipment": 97
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 99,
+        "fields": {
+            "fbm": 11.25,
+            "calculated": false,
+            "equipment": 98
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 100,
+        "fields": {
+            "fbm": 14.5,
+            "calculated": false,
+            "equipment": 99
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 101,
+        "fields": {
+            "fbm": 14.5,
+            "calculated": false,
+            "equipment": 100
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 102,
+        "fields": {
+            "fbm": 1.38,
+            "calculated": false,
+            "equipment": 101
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 103,
+        "fields": {
+            "fbm": 1.38,
+            "calculated": false,
+            "equipment": 102
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 104,
+        "fields": {
+            "fbm": 1.38,
+            "calculated": false,
+            "equipment": 103
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 105,
+        "fields": {
+            "fbm": 1,
+            "calculated": false,
+            "equipment": 104
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 106,
+        "fields": {
+            "fbm": 1,
+            "calculated": false,
+            "equipment": 105
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 107,
+        "fields": {
+            "fbm": 1,
+            "calculated": false,
+            "equipment": 106
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 108,
+        "fields": {
+            "fbm": 1.55,
+            "calculated": false,
+            "equipment": 107
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 109,
+        "fields": {
+            "fbm": 1.41,
+            "calculated": false,
+            "equipment": 108
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 110,
+        "fields": {
+            "fbm": 1.46,
+            "calculated": false,
+            "equipment": 109
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 111,
+        "fields": {
+            "fbm": 1.28,
+            "calculated": false,
+            "equipment": 111
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 112,
+        "fields": {
+            "fbm": 1.28,
+            "calculated": false,
+            "equipment": 112
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 113,
+        "fields": {
+            "fbm": 2.28,
+            "calculated": false,
+            "equipment": 113
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 114,
+        "fields": {
+            "fbm": 2.67,
+            "calculated": false,
+            "equipment": 114
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 115,
+        "fields": {
+            "fbm": 2.35,
+            "calculated": false,
+            "equipment": 115
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 116,
+        "fields": {
+            "fbm": 4.36,
+            "calculated": false,
+            "equipment": 116
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 117,
+        "fields": {
+            "fbm": 4.74,
+            "calculated": false,
+            "equipment": 117
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 118,
+        "fields": {
+            "fbm": 3.95,
+            "calculated": false,
+            "equipment": 118
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 119,
+        "fields": {
+            "fbm": 10.66,
+            "calculated": false,
+            "equipment": 120
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 120,
+        "fields": {
+            "fbm": 6.44,
+            "calculated": false,
+            "equipment": 121
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 121,
+        "fields": {
+            "fbm": 4,
+            "calculated": false,
+            "equipment": 122
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 122,
+        "fields": {
+            "fbm": 4,
+            "calculated": false,
+            "equipment": 123
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 123,
+        "fields": {
+            "fbm": 4,
+            "calculated": false,
+            "equipment": 124
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 124,
+        "fields": {
+            "fbm": 4,
+            "calculated": false,
+            "equipment": 125
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 125,
+        "fields": {
+            "fbm": 4,
+            "calculated": false,
+            "equipment": 126
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 126,
+        "fields": {
+            "fbm": 4,
+            "calculated": false,
+            "equipment": 127
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 127,
+        "fields": {
+            "fbm": 1.34,
+            "calculated": false,
+            "equipment": 128
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 128,
+        "fields": {
+            "fbm": 1.12,
+            "calculated": false,
+            "equipment": 129
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 129,
+        "fields": {
+            "fbm": 1.34,
+            "calculated": false,
+            "equipment": 129
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 130,
+        "fields": {
+            "fbm": 1.34,
+            "calculated": false,
+            "equipment": 130
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 131,
+        "fields": {
+            "fbm": 1.34,
+            "calculated": false,
+            "equipment": 131
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 132,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 132
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 133,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 133
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 134,
+        "fields": {
+            "fbm": 11.66,
+            "calculated": false,
+            "equipment": 136
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 135,
+        "fields": {
+            "fbm": 11.66,
+            "calculated": false,
+            "equipment": 137
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 136,
+        "fields": {
+            "fbm": 6.13,
+            "calculated": false,
+            "equipment": 138
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 137,
+        "fields": {
+            "fbm": 6.13,
+            "calculated": false,
+            "equipment": 139
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 138,
+        "fields": {
+            "fbm": 3.5,
+            "calculated": false,
+            "equipment": 142
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 139,
+        "fields": {
+            "fbm": 3.5,
+            "calculated": false,
+            "equipment": 143
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 140,
+        "fields": {
+            "fbm": 9.53,
+            "calculated": false,
+            "equipment": 146
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 141,
+        "fields": {
+            "fbm": 10.61,
+            "calculated": false,
+            "equipment": 147
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 142,
+        "fields": {
+            "fbm": 10.61,
+            "calculated": false,
+            "equipment": 148
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 143,
+        "fields": {
+            "fbm": 5.93,
+            "calculated": false,
+            "equipment": 149
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 144,
+        "fields": {
+            "fbm": 6.56,
+            "calculated": false,
+            "equipment": 150
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 145,
+        "fields": {
+            "fbm": 6.56,
+            "calculated": false,
+            "equipment": 151
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 146,
+        "fields": {
+            "fbm": 13.7,
+            "calculated": false,
+            "equipment": 152
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 147,
+        "fields": {
+            "fbm": 15.15,
+            "calculated": false,
+            "equipment": 153
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 148,
+        "fields": {
+            "fbm": 15.15,
+            "calculated": false,
+            "equipment": 154
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 149,
+        "fields": {
+            "fbm": 9.12,
+            "calculated": false,
+            "equipment": 155
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 150,
+        "fields": {
+            "fbm": 10.09,
+            "calculated": false,
+            "equipment": 156
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 151,
+        "fields": {
+            "fbm": 10.09,
+            "calculated": false,
+            "equipment": 157
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 152,
+        "fields": {
+            "fbm": 3.77,
+            "calculated": false,
+            "equipment": 158
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 153,
+        "fields": {
+            "fbm": 4.09,
+            "calculated": false,
+            "equipment": 159
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 154,
+        "fields": {
+            "fbm": 4.09,
+            "calculated": false,
+            "equipment": 160
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 155,
+        "fields": {
+            "fbm": 4.8,
+            "calculated": false,
+            "equipment": 161
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 156,
+        "fields": {
+            "fbm": 5.15,
+            "calculated": false,
+            "equipment": 162
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 157,
+        "fields": {
+            "fbm": 5.15,
+            "calculated": false,
+            "equipment": 163
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 158,
+        "fields": {
+            "fbm": 4.93,
+            "calculated": false,
+            "equipment": 164
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 159,
+        "fields": {
+            "fbm": 5.45,
+            "calculated": false,
+            "equipment": 165
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 160,
+        "fields": {
+            "fbm": 5.45,
+            "calculated": false,
+            "equipment": 166
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 161,
+        "fields": {
+            "fbm": 4.66,
+            "calculated": false,
+            "equipment": 167
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 162,
+        "fields": {
+            "fbm": 5.15,
+            "calculated": false,
+            "equipment": 168
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 163,
+        "fields": {
+            "fbm": 5.15,
+            "calculated": false,
+            "equipment": 169
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 164,
+        "fields": {
+            "fbm": 3.43,
+            "calculated": false,
+            "equipment": 170
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 165,
+        "fields": {
+            "fbm": 3.79,
+            "calculated": false,
+            "equipment": 171
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 166,
+        "fields": {
+            "fbm": 3.79,
+            "calculated": false,
+            "equipment": 172
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 167,
+        "fields": {
+            "fbm": 2.74,
+            "calculated": false,
+            "equipment": 173
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 168,
+        "fields": {
+            "fbm": 3.03,
+            "calculated": false,
+            "equipment": 174
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 169,
+        "fields": {
+            "fbm": 3.03,
+            "calculated": false,
+            "equipment": 175
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 170,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 176
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 171,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 177
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 172,
+        "fields": {
+            "fbm": 5.58,
+            "calculated": false,
+            "equipment": 178
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 173,
+        "fields": {
+            "fbm": 5.58,
+            "calculated": false,
+            "equipment": 179
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 174,
+        "fields": {
+            "fbm": 5.58,
+            "calculated": false,
+            "equipment": 180
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 175,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 181
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 176,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 182
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 177,
+        "fields": {
+            "fbm": 1.83,
+            "calculated": false,
+            "equipment": 183
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 178,
+        "fields": {
+            "fbm": 1.83,
+            "calculated": false,
+            "equipment": 184
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 179,
+        "fields": {
+            "fbm": 1.83,
+            "calculated": false,
+            "equipment": 185
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 180,
+        "fields": {
+            "fbm": 1,
+            "calculated": false,
+            "equipment": 186
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 181,
+        "fields": {
+            "fbm": 1,
+            "calculated": false,
+            "equipment": 187
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 182,
+        "fields": {
+            "fbm": 1,
+            "calculated": false,
+            "equipment": 188
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 183,
+        "fields": {
+            "fbm": 1,
+            "calculated": false,
+            "equipment": 189
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 184,
+        "fields": {
+            "fbm": 4.14,
+            "calculated": false,
+            "equipment": 190
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 185,
+        "fields": {
+            "fbm": 7.09,
+            "calculated": false,
+            "equipment": 191
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 186,
+        "fields": {
+            "fbm": 1,
+            "calculated": false,
+            "equipment": 192
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 187,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 193
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 188,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 194
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 189,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 195
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 190,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 196
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 191,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 197
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 192,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 198
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 193,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 199
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 194,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 200
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 195,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 201
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 196,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 202
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 197,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 203
+        }
+    },
+    {
+        "model": "turtonapp.BareModule",
+        "pk": 198,
+        "fields": {
+            "fbm": 0,
+            "calculated": false,
+            "equipment": 204
+        }
+    }
+]

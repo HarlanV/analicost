@@ -1,0 +1,26 @@
+{% extends 'partials/base.html' %}
+{% block title %} Graficos {% endblock %}
+{% block content %}
+
+    <h1> Listagem de Equacoes e Métodos </h1>
+
+    <p>-------------------------------------------------------------</p>
+    <h3> Metodo de Lang</h3>
+    <p> 1 - Pegar o custo FOB dos equipamentos</p> 
+    <p> 2 - Incluir 5% do custo FOB como transporte. Além disso, incluir os custos de materiais adicionais usando o fator de Lang </p> 
+
+    <div class="cmath">` CAPEX = 1.05 * Flang * CustoFOB `</div>
+    <p> onde: </p>
+    <div class="cmath">` CustoFOB = C0p*(I / (Ib) `</div>
+
+    <p> Obs: este capex é para a planta inteira! </p> 
+
+    <p>-------------------------------------------------------------</p>
+
+    <p>-------------------------------------------------------------</p>
+    <h3> Legendas</h3>
+
+{% endblock %}
+{% block scripts %}
+    
+{% endblock %}

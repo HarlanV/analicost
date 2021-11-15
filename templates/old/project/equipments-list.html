@@ -1,0 +1,30 @@
+{% extends 'partials/base.html' %}
+{% block title %} Graficos {% endblock %}
+{% block content %}
+
+    <h2> Lista de Equipamentos </h2>
+
+        <!-- ##### List of Equipments Area ##### -->
+        <section class="best-receipe-area">
+            <div class="container">
+                <div class="row">
+                    {% if equipamentos %}
+                    <ul>
+                        {% for equipamento in equipamentos %}
+                        <!-- Single Best Receipe Area -->
+                            <li><a href="{% url 'turton:equipamento' equipamento.id %}">{{equipamento.name}} ( {{equipamento.id}} ) </a></li>
+                        {% endfor %}
+                    </ul>
+    
+                    {% else %}
+                        <h1>  NÃO HÁ EQUIPAMENTO DISPONÍVEL NO MOMENTO  </h1>
+                    {% endif %}
+                </div>
+    
+            </div>
+        </section>
+
+{% endblock %}
+{% block scripts %}
+    
+{% endblock %}

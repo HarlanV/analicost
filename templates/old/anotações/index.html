@@ -1,0 +1,41 @@
+{% extends 'partials/base.html' %}
+{% block title %} Graficos {% endblock %}
+{% block content %}
+
+<h1> teste ok </h1>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+    {{ dados|json_script:"fluxo-caixa" }}
+    <script>
+        const value = JSON.parse(document.getElementById('fluxo-cai').textContent);
+        var dados = "{{ dados|safe }}"
+        console.log('-------------')
+        //var teste = JSON.parse(dados)
+        // console.log(dados)
+        // console.log( teste )
+        // console.log(dados)
+        console.log(value)
+        console.log('-------------')
+
+
+        /*
+        var endpoint = "{% url 'capitalcost:datachar' %}"
+
+        $.ajax({
+            method:"GET",
+            url: endpoint,
+            success: function(data){
+                / console.log(data)    
+            },
+            error: function(error_data){
+                console.log("error!!")
+                console.log(error_data)
+            }
+        })
+        */
+    </script>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'partials/base.html' %}
+{% block title %} Graficos {% endblock %}
+{% block content %}
+
+
+
+{% if project %}
+{% include 'project/has-project.html'%}
+{% else %}
+{% include 'project/no-project.html'%}
+{% endif %}
+
+
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

@@ -1,0 +1,1653 @@
+[
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 1,
+        "fields": {
+            "c1": 0,
+            "c2": 0.20899,
+            "c3": -0.0328,
+            "pressure_min": 0,
+            "pressure_max": 0.16,
+            "condition": null,
+            "equipment": 38
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 2,
+        "fields": {
+            "c1": 0,
+            "c2": 0.20899,
+            "c3": -0.0328,
+            "pressure_min": 0,
+            "pressure_max": 0.16,
+            "condition": null,
+            "equipment": 39
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 3,
+        "fields": {
+            "c1": 0,
+            "c2": 0.20899,
+            "c3": -0.0328,
+            "pressure_min": 0,
+            "pressure_max": 0.16,
+            "condition": null,
+            "equipment": 40
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 4,
+        "fields": {
+            "c1": 0,
+            "c2": 0.20899,
+            "c3": -0.0328,
+            "pressure_min": 0,
+            "pressure_max": 0.16,
+            "condition": null,
+            "equipment": 41
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 5,
+        "fields": {
+            "c1": 0,
+            "c2": 0.20899,
+            "c3": -0.0328,
+            "pressure_min": 0,
+            "pressure_max": 0.16,
+            "condition": null,
+            "equipment": 42
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 6,
+        "fields": {
+            "c1": 0,
+            "c2": 0.20899,
+            "c3": -0.0328,
+            "pressure_min": 0,
+            "pressure_max": 0.16,
+            "condition": null,
+            "equipment": 43
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 7,
+        "fields": {
+            "c1": 0,
+            "c2": 0.20899,
+            "c3": -0.0328,
+            "pressure_min": 0,
+            "pressure_max": 0.16,
+            "condition": null,
+            "equipment": 44
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 8,
+        "fields": {
+            "c1": 0,
+            "c2": 0.20899,
+            "c3": -0.0328,
+            "pressure_min": 0,
+            "pressure_max": 0.16,
+            "condition": null,
+            "equipment": 45
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 9,
+        "fields": {
+            "c1": 0,
+            "c2": 0.20899,
+            "c3": -0.0328,
+            "pressure_min": 0,
+            "pressure_max": 0.16,
+            "condition": null,
+            "equipment": 46
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 10,
+        "fields": {
+            "c1": 0,
+            "c2": 0.20899,
+            "c3": -0.0328,
+            "pressure_min": 0,
+            "pressure_max": 0.16,
+            "condition": null,
+            "equipment": 47
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 11,
+        "fields": {
+            "c1": 0,
+            "c2": 0.20899,
+            "c3": -0.0328,
+            "pressure_min": 0,
+            "pressure_max": 0.16,
+            "condition": null,
+            "equipment": 48
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 12,
+        "fields": {
+            "c1": 0,
+            "c2": 0.20899,
+            "c3": -0.0328,
+            "pressure_min": 0,
+            "pressure_max": 0.16,
+            "condition": null,
+            "equipment": 49
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 13,
+        "fields": {
+            "c1": 0,
+            "c2": 0.20899,
+            "c3": -0.0328,
+            "pressure_min": 0,
+            "pressure_max": 0.16,
+            "condition": null,
+            "equipment": 50
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 14,
+        "fields": {
+            "c1": 0,
+            "c2": 0.20899,
+            "c3": -0.0328,
+            "pressure_min": 0,
+            "pressure_max": 0.16,
+            "condition": null,
+            "equipment": 51
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 15,
+        "fields": {
+            "c1": 0,
+            "c2": 0.20899,
+            "c3": -0.0328,
+            "pressure_min": 0,
+            "pressure_max": 0.16,
+            "condition": null,
+            "equipment": 52
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 16,
+        "fields": {
+            "c1": 0,
+            "c2": 0.20899,
+            "c3": -0.0328,
+            "pressure_min": 0,
+            "pressure_max": 0.16,
+            "condition": null,
+            "equipment": 53
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 17,
+        "fields": {
+            "c1": 0.1405,
+            "c2": -0.2698,
+            "c3": 0.1293,
+            "pressure_min": 0,
+            "pressure_max": 200,
+            "condition": null,
+            "equipment": 63
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 18,
+        "fields": {
+            "c1": 0.1017,
+            "c2": -0.1957,
+            "c3": 0.09403,
+            "pressure_min": 0,
+            "pressure_max": 200,
+            "condition": null,
+            "equipment": 64
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 19,
+        "fields": {
+            "c1": 0.1405,
+            "c2": -0.2698,
+            "c3": 0.1293,
+            "pressure_min": 0,
+            "pressure_max": 200,
+            "condition": null,
+            "equipment": 65
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 20,
+        "fields": {
+            "c1": 0.1017,
+            "c2": -0.1957,
+            "c3": 0.09403,
+            "pressure_min": 0,
+            "pressure_max": 200,
+            "condition": null,
+            "equipment": 66
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 21,
+        "fields": {
+            "c1": 0.1405,
+            "c2": -0.2698,
+            "c3": 0.1293,
+            "pressure_min": 0,
+            "pressure_max": 200,
+            "condition": null,
+            "equipment": 67
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 22,
+        "fields": {
+            "c1": 0.1017,
+            "c2": -0.1957,
+            "c3": 0.09403,
+            "pressure_min": 0,
+            "pressure_max": 200,
+            "condition": null,
+            "equipment": 68
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 23,
+        "fields": {
+            "c1": 0.1347,
+            "c2": -0.2368,
+            "c3": 0.1021,
+            "pressure_min": 0,
+            "pressure_max": 200,
+            "condition": null,
+            "equipment": 69
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 24,
+        "fields": {
+            "c1": 0.1347,
+            "c2": -0.2368,
+            "c3": 0.1021,
+            "pressure_min": 0,
+            "pressure_max": 200,
+            "condition": null,
+            "equipment": 70
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 25,
+        "fields": {
+            "c1": 0.1347,
+            "c2": -0.2368,
+            "c3": 0.1021,
+            "pressure_min": 0,
+            "pressure_max": 200,
+            "condition": null,
+            "equipment": 71
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 26,
+        "fields": {
+            "c1": -0.01633,
+            "c2": 0.056875,
+            "c3": -0.00876,
+            "pressure_min": 0,
+            "pressure_max": 200,
+            "condition": null,
+            "equipment": 72
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 27,
+        "fields": {
+            "c1": -0.01633,
+            "c2": 0.056875,
+            "c3": -0.00876,
+            "pressure_min": 0,
+            "pressure_max": 200,
+            "condition": null,
+            "equipment": 73
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 28,
+        "fields": {
+            "c1": -0.01633,
+            "c2": 0.056875,
+            "c3": -0.00876,
+            "pressure_min": 0,
+            "pressure_max": 200,
+            "condition": null,
+            "equipment": 74
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 29,
+        "fields": {
+            "c1": 2.594072,
+            "c2": -4.23476,
+            "c3": 1.722404,
+            "pressure_min": 0,
+            "pressure_max": 40,
+            "condition": null,
+            "equipment": 75
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 30,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 76
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 31,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 77
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 32,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 78
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 33,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 79
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 34,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 80
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 35,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 81
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 36,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 82
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 37,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 83
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 38,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 84
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 39,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 85
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 40,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 86
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 41,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 87
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 42,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 88
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 43,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 89
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 44,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 90
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 45,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 91
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 46,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 92
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 47,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 93
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 48,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 94
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 49,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 95
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 50,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 96
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 51,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 97
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 52,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 98
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 53,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 99
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 54,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 150,
+            "condition": null,
+            "equipment": 100
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 55,
+        "fields": {
+            "c1": -0.3935,
+            "c2": 0.3957,
+            "c3": -0.00226,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 104
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 56,
+        "fields": {
+            "c1": -0.245382,
+            "c2": 0.259016,
+            "c3": -0.01363,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 105
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 57,
+        "fields": {
+            "c1": -0.245382,
+            "c2": 0.259016,
+            "c3": -0.01363,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 106
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 58,
+        "fields": {
+            "c1": -0.3935,
+            "c2": 0.3957,
+            "c3": -0.00226,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 107
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 59,
+        "fields": {
+            "c1": -0.245382,
+            "c2": 0.259016,
+            "c3": -0.01363,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 108
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 60,
+        "fields": {
+            "c1": -0.245382,
+            "c2": 0.259016,
+            "c3": -0.01363,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 109
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 61,
+        "fields": {
+            "c1": -0.3935,
+            "c2": 0.3957,
+            "c3": -0.00226,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 110
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 62,
+        "fields": {
+            "c1": -0.245382,
+            "c2": 0.259016,
+            "c3": -0.01363,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 111
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 63,
+        "fields": {
+            "c1": -0.245382,
+            "c2": 0.259016,
+            "c3": -0.01363,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 112
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 64,
+        "fields": {
+            "c1": -0.3935,
+            "c2": 0.3957,
+            "c3": -0.00226,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 113
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 65,
+        "fields": {
+            "c1": -0.245382,
+            "c2": 0.259016,
+            "c3": -0.01363,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 114
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 66,
+        "fields": {
+            "c1": -0.245382,
+            "c2": 0.259016,
+            "c3": -0.01363,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 115
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 67,
+        "fields": {
+            "c1": -0.3935,
+            "c2": 0.3957,
+            "c3": -0.00226,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 116
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 68,
+        "fields": {
+            "c1": -0.245382,
+            "c2": 0.259016,
+            "c3": -0.01363,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 117
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 69,
+        "fields": {
+            "c1": -0.245382,
+            "c2": 0.259016,
+            "c3": -0.01363,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 118
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 70,
+        "fields": {
+            "c1": -0.3935,
+            "c2": 0.3957,
+            "c3": -0.00226,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 119
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 71,
+        "fields": {
+            "c1": -0.245382,
+            "c2": 0.259016,
+            "c3": -0.01363,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 120
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 72,
+        "fields": {
+            "c1": -0.245382,
+            "c2": 0.259016,
+            "c3": -0.01363,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 121
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 73,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 146
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 74,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 147
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 75,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 148
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 76,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 149
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 77,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 150
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 78,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 151
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 79,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 152
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 80,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 153
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 81,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 154
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 82,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 155
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 83,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 156
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 84,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 157
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 85,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 158
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 86,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 159
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 87,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 160
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 88,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 161
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 89,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 162
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 90,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 163
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 91,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 164
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 92,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 165
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 93,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 166
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 94,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 167
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 95,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 168
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 96,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 169
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 97,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 170
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 98,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 171
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 99,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 172
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 100,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 173
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 101,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 174
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 102,
+        "fields": {
+            "c1": 0.1578,
+            "c2": -0.2992,
+            "c3": 0.1413,
+            "pressure_min": 0,
+            "pressure_max": 320,
+            "condition": null,
+            "equipment": 175
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 103,
+        "fields": {
+            "c1": 0,
+            "c2": 0,
+            "c3": 0,
+            "pressure_min": 0,
+            "pressure_max": 400,
+            "condition": null,
+            "equipment": 176
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 104,
+        "fields": {
+            "c1": 0,
+            "c2": 0,
+            "c3": 0,
+            "pressure_min": 0,
+            "pressure_max": 400,
+            "condition": null,
+            "equipment": 177
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 105,
+        "fields": {
+            "c1": 13.1467,
+            "c2": -12.6574,
+            "c3": 3.0705,
+            "pressure_min": 100,
+            "pressure_max": 300,
+            "condition": null,
+            "equipment": 193
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 106,
+        "fields": {
+            "c1": 0.6072,
+            "c2": -0.912,
+            "c3": 0.3327,
+            "pressure_min": 40,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 193
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 107,
+        "fields": {
+            "c1": 0,
+            "c2": 0,
+            "c3": 0,
+            "pressure_min": 0,
+            "pressure_max": 300,
+            "condition": null,
+            "equipment": 193
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 108,
+        "fields": {
+            "c1": 13.1467,
+            "c2": -12.6574,
+            "c3": 3.0705,
+            "pressure_min": 100,
+            "pressure_max": 300,
+            "condition": null,
+            "equipment": 194
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 109,
+        "fields": {
+            "c1": 0.6072,
+            "c2": -0.912,
+            "c3": 0.3327,
+            "pressure_min": 40,
+            "pressure_max": 300,
+            "condition": null,
+            "equipment": 194
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 110,
+        "fields": {
+            "c1": 0,
+            "c2": 0,
+            "c3": 0,
+            "pressure_min": 0,
+            "pressure_max": 300,
+            "condition": null,
+            "equipment": 194
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 111,
+        "fields": {
+            "c1": 0.03881,
+            "c2": -0.11272,
+            "c3": 0.08183,
+            "pressure_min": 5,
+            "pressure_max": 140,
+            "condition": null,
+            "equipment": 195
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 112,
+        "fields": {
+            "c1": -0.00164,
+            "c2": -0.00627,
+            "c3": 0.0123,
+            "pressure_min": 5,
+            "pressure_max": 140,
+            "condition": null,
+            "equipment": 195
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 113,
+        "fields": {
+            "c1": 0.03881,
+            "c2": -0.11272,
+            "c3": 0.08183,
+            "pressure_min": 5,
+            "pressure_max": 140,
+            "condition": null,
+            "equipment": 196
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 114,
+        "fields": {
+            "c1": -0.00164,
+            "c2": -0.00627,
+            "c3": 0.0123,
+            "pressure_min": 5,
+            "pressure_max": 140,
+            "condition": null,
+            "equipment": 196
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 115,
+        "fields": {
+            "c1": 0.03881,
+            "c2": -0.11272,
+            "c3": 0.08183,
+            "pressure_min": 5,
+            "pressure_max": 140,
+            "condition": null,
+            "equipment": 197
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 116,
+        "fields": {
+            "c1": -0.00164,
+            "c2": -0.00627,
+            "c3": 0.0123,
+            "pressure_min": 5,
+            "pressure_max": 140,
+            "condition": null,
+            "equipment": 197
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 117,
+        "fields": {
+            "c1": 0.03881,
+            "c2": -0.11272,
+            "c3": 0.08183,
+            "pressure_min": 5,
+            "pressure_max": 140,
+            "condition": null,
+            "equipment": 198
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 118,
+        "fields": {
+            "c1": -0.00164,
+            "c2": -0.00627,
+            "c3": 0.0123,
+            "pressure_min": 5,
+            "pressure_max": 140,
+            "condition": null,
+            "equipment": 198
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 119,
+        "fields": {
+            "c1": 13.1467,
+            "c2": -12.6574,
+            "c3": 3.0705,
+            "pressure_min": 100,
+            "pressure_max": 300,
+            "condition": null,
+            "equipment": 199
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 120,
+        "fields": {
+            "c1": 0.6072,
+            "c2": -0.912,
+            "c3": 0.3327,
+            "pressure_min": 40,
+            "pressure_max": 300,
+            "condition": null,
+            "equipment": 199
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 121,
+        "fields": {
+            "c1": 0,
+            "c2": 0,
+            "c3": 0,
+            "pressure_min": 0,
+            "pressure_max": 300,
+            "condition": null,
+            "equipment": 199
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 122,
+        "fields": {
+            "c1": 0,
+            "c2": 0,
+            "c3": 0,
+            "pressure_min": 0,
+            "pressure_max": 15,
+            "condition": null,
+            "equipment": 200
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 123,
+        "fields": {
+            "c1": -0.125,
+            "c2": 0.15361,
+            "c3": -0.02861,
+            "pressure_min": 0,
+            "pressure_max": 100,
+            "condition": null,
+            "equipment": 201
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 124,
+        "fields": {
+            "c1": -0.4045,
+            "c2": 0.1859,
+            "c3": 0,
+            "pressure_min": 5,
+            "pressure_max": 400,
+            "condition": null,
+            "equipment": 202
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 125,
+        "fields": {
+            "c1": -0.2115,
+            "c2": 0.09717,
+            "c3": 0,
+            "pressure_min": 5,
+            "pressure_max": 400,
+            "condition": null,
+            "equipment": 202
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 126,
+        "fields": {
+            "c1": 0,
+            "c2": 0,
+            "c3": 0,
+            "pressure_min": 0,
+            "pressure_max": 19,
+            "condition": null,
+            "equipment": 203
+        }
+    },
+    {
+        "model": "turtonapp.PressureFactor",
+        "pk": 127,
+        "fields": {
+            "c1": 0,
+            "c2": 0,
+            "c3": 0,
+            "pressure_min": 0,
+            "pressure_max": 19,
+            "condition": null,
+            "equipment": 204
+        }
+    }
+]

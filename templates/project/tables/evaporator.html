@@ -1,0 +1,73 @@
+<style>
+    .table-reduced-head {
+        font-size: 80% !important;
+    }
+
+    .table-centralized {
+        text-align: center;
+    }
+</style>
+
+
+
+<script>
+    function newRow(table_name, code){
+        tbody = document.getElementById('blenderBody-test')
+        row = tbody.insertRow(-1);
+        row.className = 'testeClasse'
+        row.id = code
+        cel = row.insertCell(-1)
+    }
+
+    function newCel(row_id, cel_content, cel_class){
+        row = document.getElementById(row_id)
+        cel = row.insertCell(-1)
+        cel.className = cel_class
+        cel.innerHTML = cel_content
+    }
+
+</script>
+
+
+
+<div class="container-fluid mt-2">
+    <table id="tableblender" class="table table-responsive table-sm table-centralized">
+        <thead class="thead-dark">
+            <tr class="d-flex table-reduced-head ">
+                <th class="col-1 " scope="col">  </th>
+                <th class="col-1 " scope="col">Evaporator</th>
+                <th class="col-2" scope="col">Type</th>
+                <th class="col-1" scope="col">Area</th>
+                <th class="col-1" scope="col">Pressure</th>
+                <th class="col-2" scope="col"> MOC </th>
+                <th class="col-2" scope="col"> Volume </th>
+                <th class="col-1" scope="col"> </th>
+                <th class="col-2" scope="col">Purchased Equipment Cost</th>
+                <th class="col-2" scope="col">Bare Module Cost</th>
+                <th class="col-2" scope="col">Base Equipment Cost </th>
+                <th class="col-2" scope="col">Base Bare Module Cost</th>
+            </tr>
+        </thead>
+        <tbody id="blenderBody">
+            {% for equipment in equipments %}
+
+            {% if equipment.equipment.name == "Evaporator" %}
+            <tr class="d-flex">
+                <th class="col-1" scope="row"> <button type="button" class="btn btn-outline-danger btn-sm deleteBtn"  onclick='removeEquipment("{{equipment.id}}")' > <i class="fas fa-trash"></i> </button></th>
+                <th class="col-1" scope="row">{{equipment.equipment_code}}</th>
+                <td class="col-2" scope="row">{{equipment.purchased_factor.description}}</td>
+                <td class="col-1" scope="row">{{ equipment.specification }}</td>
+                <td class="col-1" scope="row"> {{ equipment.specification }}  </td>
+                <td class="col-2" scope="row"> {{equipment.purchased_factor.material}}</td>
+                <td class="col-2" scope="row"> - </td>
+                <td class="col-1 money" scope="row"> - </td>
+                <td class="col-2 money" scope="row">{{equipment.purchased_equip_cost}}</td>
+                <td class="col-2 money" scope="row">{{equipment.baremodule_cost}}0</td>
+                <td class="col-2 money" scope="row">{{equipment.base_equipment_cost}}</td>
+                <td class="col-2 money" scope="row">{{equipment.base_baremodule_cost}}</td>
+            </tr>
+            {% endif%}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,109 @@
+<!-- Relação de scripts a serem implementados ao final de cada formulário de inserção de equipamento.
+    As funções aqui necessitam de duas funções auxiliares inseridas no em cada form. 
+-->
+<script>
+    $(document).ready(function () {
+        $('.date').mask('00/00/0000');
+        $('.money').mask('000.000.000.000.000,00', {
+            reverse: true
+        });
+        $('.money2').mask("$ #.##0,00", {
+            reverse: true
+        });
+
+    });
+
+    $('.typeEquipment').change(function () {
+        let endpoint = "{% url 'turton:calculateCost' project equipment_id %}";
+        if (checkMandatoryFields()) {
+            checkCost(endpoint, getData())
+        }
+
+    });
+
+    $('#equipment-attribute').change(function () {
+        let endpoint = "{% url 'turton:calculateCost' project equipment_id %}";
+        if (checkMandatoryFields()) {
+            checkCost(endpoint, getData())
+        }
+
+        // import limits
+
+    });
+
+    function checkCost(endpoint, data) {
+        $.ajax({
+            method: "GET",
+            url: endpoint,
+            data: data,
+            success: function (data) {
+                updateCostFields(data)
+
+            },
+            error: function (error_data) {
+                console.log(error_data)
+            },
+        });
+
+    }
+
+    function isBetweenRanges(range, value, name) {
+        if (value > range["max"]) {
+            confirmed = false
+            message = "O valor do campo " + name + " é maior do que " + String(range["max"]) +
+                ". Deseja substituir o valor pelo valor máximo ?"
+            alternative = range["max"]
+
+        } else if (value < range["min"]) {
+            confirmed = false
+            message = "O valor do campo " + name + " é menor do que " + String(range["min"]) +
+                ". Deseja substituir o valor pelo valor mínimo ?"
+            alternative = range["min"]
+        } else {
+            confirmed = true
+            message = null
+            alternative = null
+        }
+
+        return {
+            'confirmed': confirmed,
+            'message': message,
+            'alternative': alternative
+        }
+
+    }
+
+    function updateCostFields(data) {
+        document.getElementById('bareCost').value = data["bareCost"].toFixed(2)
+        document.getElementById('bareModule').value = data["bareModule"].toFixed(2)
+    }
+
+    $('#fakeButton').click(function () {
+
+        let data = getData();
+
+        $.ajax({
+            method: "GET",
+            url: "{% url 'turton:attributerange' equipment_id %}",
+            data: data,
+            success: function (response) {
+                range = isBetweenRanges(response, data["equipment_attribute"], data[
+                    "attribute_name"])
+                if (range["confirmed"] && checkMandatoryFields()) {
+                    document.getElementById("postButton").click()
+                } else {
+                    if (confirm("Não foi possível continuar. " + range["message"])) {
+                        document.getElementById('equipment-attribute').value = range["alternative"]
+                    } else {
+                        // Do nothing!
+                    }
+
+                }
+            },
+            error: function (error_data) {
+                alert("Ops, houve algum erro. Por favor, verifique os campos e tente novamente")
+                console.log(error_data)
+            },
+        });
+    });
+</script>

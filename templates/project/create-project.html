@@ -1,0 +1,37 @@
+{% extends 'equipamentos/partials/add-equipment-form.html' %}
+{% block equipment_title %} Adiconar Blender {% endblock %}
+{% block equipment_content %}
+
+
+<form action="{% url 'turton:postProject' %}"  method="POST">
+    {% csrf_token %}
+    <div class="form">
+
+        <h3> Criar projeto </h3>
+
+        <div class="container-fluid mb-2 mt-2" style="border:1px solid #cecece;">
+
+
+
+            <fieldset class="form-group row">
+
+                <div class="form-row ml-1">
+                    <div class="form-group col-md-7 ml:2" >
+                        <label for="cepci">CEPCI</label>
+                        <input type="number" step="0.01" class="form-control" id="cepci" name="cepci">
+                    </div>
+                    <div class="form-group col-md-7 ml:2" >
+                        <label for="projectNum">Project Number</label>
+                        <input type="number" step="1" class="form-control" id="projectNum" name="projectNum">
+                    </div>
+
+
+                </div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </div>
+    </div>
+</form>
+
+
+{% endblock %}

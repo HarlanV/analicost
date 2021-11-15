@@ -1,0 +1,146 @@
+{% extends 'partials/base.html' %}
+{% block title %} Graficos {% endblock %}
+{% block content %}
+
+<style>
+    .table-reduced-head {
+        font-size: 80% !important;
+    }
+
+    .table-centralized {
+        text-align: center;
+    }
+</style>
+
+<h1> Pagina de testes </h1>
+
+<div class="container-fluid">
+    <table id=tabletower class="table table-responsive table-sm table-centralized">
+        <thead class="thead-dark">
+            <tr class="d-flex table-reduced-head ">
+                <th class="col-1 " scope="col">Tower</th>
+                <th class="col-2" scope="col">Description</th>
+                <th class="col-1" scope="col">Height</th>
+                <th class="col-1" scope="col">Diameter</th>
+                <th class="col-2" scope="col">Tower MOC</th>
+                <th class="col-2" scope="col">Demister MOC</th>
+                <th class="col-1" scope="col">Pressure</th>
+                <th class="col-2" scope="col">Purchased Equipment Cost</th>
+                <th class="col-2" scope="col">Bare Module Cost</th>
+                <th class="col-2" scope="col">Base Equipment Cost </th>
+                <th class="col-2" scope="col">Base Bare Module Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="d-flex">
+                <th class="col-1" scope="row">T-101</th>
+                <td class="col-2" scope="row">Carbon Steel Valve Trays</td>
+                <td class="col-1" scope="row">18</td>
+                <td class="col-1" scope="row">1.72</td>
+                <td class="col-2" scope="row">Carbon Steel</td>
+                <td class="col-2" scope="row"> - </td>
+                <td class="col-1" scope="row">10</td>
+                <td class="col-2" scope="row">$ 21.700.000</td>
+                <td class="col-2" scope="row">$ 39.500.000</td>
+                <td class="col-2" scope="row">$ 245.000 </td>
+                <td class="col-2" scope="row">$ 394.000</td>
+            </tr>
+            <tr class="d-flex">
+                <th class="col-1" scope="row">T-101</th>
+                <td class="col-2" scope="row">Carbon Steel Valve Trays</td>
+                <td class="col-1" scope="row">18</td>
+                <td class="col-1" scope="row">1.72</td>
+                <td class="col-2" scope="row">Carbon Steel</td>
+                <td class="col-2" scope="row"> - </td>
+                <td class="col-1" scope="row">10</td>
+                <td class="col-2" scope="row">$ 21.700.000</td>
+                <td class="col-2" scope="row">$ 39.500.000</td>
+                <td class="col-2" scope="row">$ 245.000 </td>
+                <td class="col-2" scope="row">$ 394.000</td>
+            </tr>
+            <tr class="d-flex">
+                <th class="col-1" scope="row">T-101</th>
+                <td class="col-2" scope="row">Carbon Steel Valve Trays</td>
+                <td class="col-1" scope="row">18</td>
+                <td class="col-1" scope="row">1.72</td>
+                <td class="col-2" scope="row">Carbon Steel</td>
+                <td class="col-2" scope="row"> - </td>
+                <td class="col-1" scope="row">10</td>
+                <td class="col-2" scope="row">$ 21.700.000</td>
+                <td class="col-2" scope="row">$ 39.500.000</td>
+                <td class="col-2" scope="row">$ 245.000 </td>
+                <td class="col-2" scope="row">$ 394.000</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="justify-content-xl-center">
+    <div class="d-flex justify-content-center">
+        <h3> TOTAL </h3>
+    </div>
+</div>
+
+<div class="justify-content-xl-center">
+    <table class="table table-centralized">
+
+        <thead class="thead-light">
+            <tr class="d-flex table-reduced-head justify-content-center">
+                <th class="col-2" scope="col">Purchased Equipment Cost</th>
+                <th class="col-2" scope="col">Bare Module Cost</th>
+                <th class="col-2" scope="col">Base Equipment Cost </th>
+                <th class="col-2" scope="col">Base Bare Module Cost</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="d-flex justify-content-center">
+                <td class="col-2" scope="row">73.813.900</td>
+                <td class="col-2" scope="row">134.176.700</td>
+                <td class="col-2" scope="row">782.180</td>
+                <td class="col-2" scope="row">1.303.700</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+    <table class="table table-centralized">
+
+        <thead class="thead-light">
+            <tr class="d-flex table-reduced-head justify-content-center">
+                <th class="col-2" scope="col"> Total Module Cost </th>
+                <th class="col-2" scope="col"> Total Grass Roots Cost </th>
+                <th class="col-2" scope="col"> Total Equipment Cost </th>
+                <th class="col-2" scope="col"> Lang Factor Cost </th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            <tr class="d-flex justify-content-center">
+                <td class="col-2" scope="row">158.300.000</td>
+                <td class="col-2" scope="row">158.300.000</td>
+                <td class="col-2" scope="row">158.300.000</td>
+                <td class="col-2" scope="row">158.300.000</td>
+            </tr>
+
+
+
+        </tbody>
+    </table>
+
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}
