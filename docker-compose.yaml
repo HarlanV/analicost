@@ -12,9 +12,9 @@ services:
       # Password for root access
       MYSQL_ROOT_PASSWORD: 'password'
     volumes:
-      - type: volume
-      - source: db-volume
-      - target: /data/db
+        type: volume
+        source: db-volume
+        target: /data/db
 
   web:
     build: .
