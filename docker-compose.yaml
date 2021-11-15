@@ -19,9 +19,8 @@ services:
   web:
     build: .
     depends_on:
-      - migration
       - db
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python manage.py migrate && python manage.py loaddata seed.json &&python manage.py runserver 0.0.0.0:8000
     enviroments:
       - DATABASE_NAME=capcost
       - DATABASE_USER=user
