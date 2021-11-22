@@ -88,7 +88,6 @@ class EquipmentServices():
             if unitysConstants.first().is_default is True:
                 # conversor = (unitysConstants[0].convert_factor) / (unitysConstants[1].convert_factor)
                 conversor = (unitysConstants[1].convert_factor) / (unitysConstants[0].convert_factor)
-                teste_print("entrou aqui!")
             else:
                 # conversor = (unitysConstants[1].convert_factor) / (unitysConstants[0].convert_factor)
                 conversor = (unitysConstants[0].convert_factor) / (unitysConstants[1].convert_factor)
@@ -132,13 +131,13 @@ class EquipmentFormConfig():
         self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
 
         conversores = {}
+
+        # Verificar se ainda está sendo usado no front. Metodo de calculo foi modificado
         for t in self.equipmentForm["unitys"].values('unity', 'convert_factor', 'is_default'):
             if (t["is_default"]):
                 conversores["default"] = t["unity"]
             conversores[t["unity"]] = t["convert_factor"]
-            teste_print(t["is_default"])
 
-        # self.equipmentForm["teste"] = list(EquipmentUnity.objects.filter(dimension=self.equipment.dimension).values('unity', 'convert_factor'))
         self.equipmentForm["conversores"] = conversores
 
     def centrifugeForm(self):
