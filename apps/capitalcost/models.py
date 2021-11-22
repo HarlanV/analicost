@@ -1,5 +1,6 @@
 from django.db import models
 from turtonapp.models import Equipment, PurchasedFactor
+from equipamentos.models import EquipmentUnity
 
 # Create your models here.
 
@@ -60,6 +61,7 @@ class EquipmentProject(models.Model):
     spares = models.IntegerField(default=0, blank=True)
     specification = models.FloatField(default=0, blank=True)
     pressure = models.FloatField(default=0, blank=True)
+    preference_unity = models.ForeignKey(EquipmentUnity, on_delete=models.CASCADE, blank=True, null=True)
     # colocar aqui a dimensão
 
     # project = models.ManyToManyField(CapexProject)

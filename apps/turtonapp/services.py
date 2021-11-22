@@ -1,8 +1,6 @@
-from django.db.models import fields
-from django.http import response
-from django.shortcuts import get_object_or_404
+from django.db.models import Q
 
-from apps.equipamentos.views import equipamento
+from django.shortcuts import get_object_or_404
 from .models import BareModule, ComplementConstants, Equipment, MaterialFactor, PressureFactor, PurchasedFactor
 from capitalcost.models import CapexProject, Cepci
 from turtonapp import capex
@@ -74,7 +72,7 @@ class EquipmentServices():
 
         return info
 
-    def getRangeAttributes(equipment_id, specification, type):
+    def getRangeAttributes(equipment_id, specification, type, id_unity):
         args = {
             'equipment_id': int(equipment_id),
             'type': type,
@@ -82,10 +80,24 @@ class EquipmentServices():
         }
 
         equipment = capex.EquipmentCost(equipment_id, args, False, True)
+        
+        unitysConstants = EquipmentUnity.objects.filter(Q(dimension=equipment.equipment.dimension, is_default=True) | Q(id=id_unity))
+        
+        conversor = 1
+        if unitysConstants.count() > 1:
+            if unitysConstants.first().is_default is True:
+                # conversor = (unitysConstants[0].convert_factor) / (unitysConstants[1].convert_factor)
+                conversor = (unitysConstants[1].convert_factor) / (unitysConstants[0].convert_factor)
+                teste_print("entrou aqui!")
+            else:
+                # conversor = (unitysConstants[1].convert_factor) / (unitysConstants[0].convert_factor)
+                conversor = (unitysConstants[0].convert_factor) / (unitysConstants[1].convert_factor)
+        else:
+            pass  # (TODO: Exception aqui depois)
 
         range = {
-            'max': equipment.maxAttribute,
-            'min': equipment.minAttribute
+            'max': equipment.maxAttribute * conversor,
+            'min': equipment.minAttribute * conversor
         }
         return range
 
@@ -118,6 +130,16 @@ class EquipmentFormConfig():
         self.equipmentForm["types"] = self.q.values('description').distinct()
         self.equipmentForm["dimension"] = self.equipment.dimension
         self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
+
+        conversores = {}
+        for t in self.equipmentForm["unitys"].values('unity', 'convert_factor', 'is_default'):
+            if (t["is_default"]):
+                conversores["default"] = t["unity"]
+            conversores[t["unity"]] = t["convert_factor"]
+            teste_print(t["is_default"])
+
+        # self.equipmentForm["teste"] = list(EquipmentUnity.objects.filter(dimension=self.equipment.dimension).values('unity', 'convert_factor'))
+        self.equipmentForm["conversores"] = conversores
 
     def centrifugeForm(self):
         self.equipmentForm["types"] = self.q.values('description').distinct()
@@ -171,6 +193,7 @@ class ProjectServices():
         return deleted
 
 
+# Esta função está aqui temporariamente para geração de arquivos json do banco de dados.
 def temporarySeeder():
     """
     Dimension

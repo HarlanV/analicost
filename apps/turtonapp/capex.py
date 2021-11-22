@@ -1,6 +1,8 @@
+from equipamentos.models import EquipmentUnity
 from .models import BareModule, Equipment, PressureFactor, PurchasedFactor
 from capitalcost.models import CapexProject, EquipmentProject
 import math
+from django.db.models import Q
 
 
 class EquipmentCost():
@@ -10,10 +12,13 @@ class EquipmentCost():
         kwargs: (equipment_id, contants, allCosts)
         """
 
-        self.setIndividualConstants(equipment_id, args)
         self.equipment = Equipment.objects.filter(id=equipment_id).first()
+        self.defaultUnity = EquipmentUnity.objects.filter(dimension=self.equipment.dimension, is_default=True).first()
+        self.setIndividualConstants(equipment_id, args)
         self.set_purchase_constants(equipment_id, self.type)
         self.name = self.equipment.name
+        
+        # (TODO: CONFIRMAR SE É NECESSÁRIO AINDA ESSA VARIÁVEL ARGS)
         self.args = args
 
         # Caso queira apenas as informações das contantes, sem calcular custos
@@ -21,7 +26,7 @@ class EquipmentCost():
             return
 
         # Calcula preço de compra (sem BareModule)
-        self.baseCostCalculate(self.specification)
+        self.baseCostCalculate(self.specification * self.conversor)
 
         # Caso queria ser calculado todos os custos [PENSAR SE DEVE SER EXTRAÍDO DEPOIS]
         if allCosts is True:
@@ -48,7 +53,9 @@ class EquipmentCost():
             self.spares = int(args["spares"])
         else:
             self.spares = 0
-        pass
+        if "attribute_dimension" in args:
+            self.selectedUnity = EquipmentUnity.objects.filter(id=args["attribute_dimension"]).first()
+            self.conversor = (self.defaultUnity.convert_factor) / (self.selectedUnity.convert_factor)
 
     def set_purchase_constants(self, id, type):
         if self.moc is not None:
@@ -142,12 +149,12 @@ class EquipmentCost():
             self.baseEquipmentCost = self.upRound(self.baseCost)                           # 3 ok
             self.baseBaremoduleCost = self.upRound(bareModuleCost / self.reference)        # 4 trocado
 
-            t1 = self.purchasedEquipmentCost
-            t2 = self.bareModuleCost
-            t3 = self.baseEquipmentCost
-            t4 = self.baseBaremoduleCost
-            teste = str(t1) + "//" + str(t2) + "//" + str(t3) + "//" + str(t4)
-            self.teste_print(teste)
+            # t1 = self.purchasedEquipmentCost
+            # t2 = self.bareModuleCost
+            # t3 = self.baseEquipmentCost
+            # t4 = self.baseBaremoduleCost
+            # teste = str(t1) + "//" + str(t2) + "//" + str(t3) + "//" + str(t4)
+            # self.teste_print(teste)
 
     def teste_print(self, dados):
         print('--------------------------------------')
@@ -180,7 +187,8 @@ class EquipmentCost():
             'base_baremodule_cost': self.baseBaremoduleCost,
             'equipment': self.equipment,
             'spares': self.spares,
-            'specification': self.specification
+            'specification': self.specification,
+            'preference_unity': self.selectedUnity
         }
 
         if self.pressure is not None:

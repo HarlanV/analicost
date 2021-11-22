@@ -38,9 +38,9 @@
     <div class="form">
 
         <h3> {{equipment.name}} </h3>
-
+        
         <div class="container-fluid mb-2 mt-2" style="border:1px solid #cecece;">
-
+            <!-- TIPOS -->
             <fieldset class="form-group row">
                 <legend class="col-form-label col-sm-2 float-sm-left pt-0">Type</legend>
                 <div class="col-sm-10">
@@ -62,6 +62,30 @@
                 </div>
             </fieldset>
 
+            <!-- MATERIALS -->
+            <fieldset class="form-group row">
+                <legend class="col-form-label col-sm-2 float-sm-left pt-0">Type</legend>
+                <div class="col-sm-10">
+                    {% for material in materials %}
+                        {% if forloop.first is True %}
+                            <div class="form-check">
+                                <input class="form-check-input typeEquipment " type="radio" name="type"
+                                    id="{{material.material}}" value="{{material.material}}" checked >
+                        {% else %}
+                            <div class="form-check">
+                                <input class="form-check-input typeEquipment " type="radio" name="type"
+                                    id="{{material.material}}" value="{{material.material}}">                                    
+                        {% endif %}
+                        <label class="form-check-label" for="{{material.material}}">
+                            {{material.material}}
+                        </label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </fieldset>
+
+
+            <!-- ÁREA -->
             <fieldset class="form-group row">
 
                 <div class="form-row ml-1">
@@ -86,8 +110,6 @@
                 </div>
             </fieldset>
 
-
-
             <fieldset class="form-group row">
 
                 <div class="form-row ml-1">
@@ -100,7 +122,7 @@
             </fieldset>
 
 
-
+            <!-- SPARES -->
             <fieldset class="form-group row">
 
                 <div class="form-row ml-1">

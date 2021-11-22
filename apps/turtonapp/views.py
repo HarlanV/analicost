@@ -1,4 +1,3 @@
-from typing import TypeVar
 from django.http.response import JsonResponse
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
@@ -82,7 +81,7 @@ def equipmentCost(request, project, equipamento_id):
     return JsonResponse(costs)
 
 
-def attributeRange(request, equipamento_id):
+def attributeRange(request, equipamento_id, unity):
     type = request.GET["type"]
     specification = float(request.GET["equipment_attribute"])
 
@@ -90,8 +89,11 @@ def attributeRange(request, equipamento_id):
         'equipment_id': equipamento_id,
         'specification': specification,
         'type': type,
+        'id_unity': unity
     }
     range = getattr(services.EquipmentServices, 'getRangeAttributes')(**args)
+
+    teste_print(range)
 
     return JsonResponse(range)
 

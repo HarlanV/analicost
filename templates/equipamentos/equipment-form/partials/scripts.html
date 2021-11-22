@@ -21,14 +21,25 @@
 
     });
 
-    $('#equipment-attribute').change(function () {
+    $('#equipment_attribute').change(function () {
         let endpoint = "{% url 'turton:calculateCost' project equipment_id %}";
         if (checkMandatoryFields()) {
             checkCost(endpoint, getData())
         }
+    });
 
-        // import limits
+    $('#spares').change(function () {
+        let endpoint = "{% url 'turton:calculateCost' project equipment_id %}";
+        if (checkMandatoryFields()) {
+            checkCost(endpoint, getData())
+        }
+    });
 
+    $('#attribute_dimension').change(function () {
+        let endpoint = "{% url 'turton:calculateCost' project equipment_id %}";
+        if (checkMandatoryFields()) {
+            checkCost(endpoint, getData())
+        }
     });
 
     function checkCost(endpoint, data) {
@@ -48,15 +59,38 @@
     }
 
     function isBetweenRanges(range, value, name) {
+
+        ordermax = Math.log10(range["max"])
+        ordermin = Math.log10(range["min"])
+        console.log(range)
+        if (ordermax>0) {
+            range["max"] = Number((range["max"]).toFixed(2))
+            printmax = String( (range["max"] ))
+        }
+        else{
+            printmin = Number(range["max"]).toPrecision(Math.abs(ordermax)+3)
+            range["max"] = Number(range["max"].toFixed(Math.abs(ordermax)+3))
+        }
+
+        if (ordermin>0) {
+            range["min"] = Number((range["min"]).toFixed(2))
+            printmin = String(range["min"])
+        }
+        else{
+            printmin = Number(range["min"]).toPrecision(Math.abs(ordermax)+3)
+            range["min"] = Number(range["min"].toFixed(Math.abs(ordermax)+3))
+        }
+
+
         if (value > range["max"]) {
             confirmed = false
-            message = "O valor do campo " + name + " é maior do que " + String(range["max"]) +
+            message = "O valor do campo " + name + " é maior do que " + printmax +
                 ". Deseja substituir o valor pelo valor máximo ?"
             alternative = range["max"]
 
         } else if (value < range["min"]) {
             confirmed = false
-            message = "O valor do campo " + name + " é menor do que " + String(range["min"]) +
+            message = "O valor do campo " + name + " é menor do que " + printmin +
                 ". Deseja substituir o valor pelo valor mínimo ?"
             alternative = range["min"]
         } else {
@@ -79,23 +113,24 @@
     }
 
     $('#fakeButton').click(function () {
-
         let data = getData();
-
+        let attribute_dimension = document.getElementById('attribute_dimension').value;
+        console.log(attribute_dimension)
         $.ajax({
             method: "GET",
-            url: "{% url 'turton:attributerange' equipment_id %}",
+            url: "{% url 'turton:attributerange' equipment_id 999 %}".replace(999, attribute_dimension),
             data: data,
             success: function (response) {
                 range = isBetweenRanges(response, data["equipment_attribute"], data[
                     "attribute_name"])
                 if (range["confirmed"] && checkMandatoryFields()) {
-                    document.getElementById("postButton").click()
+                    // document.getElementById("postButton").click()
+                    console.log("clicado")
                 } else {
                     if (confirm("Não foi possível continuar. " + range["message"])) {
-                        document.getElementById('equipment-attribute').value = range["alternative"]
+                        document.getElementById('equipment_attribute').value = range["alternative"]
                     } else {
-                        // Do nothing!
+                        // Do nothing (yet)!
                     }
 
                 }
