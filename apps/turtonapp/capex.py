@@ -122,12 +122,9 @@ class EquipmentCost():
         else:
             pressureFactor = 1
             method = 1
-        self.original_cost = self.baseCost
         self.baseCost = (self.baseCost * self.cepci) / self.reference_cepci
-        # teste = self.baseCost
-        # self.teste_print(teste)
-        # Fator BareMobule
 
+        # Fator BareMobule
         bareModuleCost = self.baseCost * self.bareModuleFactor() * pressureFactor
         cP = bareModuleCost / self.reference
 
