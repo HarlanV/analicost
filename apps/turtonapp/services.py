@@ -30,6 +30,7 @@ class EquipmentServices():
         project = capex.ProjectCost(project, True)
         args['cepci'] = project.project.cepci
         args['equipment_id'] = int(equipment_id)
+        teste_print(args)
 
         equipment = capex.EquipmentCost(equipment_id, args, True)
 

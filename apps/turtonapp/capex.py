@@ -25,6 +25,7 @@ class EquipmentCost():
         if noCost is True:
             return
 
+
         # Calcula preço de compra (sem BareModule)
         self.baseCostCalculate(self.specification * self.conversor)
 
@@ -83,11 +84,13 @@ class EquipmentCost():
         """
 
         aux1 = self.k2 * math.log10(E)
-        aux2 = self.k3 * (math.log10(E)**2) * (self.spares + 1)
-        price = 10 ** (self.k1 + aux1 + aux2)
-
+        aux2 = self.k3 * (math.log10(E)**2) 
+        
+        price = (10 ** (self.k1 + aux1 + aux2)) * (self.spares + 1)
+        # self.teste_print(price)
         # teste = str(self.k1) + "//" + str(self.k2) + "//" + str(self.k3) + "//" + str(E)
-        # self.teste_print(teste)
+        teste = str(aux1) + "//" + str(aux2) + "//" + str(self.k1) + "//" + str(price)
+        self.teste_print(teste)
         self.baseCost = price
         return price
 
