@@ -8,16 +8,13 @@
     getData() -> JASON
 -->
 <script>
+
     // Aqui é personalizado os campos que devem ser verificados antes exibir o custo e/ou postar
     function checkMandatoryFields() {
         var type = $('input[name=type]:checked').val()
         var atribute = document.getElementById('equipment_attribute').value
-
-        if (atribute == null || atribute == "" || atribute <=0 || type == null || type == "") {
-            return false
-        } else {
-            return true
-        }
+        temVazio = [atribute, type].some(isEmptyValue)
+        return !temVazio
     }
 
     // Relação de campos e valores necessários para calculo do BareCost
@@ -45,21 +42,21 @@
                 <legend class="col-form-label col-sm-2 float-sm-left pt-0">Type</legend>
                 <div class="col-sm-10">
                     {% for type in types %}
-                        {% if forloop.first is True %}
-                            <div class="form-check">
-                                <input class="form-check-input typeEquipment " type="radio" name="type"
-                                    id="{{type.description}}" value="{{type.description}}" checked >
+                    {% if forloop.first is True %}
+                    <div class="form-check">
+                        <input class="form-check-input typeEquipment " type="radio" name="type"
+                            id="{{type.description}}" value="{{type.description}}" checked>
                         {% else %}
-                            <div class="form-check">
-                                <input class="form-check-input typeEquipment " type="radio" name="type"
-                                    id="{{type.description}}" value="{{type.description}}">                                    
-                        {% endif %}
-                        <label class="form-check-label" for="{{type.description}}">
-                            {{type.description}}
-                        </label>
+                        <div class="form-check">
+                            <input class="form-check-input typeEquipment " type="radio" name="type"
+                                id="{{type.description}}" value="{{type.description}}">
+                            {% endif %}
+                            <label class="form-check-label" for="{{type.description}}">
+                                {{type.description}}
+                            </label>
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
-                </div>
             </fieldset>
 
             <fieldset class="form-group row">
@@ -77,7 +74,7 @@
                             {% if unity.is_default is True %}
                             <option value="{{unity.id}}" selected>{{unity.unity}}</option>
                             {% else %}
-                            <option value="{{unity.id}}" > {{unity.unity}} </option>
+                            <option value="{{unity.id}}"> {{unity.unity}} </option>
                             {% endif %}
                             {% endfor %}
                         </select>
@@ -91,7 +88,7 @@
                 <div class="form-row ml-1">
                     <div class="form-group col-md-7 ml:2">
                         <label for="spares">Spares</label>
-                        <input type="number" step="1" min=0 class="form-control" id="spares" name="spares" value=0 >
+                        <input type="number" step="1" min=0 class="form-control" id="spares" name="spares" value=0>
                     </div>
 
 
