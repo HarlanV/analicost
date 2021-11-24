@@ -12,12 +12,8 @@
     function checkMandatoryFields() {
         var type = $('input[name=type]:checked').val()
         var atribute = document.getElementById('equipment_attribute').value
-
-        if (atribute == null || atribute == "" || atribute <=0 || type == null || type == "") {
-            return false
-        } else {
-            return true
-        }
+        temVazio = [atribute, type].some(isEmptyValue)
+        return !temVazio
     }
 
     // Relação de campos e valores necessários para calculo do BareCost
@@ -28,6 +24,7 @@
             'equipment_attribute': document.getElementById('equipment_attribute').value,
             'attribute_name': "Area",
             'spares': document.getElementById('spares').value,
+            'attribute_dimension': document.getElementById('attribute_dimension').value,
         };
 
     }
@@ -71,13 +68,13 @@
                             name="equipment_attribute">
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="selectUnity">Unity</label>
-                        <select id="selectUnity" class="form-control" name="attribute-dimension">
+                        <label for="attribute_dimension">Unity</label>
+                        <select id="attribute_dimension" class="form-control" name="attribute_dimension">
                             {% for unity in unitys %}
                             {% if unity.is_default is True %}
-                            <option selected> {{unity.unity}} </option>
+                            <option value="{{unity.id}}" selected>{{unity.unity}}</option>
                             {% else %}
-                            <option> {{unity.unity}} </option>
+                            <option value="{{unity.id}}"> {{unity.unity}} </option>
                             {% endif %}
                             {% endfor %}
                         </select>

@@ -44,6 +44,12 @@
     {% if tbl == "Evaporator" %}
         {% include 'project/tables/evaporator.html'%}
     {% endif%}
+    {% if tbl == "Compressor" %}
+        {% include 'project/tables/compressor.html'%}
+    {% endif%}
+    {% if tbl == "Conveyor" %}
+        {% include 'project/tables/conveyor.html'%}
+    {% endif%}
 
 {% endfor %}
 {% include 'project/tables/total-capex-report.html' %}

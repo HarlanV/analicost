@@ -2,42 +2,105 @@
 {% block equipment_title %} Adiconar Blender {% endblock %}
 {% block equipment_content %}
 
+<!-- Essa relação de script é individual para cada form.
+    Lista de funções obrigatórias:
+    checkMandatoryFields() -> Boolean
+    getData() -> JASON
+-->
+<script>
+    // Aqui é personalizado os campos que devem ser verificados antes exibir o custo e/ou postar
+    function checkMandatoryFields() {
+        var type = $('input[name=type]:checked').val()
+        var atribute = document.getElementById('equipment_attribute').value
+        temVazio = [atribute, type].some(isEmptyValue)
+        return !temVazio
+    }
 
-{% include 'equipamentos/equipment-form/partials/head-form.html' %}
+    // Relação de campos e valores necessários para calculo do BareCost
+    function getData() {
 
+        return {
+            'type': $('input[name=type]:checked').val(),
+            'equipment_attribute': document.getElementById('equipment_attribute').value,
+            'attribute_name': "Area",
+            'spares': document.getElementById('spares').value,
+            'attribute_dimension': document.getElementById('attribute_dimension').value,
+            'moc': $('input[name=moc]:checked').val(),
+        }
 
+    }
+</script>
+
+<form action="{% url 'turton:postEquipment' project equipment_id %}" method="POST">
+    {% csrf_token %}
+    <div class="form">
+
+        <h3> {{equipment.name}} </h3>
+
+        <div class="container-fluid mb-2 mt-2" style="border:1px solid #cecece;">
+            <!-- TIPOS -->
             <fieldset class="form-group row">
-                <legend class="col-form-label col-sm-2 float-sm-left pt-0">Construction Material</legend>
+                <legend class="col-form-label col-sm-2 float-sm-left pt-0">Type</legend>
                 <div class="col-sm-10">
-                
-                    {% for material in materials %}
+                    {% for type in types %}
+                    {% if forloop.first is True %}
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="type" id="{{type.description}}"
-                            value="{{type.description}}">
-                        <label class="form-check-label" for="gridRadios1">
-                            {{material.material}}
-                        </label>
+                        <input class="form-check-input typeEquipment " type="radio" name="type"
+                            id="{{type.description}}" value="{{type.description}}" checked>
+                        {% else %}
+                        <div class="form-check">
+                            <input class="form-check-input typeEquipment " type="radio" name="type"
+                                id="{{type.description}}" value="{{type.description}}">
+                            {% endif %}
+                            <label class="form-check-label" for="{{type.description}}">
+                                {{type.description}}
+                            </label>
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
-                </div>
             </fieldset>
 
+            <!-- MATERIALS -->
+            <fieldset class="form-group row">
+                <legend class="col-form-label col-sm-2 float-sm-left pt-0">Material of Construction</legend>
+                <div class="col-sm-10">
+                    {% for material in materials %}
+                    {% if forloop.first is True %}
+                    <div class="form-check">
+                        <input class="form-check-input typeEquipment " type="radio" name="moc"
+                            id="{{material.material}}" value="{{material.material}}" checked>
+                        {% else %}
+                        <div class="form-check">
+                            <input class="form-check-input typeEquipment " type="radio" name="moc"
+                                id="{{material.material}}" value="{{material.material}}">
+                            {% endif %}
+                            <label class="form-check-label" for="{{material.material}}">
+                                {{material.material}}
+                            </label>
+                        </div>
+                        {% endfor %}
+                    </div>
+            </fieldset>
+
+
+            <!-- ÁREA -->
             <fieldset class="form-group row">
 
                 <div class="form-row ml-1">
-                    <div class="form-group col-md-7 ml:2" >
-                        <label for="inputCity">Fluid Power</label>
-                        <input type="number" step="0.01" class="form-control" id="equipment-attribute" name="equipment-attribute">
+                    <div class="form-group col-md-7 ml:2">
+                        <label for="equipment_attribute">Fluid Power</label>
+                        <input type="number" step="0.01" min="0.01" class="form-control" id="equipment_attribute"
+                            name="equipment_attribute">
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="inputState">Unity</label>
-                        <select id="inputState" class="form-control" name= "attribute-dimension">
+                        <label for="attribute_dimension">Unity</label>
+                        <select id="attribute_dimension" class="form-control" name="attribute_dimension">
                             {% for unity in unitys %}
-                                {% if unity.is_default is True %}
-                                    <option selected > {{unity.unity}} </option>
-                                {% else %}
-                                    <option> {{unity.unity}} </option>
-                                {% endif %}
+                            {% if unity.is_default is True %}
+                            <option value="{{unity.id}}" selected>{{unity.unity}}</option>
+                            {% else %}
+                            <option value="{{unity.id}}"> {{unity.unity}} </option>
+                            {% endif %}
                             {% endfor %}
                         </select>
                     </div>
@@ -45,14 +108,14 @@
                 </div>
             </fieldset>
 
+            <!-- SPARES -->
             <fieldset class="form-group row">
 
                 <div class="form-row ml-1">
-                    <div class="form-group col-md-7 ml:2" >
-                        <label for="inputCity">Spares</label>
-                        <input type="number" step="1" min=0 class="form-control" id="area" name="area">
+                    <div class="form-group col-md-7 ml:2">
+                        <label for="spares">Spares</label>
+                        <input type="number" step="1" min=0 class="form-control" id="spares" name="spares" value=0>
                     </div>
-
 
                 </div>
             </fieldset>
@@ -61,6 +124,8 @@
         </div>
     </div>
 </form>
+<button type="submit" id="fakeButton" class="btn btn-primary mb-2">Submit</button>
 
+{% include 'equipamentos/equipment-form/partials/scripts.html' %}
 
 {% endblock %}

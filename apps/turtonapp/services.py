@@ -30,8 +30,6 @@ class EquipmentServices():
         project = capex.ProjectCost(project, True)
         args['cepci'] = project.project.cepci
         args['equipment_id'] = int(equipment_id)
-        teste_print(args)
-
         equipment = capex.EquipmentCost(equipment_id, args, True)
 
         costs = {
@@ -153,6 +151,12 @@ class EquipmentFormConfig():
         self.equipmentForm["materials"] = self.q.values('material').distinct()
 
     def evaporatorForm(self):
+        self.equipmentForm["types"] = self.q.values('description').distinct()
+        self.equipmentForm["dimension"] = self.equipment.dimension
+        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
+        self.equipmentForm["materials"] = self.q.values('material').distinct()
+
+    def conveyorForm(self):
         self.equipmentForm["types"] = self.q.values('description').distinct()
         self.equipmentForm["dimension"] = self.equipment.dimension
         self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)

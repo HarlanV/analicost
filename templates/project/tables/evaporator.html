@@ -9,27 +9,6 @@
 </style>
 
 
-
-<script>
-    function newRow(table_name, code){
-        tbody = document.getElementById('blenderBody-test')
-        row = tbody.insertRow(-1);
-        row.className = 'testeClasse'
-        row.id = code
-        cel = row.insertCell(-1)
-    }
-
-    function newCel(row_id, cel_content, cel_class){
-        row = document.getElementById(row_id)
-        cel = row.insertCell(-1)
-        cel.className = cel_class
-        cel.innerHTML = cel_content
-    }
-
-</script>
-
-
-
 <div class="container-fluid mt-2">
     <table id="tableblender" class="table table-responsive table-sm table-centralized">
         <thead class="thead-dark">

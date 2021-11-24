@@ -11,7 +11,6 @@ class EquipmentCost():
         """
         kwargs: (equipment_id, contants, allCosts)
         """
-
         self.equipment = Equipment.objects.filter(id=equipment_id).first()
         self.defaultUnity = EquipmentUnity.objects.filter(dimension=self.equipment.dimension, is_default=True).first()
         self.setIndividualConstants(equipment_id, args)
@@ -35,9 +34,8 @@ class EquipmentCost():
     # Função para atribuição de variáveis
     def setIndividualConstants(self, equipment_id: int, args: dict):
         self.type = args["type"]
-
         if "moc" in args:
-            args["pressure"] = 100
+            # args["pressure"] = 100
             self.moc = args["moc"]
         else:
             self.moc = None
@@ -49,7 +47,8 @@ class EquipmentCost():
             self.cepci = args["cepci"]
         if "equipment_attribute" in args:
             self.specification = float(args["equipment_attribute"])
-        if "spares" in args:
+        if ("spares" in args and args["spares"].isspace()):
+            teste_print()
             self.spares = int(args["spares"])
         else:
             self.spares = 0
@@ -85,8 +84,6 @@ class EquipmentCost():
         aux1 = self.k2 * math.log10(E)
         aux2 = self.k3 * (math.log10(E)**2)
         price = (10 ** (self.k1 + aux1 + aux2)) * (self.spares + 1)
-        teste = str(aux1) + "//" + str(aux2) + "//" + str(self.k1) + "//" + str(price)
-        self.teste_print(teste)
         self.baseCost = price
         return price
 
@@ -116,12 +113,13 @@ class EquipmentCost():
 
     def setCosts(self):
 
+        pressureFactor = 1
+        method = "comum"
+        if self.moc is not None:
+            method = "alternativo"
         if self.pressure is not None:
             pressureFactor = self.pressureFactorCalc(self.pressure)
             method = 2
-        else:
-            pressureFactor = 1
-            method = 1
         self.baseCost = (self.baseCost * self.cepci) / self.reference_cepci
 
         # Fator BareMobule
@@ -132,7 +130,9 @@ class EquipmentCost():
 
         # Aqui nós temos uma diferença nos métodos comparados com o Blender e Evaporador.
         # Esse Method é temporário até entender melhor se há um erro no calculo
-        if method == 2:
+        # Obs: para o "comum" temos self.reference = 1
+        #  ???? reference = 1/reference ?????
+        if method == "alternativo":
             # Evaporator
             self.purchasedEquipmentCost = self.upRound(bareModuleCost / self.reference)    # 1 trocado
             self.bareModuleCost = self.upRound(bareModuleCost)                             # 2 ok
@@ -150,14 +150,7 @@ class EquipmentCost():
             # t3 = self.baseEquipmentCost
             # t4 = self.baseBaremoduleCost
             # teste = str(t1) + "//" + str(t2) + "//" + str(t3) + "//" + str(t4)
-            # self.teste_print(teste)
-
-    def teste_print(self, dados):
-        print('--------------------------------------')
-        print('--------------------------------------')
-        print(dados)
-        print('--------------------------------------')
-        print('--------------------------------------')
+            # teste_print(teste)
 
     # Função auxiliar para arredondamento de valor significativo. Regra de Turton no CAPCOST {encapsular}
     def upRound(self, value):
@@ -279,13 +272,6 @@ class ProjectCost():
         project.save()
         self.project = project
 
-    def teste_print(self, dados):
-        print('--------------------------------------')
-        print('--------------------------------------')
-        print(dados)
-        print('--------------------------------------')
-        print('--------------------------------------')
-
     def listEquipmentsProject(self):
         self.equipments = EquipmentProject.objects.filter(project=self.project)
         listDistinctEquipment = (EquipmentProject.objects.filter(project=self.project).values('equipment__name').distinct())
@@ -341,3 +327,13 @@ class ProjectCost():
             return True
         else:
             return False
+
+
+def teste_print(dados):
+    print('--------------------------------------')
+    print('--------------------------------------')
+    print(dados)
+    print('--------------------------------------')
+    print('--------------------------------------')
+
+
