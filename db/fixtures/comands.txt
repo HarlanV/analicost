@@ -1,0 +1,11 @@
+python manage.py loaddata dimension.json
+python manage.py loaddata equipUnity.json
+python manage.py loaddata equip.json
+python manage.py loaddata purchaseFact.json
+python manage.py loaddata pressureFact.json
+python manage.py loaddata materialFact.json
+python manage.py loaddata baremodule.json
+python manage.py loaddata complement.json
+python manage.py loaddata cepci.json
+
+python manage.py loaddata seed.json

@@ -1,0 +1,282 @@
+[
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 1,
+        "fields": {
+            "constant": "threshold",
+            "value": 0.01,
+            "description": "Threshold",
+            "equipment": 38
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 2,
+        "fields": {
+            "constant": "threshold",
+            "value": 0.01,
+            "description": "Threshold",
+            "equipment": 39
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 3,
+        "fields": {
+            "constant": "threshold",
+            "value": 0.04,
+            "description": "Threshold",
+            "equipment": 40
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 4,
+        "fields": {
+            "constant": "threshold",
+            "value": 0.04,
+            "description": "Threshold",
+            "equipment": 41
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 5,
+        "fields": {
+            "constant": "threshold",
+            "value": 0.01,
+            "description": "Threshold",
+            "equipment": 42
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 6,
+        "fields": {
+            "constant": "threshold",
+            "value": 0.01,
+            "description": "Threshold",
+            "equipment": 43
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 7,
+        "fields": {
+            "constant": "threshold",
+            "value": 0.04,
+            "description": "Threshold",
+            "equipment": 44
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 8,
+        "fields": {
+            "constant": "threshold",
+            "value": 0.04,
+            "description": "Threshold",
+            "equipment": 45
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 9,
+        "fields": {
+            "constant": "threshold",
+            "value": 0.01,
+            "description": "Threshold",
+            "equipment": 46
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 10,
+        "fields": {
+            "constant": "threshold",
+            "value": 0.01,
+            "description": "Threshold",
+            "equipment": 47
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 11,
+        "fields": {
+            "constant": "threshold",
+            "value": 0.04,
+            "description": "Threshold",
+            "equipment": 48
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 12,
+        "fields": {
+            "constant": "threshold",
+            "value": 0.04,
+            "description": "Threshold",
+            "equipment": 49
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 13,
+        "fields": {
+            "constant": "threshold",
+            "value": 0.01,
+            "description": "Threshold",
+            "equipment": 50
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 14,
+        "fields": {
+            "constant": "threshold",
+            "value": 0.01,
+            "description": "Threshold",
+            "equipment": 51
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 15,
+        "fields": {
+            "constant": "threshold",
+            "value": 0.04,
+            "description": "Threshold",
+            "equipment": 52
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 16,
+        "fields": {
+            "constant": "threshold",
+            "value": 0.04,
+            "description": "Threshold",
+            "equipment": 53
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 17,
+        "fields": {
+            "constant": "FT1",
+            "value": 1,
+            "description": "Steam Supreheat Factor",
+            "equipment": 72
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 18,
+        "fields": {
+            "constant": "FT2",
+            "value": 0.00184,
+            "description": "Steam Supreheat Factor",
+            "equipment": 72
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 19,
+        "fields": {
+            "constant": "FT3",
+            "value": 0.00000335,
+            "description": "Steam Supreheat Factor",
+            "equipment": 72
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 20,
+        "fields": {
+            "constant": "FT1",
+            "value": 1,
+            "description": "Steam Supreheat Factor",
+            "equipment": 73
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 21,
+        "fields": {
+            "constant": "FT2",
+            "value": 0.00184,
+            "description": "Steam Supreheat Factor",
+            "equipment": 73
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 22,
+        "fields": {
+            "constant": "FT3",
+            "value": 0.00000335,
+            "description": "Steam Supreheat Factor",
+            "equipment": 73
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 23,
+        "fields": {
+            "constant": "FT1",
+            "value": 1,
+            "description": "Steam Supreheat Factor",
+            "equipment": 74
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 24,
+        "fields": {
+            "constant": "FT2",
+            "value": 0.00184,
+            "description": "Steam Supreheat Factor",
+            "equipment": 74
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 25,
+        "fields": {
+            "constant": "FT3",
+            "value": 0.00000335,
+            "description": "Steam Supreheat Factor",
+            "equipment": 74
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 26,
+        "fields": {
+            "constant": "FT1",
+            "value": 1,
+            "description": "Steam Supreheat Factor",
+            "equipment": 75
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 27,
+        "fields": {
+            "constant": "FT2",
+            "value": 0.00184,
+            "description": "Steam Supreheat Factor",
+            "equipment": 75
+        }
+    },
+    {
+        "model": "turtonapp.ComplementConstants",
+        "pk": 28,
+        "fields": {
+            "constant": "FT3",
+            "value": 0.00000335,
+            "description": "Steam Supreheat Factor",
+            "equipment": 75
+        }
+    }
+]

@@ -1,11 +1,9 @@
 from django.db.models import Q
 
 from django.shortcuts import get_object_or_404
-from .models import BareModule, ComplementConstants, Equipment, MaterialFactor, PressureFactor, PurchasedFactor
+from .models import BareModule, ComplementConstants, Equipment, MaterialFactor, PressureFactor, PurchasedFactor, EquipmentUnity, Dimension
 from capitalcost.models import CapexProject, Cepci
 from turtonapp import capex
-from turtonapp.models import Dimension
-from equipamentos.models import EquipmentUnity
 
 
 class EquipmentServices():

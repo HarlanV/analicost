@@ -99,3 +99,17 @@ class ComplementConstants(models.Model):
 
     class Meta:
         db_table = "turton_complement_constants"
+
+
+class EquipmentUnity(models.Model):
+    dimension = models.ForeignKey(Dimension, on_delete=models.CASCADE)
+    unity = models.CharField(max_length=300, null=True)
+    unity_math = models.CharField(max_length=300, null=True)
+    convert_factor = models.FloatField(null=True, blank=True)
+    is_default = models.BooleanField(null=True, blank=True)
+
+    def __str__(self):
+        return self.unity
+
+    class Meta:
+        db_table = "equipment_unity"

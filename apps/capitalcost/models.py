@@ -1,6 +1,5 @@
 from django.db import models
-from turtonapp.models import Equipment, PurchasedFactor
-from equipamentos.models import EquipmentUnity
+from turtonapp.models import Equipment, PurchasedFactor, EquipmentUnity
 
 # Create your models here.
 

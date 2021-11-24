@@ -38,7 +38,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'turtonapp',
-    'equipamentos',
     'usuarioapp',
     'capitalcost',
     'django.contrib.admin',

@@ -1,5 +1,4 @@
-from equipamentos.models import EquipmentUnity
-from .models import BareModule, Equipment, PressureFactor, PurchasedFactor
+from .models import BareModule, Equipment, PressureFactor, PurchasedFactor, EquipmentUnity
 from capitalcost.models import CapexProject, EquipmentProject
 import math
 from django.db.models import Q
