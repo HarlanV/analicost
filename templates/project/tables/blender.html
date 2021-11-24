@@ -32,7 +32,7 @@
             {% if equipment.equipment.name == "Blender" %}
             <tr class="d-flex">
                 <th class="col-1" scope="row"> <button type="button" class="btn btn-outline-danger btn-sm deleteBtn"  onclick='removeEquipment("{{equipment.id}}")' > <i class="fas fa-trash"></i> </button></th>
-                <th class="col-1" scope="row">{{equipment.equipment_code}}</th>
+                <th class="col-1" scope="row"><a href="#"> {{equipment.equipment_code}} </a></th>
                 <td class="col-2" scope="row">{{equipment.purchased_factor.description}}</td>
                 <td class="col-1" scope="row">{{equipment.specification}}  {{equipment.preference_unity}}</td>
                 <td class="col-1" scope="row"> {{ equipment.spares }} </td>
