@@ -15,9 +15,6 @@ class EquipmentCost():
         self.setIndividualConstants(equipment_id, args)
         self.set_purchase_constants(equipment_id, self.type)
         self.name = self.equipment.name
-        
-        # (TODO: CONFIRMAR SE É NECESSÁRIO AINDA ESSA VARIÁVEL ARGS)
-        self.args = args
 
         # Caso queira apenas as informações das contantes, sem calcular custos
         if noCost is True:
@@ -34,7 +31,6 @@ class EquipmentCost():
     def setIndividualConstants(self, equipment_id: int, args: dict):
         self.type = args["type"]
         if "moc" in args:
-            # args["pressure"] = 100
             self.moc = args["moc"]
         else:
             self.moc = None
@@ -46,8 +42,7 @@ class EquipmentCost():
             self.cepci = args["cepci"]
         if "equipment_attribute" in args:
             self.specification = float(args["equipment_attribute"])
-        if ("spares" in args and args["spares"].isspace()):
-            teste_print()
+        if ("spares" in args and args["spares"] != ""):
             self.spares = int(args["spares"])
         else:
             self.spares = 0
@@ -79,7 +74,6 @@ class EquipmentCost():
         Função recebe um valor de especificação E (área, volume, etc) e calcula
         o custo de compra básico (sem B.M.)
         """
-
         aux1 = self.k2 * math.log10(E)
         aux2 = self.k3 * (math.log10(E)**2)
         price = (10 ** (self.k1 + aux1 + aux2)) * (self.spares + 1)
@@ -204,7 +198,10 @@ class ProjectCost():
 
     def __init__(self, num, noCreate=False):
 
+        # Checa se projeto já existe...
         hasProject = self.checkProject(num)
+
+        # caso seja solicitado para não criar ou já exista...
         if noCreate is False and hasProject is False:
             self.createProject(num)
         else:
@@ -243,21 +240,22 @@ class ProjectCost():
 
         project = self.project
 
-        # listEquipments = self.listEquipmentsProject()
+        # Zera os contadores de soma
         listEquipments = self.equipments
-        equipment_code = 0
         purchased_equip_cost = 0
         baremodule_cost = 0
         base_equipment_cost = 0
         base_baremodule_cost = 0
 
+        # Faz as novas somas iterando pelos equipamentos
         for equipment in listEquipments:
             purchased_equip_cost += equipment.purchased_equip_cost
             baremodule_cost += equipment.baremodule_cost
             base_equipment_cost += equipment.base_equipment_cost
             base_baremodule_cost += equipment.base_baremodule_cost
 
-        project.equipment_code = equipment_code
+        # project.equipment_code = equipment_code
+        teste_print(project.purchased_equip_cost)
         project.purchased_equip_cost = purchased_equip_cost
         project.baremodule_cost = baremodule_cost
         project.base_equipment_cost = base_equipment_cost
@@ -286,9 +284,13 @@ class ProjectCost():
 
         return (round((value / (10**digits))) * (10**digits))
 
+    # Confirma se um projeto já existe
     def checkProject(self, num):
+        """
+        Confirms if a project already exists, given its number
+        """
         project = self.getProject(num)
-        self.setProject(100, project)
+        # self.setProject(100, project)
         if project:
             return True
         else:
@@ -334,5 +336,3 @@ def teste_print(dados):
     print(dados)
     print('--------------------------------------')
     print('--------------------------------------')
-
-

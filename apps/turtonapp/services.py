@@ -77,9 +77,7 @@ class EquipmentServices():
         }
 
         equipment = capex.EquipmentCost(equipment_id, args, False, True)
-        
         unitysConstants = EquipmentUnity.objects.filter(Q(dimension=equipment.equipment.dimension, is_default=True) | Q(id=id_unity))
-        
         conversor = 1
         if unitysConstants.count() > 1:
             if unitysConstants.first().is_default is True:
@@ -126,16 +124,6 @@ class EquipmentFormConfig():
         self.equipmentForm["types"] = self.q.values('description').distinct()
         self.equipmentForm["dimension"] = self.equipment.dimension
         self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-
-        conversores = {}
-
-        # Verificar se ainda está sendo usado no front. Metodo de calculo foi modificado
-        for t in self.equipmentForm["unitys"].values('unity', 'convert_factor', 'is_default'):
-            if (t["is_default"]):
-                conversores["default"] = t["unity"]
-            conversores[t["unity"]] = t["convert_factor"]
-
-        self.equipmentForm["conversores"] = conversores
 
     def centrifugeForm(self):
         self.equipmentForm["types"] = self.q.values('description').distinct()

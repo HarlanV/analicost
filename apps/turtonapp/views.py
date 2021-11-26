@@ -9,10 +9,9 @@ def index(request):
     list_projects = services.ProjectServices.listProjects()
 
     if not list_projects:
-        teste_print("VAZIO!!!")
         dados = {}
         return render(request, 'project/index.html', dados)
-   
+
     num = list_projects[0]
     return redirect('turton:project', project=num)
 
@@ -64,8 +63,7 @@ def addEquipmentProject_POST(request, project, equipamento_id):
     }
 
     getattr(services.EquipmentServices, 'addEquipmentToProjec')(**data)
-
-    return redirect('turton:index')
+    return redirect('turton:project', project=project)
 
 
 def equipmentCost(request, project, equipamento_id):
@@ -93,14 +91,11 @@ def attributeRange(request, equipamento_id, unity):
     }
     range = getattr(services.EquipmentServices, 'getRangeAttributes')(**args)
 
-    teste_print(range)
-
     return JsonResponse(range)
 
 
 def removeEquipment_DELETE(request, project, equipamento_id):
     sucesso = services.ProjectServices().removeEquipment(project, equipamento_id)
-    # teste_print(project)
     data = {
         'sucesso': sucesso
     }

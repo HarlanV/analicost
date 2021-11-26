@@ -1,8 +1,34 @@
 {% extends 'equipamentos/partials/add-equipment-form.html' %}
 {% block equipment_title %} Adiconar Blender {% endblock %}
 {% block equipment_content %}
+{{ conversores|json_script:"conversores" }}
+<!-- Essa relação de script é individual para cada form.
+    Lista de funções obrigatórias:
+    checkMandatoryFields() -> Boolean
+    getData() -> JASON
+-->
+<script>
 
-{% include 'partials/scripts/insert_equipment_form/blender.html' %}
+    // Aqui é personalizado os campos que devem ser verificados antes exibir o custo e/ou postar
+    function checkMandatoryFields() {
+        var type = $('input[name=type]:checked').val()
+        var atribute = document.getElementById('equipment_attribute').value
+        temVazio = [atribute, type].some(isEmptyValue)
+        return !temVazio
+    }
+
+    // Relação de campos e valores necessários para calculo do BareCost
+    function getData() {
+
+        return {
+            'type': $('input[name=type]:checked').val(),
+            'equipment_attribute': document.getElementById('equipment_attribute').value,
+            'attribute_name': "Area",
+            'attribute_dimension': document.getElementById('attribute_dimension').value,
+        };
+    }
+</script>
+
 <form action="{% url 'turton:postEquipment' project equipment_id %}" method="POST">
     {% csrf_token %}
     <div class="form">
@@ -36,7 +62,7 @@
 
                 <div class="form-row ml-1">
                     <div class="form-group col-md-7 ml:2">
-                        <label for="equipment_attribute">Volume of Blender</label>
+                        <label for="equipment_attribute">Area</label>
                         <input type="number" step="0.01" min="0.01" class="form-control" id="equipment_attribute"
                             name="equipment_attribute">
                     </div>
@@ -56,24 +82,12 @@
                 </div>
             </fieldset>
 
-            <fieldset class="form-group row">
-
-                <div class="form-row ml-1">
-                    <div class="form-group col-md-7 ml:2">
-                        <label for="spares">Spares</label>
-                        <input type="number" step="1" min=0 class="form-control" id="spares" name="spares" value=0>
-                    </div>
-
-
-                </div>
-            </fieldset>
-
-            {% include 'equipamentos/partials/bare-fields.html' %}
+            {% include 'equipamentos/equipment-form/partials/bare-fields.html' %}
         </div>
     </div>
 </form>
 <button type="submit" id="fakeButton" class="btn btn-primary mb-2">Submit</button>
 
-{% include 'partials/scripts/insert_equipment_form/base.html' %}
+{% include 'equipamentos/equipment-form/partials/scripts.html' %}
 
 {% endblock %}

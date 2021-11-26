@@ -1,0 +1,21 @@
+<script>
+
+    // Aqui é personalizado os campos que devem ser verificados antes exibir o custo e/ou postar
+    function checkMandatoryFields() {
+        var type = $('input[name=type]:checked').val()
+        var atribute = document.getElementById('equipment_attribute').value
+        temVazio = [atribute, type].some(isEmptyValue)
+        return !temVazio
+    }
+
+    // Relação de campos e valores necessários para calculo do BareCost
+    function getData() {
+
+        return {
+            'type': $('input[name=type]:checked').val(),
+            'equipment_attribute': document.getElementById('equipment_attribute').value,
+            'spares': document.getElementById('spares').value,
+            'attribute_dimension': document.getElementById('attribute_dimension').value,
+        };
+    }
+</script>

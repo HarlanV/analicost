@@ -61,9 +61,6 @@ class EquipmentProject(models.Model):
     specification = models.FloatField(default=0, blank=True)
     pressure = models.FloatField(default=0, blank=True)
     preference_unity = models.ForeignKey(EquipmentUnity, on_delete=models.CASCADE, blank=True, null=True)
-    # colocar aqui a dimensão
-
-    # project = models.ManyToManyField(CapexProject)
     equipment_code = models.CharField(max_length=30, null=True)
     purchased_equip_cost = models.FloatField(null=True)
     baremodule_cost = models.FloatField(null=True)
