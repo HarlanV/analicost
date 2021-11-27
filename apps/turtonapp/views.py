@@ -66,6 +66,18 @@ def addEquipmentProject_POST(request, project, equipamento_id):
     return redirect('turton:project', project=project)
 
 
+# POST para insert de Equipamento no Projeto
+def updateEquipment_POST(request, project, equipamento_id):
+    data = {
+        'equipment_id': equipamento_id,
+        'project': project,
+        'args': dict(request.POST.items())
+    }
+
+    getattr(services.EquipmentServices, 'updateEquipmentInProjec')(**data)
+    return redirect('turton:project', project=project)
+
+
 def equipmentCost(request, project, equipamento_id):
 
     data = {
@@ -114,6 +126,7 @@ def updateEquipment_GET(request, project, equipamento_id):
     equipment = services.EquipmentServices.getEquipmentFromProject(equipamento_id)
     options = services.EquipmentServices.equiptmentFormOptions(equipment.equipment.id)
     options["project"] = project
+    options["equipment_project_id"] = equipamento_id
     equipmentUrl = options["equipment"].name.lower().replace(" ", "_")
 
     # informação de equipamento..

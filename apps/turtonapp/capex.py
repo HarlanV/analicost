@@ -105,7 +105,6 @@ class EquipmentCost():
         return pressureFactor
 
     def setCosts(self):
-
         pressureFactor = 1
         method = "comum"
         if self.moc is not None:
@@ -182,6 +181,28 @@ class EquipmentCost():
 
         return equipment
 
+    def updateInProject(self, project, equipmentProject):
+        args = {
+            'purchased_factor': self.purchase_obj,
+            'equipment_code': self.findsEquipmentCode(project.projectNum),
+            'purchased_equip_cost': self.purchasedEquipmentCost,
+            'baremodule_cost': self.bareModuleCost,
+            'base_equipment_cost': self.baseEquipmentCost,
+            'base_baremodule_cost': self.baseBaremoduleCost,
+            'equipment': self.equipment,
+            'spares': self.spares,
+            'specification': self.specification,
+            'preference_unity': self.selectedUnity
+        }
+
+        if self.pressure is not None:
+            args["pressure"] = self.pressure
+
+        equipment = project.updateEquipment(args, equipmentProject)
+        equipment = project.updateCosts()
+        return equipment
+
+
     # Função auxiliar para criar o código de Projeto do Equipamento {encapsular}
     def findsEquipmentCode(self, numProject):
         equipmentLetter = self.equipment.symbol
@@ -236,6 +257,14 @@ class ProjectCost():
         self.equipments = self.listEquipmentsProject()
         return equipment
 
+    def updateEquipment(self, data, equipmentProject):
+
+        data['project'] = self.project
+        equipment = EquipmentProject.objects.filter(id=equipmentProject.id)
+        equipment.update(**data)
+        self.equipments = self.listEquipmentsProject()
+        return equipment
+
     def updateCosts(self):
 
         project = self.project
@@ -255,7 +284,6 @@ class ProjectCost():
             base_baremodule_cost += equipment.base_baremodule_cost
 
         # project.equipment_code = equipment_code
-        teste_print(project.purchased_equip_cost)
         project.purchased_equip_cost = purchased_equip_cost
         project.baremodule_cost = baremodule_cost
         project.base_equipment_cost = base_equipment_cost
@@ -273,7 +301,6 @@ class ProjectCost():
         self.equipments = EquipmentProject.objects.filter(project=self.project)
         listDistinctEquipment = (EquipmentProject.objects.filter(project=self.project).values('equipment__name').distinct())
         self.listDistinctEquipment = list(map(lambda x: x["equipment__name"], listDistinctEquipment))
-        # self.unique_equipments = EquipmentProject.objects.filter(project=self.project).values('description').distinct()
         return self.equipments
 
     def upRound(self, value):

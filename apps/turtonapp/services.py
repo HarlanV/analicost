@@ -21,9 +21,6 @@ class EquipmentServices():
         return equipment
 
     def getEquipmentPrice(equipment_id, project, args):
-        """
-        [EM MANUTENÇÃO]
-        """
         project = capex.ProjectCost(project, True)
         args['cepci'] = project.project.cepci
         args['equipment_id'] = int(equipment_id)
@@ -55,6 +52,20 @@ class EquipmentServices():
 
         return True
 
+    def updateEquipmentInProjec(equipment_id: int, project: int, args: dict):
+        """
+        kwargs: (equipment_id, project, args)
+        """
+        equipmentProject = EquipmentServices.getEquipmentFromProject(equipment_id)
+        project = capex.ProjectCost(project, True)
+        args['cepci'] = project.project.cepci
+        # TODO: Verificar se é necessário esse id. no insert tbm!
+        args['equipment_id'] = int(equipmentProject.equipment.id)
+        equipmentCost = capex.EquipmentCost(equipmentProject.equipment.id, args, True)
+        equipmentCost.updateInProject(project, equipmentProject)
+
+        return True
+
     def getProjectReport(n):
         projectCost = capex.ProjectCost(n)
         equipments = projectCost.equipments
@@ -78,12 +89,12 @@ class EquipmentServices():
         equipment = capex.EquipmentCost(equipment_id, args, False, True)
         unitysConstants = EquipmentUnity.objects.filter(Q(dimension=equipment.equipment.dimension, is_default=True) | Q(id=id_unity))
         conversor = 1
+
+        # (TODO: ver se não seria melhor colocar esse trecho dentro da classe de equipamentos)
         if unitysConstants.count() > 1:
             if unitysConstants.first().is_default is True:
-                # conversor = (unitysConstants[0].convert_factor) / (unitysConstants[1].convert_factor)
                 conversor = (unitysConstants[1].convert_factor) / (unitysConstants[0].convert_factor)
             else:
-                # conversor = (unitysConstants[1].convert_factor) / (unitysConstants[0].convert_factor)
                 conversor = (unitysConstants[0].convert_factor) / (unitysConstants[1].convert_factor)
         else:
             pass  # (TODO: Exception aqui depois)
