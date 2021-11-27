@@ -13,33 +13,29 @@
 
     });
 
-    $('.typeEquipment').change(function () {
+    function updateBareFields(){
         let endpoint = "{% url 'turton:calculateCost' project equipment_id %}";
         if (checkMandatoryFields()) {
             checkCost(endpoint, getData())
         }
+    }
+
+    $('.typeEquipment').change(function () {
+        updateBareFields()
 
     });
 
     $('#equipment_attribute').change(function () {
-        let endpoint = "{% url 'turton:calculateCost' project equipment_id %}";
-        if (checkMandatoryFields()) {
-            checkCost(endpoint, getData())
-        }
+        updateBareFields()
     });
 
     $('#spares').change(function () {
-        let endpoint = "{% url 'turton:calculateCost' project equipment_id %}";
-        if (checkMandatoryFields()) {
-            checkCost(endpoint, getData())
-        }
+        updateBareFields()
     });
 
     $('#attribute_dimension').change(function () {
-        let endpoint = "{% url 'turton:calculateCost' project equipment_id %}";
-        if (checkMandatoryFields()) {
-            checkCost(endpoint, getData())
-        }
+        updateBareFields()
+
     });
 
     function checkCost(endpoint, data) {

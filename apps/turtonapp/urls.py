@@ -15,5 +15,6 @@ urlpatterns = [
     path('getdatacostinfo <int:project>/<int:equipamento_id>', views.equipmentCost, name='calculateCost'),
     path('<int:project>/DELETE', views.deleteProject_DELETE, name='deleteProject'),
     path('<int:project>/<int:equipamento_id>/equipment/DELETE', views.removeEquipment_DELETE, name='removeEquipment'),
+    path('<int:project>/<int:equipamento_id>/equipment/edit', views.updateEquipment_GET, name='editEquipment'),
     path('<int:equipamento_id><int:unity>/range/GET', views.attributeRange, name='attributerange')
 ]

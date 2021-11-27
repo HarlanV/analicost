@@ -2,7 +2,7 @@ from django.db.models import Q
 
 from django.shortcuts import get_object_or_404
 from .models import BareModule, ComplementConstants, Equipment, MaterialFactor, PressureFactor, PurchasedFactor, EquipmentUnity, Dimension
-from capitalcost.models import CapexProject, Cepci
+from capitalcost.models import CapexProject, Cepci, EquipmentProject
 from turtonapp import capex
 
 
@@ -13,9 +13,8 @@ class EquipmentServices():
         equipamento = Equipment.objects.all()
         return equipamento
 
-    def get_equipment(id, type=None, specification=None):
-        if type is None:
-            equipment = get_object_or_404(Equipment, pk=id)
+    def getEquipmentFromProject(id):
+        equipment = get_object_or_404(EquipmentProject, pk=id)
 
         # equipment = get_object_or_404(Equipment, pk=id)
         # equipamentos = get_object_or_404(PurchasedFactor, pk=id)

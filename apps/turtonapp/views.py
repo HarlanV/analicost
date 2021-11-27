@@ -110,6 +110,24 @@ def deleteProject_DELETE(request, project):
     return JsonResponse(data)
 
 
+def updateEquipment_GET(request, project, equipamento_id):
+    equipment = services.EquipmentServices.getEquipmentFromProject(equipamento_id)
+    options = services.EquipmentServices.equiptmentFormOptions(equipment.equipment.id)
+    options["project"] = project
+    equipmentUrl = options["equipment"].name.lower().replace(" ", "_")
+
+    # informação de equipamento..
+    options['equipment_data'] = equipment
+    #
+    url = "equipamentos/edit_form/" + equipmentUrl + ".html"
+    return render(request, url, options)
+    pass
+
+
+def updateEquipment_PUT(request, project, equipamento_id):
+    pass
+
+
 def teste_print(dados):
     print('--------------------------------------')
     print('--------------------------------------')
