@@ -202,7 +202,6 @@ class EquipmentCost():
         equipment = project.updateCosts()
         return equipment
 
-
     # Função auxiliar para criar o código de Projeto do Equipamento {encapsular}
     def findsEquipmentCode(self, numProject):
         equipmentLetter = self.equipment.symbol
