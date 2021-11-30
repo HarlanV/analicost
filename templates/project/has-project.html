@@ -1,3 +1,13 @@
+<style>
+    .table-reduced-head {
+        font-size: 70% !important;
+    }
+
+    .table-centralized {
+        text-align: center;
+    }
+</style>
+
 
 <h2> CAPITAL COST - CAPEX </h2>
 
@@ -34,6 +44,7 @@
 </div>
 
 
+<!-- TODO: Pensar em uma maneira mais eficiente de chamar os includes necessários -->
 {% for tbl in tables_list %}
     {% if tbl == "Blender" %}
         {% include 'project/tables/blender.html'%}
@@ -50,6 +61,9 @@
     {% if tbl == "Conveyor" %}
         {% include 'project/tables/conveyor.html'%}
     {% endif%}
+    {% if tbl == "Crystallizer" %}
+    {% include 'project/tables/crystallizer.html'%}
+{% endif%}
 
 {% endfor %}
 {% include 'project/tables/total-capex-report.html' %}

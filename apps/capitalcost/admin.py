@@ -33,5 +33,4 @@ class ListEquipmentCapex(admin.ModelAdmin):
 admin.site.register(Cepci, ListagemCepci)
 admin.site.register(CapexProject, ListCapex)
 admin.site.register(EquipmentProject, ListEquipmentCapex)
-
-# admin.site.register(HistoricoFluxoCaixa, ListandoFluxoCaixa)
+admin.site.register(HistoricoFluxoCaixa, ListandoFluxoCaixa)

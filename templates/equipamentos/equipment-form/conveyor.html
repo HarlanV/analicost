@@ -7,28 +7,8 @@
     checkMandatoryFields() -> Boolean
     getData() -> JASON
 -->
-<script>
 
-    // Aqui é personalizado os campos que devem ser verificados antes exibir o custo e/ou postar
-    function checkMandatoryFields() {
-        var type = $('input[name=type]:checked').val()
-        var atribute = document.getElementById('equipment_attribute').value
-        temVazio = [atribute, type].some(isEmptyValue)
-        return !temVazio
-    }
-
-    // Relação de campos e valores necessários para calculo do BareCost
-    function getData() {
-
-        return {
-            'type': $('input[name=type]:checked').val(),
-            'equipment_attribute': document.getElementById('equipment_attribute').value,
-            'attribute_name': "Area",
-            'attribute_dimension': document.getElementById('attribute_dimension').value,
-        };
-    }
-</script>
-
+{% include 'partials/scripts/insert_equipment_form/conveyor.html' %}
 <form action="{% url 'turton:postEquipment' project equipment_id %}" method="POST">
     {% csrf_token %}
     <div class="form">
@@ -82,12 +62,12 @@
                 </div>
             </fieldset>
 
-            {% include 'equipamentos/equipment-form/partials/bare-fields.html' %}
+            {% include 'equipamentos/partials/bare-fields.html' %}
         </div>
     </div>
 </form>
 <button type="submit" id="fakeButton" class="btn btn-primary mb-2">Submit</button>
 
-{% include 'equipamentos/equipment-form/partials/scripts.html' %}
+{% include 'partials/scripts/insert_equipment_form/base.html' %}
 
 {% endblock %}

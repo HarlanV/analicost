@@ -9,8 +9,6 @@ class HistoricoFluxoCaixa(models.Model):
     descricao = models.CharField(max_length=100)
     valor = models.FloatField()
     data = models.DateField()
-    entrada = models.BooleanField(null=True)
-    saida = models.BooleanField(null=True)
 
     def __str__(self):
         return self.descricao

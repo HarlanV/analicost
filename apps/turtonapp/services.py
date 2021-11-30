@@ -158,6 +158,12 @@ class EquipmentFormConfig():
         self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
         self.equipmentForm["materials"] = self.q.values('material').distinct()
 
+    def crystallizerForm(self):
+        self.equipmentForm["types"] = self.q.values('description').distinct()
+        self.equipmentForm["dimension"] = self.equipment.dimension
+        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
+        self.equipmentForm["materials"] = self.q.values('material').distinct()
+
 
 class ProjectServices():
 
