@@ -3,7 +3,7 @@
 {% block equipment_content %}
 
 {% include 'partials/scripts/insert_equipment_form/compressor.html' %}
-<form action="{% url 'turton:updateEquipment' project equipment_id %}" method="POST">
+<form action="{% url 'turton:updateEquipment' project equipment_project_id %}" method="POST">
     {% csrf_token %}
     <div class="form">
 
