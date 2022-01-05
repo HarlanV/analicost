@@ -2,12 +2,6 @@
 {% block equipment_title %} Insert Compressor {% endblock %}
 {% block equipment_content %}
 
-<!-- Essa relação de script é individual para cada form.
-    Lista de funções obrigatórias:
-    checkMandatoryFields() -> Boolean
-    getData() -> JASON
--->
-
 {% include 'partials/scripts/insert_equipment_form/compressor.html' %}
 <form action="{% url 'turton:postEquipment' project equipment_id %}" method="POST">
     {% csrf_token %}
@@ -59,7 +53,6 @@
                         {% endfor %}
                     </div>
             </fieldset>
-
 
             <!-- ÁREA -->
             <fieldset class="form-group row">

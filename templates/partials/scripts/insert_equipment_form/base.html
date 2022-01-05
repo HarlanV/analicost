@@ -35,7 +35,6 @@
 
     $('#attribute_dimension').change(function () {
         updateBareFields()
-i
     });
 
     function checkCost(endpoint, data) {
@@ -120,7 +119,6 @@ i
                         "attribute_name"])
                     if (range["confirmed"] && checkMandatoryFields()) {
                         document.getElementById("postButton").click()
-                        console.log("clicado")
                     } else {
                         if (confirm("Não foi possível continuar. " + range["message"])) {
                             document.getElementById('equipment_attribute').value = range["alternative"]
@@ -129,7 +127,7 @@ i
                 },
                 error: function (error_data) {
                     alert("Ops, houve algum erro. Por favor, verifique os campos e tente novamente")
-                    console.log(error_data)
+                    console.log("Ajax request error: attribute dimension couldn't be confirmed.")
                 },
             });
 

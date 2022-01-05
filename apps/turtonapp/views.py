@@ -92,6 +92,7 @@ def equipmentCost(request, project, equipamento_id):
 
 
 def attributeRange(request, equipamento_id, unity):
+
     type = request.GET["type"]
     specification = float(request.GET["equipment_attribute"])
 
