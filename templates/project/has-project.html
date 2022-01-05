@@ -46,23 +46,23 @@
 
 <!-- TODO: Pensar em uma maneira mais eficiente de chamar os includes necessários -->
 {% for tbl in tables_list %}
-    {% if tbl == "Blender" %}
-        {% include 'project/tables/blender.html'%}
-    {% endif%}
-    {% if tbl == "Centrifuge" %}
-        {% include 'project/tables/centrifuge.html'%}
-    {% endif%}
-    {% if tbl == "Evaporator" %}
-        {% include 'project/tables/evaporator.html'%}
-    {% endif%}
-    {% if tbl == "Compressor" %}
-        {% include 'project/tables/compressor.html'%}
-    {% endif%}
-    {% if tbl == "Conveyor" %}
-        {% include 'project/tables/conveyor.html'%}
-    {% endif%}
-    {% if tbl == "Crystallizer" %}
-    {% include 'project/tables/crystallizer.html'%}
+{% if tbl == "Blender" %}
+{% include 'project/tables/blender.html'%}
+{% endif%}
+{% if tbl == "Centrifuge" %}
+{% include 'project/tables/centrifuge.html'%}
+{% endif%}
+{% if tbl == "Evaporator" %}
+{% include 'project/tables/evaporator.html'%}
+{% endif%}
+{% if tbl == "Compressor" %}
+{% include 'project/tables/compressor.html'%}
+{% endif%}
+{% if tbl == "Conveyor" %}
+{% include 'project/tables/conveyor.html'%}
+{% endif%}
+{% if tbl == "Crystallizer" %}
+{% include 'project/tables/crystallizer.html'%}
 {% endif%}
 
 {% endfor %}
@@ -82,12 +82,23 @@
             error: function (error_data) {
                 alert(
                     "Ops, houve algum erro. Por favor, entre em contato com o seu administrador ou servidor"
-                    )
+                )
                 console.log(error_data)
             },
         });
     }
 
+
+    function editEquipment(equipment_id) {
+        let url = "{% url 'turton:editEquipment' project.project_number 999 %}".replace(999, equipment_id);
+        window.location = url;
+    }
+
+    function configEquipment(equipment_id) {
+        alert("Desabilitado Temporariamente")
+        // let url = "{% url 'turton:editEquipment' project.project_number 999 %}".replace(999, equipment_id);
+        // window.location = url;
+    }
 
     function deletarProjeto() {
         let url = "{% url 'turton:deleteProject' project.project_number %}"
@@ -103,7 +114,8 @@
             },
             error: function (error_data) {
                 alert(
-                    "Ops, houve algum erro. Por favor, entre em contato com o seu administrador ou servidor")
+                    "Ops, houve algum erro. Por favor, entre em contato com o seu administrador ou servidor"
+                    )
                 console.log(error_data)
             },
         });
