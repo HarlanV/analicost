@@ -3,12 +3,12 @@
     <table id="tableblender" class="table table-responsive table-sm table-centralized">
         <thead class="thead-dark">
             <tr class="d-flex table-reduced-head ">
-                <th class="col-1" scope="col">  </th>
-                <th class="col-1" scope="col">Conveyors</th>
+                <th class="col-2" scope="col"> Conveyors </th>
+                <th class="col-1" scope="col"> </th>
                 <th class="col-2" scope="col">Type</th>
                 <th class="col-1" scope="col">Area</th>
                 <th class="col-1" scope="col"> </th>
-                <th class="col-2" scope="col"> </th>
+                <th class="col-1" scope="col"> </th>
                 <th class="col-2" scope="col"> </th>
                 <th class="col-1" scope="col"> </th>
                 <th class="col-2" scope="col">Purchased Equipment Cost</th>
@@ -22,12 +22,12 @@
 
             {% if equipment.equipment.name == "Conveyor" %}
             <tr class="d-flex">
-                <th class="col-1" scope="row"> <button type="button" class="btn btn-outline-danger btn-sm deleteBtn"  onclick='removeEquipment("{{equipment.id}}")' > <i class="fas fa-trash"></i> </button></th>
-                <th class="col-1" scope="row">{{equipment.equipment_code}}</th>
-                <td class="col-2" scope="row">{{equipment.purchased_factor.description}}</td>
-                <td class="col-1" scope="row">{{equipment.specification}}  {{equipment.preference_unity}}</td>
+                {% include 'project/tables/table-tools.html'%}
+                <th class="col-1" scope="row"> {{equipment.equipment_code}} </th>
+                <td class="col-2" scope="row"> {{equipment.purchased_factor.description}} </td>
+                <td class="col-1" scope="row"> {{equipment.specification}}  {{equipment.preference_unity}} </td>
                 <td class="col-1" scope="row"> - </td>
-                <td class="col-2" scope="row"> - </td>
+                <td class="col-1" scope="row"> - </td>
                 <td class="col-2 money " scope="row"> - </td>
                 <td class="col-1 money " scope="row"> - </td>
                 <td class="col-2 money " scope="row">{{equipment.purchased_equip_cost}}</td>

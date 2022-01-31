@@ -11,30 +11,12 @@
 
         <div class="container-fluid mb-2 mt-2" style="border:1px solid #cecece;">
 
+            <!-- TIPOS -->
+            {% include 'equipamentos/partials/typeEditForm.html' %}
+
+
+            <!-- ÁREA -->
             <fieldset class="form-group row">
-                <legend class="col-form-label col-sm-2 float-sm-left pt-0">Type</legend>
-                <div class="col-sm-10">
-                    {% for type in types %}
-                    {% if equipment_data.purchased_factor.description == type.description %}
-
-                    <div class="form-check">
-                        <input class="form-check-input typeEquipment " type="radio" name="type"
-                            id="{{type.description}}" value="{{type.description}}" checked>
-                        {% else %}
-                        <div class="form-check">
-                            <input class="form-check-input typeEquipment " type="radio" name="type"
-                                id="{{type.description}}" value="{{type.description}}">
-                            {% endif %}
-                            <label class="form-check-label" for="{{type.description}}">
-                                {{type.description}}
-                            </label>
-                        </div>
-                        {% endfor %}
-                    </div>
-            </fieldset>
-
-            <fieldset class="form-group row">
-
                 <div class="form-row ml-1">
                     <div class="form-group col-md-7 ml:2">
                         <label for="equipment_attribute">Volume of Blender</label>
@@ -53,7 +35,6 @@
                             {% endfor %}
                         </select>
                     </div>
-
                 </div>
             </fieldset>
 
@@ -62,7 +43,8 @@
                 <div class="form-row ml-1">
                     <div class="form-group col-md-7 ml:2">
                         <label for="spares">Spares</label>
-                        <input type="number" step="1" min=0 class="form-control" id="spares" name="spares" value="{{equipment_data.spares}}">
+                        <input type="number" step="1" min=0 class="form-control" id="spares" name="spares"
+                            value="{{equipment_data.spares}}">
                     </div>
 
 
@@ -77,5 +59,7 @@
 
 {% include 'partials/scripts/insert_equipment_form/base.html' %}
 
-<script> window.onload = updateBareFields() </script>
+<script>
+    window.onload = updateBareFields()
+</script>
 {% endblock %}

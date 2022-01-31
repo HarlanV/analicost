@@ -106,6 +106,7 @@ class EquipmentServices():
         return range
 
 
+# FORMULÁRIOS DE EQUIPAMENTO (Trocar para classe específica qnd finalizado)
 class EquipmentFormConfig():
 
     def __init__(self, id):
@@ -124,7 +125,7 @@ class EquipmentFormConfig():
 
     # Defini qual o formulario a ser chamado e retorna o valor
     def makeform(self):
-        name = self.equipment.name.lower().replace("-", "_")
+        name = self.equipment.name.lower().replace("-", "_").replace(" ", "_")
         do = f"{name}Form"
         if callable(func := getattr(self, do)):
             func()
@@ -151,12 +152,35 @@ class EquipmentFormConfig():
         self.equipmentForm["dimension"] = self.equipment.dimension
         self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
         self.equipmentForm["materials"] = self.q.values('material').distinct()
+        pressureDimension = Dimension.objects.get(dimension="Gauge Pressure")
+        self.equipmentForm["pressureUnity"] = EquipmentUnity.objects.filter(dimension=pressureDimension)
 
     def conveyorForm(self):
         self.equipmentForm["types"] = self.q.values('description').distinct()
         self.equipmentForm["dimension"] = self.equipment.dimension
         self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
         self.equipmentForm["materials"] = self.q.values('material').distinct()
+
+    def crystallizerForm(self):
+        self.equipmentForm["types"] = self.q.values('description').distinct()
+        self.equipmentForm["dimension"] = self.equipment.dimension
+        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
+        self.equipmentForm["materials"] = self.q.values('material').distinct()
+
+    def driveForm(self):
+        self.equipmentForm["types"] = self.q.values('description').distinct()
+        self.equipmentForm["dimension"] = self.equipment.dimension
+        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
+
+    def dryerForm(self):
+        self.equipmentForm["types"] = self.q.values('description').distinct()
+        self.equipmentForm["dimension"] = self.equipment.dimension
+        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
+
+    def dust_collectorsForm(self):
+        self.equipmentForm["types"] = self.q.values('description').distinct()
+        self.equipmentForm["dimension"] = self.equipment.dimension
+        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
 
     def crystallizerForm(self):
         self.equipmentForm["types"] = self.q.values('description').distinct()

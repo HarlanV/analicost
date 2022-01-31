@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import BareModule, ComplementConstants, Equipment, EquipmentUnity, MaterialFactor, PressureFactor, PurchasedFactor
+from .models import BareModule, ComplementConstants, Dimension, Equipment, EquipmentUnity, MaterialFactor, PressureFactor, PurchasedFactor
 
 
 class ListandoEquipamentos(admin.ModelAdmin):
@@ -58,6 +58,14 @@ class ListandoUnidades(admin.ModelAdmin):
     list_per_page = 10
 
 
+class ListandoDimension(admin.ModelAdmin):
+    list_display = ('id', 'dimension', 'unity', 'symbol')
+    list_display_links = ('id', 'dimension', 'unity')
+    search_fields = ('dimension',)
+    list_filter = ('dimension',)
+    list_per_page = 10
+
+
 admin.site.register(EquipmentUnity, ListandoUnidades)
 admin.site.register(Equipment, ListandoEquipamentos)
 admin.site.register(PurchasedFactor, ListandoKs)
@@ -65,3 +73,4 @@ admin.site.register(BareModule, ListandoBare)
 admin.site.register(ComplementConstants, ListandoComplement)
 admin.site.register(PressureFactor, ListandoPressure)
 admin.site.register(MaterialFactor, ListandoMaterial)
+admin.site.register(Dimension, ListandoDimension)

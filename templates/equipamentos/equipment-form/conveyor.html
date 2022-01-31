@@ -1,12 +1,7 @@
 {% extends 'equipamentos/partials/add-equipment-form.html' %}
-{% block equipment_title %} Adiconar Blender {% endblock %}
+{% block equipment_title %} Adiconar Conveyor {% endblock %}
 {% block equipment_content %}
 {{ conversores|json_script:"conversores" }}
-<!-- Essa relação de script é individual para cada form.
-    Lista de funções obrigatórias:
-    checkMandatoryFields() -> Boolean
-    getData() -> JASON
--->
 
 {% include 'partials/scripts/insert_equipment_form/conveyor.html' %}
 <form action="{% url 'turton:postEquipment' project equipment_id %}" method="POST">
