@@ -1,0 +1,7 @@
+<form action="{% url 'turton:postEquipment' project equipment_id %}" method="POST">
+    {% csrf_token %}
+    <div class="form">
+
+        <h3> {{equipment.name}} </h3>
+
+        <div class="container-fluid mb-2 mt-2" style="border:1px solid #cecece;">

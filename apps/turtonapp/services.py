@@ -182,11 +182,19 @@ class EquipmentFormConfig():
         self.equipmentForm["dimension"] = self.equipment.dimension
         self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
 
-    def crystallizerForm(self):
+    def disable_fanForm(self):
         self.equipmentForm["types"] = self.q.values('description').distinct()
         self.equipmentForm["dimension"] = self.equipment.dimension
         self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
         self.equipmentForm["materials"] = self.q.values('material').distinct()
+
+    def vaporizerForm(self):
+        self.equipmentForm["types"] = self.q.values('description').distinct()
+        self.equipmentForm["dimension"] = self.equipment.dimension
+        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
+        self.equipmentForm["materials"] = self.q.values('material').distinct()
+        pressureDimension = Dimension.objects.get(dimension="Gauge Pressure")
+        self.equipmentForm["pressureUnity"] = EquipmentUnity.objects.filter(dimension=pressureDimension)
 
 
 class ProjectServices():

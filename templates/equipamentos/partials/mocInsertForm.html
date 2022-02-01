@@ -1,0 +1,21 @@
+<!-- Partial Moc Insert -->
+<fieldset class="form-group row">
+    <legend class="col-form-label col-sm-2 float-sm-left pt-0">Material of Construction</legend>
+    <div class="col-sm-10">
+        {% for material in materials %}
+        {% if forloop.first is True %}
+        <div class="form-check">
+            <input class="form-check-input typeEquipment " type="radio" name="moc"
+                id="{{material.material}}" value="{{material.material}}" checked>
+            {% else %}
+            <div class="form-check">
+                <input class="form-check-input typeEquipment " type="radio" name="moc"
+                    id="{{material.material}}" value="{{material.material}}">
+                {% endif %}
+                <label class="form-check-label" for="{{material.material}}">
+                    {{material.material}}
+                </label>
+            </div>
+            {% endfor %}
+        </div>
+</fieldset>

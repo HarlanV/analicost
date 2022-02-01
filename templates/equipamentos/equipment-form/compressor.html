@@ -3,56 +3,15 @@
 {% block equipment_content %}
 
 {% include 'partials/scripts/insert_equipment_form/compressor.html' %}
-<form action="{% url 'turton:postEquipment' project equipment_id %}" method="POST">
-    {% csrf_token %}
-    <div class="form">
 
-        <h3> {{equipment.name}} </h3>
+        <!-- HEADER FORM -->
+        {% include 'equipamentos/partials/insertHeaderForm.html' %}
 
-        <div class="container-fluid mb-2 mt-2" style="border:1px solid #cecece;">
-            <!-- TIPOS -->
-            <fieldset class="form-group row">
-                <legend class="col-form-label col-sm-2 float-sm-left pt-0">Type</legend>
-                <div class="col-sm-10">
-                    {% for type in types %}
-                    {% if forloop.first is True %}
-                    <div class="form-check">
-                        <input class="form-check-input typeEquipment " type="radio" name="type"
-                            id="{{type.description}}" value="{{type.description}}" checked>
-                        {% else %}
-                        <div class="form-check">
-                            <input class="form-check-input typeEquipment " type="radio" name="type"
-                                id="{{type.description}}" value="{{type.description}}">
-                            {% endif %}
-                            <label class="form-check-label" for="{{type.description}}">
-                                {{type.description}}
-                            </label>
-                        </div>
-                        {% endfor %}
-                    </div>
-            </fieldset>
+            <!-- TYPES -->
+            {% include 'equipamentos/partials/typeInsertForm.html' %}
 
             <!-- MATERIALS -->
-            <fieldset class="form-group row">
-                <legend class="col-form-label col-sm-2 float-sm-left pt-0">Material of Construction</legend>
-                <div class="col-sm-10">
-                    {% for material in materials %}
-                    {% if forloop.first is True %}
-                    <div class="form-check">
-                        <input class="form-check-input typeEquipment " type="radio" name="moc"
-                            id="{{material.material}}" value="{{material.material}}" checked>
-                        {% else %}
-                        <div class="form-check">
-                            <input class="form-check-input typeEquipment " type="radio" name="moc"
-                                id="{{material.material}}" value="{{material.material}}">
-                            {% endif %}
-                            <label class="form-check-label" for="{{material.material}}">
-                                {{material.material}}
-                            </label>
-                        </div>
-                        {% endfor %}
-                    </div>
-            </fieldset>
+            {% include 'equipamentos/partials/mocInsertForm.html' %}
 
             <!-- ÁREA -->
             <fieldset class="form-group row">
