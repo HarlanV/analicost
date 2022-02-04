@@ -182,11 +182,13 @@ class EquipmentFormConfig():
         self.equipmentForm["dimension"] = self.equipment.dimension
         self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
 
-    def disable_fanForm(self):
+    def fanForm(self):
         self.equipmentForm["types"] = self.q.values('description').distinct()
         self.equipmentForm["dimension"] = self.equipment.dimension
         self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
         self.equipmentForm["materials"] = self.q.values('material').distinct()
+        pressureDimension = Dimension.objects.get(dimension="Gauge Pressure")
+        self.equipmentForm["pressureUnity"] = EquipmentUnity.objects.filter(dimension=pressureDimension)
 
     def vaporizerForm(self):
         self.equipmentForm["types"] = self.q.values('description').distinct()
@@ -195,6 +197,40 @@ class EquipmentFormConfig():
         self.equipmentForm["materials"] = self.q.values('material').distinct()
         pressureDimension = Dimension.objects.get(dimension="Gauge Pressure")
         self.equipmentForm["pressureUnity"] = EquipmentUnity.objects.filter(dimension=pressureDimension)
+
+    def filterForm(self):
+        self.equipmentForm["types"] = self.q.values('description').distinct()
+        self.equipmentForm["dimension"] = self.equipment.dimension
+        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
+
+    def mixerForm(self):
+        self.equipmentForm["types"] = self.q.values('description').distinct()
+        self.equipmentForm["dimension"] = self.equipment.dimension
+        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
+
+    def pumpForm(self):
+        self.equipmentForm["types"] = self.q.values('description').distinct()
+        self.equipmentForm["dimension"] = self.equipment.dimension
+        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
+        self.equipmentForm["materials"] = self.q.values('material').distinct()
+        pressureDimension = Dimension.objects.get(dimension="Gauge Pressure")
+        self.equipmentForm["pressureUnity"] = EquipmentUnity.objects.filter(dimension=pressureDimension)
+
+    def screenForm(self):
+        self.equipmentForm["types"] = self.q.values('description').distinct()
+        self.equipmentForm["dimension"] = self.equipment.dimension
+        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
+
+    def tankForm(self):
+        self.equipmentForm["types"] = self.q.values('description').distinct()
+        self.equipmentForm["dimension"] = self.equipment.dimension
+        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
+
+    def turbineForm(self):
+        self.equipmentForm["types"] = self.q.values('description').distinct()
+        self.equipmentForm["dimension"] = self.equipment.dimension
+        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
+        self.equipmentForm["materials"] = self.q.values('material').distinct()
 
 
 class ProjectServices():
