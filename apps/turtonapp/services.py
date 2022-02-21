@@ -233,6 +233,26 @@ class EquipmentFormConfig():
         self.equipmentForm["materials"] = self.q.values('material').distinct()
 
 
+class infoReport():
+
+    def __init__(self, id):
+        self.equipmentForm = {}
+        self.equipmentForm["equipment_id"] = id
+
+        self.q = PurchasedFactor.objects.filter(equipment_id=id)
+        self.equipment = self.q.first().equipment
+        self.equipmentForm["equipment"] = self.equipment
+
+    # Define qual o formulario a ser chamado e retorna o valor
+    def makeform(self):
+        name = self.equipment.name.lower().replace("-", "_").replace(" ", "_")
+        equipmentClass = f"endereco.{name}.report"
+        mod = __import__(equipmentClass, fromlist=['form'])
+        self.equipmentForm = getattr(mod, 'form')(self.q, self.dimension)
+
+        return self.equipmentForm
+
+
 class ProjectServices():
 
     def listProjects():

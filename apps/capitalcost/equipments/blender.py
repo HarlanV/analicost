@@ -1,6 +1,5 @@
-from .models import BareModule, Equipment, PressureFactor, PurchasedFactor, EquipmentUnity
+from apps.turtonapp.models import BareModule, Equipment, PressureFactor, PurchasedFactor, EquipmentUnity
 from capitalcost.models import CapexProject, EquipmentProject
-import math
 from django.db.models import Q
 from apps.capitalcost.equipments import Equipment
 
@@ -19,9 +18,16 @@ class Blender(Equipment):
         self.config_purchase_constants(equipment_id, self.type)
         self.name = self.equipment.name
 
-    def configEquipmentConstants(self, id):
-        self.equipment = Equipment.objects.filter(id).first()
-        pass
+    # Busca e configura as contantes de custo do equipamento
+    def config_purchase_constants(self, id, type):
+        if self.moc is not None:
+            constants = PurchasedFactor.objects.filter(equipment_id=id, description=type, material=self.moc).first()
+            refId = PurchasedFactor.objects.filter(equipment_id=id, description=type, is_reference=True).first().id
+            self.reference = BareModule.objects.filter(equipment_id=refId).first().fbm
+        else:
+            self.reference = 1
+            constants = PurchasedFactor.objects.filter(equipment_id=id, description=type).first()
+        self.set_purchase_constants(type, constants)
 
     # Função para atribuição de variáveis
     def setIndividualConstants(self, equipment_id: int, args: dict):
@@ -67,27 +73,6 @@ class Blender(Equipment):
         self.baseEquipmentCost = self.upRound(self.baseCost)                           # 3 ok
         self.baseBaremoduleCost = self.upRound(bareModuleCost / self.reference)        # 4 trocado
 
-        # t1 = self.purchasedEquipmentCost
-        # t2 = self.bareModuleCost
-        # t3 = self.baseEquipmentCost
-        # t4 = self.baseBaremoduleCost
-        # teste = str(t1) + "//" + str(t2) + "//" + str(t3) + "//" + str(t4)
-        # teste_print(teste)
-
-    # Função auxiliar para arredondamento de valor significativo. Regra de Turton no CAPCOST {encapsular}
-    def upRound(self, value):
-        """
-        função auxiliar aproxima value para o mais proximo do multiplo de (10^digits)
-        """
-        rounded = round(value)
-        if (rounded < 1):
-            digits = -3
-        else:
-            digits = -(3 - len(str(round(value))))
-
-        rounded = (round((value / (10**digits))) * (10**digits))
-        return rounded
-
 
 class sketch(Blender):
 
@@ -119,6 +104,26 @@ class costs(fobCost):
     def __init__(self, equipment_id: int, args: dict):
         super().__init__(equipment_id, args)
         super().setCosts()
+
+
+class report():
+    def __init__(self):
+        pass
+
+    def form(self, q, dimension):
+        self.equipmentForm["types"] = q.values('description').distinct()
+        self.equipmentForm["dimension"] = dimension
+        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=dimension)
+        return self.equipmentForm
+
+
+class formData():
+
+    def __init__(self):
+        self.data = {}
+
+    def validate():
+        pass
 
 
 def teste_print(dados):

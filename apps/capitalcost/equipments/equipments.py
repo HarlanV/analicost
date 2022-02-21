@@ -1,4 +1,4 @@
-from .models import BareModule, Equipment, PressureFactor, PurchasedFactor, EquipmentUnity
+from apps.turtonapp.models import BareModule, Equipment, PressureFactor, PurchasedFactor, EquipmentUnity
 from capitalcost.models import CapexProject, EquipmentProject
 import math
 from django.db.models import Q
@@ -9,21 +9,9 @@ class Equipments():
     def __init__(self, equipment_id: int, args: dict):
         return
 
+    # [ok] Retona as constante de custo do equipamento
     def configEquipmentConstants(self, id):
         self.equipment = Equipment.objects.filter(id).first()
-        pass
-
-    # Função para atribuição de variáveis
-
-    def config_purchase_constants(self, id, type):
-        if self.moc is not None:
-            constants = PurchasedFactor.objects.filter(equipment_id=id, description=type, material=self.moc).first()
-            refId = PurchasedFactor.objects.filter(equipment_id=id, description=type, is_reference=True).first().id
-            self.reference = BareModule.objects.filter(equipment_id=refId).first().fbm
-        else:
-            self.reference = 1
-            constants = PurchasedFactor.objects.filter(equipment_id=id, description=type).first()
-        self.set_purchase_constants(type, constants)
 
     # [ok] Seta as variáveis para calculo do custo de compra
     def set_purchase_constants(self, type, constants):
