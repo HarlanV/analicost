@@ -2,6 +2,6 @@
 analicap/.env.*
 analicap/*.teste
 /docker/
-analicap/__pycache__/
+**/__pycache__
 /__pycache__/
 __pycache__/
