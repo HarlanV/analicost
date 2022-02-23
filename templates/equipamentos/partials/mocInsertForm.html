@@ -5,7 +5,7 @@
         {% for material in materials %}
         {% if forloop.first is True %}
         <div class="form-check">
-            <input class="form-check-input typeEquipment " type="radio" name="moc"
+            <input class="form-check-input mocEquipment " type="radio" name="moc"
                 id="{{material.material}}" value="{{material.material}}" checked>
             {% else %}
             <div class="form-check">

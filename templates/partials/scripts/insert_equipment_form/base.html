@@ -2,6 +2,7 @@
     As funções aqui necessitam de duas funções auxiliares inseridas no em cada form. 
 -->
 <script>
+    var wasPosted = false
     $(document).ready(function () {
         $('.date').mask('00/00/0000');
         $('.money').mask('000.000.000.000.000,00', {
@@ -24,6 +25,61 @@
         updateBareFields()
 
     });
+
+
+    $('#insertEquipmentForm').submit(function (e) {
+
+        e.preventDefault()
+        let data = getData();
+        form = $(this);        
+        let attribute_dimension = document.getElementById('attribute_dimension').value;
+        if (checkMandatoryFields()){
+            $.ajax({
+                method: "GET",
+                url: "{% url 'turton:attributerange' equipment_id 999 %}".replace(999, attribute_dimension),
+                data: data,
+                success: function (response) {
+                    range = isBetweenRanges(response, data["equipment_attribute"], data[
+                        "attribute_name"])
+                    if (range["confirmed"] && checkMandatoryFields()) {
+                        $.ajax({
+                            type: 'POST',
+                            url: $("form").attr("action"),
+                            data: $("form").serialize(),
+                            success: function(response){
+                                alert("Equipamento inserido com sucesso")
+                                document.getElementById("returnButton").click()
+
+                            },
+                            error: function(error_data){
+                                alert("Houve algum problema durante o envio, favor entrar em contato com administrador")
+                            }
+                        })
+                    } else {
+                        if (confirm("Não foi possível continuar. " + range["message"])) {
+                            document.getElementById('equipment_attribute').value = range["alternative"]
+                            updateBareFields()
+                        }
+                    }
+                },
+                error: function (error_data) {
+                    alert("Ops, houve algum erro. Por favor, verifique os campos e tente novamente")
+                    console.log("Ajax request error: attribute dimension couldn't be confirmed.")
+                },
+            })
+            ;
+        }else{
+            alert("Por favor, confirme se não ha nenhum campo vazio")
+        }
+        var wasPosted = true
+    });
+
+    function postForm(form){
+        var wasPosted = true
+        form.submit()
+
+    }
+   
 
     $('#equipment_attribute').change(function () {
         updateBareFields()
@@ -106,8 +162,11 @@
         document.getElementById('bareModule').value = data["bareModule"].toFixed(2)
     }
 
+
+
     $('#fakeButton').click(function () {
         let data = getData();
+
         let attribute_dimension = document.getElementById('attribute_dimension').value;
         if (checkMandatoryFields()){
             $.ajax({
@@ -122,6 +181,7 @@
                     } else {
                         if (confirm("Não foi possível continuar. " + range["message"])) {
                             document.getElementById('equipment_attribute').value = range["alternative"]
+                            updateBareFields()
                         }
                     }
                 },

@@ -1,4 +1,4 @@
-<form action="{% url 'turton:postEquipment' project equipment_id %}" method="POST">
+<form id="insertEquipmentForm" action="{% url 'turton:postEquipment' project equipment_id %}" method="POST">
     {% csrf_token %}
     <div class="form">
 

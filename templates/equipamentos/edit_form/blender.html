@@ -3,13 +3,8 @@
 {% block equipment_content %}
 
 {% include 'partials/scripts/insert_equipment_form/blender.html' %}
-<form action="{% url 'turton:updateEquipment' project equipment_project_id %}" method="POST">
-    {% csrf_token %}
-    <div class="form">
-
-        <h3> {{equipment.name}} </h3>
-
-        <div class="container-fluid mb-2 mt-2" style="border:1px solid #cecece;">
+        <!-- HEADER FORM -->
+        {% include 'equipamentos/partials/editHeaderForm.html' %}
 
             <!-- TIPOS -->
             {% include 'equipamentos/partials/typeEditForm.html' %}
@@ -55,11 +50,5 @@
         </div>
     </div>
 </form>
-<button type="submit" id="fakeButton" class="btn btn-primary mb-2">Submit</button>
-
-{% include 'partials/scripts/insert_equipment_form/base.html' %}
-
-<script>
-    window.onload = updateBareFields()
-</script>
+{% include 'equipamentos/partials/equipmentsElemAfterForm.html' %}
 {% endblock %}

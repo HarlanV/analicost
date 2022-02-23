@@ -5,7 +5,6 @@ from . import views
 app_name = 'turton'
 
 urlpatterns = [
-
     path('', views.index, name='index'),
     path('projeto/<int:project>', views.projectReport_GET, name='project'),
     path('<int:project>/<int:equipamento_id>', views.addEquipmentProjectForm_GET, name='equipment'),

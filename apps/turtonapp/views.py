@@ -2,10 +2,12 @@ from django.http.response import JsonResponse
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from turtonapp import services
+from django.urls import reverse
 
 
 # Listagem do Equipamento
 def index(request):
+
     list_projects = services.ProjectServices.listProjects()
 
     if not list_projects:
@@ -41,6 +43,7 @@ def projectReport_GET(request, project):
         'equipments': report["equipments"],
         'equipmentsDetails': report["equipmentsDetails"],
     }
+
     return render(request, 'project/index.html', dados)
 
 
@@ -56,6 +59,7 @@ def addEquipmentProjectForm_GET(request, project, equipamento_id):
 
 # POST para insert de Equipamento no Projeto
 def addEquipmentProject_POST(request, project, equipamento_id):
+
     data = {
         'equipment_id': equipamento_id,
         'project': project,
@@ -63,7 +67,8 @@ def addEquipmentProject_POST(request, project, equipamento_id):
     }
 
     getattr(services.EquipmentServices, 'addEquipmentToProjec')(**data)
-    return redirect('turton:project', project=project)
+    return JsonResponse(status=201, data={'status': 'false', 'message': "Adicionado com sucesso"})
+    # return redirect('turton:project', project=project)
 
 
 # POST para insert de Equipamento no Projeto
@@ -79,30 +84,25 @@ def updateEquipment_POST(request, project, equipamento_id):
 
 
 def equipmentCost(request, project, equipamento_id):
-
     data = {
         'equipment_id': equipamento_id,
         'project': project,
         'args': dict(request.GET.items())
     }
-
     costs = getattr(services.EquipmentServices, 'getEquipmentPrice')(**data)
 
     return JsonResponse(costs)
 
 
+# TODO: fazer retrocesso para remover unity das rotas chamadas. Não mais utilizado
 def attributeRange(request, equipamento_id, unity):
 
-    type = request.GET["type"]
-    specification = float(request.GET["equipment_attribute"])
-
-    args = {
+    data = {
         'equipment_id': equipamento_id,
-        'specification': specification,
-        'type': type,
-        'id_unity': unity
+        'args': dict(request.GET.items())
     }
-    range = getattr(services.EquipmentServices, 'getRangeAttributes')(**args)
+
+    range = getattr(services.EquipmentServices, 'getRangeAttributes')(**data)
 
     return JsonResponse(range)
 
@@ -124,7 +124,7 @@ def deleteProject_DELETE(request, project):
 
 
 def updateEquipment_GET(request, project, equipamento_id):
-    equipment = services.EquipmentServices.getEquipmentFromProject(equipamento_id)
+    equipment = services.EquipmentServices.getEquipmentInProject(equipamento_id)
     options = services.EquipmentServices.equiptmentFormOptions(equipment.equipment.id)
     options["project"] = project
     options["equipment_project_id"] = equipamento_id
@@ -135,10 +135,6 @@ def updateEquipment_GET(request, project, equipamento_id):
     #
     url = "equipamentos/edit_form/" + equipmentUrl + ".html"
     return render(request, url, options)
-    pass
-
-
-def updateEquipment_PUT(request, project, equipamento_id):
     pass
 
 

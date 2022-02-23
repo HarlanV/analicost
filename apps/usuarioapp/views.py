@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from django.http import JsonResponse
+from apps.capitalcost.project import teste_print
 from turtonapp.services import temporarySeeder
+from django.urls import reverse
 
 
 # Listagem do Equipamento
 def index(request):
+
     return render(request, 'index.html')
 
 

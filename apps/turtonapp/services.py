@@ -1,9 +1,8 @@
 from django.db.models import Q
-
 from django.shortcuts import get_object_or_404
+from capitalcost.project import ProjectCost
 from .models import BareModule, ComplementConstants, Equipment, MaterialFactor, PressureFactor, PurchasedFactor, EquipmentUnity, Dimension
 from capitalcost.models import CapexProject, Cepci, EquipmentProject
-from turtonapp import capex
 
 
 class EquipmentServices():
@@ -13,19 +12,25 @@ class EquipmentServices():
         equipamento = Equipment.objects.all()
         return equipamento
 
-    def getEquipmentFromProject(id):
-        equipment = get_object_or_404(EquipmentProject, pk=id)
+    def getEquipmentFromId(id):
+        return Equipment.objects.get(id=id)
 
-        # equipment = get_object_or_404(Equipment, pk=id)
-        # equipamentos = get_object_or_404(PurchasedFactor, pk=id)
+    def getEquipmentInProject(id):
+        equipment = get_object_or_404(EquipmentProject, pk=id)
         return equipment
 
     def getEquipmentPrice(equipment_id, project, args):
-        project = capex.ProjectCost(project, True)
+        project = ProjectCost(project, True)
         args['cepci'] = project.project.cepci
         args['equipment_id'] = int(equipment_id)
-        equipment = capex.EquipmentCost(equipment_id, args, True)
 
+        equipment = findEquipmentPath(
+            EquipmentServices.getEquipmentFromId(equipment_id),
+            'EquipmentCosts', {
+                'args': args,
+                'equipment_id': equipment_id
+            }
+        )
         costs = {
             'bareCost': equipment.purchasedEquipmentCost,
             'bareModule': equipment.bareModuleCost
@@ -34,7 +39,7 @@ class EquipmentServices():
         return costs
 
     def equiptmentFormOptions(id):
-        form = EquipmentFormConfig(id)
+        form = infoReport(id)
         form = form.makeform()
         return form
 
@@ -43,11 +48,20 @@ class EquipmentServices():
         kwargs: (equipment_id, project, args)
         """
 
-        project = capex.ProjectCost(project, True)
+        project = ProjectCost(project, True)
         args['cepci'] = project.project.cepci
         args['equipment_id'] = int(equipment_id)
 
-        equipment = capex.EquipmentCost(equipment_id, args, True)
+        equipment = findEquipmentPath(
+            EquipmentServices.getEquipmentFromId(equipment_id),
+            'EquipmentCosts',
+            {
+                'equipment_id': equipment_id,
+                'args': args
+            }
+        )
+
+        # equipment = EquipmentCosts(equipment_id, args, False) #fobCost
         equipment.insertIntoProject(project)
 
         return True
@@ -56,18 +70,26 @@ class EquipmentServices():
         """
         kwargs: (equipment_id, project, args)
         """
-        equipmentProject = EquipmentServices.getEquipmentFromProject(equipment_id)
-        project = capex.ProjectCost(project, True)
+        equipmentProject = EquipmentServices.getEquipmentInProject(equipment_id)
+        project = ProjectCost(project, True)
         args['cepci'] = project.project.cepci
         # TODO: Verificar se é necessário esse id. no insert tbm!
         args['equipment_id'] = int(equipmentProject.equipment.id)
-        equipmentCost = capex.EquipmentCost(equipmentProject.equipment.id, args, True)
+
+        equipmentCost = findEquipmentPath(
+            EquipmentServices.getEquipmentFromId(equipmentProject.equipment.id),
+            'EquipmentCosts', {
+                'equipment_id': equipmentProject.equipment.id,
+                'args': args
+            }
+        )
+
         equipmentCost.updateInProject(project, equipmentProject)
 
         return True
 
     def getProjectReport(n):
-        projectCost = capex.ProjectCost(n)
+        projectCost = ProjectCost(n)
         equipments = projectCost.equipments
         equipmentsDetails = list(map(lambda x: [x.equipment, x.equipment.dimension], equipments))
         info = {
@@ -79,15 +101,22 @@ class EquipmentServices():
 
         return info
 
-    def getRangeAttributes(equipment_id, specification, type, id_unity):
-        args = {
-            'equipment_id': int(equipment_id),
-            'type': type,
-            'specification': float(specification),
-        }
+    def getRangeAttributes(equipment_id, args):
+        # values = {
+        #     'equipment_id': int(equipment_id),
+        #     'equipment_attribute': float(equipment_attribute),
+        #     'attribute_dimension': id_unity
+        # }
 
-        equipment = capex.EquipmentCost(equipment_id, args, False, True)
-        unitysConstants = EquipmentUnity.objects.filter(Q(dimension=equipment.equipment.dimension, is_default=True) | Q(id=id_unity))
+        equipmentForm = EquipmentServices.getEquipmentFromId(equipment_id)
+
+        # equipment = FobCost(equipment_id, args)
+        equipment = findEquipmentPath(equipmentForm, 'FobCost', {
+            'equipment_id': equipment_id,
+            'args': args
+        })
+        # equipment = FobCost(equipment_id, args)
+        unitysConstants = EquipmentUnity.objects.filter(Q(dimension=equipment.equipment.dimension, is_default=True) | Q(id=args["attribute_dimension"]))
         conversor = 1
 
         # (TODO: ver se não seria melhor colocar esse trecho dentro da classe de equipamentos)
@@ -106,149 +135,23 @@ class EquipmentServices():
         return range
 
 
-# FORMULÁRIOS DE EQUIPAMENTO (Trocar para classe específica qnd finalizado)
-class EquipmentFormConfig():
-
-    def __init__(self, id):
-        """
-        Esta classe ainda está sob a possibilidade de se tornar um banco de dados.
-        Contudo, para fins de desenvolvimento, sesrá feito da maneira menos complexa por enquanto
-        kwargs: (equipment_id)
-        """
-
-        self.equipmentForm = {}
-        self.equipmentForm["equipment_id"] = id
-
-        self.q = PurchasedFactor.objects.filter(equipment_id=id)
-        self.equipment = self.q.first().equipment
-        self.equipmentForm["equipment"] = self.equipment
-
-    # Defini qual o formulario a ser chamado e retorna o valor
-    def makeform(self):
-        name = self.equipment.name.lower().replace("-", "_").replace(" ", "_")
-        do = f"{name}Form"
-        if callable(func := getattr(self, do)):
-            func()
-        return self.equipmentForm
-
-    def blenderForm(self):
-        self.equipmentForm["types"] = self.q.values('description').distinct()
-        self.equipmentForm["dimension"] = self.equipment.dimension
-        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-
-    def centrifugeForm(self):
-        self.equipmentForm["types"] = self.q.values('description').distinct()
-        self.equipmentForm["dimension"] = self.equipment.dimension
-        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-
-    def compressorForm(self):
-        self.equipmentForm["types"] = self.q.values('description').distinct()
-        self.equipmentForm["dimension"] = self.equipment.dimension
-        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-        self.equipmentForm["materials"] = self.q.values('material').distinct()
-
-    def evaporatorForm(self):
-        self.equipmentForm["types"] = self.q.values('description').distinct()
-        self.equipmentForm["dimension"] = self.equipment.dimension
-        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-        self.equipmentForm["materials"] = self.q.values('material').distinct()
-        pressureDimension = Dimension.objects.get(dimension="Gauge Pressure")
-        self.equipmentForm["pressureUnity"] = EquipmentUnity.objects.filter(dimension=pressureDimension)
-
-    def conveyorForm(self):
-        self.equipmentForm["types"] = self.q.values('description').distinct()
-        self.equipmentForm["dimension"] = self.equipment.dimension
-        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-        self.equipmentForm["materials"] = self.q.values('material').distinct()
-
-    def crystallizerForm(self):
-        self.equipmentForm["types"] = self.q.values('description').distinct()
-        self.equipmentForm["dimension"] = self.equipment.dimension
-        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-        self.equipmentForm["materials"] = self.q.values('material').distinct()
-
-    def driveForm(self):
-        self.equipmentForm["types"] = self.q.values('description').distinct()
-        self.equipmentForm["dimension"] = self.equipment.dimension
-        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-
-    def dryerForm(self):
-        self.equipmentForm["types"] = self.q.values('description').distinct()
-        self.equipmentForm["dimension"] = self.equipment.dimension
-        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-
-    def dust_collectorsForm(self):
-        self.equipmentForm["types"] = self.q.values('description').distinct()
-        self.equipmentForm["dimension"] = self.equipment.dimension
-        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-
-    def fanForm(self):
-        self.equipmentForm["types"] = self.q.values('description').distinct()
-        self.equipmentForm["dimension"] = self.equipment.dimension
-        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-        self.equipmentForm["materials"] = self.q.values('material').distinct()
-        pressureDimension = Dimension.objects.get(dimension="Gauge Pressure")
-        self.equipmentForm["pressureUnity"] = EquipmentUnity.objects.filter(dimension=pressureDimension)
-
-    def vaporizerForm(self):
-        self.equipmentForm["types"] = self.q.values('description').distinct()
-        self.equipmentForm["dimension"] = self.equipment.dimension
-        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-        self.equipmentForm["materials"] = self.q.values('material').distinct()
-        pressureDimension = Dimension.objects.get(dimension="Gauge Pressure")
-        self.equipmentForm["pressureUnity"] = EquipmentUnity.objects.filter(dimension=pressureDimension)
-
-    def filterForm(self):
-        self.equipmentForm["types"] = self.q.values('description').distinct()
-        self.equipmentForm["dimension"] = self.equipment.dimension
-        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-
-    def mixerForm(self):
-        self.equipmentForm["types"] = self.q.values('description').distinct()
-        self.equipmentForm["dimension"] = self.equipment.dimension
-        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-
-    def pumpForm(self):
-        self.equipmentForm["types"] = self.q.values('description').distinct()
-        self.equipmentForm["dimension"] = self.equipment.dimension
-        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-        self.equipmentForm["materials"] = self.q.values('material').distinct()
-        pressureDimension = Dimension.objects.get(dimension="Gauge Pressure")
-        self.equipmentForm["pressureUnity"] = EquipmentUnity.objects.filter(dimension=pressureDimension)
-
-    def screenForm(self):
-        self.equipmentForm["types"] = self.q.values('description').distinct()
-        self.equipmentForm["dimension"] = self.equipment.dimension
-        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-
-    def tankForm(self):
-        self.equipmentForm["types"] = self.q.values('description').distinct()
-        self.equipmentForm["dimension"] = self.equipment.dimension
-        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-
-    def turbineForm(self):
-        self.equipmentForm["types"] = self.q.values('description').distinct()
-        self.equipmentForm["dimension"] = self.equipment.dimension
-        self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
-        self.equipmentForm["materials"] = self.q.values('material').distinct()
-
-
 class infoReport():
 
     def __init__(self, id):
-        self.equipmentForm = {}
-        self.equipmentForm["equipment_id"] = id
-
+        self.id = id
         self.q = PurchasedFactor.objects.filter(equipment_id=id)
         self.equipment = self.q.first().equipment
-        self.equipmentForm["equipment"] = self.equipment
 
     # Define qual o formulario a ser chamado e retorna o valor
     def makeform(self):
-        name = self.equipment.name.lower().replace("-", "_").replace(" ", "_")
-        equipmentClass = f"endereco.{name}.report"
-        mod = __import__(equipmentClass, fromlist=['form'])
-        self.equipmentForm = getattr(mod, 'form')(self.q, self.dimension)
+        args = {
+            'q': self.q,
+            'equipment': self.equipment
+        }
+        instancia = findEquipmentPath(self.equipment, 'EquipmentComplementData', args)
+
+        self.equipmentForm = instancia.form()
+        self.equipmentForm["equipment_id"] = self.id
 
         return self.equipmentForm
 
@@ -261,7 +164,7 @@ class ProjectServices():
         return projectsNums
 
     def getProjectReport(n):
-        projectCost = capex.ProjectCost(n)
+        projectCost = ProjectCost(n)
         equipments = projectCost.equipments
         equipmentsDetails = list(map(lambda x: [x.equipment, x.equipment.dimension], equipments))
         info = {
@@ -279,12 +182,27 @@ class ProjectServices():
         project.save()
 
     def removeEquipment(self, project, equipment_id):
-        deleted = capex.ProjectCost(project).removeEquipment(equipment_id)
+        deleted = ProjectCost(project).removeEquipment(equipment_id)
         return deleted
 
     def deleteProject(self, project):
-        deleted = capex.ProjectCost(project).removeProject()
+        deleted = ProjectCost(project).removeProject()
         return deleted
+
+
+def findEquipmentPath(equipment, equipmentClass, args=None, genericEquipment=None):
+    """
+    equipment:Equipment, equipmentClass:string, args=None
+    """
+    name = equipment.name.lower().replace("-", "_").replace(" ", "_")
+    equipmentPath = "capitalcost.equipments." + name
+    mod = __import__(equipmentPath, fromlist=[equipmentClass])
+
+    if args is not None:
+        response = getattr(mod, equipmentClass)(**args)
+    else:
+        response = getattr(mod, equipmentClass)()
+    return response
 
 
 # Esta função está aqui temporariamente para geração de arquivos json do banco de dados.

@@ -31,8 +31,6 @@ class HomeView(View):
             'equipmentsDetails': report["equipmentsDetails"]
         }
 
-        teste_print(dados)
-
         return render(request, 'custos/relatorios/capex.html', dados)
 
 
