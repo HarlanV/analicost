@@ -5,11 +5,11 @@
         {% for material in materials %}
         {% if equipment_data.purchased_factor.material == material.material %}
         <div class="form-check">
-            <input class="form-check-input typeEquipment " type="radio" name="moc"
+            <input class="form-check-input mocEquipment " type="radio" name="moc"
                 id="{{material.material}}" value="{{material.material}}" checked>
             {% else %}
             <div class="form-check">
-                <input class="form-check-input typeEquipment " type="radio" name="moc"
+                <input class="form-check-input mocEquipment " type="radio" name="moc"
                     id="{{material.material}}" value="{{material.material}}">
                 {% endif %}
                 <label class="form-check-label" for="{{material.material}}">

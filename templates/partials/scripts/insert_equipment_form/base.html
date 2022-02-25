@@ -2,7 +2,8 @@
     As funções aqui necessitam de duas funções auxiliares inseridas no em cada form. 
 -->
 <script>
-    var wasPosted = false
+
+
     $(document).ready(function () {
         $('.date').mask('00/00/0000');
         $('.money').mask('000.000.000.000.000,00', {
@@ -14,72 +15,33 @@
 
     });
 
-    function updateBareFields(){
+    function updateBareFields() {
         let endpoint = "{% url 'turton:calculateCost' project equipment_id %}";
         if (checkMandatoryFields()) {
             checkCost(endpoint, getData())
         }
     }
 
+    // Atualiza os campos caso 
     $('.typeEquipment').change(function () {
         updateBareFields()
-
     });
 
-
+    // Verificação e postagem do formulário
     $('#insertEquipmentForm').submit(function (e) {
-
         e.preventDefault()
         let data = getData();
-        form = $(this);        
+        form = $(this);
         let attribute_dimension = document.getElementById('attribute_dimension').value;
-        if (checkMandatoryFields()){
-            $.ajax({
-                method: "GET",
-                url: "{% url 'turton:attributerange' equipment_id 999 %}".replace(999, attribute_dimension),
-                data: data,
-                success: function (response) {
-                    range = isBetweenRanges(response, data["equipment_attribute"], data[
-                        "attribute_name"])
-                    if (range["confirmed"] && checkMandatoryFields()) {
-                        $.ajax({
-                            type: 'POST',
-                            url: $("form").attr("action"),
-                            data: $("form").serialize(),
-                            success: function(response){
-                                alert("Equipamento inserido com sucesso")
-                                document.getElementById("returnButton").click()
 
-                            },
-                            error: function(error_data){
-                                alert("Houve algum problema durante o envio, favor entrar em contato com administrador")
-                            }
-                        })
-                    } else {
-                        if (confirm("Não foi possível continuar. " + range["message"])) {
-                            document.getElementById('equipment_attribute').value = range["alternative"]
-                            updateBareFields()
-                        }
-                    }
-                },
-                error: function (error_data) {
-                    alert("Ops, houve algum erro. Por favor, verifique os campos e tente novamente")
-                    console.log("Ajax request error: attribute dimension couldn't be confirmed.")
-                },
-            })
-            ;
-        }else{
+        // confirma se há algum campo obrigatório vazio
+        if (checkMandatoryFields()) {
+            checkDataForm(data, attribute_dimension)
+        } else {
             alert("Por favor, confirme se não ha nenhum campo vazio")
         }
-        var wasPosted = true
+
     });
-
-    function postForm(form){
-        var wasPosted = true
-        form.submit()
-
-    }
-   
 
     $('#equipment_attribute').change(function () {
         updateBareFields()
@@ -90,6 +52,19 @@
     });
 
     $('#attribute_dimension').change(function () {
+        updateBareFields()
+    });
+
+    $('#pressure').change(function () {
+        updateBareFields()
+    });
+
+    $('#pressure_unity').change(function () {
+        updateBareFields()
+    });
+
+    $('.mocEquipment').change(function () {
+        console.log( $('input[name=moc]:checked').val())
         updateBareFields()
     });
 
@@ -110,25 +85,23 @@
     }
 
     function isBetweenRanges(range, value, name) {
-
+        console.log(range)
         ordermax = Math.log10(range["max"])
         ordermin = Math.log10(range["min"])
-        if (ordermax>0) {
+        if (ordermax > 0) {
             range["max"] = Number((range["max"]).toFixed(2))
-            printmax = String( (range["max"] ))
-        }
-        else{
-            printmin = Number(range["max"]).toPrecision(Math.abs(ordermax)+3)
-            range["max"] = Number(range["max"].toFixed(Math.abs(ordermax)+3))
+            printmax = String((range["max"]))
+        } else {
+            printmin = Number(range["max"]).toPrecision(Math.abs(ordermax) + 3)
+            range["max"] = Number(range["max"].toFixed(Math.abs(ordermax) + 3))
         }
 
-        if (ordermin>0) {
+        if (ordermin > 0) {
             range["min"] = Number((range["min"]).toFixed(2))
             printmin = String(range["min"])
-        }
-        else{
-            printmin = Number(range["min"]).toPrecision(Math.abs(ordermax)+3)
-            range["min"] = Number(range["min"].toFixed(Math.abs(ordermax)+3))
+        } else {
+            printmin = Number(range["min"]).toPrecision(Math.abs(ordermax) + 3)
+            range["min"] = Number(range["min"].toFixed(Math.abs(ordermax) + 3))
         }
 
 
@@ -162,41 +135,93 @@
         document.getElementById('bareModule').value = data["bareModule"].toFixed(2)
     }
 
-
-
-    $('#fakeButton').click(function () {
-        let data = getData();
-
-        let attribute_dimension = document.getElementById('attribute_dimension').value;
-        if (checkMandatoryFields()){
-            $.ajax({
-                method: "GET",
-                url: "{% url 'turton:attributerange' equipment_id 999 %}".replace(999, attribute_dimension),
-                data: data,
-                success: function (response) {
-                    range = isBetweenRanges(response, data["equipment_attribute"], data[
-                        "attribute_name"])
-                    if (range["confirmed"] && checkMandatoryFields()) {
-                        document.getElementById("postButton").click()
-                    } else {
-                        if (confirm("Não foi possível continuar. " + range["message"])) {
-                            document.getElementById('equipment_attribute').value = range["alternative"]
-                            updateBareFields()
-                        }
-                    }
-                },
-                error: function (error_data) {
-                    alert("Ops, houve algum erro. Por favor, verifique os campos e tente novamente")
-                    console.log("Ajax request error: attribute dimension couldn't be confirmed.")
-                },
-            });
-
-        }else{
-            alert("Por favor, confirme se não ha nenhum campo vazio")
-        }
-    });
-
-    function isEmptyValue(element, index, array){
+    function isEmptyValue(element, index, array) {
         return (element == null || element == "")
+    }
+
+    function checkDataForm(data, attribute_dimension, ) {
+        $.ajax({
+            method: "GET",
+            url: "{% url 'turton:attributerange' equipment_id 999 %}".replace(999, attribute_dimension),
+            data: data,
+            success: function (response) {
+                // checagem se o valor de atributo está dentro dos limites
+                range = isBetweenRanges(response, data["equipment_attribute"], data["attribute_name"])            
+                       
+                // Caso Não tenha a função OU a pressão esteja ok, prosseguimos a execução
+                if ( (typeof isInPressureRange === "function") && (isInPressureRange() === false )){
+                    console.log("Problema na pressao")
+                    return
+                }
+
+                // Caso os campos e intervalos estejam ok, enviamos o formulário
+                if (range["confirmed"] && checkMandatoryFields()) {
+                    postForm()
+                } else {
+                    // Caso não estejam, é possivel atualizar automaticamente o campo
+                    if (confirm("Não foi possível continuar. " + range["message"])) {
+                        document.getElementById('equipment_attribute').value = range["alternative"]
+                        updateBareFields()
+                    }
+                }
+            },
+            error: function (error_data) {
+                alert("Ops, houve algum erro. Por favor, verifique os campos e tente novamente")
+                console.log("Ajax request error: attribute dimension couldn't be confirmed.")
+            },
+        })
+    }
+
+    // envio do formulário via ajax
+    function postForm() {
+        $.ajax({
+            type: 'POST',
+            url: $("form").attr("action"),
+            data: $("form").serialize(),
+            success: function (response) {
+                alert("Equipamento inserido com sucesso")
+                document.getElementById("returnButton").click()
+            },
+            error: function (error_data) {
+                alert("Houve algum problema durante o envio, favor entrar em contato com administrador")
+            }
+        })
+    }
+
+
+    function setPressureLimits(pressure) {
+
+        var pressureLimits = JSON.parse(document.getElementById('pressureLimits').textContent);
+        var typesSubtitle = JSON.parse(document.getElementById('typesSubtitle').textContent);
+        var auxiliarLists = JSON.parse(document.getElementById('auxiliarLists').textContent);
+        let materialList = auxiliarLists[0]
+        let equipmentsList = auxiliarLists[1]
+
+        var pressao = {}
+        limits = {}
+        aux = {}
+
+        for (var i of equipmentsList) {
+            for (var j of materialList) {
+                aux[j] = {
+                    max: undefined,
+                    min: undefined
+                }
+            }
+            pressao[i] = aux
+            aux = {}
+        }
+
+        pressureLimits.forEach(function (value, key) {
+            limits[value[0]] = Object.values(pressureLimits[key])
+        })
+
+        typesSubtitle.forEach(function (value, key) {
+            pressao[value[0]][value[2]]["max"] = limits[value[1]][2]
+            pressao[value[0]][value[2]]["min"] = limits[value[1]][1]
+        })
+
+        // convertPressure()
+        return pressao
     }
 </script>

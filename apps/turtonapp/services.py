@@ -102,11 +102,6 @@ class EquipmentServices():
         return info
 
     def getRangeAttributes(equipment_id, args):
-        # values = {
-        #     'equipment_id': int(equipment_id),
-        #     'equipment_attribute': float(equipment_attribute),
-        #     'attribute_dimension': id_unity
-        # }
 
         equipmentForm = EquipmentServices.getEquipmentFromId(equipment_id)
 
@@ -115,6 +110,7 @@ class EquipmentServices():
             'equipment_id': equipment_id,
             'args': args
         })
+
         # equipment = FobCost(equipment_id, args)
         unitysConstants = EquipmentUnity.objects.filter(Q(dimension=equipment.equipment.dimension, is_default=True) | Q(id=args["attribute_dimension"]))
         conversor = 1

@@ -33,18 +33,8 @@
                 </div>
             </fieldset>
 
-            <fieldset class="form-group row">
+            {% include 'equipamentos/partials/sparesEditForm.html' %}
 
-                <div class="form-row ml-1">
-                    <div class="form-group col-md-7 ml:2">
-                        <label for="spares">Spares</label>
-                        <input type="number" step="1" min=0 class="form-control" id="spares" name="spares"
-                            value="{{equipment_data.spares}}">
-                    </div>
-
-
-                </div>
-            </fieldset>
 
             {% include 'equipamentos/partials/bare-fields.html' %}
         </div>

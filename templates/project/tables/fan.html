@@ -7,9 +7,8 @@
         text-align: center;
     }
 </style>
-
             {% for equipment in equipments %}
-            {% if equipment.equipment.name == "Evaporator" %}
+            {% if equipment.equipment.name == "Fan" %}
             <tr class="d-flex">
                 {% include 'project/tables/table-tools.html'%}
                 <th class="col-1" scope="row">{{equipment.equipment_code}}</th>

@@ -3,7 +3,7 @@ from turtonapp.models import BareModule, EquipmentUnity, PurchasedFactor
 from capitalcost.equipments.equipments import BaseEquipment, teste_print
 
 
-class Blender(BaseEquipment):
+class Crystallizer(BaseEquipment):
 
     def __init__(self, equipment_id: int, args: dict):
         # 1. Configuração das variáveis
@@ -41,11 +41,6 @@ class Blender(BaseEquipment):
             self.selectedUnity = EquipmentUnity.objects.filter(id=args["attribute_dimension"]).first()
             self.conversor = (self.defaultUnity.convert_factor) / (self.selectedUnity.convert_factor)
 
-    def config_purchase_constants(self, id, type):
-        self.reference = 1
-        constants = PurchasedFactor.objects.filter(equipment_id=id, description=type).first()
-        self.set_purchase_constants(type, constants)
-
     # Calculo dos custos totais, incluindo o Bare Module
     def setCosts(self):
 
@@ -63,13 +58,13 @@ class Blender(BaseEquipment):
         self.baseBaremoduleCost = self.upRound(bareModuleCost / self.reference)        # 4 trocado
 
 
-class sketch(Blender):
+class sketch(Crystallizer):
 
     def __init__(self, equipment_id: int, args: dict):
         super().__init__(equipment_id, args)
 
 
-class FobCost(Blender):
+class FobCost(Crystallizer):
     def __init__(self, equipment_id: int, args: dict):
         super().__init__(equipment_id, args)
         # 2. Calculos de Custo

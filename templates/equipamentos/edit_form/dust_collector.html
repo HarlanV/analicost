@@ -1,28 +1,28 @@
 {% extends 'equipamentos/partials/add-equipment-form.html' %}
-{% block equipment_title %} Insert Centrifuge {% endblock %}
+{% block equipment_title %} Adiconar Blender {% endblock %}
 {% block equipment_content %}
 
-{% include 'partials/scripts/insert_equipment_form/filter.html' %}
-
+{% include 'partials/scripts/insert_equipment_form/dust_collector.html' %}
         <!-- HEADER FORM -->
-        {% include 'equipamentos/partials/insertHeaderForm.html' %}
+        {% include 'equipamentos/partials/editHeaderForm.html' %}
 
-            <!-- TYPES -->
-            {% include 'equipamentos/partials/typeInsertForm.html' %}
+            <!-- TIPOS -->
+            {% include 'equipamentos/partials/typeEditForm.html' %}
 
-            <!-- UNIDADE -->
+
+            <!-- ÁREA -->
             <fieldset class="form-group row">
                 <div class="form-row ml-1">
                     <div class="form-group col-md-7 ml:2">
-                        <label for="equipment_attribute">Area of Filter</label>
+                        <label for="equipment_attribute">Volumetric Flow</label>
                         <input type="number" step="0.01" min="0.01" class="form-control" id="equipment_attribute"
-                            name="equipment_attribute">
+                            name="equipment_attribute" value="{{equipment_data.specification}}">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="attribute_dimension">Unity</label>
                         <select id="attribute_dimension" class="form-control" name="attribute_dimension">
                             {% for unity in unitys %}
-                            {% if unity.is_default is True %}
+                            {% if equipment_data.preference_unity == unity %}
                             <option value="{{unity.id}}" selected>{{unity.unity}}</option>
                             {% else %}
                             <option value="{{unity.id}}"> {{unity.unity}} </option>
@@ -32,12 +32,12 @@
                     </div>
                 </div>
             </fieldset>
-
+          
             {% include 'equipamentos/partials/bare-fields.html' %}
+            
         </div>
     </div>
 </form>
+{% include 'equipamentos/partials/equipmentsElemAfterForm.html' %}
 
-{% include 'equipamentos/partials/returnButton.html' %}
-{% include 'partials/scripts/insert_equipment_form/base.html' %}
 {% endblock %}

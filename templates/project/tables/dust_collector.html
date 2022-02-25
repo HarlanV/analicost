@@ -1,6 +1,7 @@
+
 {% for equipment in equipments %}
 
-{% if equipment.equipment.name == "Centrifuge" %}
+{% if equipment.equipment.name == "Dust Collector" %}
 <tr class="d-flex">
   {% include 'project/tables/table-tools.html'%}
   <th class="col-1" scope="row">{{equipment.equipment_code}}</th>

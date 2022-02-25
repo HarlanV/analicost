@@ -1,8 +1,13 @@
 {% extends 'equipamentos/partials/add-equipment-form.html' %}
 {% block equipment_title %} Insert Centrifuge {% endblock %}
 {% block equipment_content %}
+{{ pressureLimits|json_script:"pressureLimits"}}
+{{ typesSubtitle|json_script:"typesSubtitle"}}
+{{ auxiliarLists|json_script:"auxiliarLists"}}
+{{ conversores|json_script:"conversores"}}
 
-{% include 'partials/scripts/insert_equipment_form/centrifuge.html' %}
+
+{% include 'partials/scripts/insert_equipment_form/fan.html' %}
 
         <!-- HEADER FORM -->
         {% include 'equipamentos/partials/insertHeaderForm.html' %}
@@ -10,7 +15,7 @@
             <!-- TYPES -->
             {% include 'equipamentos/partials/typeInsertForm.html' %}
                     
-            <!-- MATERIALS -->        
+            <!-- MATERIALS -->
             {% include 'equipamentos/partials/mocInsertForm.html' %}
 
             <!-- VOLUMETRIC FLOWRATE -->
@@ -41,7 +46,7 @@
                 <div class="form-row ml-1">
                     <div class="form-group col-md-7 ml:2">
                         <label for="pressure">Pressure Rise</label>
-                        <input type="number" step="0.01" min="0.01" class="form-control" id="pressure"
+                        <input type="number" step="0.0001" class="form-control" id="pressure"
                             name="pressure">
                     </div>
                     <div class="form-group col-md-4">
@@ -60,26 +65,16 @@
             </fieldset>
 
             <!-- SPARES -->
-            <fieldset class="form-group row">
-                <div class="form-row ml-1">
-                    <div class="form-group col-md-7 ml:2">
-                        <label for="spares">Spares</label>
-                        <input type="number" step="1" min=0 class="form-control" id="spares" name="spares" value=0>
-                    </div>
-
-                </div>
-            </fieldset>
-
+            {% include 'equipamentos/partials/sparesInsertForm.html' %}
 
 
             {% include 'equipamentos/partials/bare-fields.html' %}
-            
-
-            <button type="submit" class="btn btn-primary">Submit</button>
 
         </div>
     </div>
 </form>
+{% include 'equipamentos/partials/returnButton.html' %}
 
+{% include 'partials/scripts/insert_equipment_form/base.html' %}
 
 {% endblock %}

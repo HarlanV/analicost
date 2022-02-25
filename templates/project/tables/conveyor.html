@@ -1,42 +1,23 @@
+{% for equipment in equipments %}
 
-<div class="container-fluid mt-2">
-    <table id="tableblender" class="table table-responsive table-sm table-centralized">
-        <thead class="thead-dark">
-            <tr class="d-flex table-reduced-head ">
-                <th class="col-2" scope="col"> Conveyors </th>
-                <th class="col-1" scope="col"> </th>
-                <th class="col-2" scope="col">Type</th>
-                <th class="col-1" scope="col">Area</th>
-                <th class="col-1" scope="col"> </th>
-                <th class="col-1" scope="col"> </th>
-                <th class="col-2" scope="col"> </th>
-                <th class="col-1" scope="col"> </th>
-                <th class="col-2" scope="col">Purchased Equipment Cost</th>
-                <th class="col-2" scope="col">Bare Module Cost</th>
-                <th class="col-2" scope="col">Base Equipment Cost </th>
-                <th class="col-2" scope="col">Base Bare Module Cost</th>
-            </tr>
-        </thead>
-        <tbody id="blenderBody">
-            {% for equipment in equipments %}
+{% if equipment.equipment.name == "Conveyor" %}
+<tr class="d-flex">
+    {% include 'project/tables/table-tools.html'%}
+    <th class="col-1" scope="row">{{equipment.equipment_code}}</th>
+    <th class="col-2" scope="row">{{tbl}}</th>
+    <td class="col-2" scope="row">{{equipment.purchased_factor.description}}</td>
+    <td class="col-2" scope="row">{{equipment.specification}} ({{equipment.preference_unity}}) </td>
+    <td class="col-1" scope="row"> - </td>
+    <td class="col-2" scope="row"> - </td>
+    <td class="col-1" scope="row"> - </td>
+    <td class="col-1" scope="row"> - </td>
+    <td class="col-1" scope="row"> - </td>
+    <td class="col-2 money " scope="row">{{equipment.purchased_equip_cost}}</td>
+    <td class="col-2 money " scope="row">{{equipment.baremodule_cost}}</td>
+    <td class="col-2 money " scope="row">{{equipment.base_equipment_cost}}</td>
+    <td class="col-2 money " scope="row">{{equipment.base_baremodule_cost}}</td>
+</tr>
 
-            {% if equipment.equipment.name == "Conveyor" %}
-            <tr class="d-flex">
-                {% include 'project/tables/table-tools.html'%}
-                <th class="col-1" scope="row"> {{equipment.equipment_code}} </th>
-                <td class="col-2" scope="row"> {{equipment.purchased_factor.description}} </td>
-                <td class="col-1" scope="row"> {{equipment.specification}}  {{equipment.preference_unity}} </td>
-                <td class="col-1" scope="row"> - </td>
-                <td class="col-1" scope="row"> - </td>
-                <td class="col-2 money " scope="row"> - </td>
-                <td class="col-1 money " scope="row"> - </td>
-                <td class="col-2 money " scope="row">{{equipment.purchased_equip_cost}}</td>
-                <td class="col-2 money " scope="row">{{equipment.baremodule_cost}}</td>
-                <td class="col-2 money " scope="row">{{equipment.base_equipment_cost}}</td>
-                <td class="col-2 money " scope="row">{{equipment.base_baremodule_cost}}</td>
-            </tr>
-            {% endif%}
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
+</tr>
+{% endif%}
+{% endfor %}

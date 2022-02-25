@@ -1,7 +1,9 @@
 .env
+.pyc
 analicap/.env.*
 analicap/*.teste
 /docker/
 **/__pycache__
 /__pycache__/
 __pycache__/
+

@@ -1,3 +1,4 @@
+from queue import Empty
 from turtonapp.models import BareModule, Equipment, PressureFactor
 from capitalcost.models import EquipmentProject
 import math
@@ -59,8 +60,8 @@ class BaseEquipment():
         aux1 = const.c1
         aux2 = const.c2 * (math.log10(pressure))
         aux3 = const.c3 * (math.log10(pressure)**2)
-
         pressureFactor = 10 ** (aux1 + aux2 + aux3)
+
         return pressureFactor
 
     # [ok] Função auxiliar para arredondamento de valor significativo. Regra de Turton no CAPCOST {encapsular}
@@ -92,9 +93,13 @@ class BaseEquipment():
             'preference_unity': self.selectedUnity
         }
 
-        # if self.pressure foi definida...
-        if 'self.pressure' in locals():
-            args["pressure"] = self.pressure
+        # Nem todos os equipamentos possuem pressão. Campo nulable
+
+        try:
+            if self.pressure is not None:
+                args["pressure"] = self.pressure
+        except AttributeError:
+            pass
 
         equipment = project.insertEquipment(args)
 

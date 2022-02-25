@@ -40,11 +40,6 @@ class Centrifuge(BaseEquipment):
             self.selectedUnity = EquipmentUnity.objects.filter(id=args["attribute_dimension"]).first()
             self.conversor = (self.defaultUnity.convert_factor) / (self.selectedUnity.convert_factor)
 
-    def config_purchase_constants(self, id, type):
-        self.reference = 1
-        constants = PurchasedFactor.objects.filter(equipment_id=id, description=type).first()
-        self.set_purchase_constants(type, constants)
-
     # Calculo dos custos totais, incluindo o Bare Module
     def setCosts(self):
 

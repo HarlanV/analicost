@@ -1,8 +1,12 @@
 {% extends 'equipamentos/partials/add-equipment-form.html' %}
 {% block equipment_title %} Insert Centrifuge {% endblock %}
 {% block equipment_content %}
+{{ pressureLimits|json_script:"pressureLimits"}}
+{{ typesSubtitle|json_script:"typesSubtitle"}}
+{{ auxiliarLists|json_script:"auxiliarLists"}}
+{{ conversores|json_script:"conversores"}}
 
-{% include 'partials/scripts/insert_equipment_form/centrifuge.html' %}
+{% include 'partials/scripts/insert_equipment_form/evaporator.html' %}
 
         <!-- HEADER FORM -->
         {% include 'equipamentos/partials/insertHeaderForm.html' %}
@@ -59,18 +63,8 @@
                 </div>
             </fieldset>
 
-
             <!-- SPARES -->
-            <fieldset class="form-group row">
-
-                <div class="form-row ml-1">
-                    <div class="form-group col-md-7 ml:2">
-                        <label for="spares">Spares</label>
-                        <input type="number" step="1" min=0 class="form-control" id="spares" name="spares" value=0>
-                    </div>
-
-                </div>
-            </fieldset>
+            {% include 'equipamentos/partials/sparesInsertForm.html' %}
 
             {% include 'equipamentos/partials/bare-fields.html' %}
         </div>

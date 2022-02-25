@@ -1,9 +1,12 @@
 {% extends 'equipamentos/partials/add-equipment-form.html' %}
 {% block equipment_title %} Insert Centrifuge {% endblock %}
 {% block equipment_content %}
+{{ pressureLimits|json_script:"pressureLimits"}}
+{{ typesSubtitle|json_script:"typesSubtitle"}}
+{{ auxiliarLists|json_script:"auxiliarLists"}}
+{{ conversores|json_script:"conversores"}}
 
-{% include 'partials/scripts/insert_equipment_form/centrifuge.html' %}
-
+{% include 'partials/scripts/insert_equipment_form/vaporizer.html' %}
         <!-- HEADER FORM -->
         {% include 'equipamentos/partials/insertHeaderForm.html' %}
 

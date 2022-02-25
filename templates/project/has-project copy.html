@@ -45,75 +45,35 @@
 
 
 <!-- TODO: Pensar em uma maneira mais eficiente de chamar os includes necessários -->
+{% for tbl in tables_list %}
+{% if tbl == "Blender" %}
+{% include 'project/tables/blender-teste.html'%}
+{% endif%}
+{% if tbl == "Centrifuge" %}
+{% include 'project/tables/centrifuge.html'%}
+{% endif%}
+{% if tbl == "Compressor" %}
+{% include 'project/tables/compressor.html'%}
+{% endif%}
+{% if tbl == "Conveyor" %}
+{% include 'project/tables/conveyor.html'%}
+{% endif%}
+{% if tbl == "Crystallizer" %}
+{% include 'project/tables/crystallizer.html'%}
+{% endif%}
+{% if tbl == "Evaporator" %}
+{% include 'project/tables/evaporator.html'%}
+{% endif%}
 
-<div class="container-fluid mt-2">
-    <table id="tableblender" class="table table-responsive table-sm table-centralized">
-        <thead class="thead-dark">
-            <tr class="d-flex table-reduced-head" id="{{tbl}}">
-                <th class="col-2" scope="col"> Options </th>
-                <th class="col-1" scope="col"> Equip. Code </th>
-                <th class="col-2" scope="col"> Equipment </th>
-                <th class="col-2" scope="col"> Type </th>
-                <th class="col-2" scope="col"> Techinical Feature (unity) </th>
-                <th class="col-1" scope="col"># Spares</th>
-                <th class="col-2" scope="col">Pressure (unity)</th>
-                <th class="col-1" scope="col"> M.O.C.</th>
-                <th class="col-1" scope="col"> Sapce 1</th>
-                <th class="col-1" scope="col"> Space 2  </th>
+{% if tbl == "Fan" %}
+{% include 'project/tables/fan.html'%}
+{% endif%}
 
+{% if tbl == "Filter" %}
+{% include 'project/tables/filter.html'%}
+{% endif%}
 
-                <th class="col-2" scope="col">Purchased Equipment Cost</th>
-                <th class="col-2" scope="col">Bare Module Cost</th>
-                <th class="col-2" scope="col">Base Equipment Cost </th>
-                <th class="col-2" scope="col">Base Bare Module Cost</th>
-            </tr>
-        </thead>
-        <tbody id="blenderBody">
-        {% for tbl in tables_list %}
-            {% if tbl == "Blender" %}
-            {% include 'project/tables/blender.html'%}
-            {% endif%}
-            {% if tbl == "Centrifuge" %}
-            {% include 'project/tables/centrifuge.html'%}
-            {% endif%}
-            {% if tbl == "Evaporator" %}
-            {% include 'project/tables/evaporator.html'%}
-            {% endif%}
-            {% if tbl == "Compressor" %}
-            {% include 'project/tables/compressor.html'%}
-            {% endif%}
-            {% if tbl == "Conveyor" %}
-            {% include 'project/tables/conveyor.html'%}
-            {% endif%}
-            {% if tbl == "Crystallizer" %}
-            {% include 'project/tables/crystallizer.html'%} 
-            {% endif%}     
-            {% if tbl == "Drive" %}
-            {% include 'project/tables/driver.html'%}
-            {% endif%}  
-            {% if tbl == "Dryer" %}
-            {% include 'project/tables/dryer.html'%}
-            {% endif%}  
-            {% if tbl == "Dust Collector" %}
-            {% include 'project/tables/dust_collector.html'%}
-            {% endif%}  
-            {% if tbl == "Vaporizer" %}
-            {% include 'project/tables/vaporizer.html'%}
-            {% endif%} 
-            {% if tbl == "Fan" %}
-            {% include 'project/tables/fan.html'%}
-            {% endif%} 
-            {% if tbl == "Filter" %}
-            {% include 'project/tables/filter.html'%}
-            {% endif%} 
-
-            {% endfor %}
-        </tbody>
-
-    </table>
-</div>
-
-
+{% endfor %}
 {% include 'project/tables/total-capex-report.html' %}
 
 <script>
