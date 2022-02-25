@@ -46,6 +46,10 @@ class Blender(BaseEquipment):
         if "attribute_dimension" in args:
             self.selectedUnity = EquipmentUnity.objects.filter(id=args["attribute_dimension"]).first()
             self.conversor = (self.defaultUnity.convert_factor) / (self.selectedUnity.convert_factor)
+        if "pressure_unity" in args:
+            self.pressureUnity = EquipmentUnity.objects.filter(id=args["pressure_unity"]).first()
+            self.defaultPressure = EquipmentUnity.objects.filter(unity="kPag").first()
+            self.pressureConversor = (self.defaultPressure.convert_factor) / (self.pressureUnity.convert_factor)
 
     # Sobrecreve metodo da classe mãe com regras especificas
     def pressureFactorCalc(self, pressure):
@@ -66,7 +70,7 @@ class Blender(BaseEquipment):
         if self.pressure < (1 / 100):
             pressureFactor = 1
         else:
-            pressureFactor = self.pressureFactorCalc(self.pressure)
+            pressureFactor = self.pressureFactorCalc(self.pressure * self.pressureConversor)
 
         self.baseCost = (self.baseCost * self.cepci) / self.reference_cepci
 

@@ -58,6 +58,7 @@ class EquipmentProject(models.Model):
     spares = models.IntegerField(default=0, blank=True)
     specification = models.FloatField(default=0, blank=True)
     pressure = models.FloatField(default=0, blank=True)
+    pressureunity = models.ForeignKey(EquipmentUnity, on_delete=models.CASCADE, blank=True, null=True, related_name="related_equipment")
     preference_unity = models.ForeignKey(EquipmentUnity, on_delete=models.CASCADE, blank=True, null=True)
     equipment_code = models.CharField(max_length=30, null=True)
     purchased_equip_cost = models.FloatField(null=True)

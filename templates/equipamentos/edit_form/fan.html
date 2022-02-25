@@ -55,7 +55,7 @@
                         <label for="pressure_unity">Unity</label>
                         <select id="pressure_unity" class="form-control" name="pressure_unity">
                             {% for unity in pressureUnity %}
-                            {% if unity.is_default is True %}
+                            {% if equipment_data.pressureunity == unity %}
                             <option value="{{unity.id}}" selected>{{unity.unity}}</option>
                             {% else %}
                             <option value="{{unity.id}}"> {{unity.unity}} </option>

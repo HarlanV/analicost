@@ -98,6 +98,7 @@ class BaseEquipment():
         try:
             if self.pressure is not None:
                 args["pressure"] = self.pressure
+                args["pressureunity"] = self.pressureUnity
         except AttributeError:
             pass
 
@@ -124,8 +125,12 @@ class BaseEquipment():
             'preference_unity': self.selectedUnity
         }
 
-        if 'self.pressure' in locals():
-            args["pressure"] = self.pressure
+        try:
+            if self.pressure is not None:
+                args["pressure"] = self.pressure
+                args["pressureunity"] = self.pressureUnity
+        except AttributeError:
+            pass
 
         equipment = project.updateEquipment(args, equipmentProject)
         equipment = project.updateCosts()
