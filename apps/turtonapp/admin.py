@@ -43,8 +43,8 @@ class ListandoPressure(admin.ModelAdmin):
 
 
 class ListandoMaterial(admin.ModelAdmin):
-    list_display = ('equipment', 'b1', 'b2', 'material', 'condition')
-    list_display_links = ('equipment', 'b1', 'b2', 'material', 'condition')
+    list_display = ('equipment', 'b1', 'b2', 'material', 'condition', 'fm')
+    list_display_links = ('equipment', 'b1', 'b2', 'material', 'condition', 'fm')
     search_fields = ('equipment__description', 'equipment__equipment__name', '')
     list_filter = ('equipment__equipment',)
     list_per_page = 10

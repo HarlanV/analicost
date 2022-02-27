@@ -1,0 +1,108 @@
+
+<script>
+    // Aqui é personalizado os campos que devem ser verificados antes exibir o custo e/ou postar
+    function checkMandatoryFields() {
+        var type = $('input[name=type]:checked').val()
+        lockMoc(type)
+        var type = $('input[name=type]:checked').val()
+        var atribute = document.getElementById('equipment_attribute').value
+        var pressure = document.getElementById('pressure').value
+        temVazio = [atribute, type, pressure].some(isEmptyValue)
+        return !temVazio
+    }
+
+    // Relação de campos e valores necessári                                                                                                                                                                                                                                                                                                                                                                                                                                                                    os para calculo do BareCost
+    function getData() {
+
+        return {
+            'type': $('input[name=type]:checked').val(),
+            'equipment_attribute': document.getElementById('equipment_attribute').value,
+            'attribute_name': "Area",
+            'spares': document.getElementById('spares').value,
+            'attribute_dimension': document.getElementById('attribute_dimension').value,
+            'moc': $('input[name=moc]:checked').val(),
+            'pressure': document.getElementById('pressure').value,
+            'pressure_unity': document.getElementById('pressure_unity').value
+        }
+    }
+
+    function isInPressureRange(){
+        const typeEquip = $('input[name=type]:checked').val()
+        const materialEquip = $('input[name=moc]:checked').val()
+        const pressureOp = document.getElementById('pressure').value
+        const pressao = setPressureLimits()
+        const conversor = JSON.parse(document.getElementById('conversores').textContent);
+        const u = document.getElementById("pressure_unity");
+        const unity= u.options[u.selectedIndex].text;
+        //console.log("max:"+pressureOp/(conversor[unity] +"//"+pressao[typeEquip][materialEquip]["max"]))
+        console.log("pressao:" + pressureOp/(conversor[unity]))
+        console.log("max:"+pressureOp/(conversor[unity]) +"//"+pressao[typeEquip][materialEquip]["max"])
+        
+        console.log("min:"+pressureOp/(conversor[unity]) +"//"+pressao[typeEquip][materialEquip]["min"])
+        // console.log("min:"+pressureOp/(conversor[unity] +"//"+pressao[typeEquip][materialEquip]["min"]))
+
+        if ((pressureOp/(conversor[unity])) > pressao[typeEquip][materialEquip]["max"]){
+            alert("A pressão está acima de " + ((pressao[typeEquip][materialEquip]["max"])*(conversor[unity])) +unity +". Reveja o valor inserido")
+            return false
+        }        
+        if ((pressureOp/(conversor[unity])) < pressao[typeEquip][materialEquip]["min"]){
+            alert("A pressão está abaixo de " + ((pressao[typeEquip][materialEquip]["min"])*(conversor[unity])) +unity +". Reveja o valor inserido")
+             return false
+        }
+        return true
+    }
+
+    $('#pressure').change(function () {
+        updateBareFields()
+    });
+
+    $('#pressure_unity').change(function () {
+        updateBareFields()
+    });
+
+    function uncheckMoc(uncheckList, mocList, checkedMoc){
+        // remove o primeiro elemento, que será sempre o nome do equipamento
+        uncheckList.shift()
+        // retorna quais são possiveis de marcar
+        let difference = uncheckList
+                 .filter(x => !mocList.includes(x))
+                 .concat(mocList.filter(x => !uncheckList.includes(x)));
+
+
+        // remove a marcação do material e marca o proximo viável
+        if(uncheckList.includes(checkedMoc)){
+            document.getElementById(checkedMoc).checked = false
+            document.getElementById(difference[0]).checked = true
+        }
+
+        // esconde ou bloqueia os elementos não permitidos
+        for (ul of uncheckList){
+                document.getElementById("div"+ul).style.visibility = "hidden";
+                // document.getElementById("div"+ul).style.visibility = 'block';
+                }
+        
+        // garante que estejam visiveis os possiveis (caso de "destroca")
+        for (d of difference){
+            document.getElementById("div"+d).style.visibility = "visible";
+            // document.getElementById("div"+d).style.visibility = 'none';
+        }
+    }
+ 
+    function lockMoc(type){
+
+        let mocList = JSON.parse(JSON.parse(document.getElementById('typesAndMaterials').textContent));
+        let moc = $('input[name=moc]:checked').val()
+        let materialList = JSON.parse(document.getElementById('auxiliarLists').textContent)[0];
+        for (lista of mocList){
+
+            if ((lista[0]==type)){
+                let difference = lista
+                 .filter(x => !materialList.includes(x))
+                 .concat(materialList.filter(x => !lista.includes(x)));
+                 uncheckMoc(difference, materialList, moc)
+                break
+            }
+        }
+    }
+
+</script>

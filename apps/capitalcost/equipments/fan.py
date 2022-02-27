@@ -4,7 +4,7 @@ from capitalcost.equipments.equipments import BaseEquipment, teste_print
 import math
 
 
-class Blender(BaseEquipment):
+class Fan(BaseEquipment):
 
     def __init__(self, equipment_id: int, args: dict):
         # 1. Configuração das variáveis
@@ -53,8 +53,6 @@ class Blender(BaseEquipment):
 
     # Sobrecreve metodo da classe mãe com regras especificas
     def pressureFactorCalc(self, pressure):
-        # Valores de referência em Kpa
-        pressure = pressure * 100
         const = PressureFactor.objects.filter(equipment_id=self.purchase_id).first()
         aux1 = const.c1
         aux2 = const.c2 * (math.log10(pressure))
@@ -78,19 +76,19 @@ class Blender(BaseEquipment):
         bareModuleCost = self.baseCost * self.bareModuleFactor() * pressureFactor
 
         # Arredonda valores
-        self.baseBaremoduleCost = self.upRound(self.baseCost * self.reference)         # 4 trocado
-        self.bareModuleCost = self.upRound(bareModuleCost)                             # 2 ok
-        self.baseEquipmentCost = self.upRound(self.baseCost)                           # 3 ok
-        self.purchasedEquipmentCost = self.upRound(bareModuleCost / self.reference)    # 1 trocado
+        self.purchasedEquipmentCost = self.upRound(bareModuleCost / self.reference)
+        self.bareModuleCost = self.upRound(bareModuleCost)
+        self.baseEquipmentCost = self.upRound(self.baseCost)
+        self.baseBaremoduleCost = self.upRound(self.baseCost * self.reference)
 
 
-class sketch(Blender):
+class sketch(Fan):
 
     def __init__(self, equipment_id: int, args: dict):
         super().__init__(equipment_id, args)
 
 
-class FobCost(Blender):
+class FobCost(Fan):
     def __init__(self, equipment_id: int, args: dict):
         super().__init__(equipment_id, args)
         # 2. Calculos de Custo

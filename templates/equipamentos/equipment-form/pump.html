@@ -1,8 +1,20 @@
 {% extends 'equipamentos/partials/add-equipment-form.html' %}
-{% block equipment_title %} Insert Centrifuge {% endblock %}
+{% block equipment_title %} Insert {{equipment.name}} {% endblock %}
 {% block equipment_content %}
+{{ pressureLimits|json_script:"pressureLimits"}}
+{{ typesSubtitle|json_script:"typesSubtitle"}}
+{{ auxiliarLists|json_script:"auxiliarLists"}}
+{{ conversores|json_script:"conversores"}}
+{{ typesAndMaterials|json_script:"typesAndMaterials"}}
 
-{% include 'partials/scripts/insert_equipment_form/centrifuge.html' %}
+
+<script> 
+        aceitaveis = JSON.parse(JSON.parse(document.getElementById('typesAndMaterials').textContent));
+        var auxiliarLists = JSON.parse(document.getElementById('auxiliarLists').textContent);
+        // console.log(auxiliarLists[0])
+</script>
+
+{% include 'partials/scripts/insert_equipment_form/pump.html' %}
 
         <!-- HEADER FORM -->
         {% include 'equipamentos/partials/insertHeaderForm.html' %}

@@ -44,17 +44,17 @@ class Compressor(BaseEquipment):
 
     # Calculo dos custos totais, incluindo o Bare Module
     def setCosts(self):
-        pressureFactor = 1
+
         self.baseCost = (self.baseCost * self.cepci) / self.reference_cepci
 
         # Fator BareMobule
-        bareModuleCost = self.baseCost * self.bareModuleFactor() * pressureFactor
+        bareModuleCost = self.baseCost * self.bareModuleFactor()
 
         # Arredonda valores
-        self.baseBaremoduleCost = self.upRound(self.baseCost * self.reference)        # 4 trocado
-        self.bareModuleCost = self.upRound(bareModuleCost)                             # 2 ok
-        self.baseEquipmentCost = self.upRound(self.baseCost)                           # 3 ok
-        self.purchasedEquipmentCost = self.upRound(bareModuleCost / self.reference)     # 1 trocado
+        self.purchasedEquipmentCost = self.upRound(bareModuleCost / self.reference)
+        self.bareModuleCost = self.upRound(bareModuleCost)
+        self.baseEquipmentCost = self.upRound(self.baseCost)
+        self.baseBaremoduleCost = self.upRound(self.baseCost * self.reference)
 
 
 class sketch(Compressor):

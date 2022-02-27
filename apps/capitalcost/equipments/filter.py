@@ -3,7 +3,7 @@ from turtonapp.models import BareModule, EquipmentUnity, PurchasedFactor
 from capitalcost.equipments.equipments import BaseEquipment, teste_print
 
 
-class Blender(BaseEquipment):
+class Filter(BaseEquipment):
 
     def __init__(self, equipment_id: int, args: dict):
         # 1. Configuração das variáveis
@@ -57,13 +57,13 @@ class Blender(BaseEquipment):
         self.baseBaremoduleCost = self.upRound(bareModuleCost / self.reference)        # 4 trocado
 
 
-class sketch(Blender):
+class sketch(Filter):
 
     def __init__(self, equipment_id: int, args: dict):
         super().__init__(equipment_id, args)
 
 
-class FobCost(Blender):
+class FobCost(Filter):
     def __init__(self, equipment_id: int, args: dict):
         super().__init__(equipment_id, args)
         # 2. Calculos de Custo

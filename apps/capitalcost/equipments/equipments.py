@@ -1,5 +1,5 @@
 from queue import Empty
-from turtonapp.models import BareModule, Equipment, PressureFactor
+from turtonapp.models import BareModule, Equipment, MaterialFactor, PressureFactor
 from capitalcost.models import EquipmentProject
 import math
 
@@ -54,9 +54,25 @@ class BaseEquipment():
         fbm = BareModule.objects.filter(equipment_id=self.purchase_id).first().fbm
         return fbm
 
+    def roughFbm(self, equip_id):
+        materialFactors = MaterialFactor.objects.filter(equipment_id=equip_id).first()
+        self.b1 = materialFactors.b1
+        self.b2 = materialFactors.b2
+        self.fM = materialFactors.fm
+        fbm = (self.b1 + (self.b2 * self.fM * self.pressureFactor))
+        return fbm
+
+    def baseRoughFbm(self, equip_id):
+        b1 = self.b1
+        b2 = self.b2
+        fM = 1
+        fP = 1
+        fbm = (b1 + (b2 * fM * fP))
+        return fbm
+
     # [ok] Calculo do fator de pressão
     def pressureFactorCalc(self, pressure):
-        const = PressureFactor.objects.filter(equipment_id=self.purchase_id).first()
+        const = PressureFactor.objects.filter(equipment=self.purchase_id).first()
         aux1 = const.c1
         aux2 = const.c2 * (math.log10(pressure))
         aux3 = const.c3 * (math.log10(pressure)**2)

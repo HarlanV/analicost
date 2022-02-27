@@ -31,12 +31,12 @@ class Vaporizer(BaseEquipment):
         self.type = args["type"]
         self.moc = args["moc"]
         self.pressure = 0
+        self.spares = 0
 
         if "pressure" in args:
             self.pressure = (float(args["pressure"]))
         if "cepci" in args:
             self.cepci = args["cepci"]
-
         if "equipment_attribute" in args:
             self.specification = float(args["equipment_attribute"])
         if ("spares" in args and args["spares"] != ""):
@@ -44,23 +44,31 @@ class Vaporizer(BaseEquipment):
         if "attribute_dimension" in args:
             self.selectedUnity = EquipmentUnity.objects.filter(id=args["attribute_dimension"]).first()
             self.conversor = (self.defaultUnity.convert_factor) / (self.selectedUnity.convert_factor)
+        if "pressure_unity" in args:
+            self.pressureUnity = EquipmentUnity.objects.filter(id=args["pressure_unity"]).first()
+            self.defaultPressure = EquipmentUnity.objects.filter(unity="barg").first()
+            self.pressureConversor = (self.defaultPressure.convert_factor) / (self.pressureUnity.convert_factor)
 
     # Calculo dos custos totais, incluindo o Bare Module
     def setCosts(self):
+        # pressureFactor = self.pressureFactorCalc(self.pressure)
         # Para valores de pressão < 0, o valor do fator é aproximadamente 1 constante
         pressureFactor = 1
-        if self.pressure > 10:
-            pressureFactor = self.pressureFactorCalc(self.pressure)
+
+        if self.pressure * self.pressureConversor > 10:
+            pressureFactor = self.pressureFactorCalc(self.pressure * self.pressureConversor)
+
+        self.pressureFactor = pressureFactor
         self.baseCost = (self.baseCost * self.cepci) / self.reference_cepci
 
         # Fator BareMobule
         bareModuleCost = self.baseCost * self.bareModuleFactor() * pressureFactor
 
         # Arredonda valores
-        self.baseBaremoduleCost = self.upRound(self.baseCost * self.reference)        # 4 trocado
-        self.bareModuleCost = self.upRound(bareModuleCost)                             # 2 ok
-        self.baseEquipmentCost = self.upRound(self.baseCost)                           # 3 ok
-        self.purchasedEquipmentCost = self.upRound(bareModuleCost / self.reference)     # 1 trocado
+        self.purchasedEquipmentCost = self.upRound(bareModuleCost / self.reference)
+        self.bareModuleCost = self.upRound(bareModuleCost)
+        self.baseEquipmentCost = self.upRound(self.baseCost)
+        self.baseBaremoduleCost = self.upRound(self.baseCost * self.reference)
 
 
 class sketch(Vaporizer):

@@ -60,8 +60,6 @@
                 <th class="col-1" scope="col"> M.O.C.</th>
                 <th class="col-1" scope="col"> Sapce 1</th>
                 <th class="col-1" scope="col"> Space 2  </th>
-
-
                 <th class="col-2" scope="col">Purchased Equipment Cost</th>
                 <th class="col-2" scope="col">Bare Module Cost</th>
                 <th class="col-2" scope="col">Base Equipment Cost </th>
@@ -70,6 +68,7 @@
         </thead>
         <tbody id="blenderBody">
         {% for tbl in tables_list %}
+        {{tbl}}
             {% if tbl == "Blender" %}
             {% include 'project/tables/blender.html'%}
             {% endif%}
@@ -106,7 +105,24 @@
             {% if tbl == "Filter" %}
             {% include 'project/tables/filter.html'%}
             {% endif%} 
-
+            {% if tbl == "Pump" %}
+            {% include 'project/tables/pump.html'%}
+            {% endif%} 
+            {% if tbl == "Mixer" %}
+            {% include 'project/tables/mixer.html'%}
+            {% endif%} 
+            {% if tbl == "Reactor" %}
+            {% include 'project/tables/reactor.html'%}
+            {% endif%} 
+            {% if tbl == "Screen" %}
+            {% include 'project/tables/screen.html'%}
+            {% endif%} 
+            {% if tbl == "Tank" %}
+            {% include 'project/tables/tank.html'%}
+            {% endif%} 
+            {% if tbl == "Turbine" %}
+            {% include 'project/tables/turbine.html'%}
+            {% endif%} 
             {% endfor %}
         </tbody>
 

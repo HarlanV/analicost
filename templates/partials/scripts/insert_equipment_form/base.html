@@ -2,7 +2,8 @@
     As funções aqui necessitam de duas funções auxiliares inseridas no em cada form. 
 -->
 <script>
-
+    // faz uma primeira checagem com as funções obrigatórias
+    checkMandatoryFields()
 
     $(document).ready(function () {
         $('.date').mask('00/00/0000');
@@ -139,7 +140,7 @@
         return (element == null || element == "")
     }
 
-    function checkDataForm(data, attribute_dimension, ) {
+    function checkDataForm(data, attribute_dimension) {
         $.ajax({
             method: "GET",
             url: "{% url 'turton:attributerange' equipment_id 999 %}".replace(999, attribute_dimension),
@@ -221,7 +222,11 @@
             pressao[value[0]][value[2]]["min"] = limits[value[1]][1]
         })
 
+        
         // convertPressure()
         return pressao
     }
+
+
+
 </script>

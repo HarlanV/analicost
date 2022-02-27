@@ -1,5 +1,5 @@
 {% extends 'equipamentos/partials/add-equipment-form.html' %}
-{% block equipment_title %} Adiconar Conveyor {% endblock %}
+{% block equipment_title %} Adiconar {{equipment.name}} {% endblock %}
 {% block equipment_content %}
 {{ conversores|json_script:"conversores" }}
 

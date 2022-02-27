@@ -1,5 +1,5 @@
 {% extends 'equipamentos/partials/add-equipment-form.html' %}
-{% block equipment_title %} Adiconar Blender {% endblock %}
+{% block equipment_title %} Adiconar {{equipment.name}} {% endblock %}
 {% block equipment_content %}
 {{ pressureLimits|json_script:"pressureLimits"}}
 {{ typesSubtitle|json_script:"typesSubtitle"}}

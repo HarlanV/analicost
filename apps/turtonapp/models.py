@@ -69,7 +69,7 @@ class MaterialFactor(models.Model):
     b2 = models.FloatField(null=True)
     fm = models.FloatField(null=True)
     material = models.CharField(max_length=200, null=True)
-    condition = models.CharField(max_length=300, null=True)
+    condition = models.CharField(max_length=300, null=True, blank=True)
     equipment = models.ForeignKey(PurchasedFactor, on_delete=models.CASCADE)
 
     class Meta:

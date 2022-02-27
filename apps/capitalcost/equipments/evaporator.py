@@ -45,26 +45,42 @@ class Evaporator(BaseEquipment):
         if "attribute_dimension" in args:
             self.selectedUnity = EquipmentUnity.objects.filter(id=args["attribute_dimension"]).first()
             self.conversor = (self.defaultUnity.convert_factor) / (self.selectedUnity.convert_factor)
+        if "pressure_unity" in args:
+            self.pressureUnity = EquipmentUnity.objects.filter(id=args["pressure_unity"]).first()
+            self.defaultPressure = EquipmentUnity.objects.filter(unity="barg").first()
+            self.pressureConversor = (self.defaultPressure.convert_factor) / (self.pressureUnity.convert_factor)
 
     # Calculo dos custos totais, incluindo o Bare Module
     def setCosts(self):
-        
+
         # pressureFactor = self.pressureFactorCalc(self.pressure)
         # Para valores de pressão < 0, o valor do fator é aproximadamente 1 constante
         pressureFactor = 1
-        if self.pressure > 10:
-            pressureFactor = self.pressureFactorCalc(self.pressure)
 
+        if self.pressure * self.pressureConversor > 10:
+            pressureFactor = self.pressureFactorCalc(self.pressure * self.pressureConversor)
+
+        self.pressureFactor = pressureFactor
         self.baseCost = (self.baseCost * self.cepci) / self.reference_cepci
 
         # Fator BareMobule
         bareModuleCost = self.baseCost * self.bareModuleFactor() * pressureFactor
 
         # Arredonda valores
-        self.baseBaremoduleCost = self.upRound(self.baseCost * self.reference)         # 4 trocado
-        self.bareModuleCost = self.upRound(bareModuleCost)                             # 2 ok
-        self.baseEquipmentCost = self.upRound(self.baseCost)                           # 3 ok
-        self.purchasedEquipmentCost = self.upRound(bareModuleCost / self.reference)    # 1 trocado
+        self.purchasedEquipmentCost = self.upRound(bareModuleCost / self.reference)
+        self.bareModuleCost = self.upRound(bareModuleCost)
+        self.baseEquipmentCost = self.upRound(self.baseCost)
+        self.baseBaremoduleCost = self.upRound(self.baseCost * self.reference)
+
+        t1 = self.purchasedEquipmentCost
+        t2 = self.bareModuleCost
+        t3 = self.baseEquipmentCost
+        t4 = self.baseBaremoduleCost
+        teste = str(t1) + "//" + str(t2) + "//" + str(t3) + "//" + str(t4)
+        teste2 = str(self.bareModuleFactor()) + "//" + str(self.reference) + "//" + str(pressureFactor) + "//" + str(self.pressureConversor)
+
+        teste_print(teste)
+        teste_print(teste2)
 
 
 class sketch(Evaporator):

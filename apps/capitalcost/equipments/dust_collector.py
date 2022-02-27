@@ -19,7 +19,6 @@ class DustCollector(BaseEquipment):
 
     # Busca e configura as contantes de custo do equipamento
     def config_purchase_constants(self, id, type):
-        self.reference = 1
         constants = PurchasedFactor.objects.filter(equipment_id=id, description=type).first()
         self.set_purchase_constants(type, constants)
 
@@ -42,20 +41,16 @@ class DustCollector(BaseEquipment):
 
     # Calculo dos custos totais, incluindo o Bare Module
     def setCosts(self):
-
-        # pressureFactor = self.pressureFactorCalc(self.pressure)
-        pressureFactor = 1
         self.baseCost = (self.baseCost * self.cepci) / self.reference_cepci
 
         # Fator BareMobule
-        bareModuleCost = self.baseCost * self.bareModuleFactor() * pressureFactor
+        bareModuleCost = self.baseCost * self.bareModuleFactor()
 
         # Arredonda valores
-        # Blender
-        self.purchasedEquipmentCost = self.upRound(self.baseCost * self.reference)     # 1 trocado
+        self.purchasedEquipmentCost = self.upRound(self.baseCost)     # 1 trocado
         self.bareModuleCost = self.upRound(bareModuleCost)                             # 2 ok
         self.baseEquipmentCost = self.upRound(self.baseCost)                           # 3 ok
-        self.baseBaremoduleCost = self.upRound(bareModuleCost / self.reference)        # 4 trocado
+        self.baseBaremoduleCost = self.upRound(bareModuleCost)        # 4 trocado
 
 
 class sketch(DustCollector):

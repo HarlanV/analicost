@@ -1,8 +1,8 @@
 {% extends 'equipamentos/partials/add-equipment-form.html' %}
-{% block equipment_title %} Insert Centrifuge {% endblock %}
+{% block equipment_title %} Insert {{equipment.name}} {% endblock %}
 {% block equipment_content %}
 
-{% include 'partials/scripts/insert_equipment_form/centrifuge.html' %}
+{% include 'partials/scripts/insert_equipment_form/mixer.html' %}
 
         <!-- HEADER FORM -->
         {% include 'equipamentos/partials/insertHeaderForm.html' %}
@@ -34,24 +34,13 @@
             </fieldset>
 
             <!-- SPARES -->
-            <fieldset class="form-group row">
-                <div class="form-row ml-1">
-                    <div class="form-group col-md-7 ml:2">
-                        <label for="spares">Spares</label>
-                        <input type="number" step="1" min=0 class="form-control" id="spares" name="spares" value=0>
-                    </div>
-                </div>
-            </fieldset>
-
+            {% include 'equipamentos/partials/sparesInsertForm.html' %}
 
             {% include 'equipamentos/partials/bare-fields.html' %}
-            
-
-            <button type="submit" class="btn btn-primary">Submit</button>
-
         </div>
     </div>
 </form>
 
-
+{% include 'equipamentos/partials/returnButton.html' %}
+{% include 'partials/scripts/insert_equipment_form/base.html' %}
 {% endblock %}

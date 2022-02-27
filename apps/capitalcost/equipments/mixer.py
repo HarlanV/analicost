@@ -3,7 +3,7 @@ from turtonapp.models import BareModule, EquipmentUnity, PurchasedFactor
 from capitalcost.equipments.equipments import BaseEquipment, teste_print
 
 
-class Blender(BaseEquipment):
+class Mixer(BaseEquipment):
 
     def __init__(self, equipment_id: int, args: dict):
         # 1. Configuração das variáveis
@@ -19,13 +19,8 @@ class Blender(BaseEquipment):
 
     # Busca e configura as contantes de custo do equipamento
     def config_purchase_constants(self, id, type):
-        if self.moc is not None:
-            constants = PurchasedFactor.objects.filter(equipment_id=id, description=type, material=self.moc).first()
-            refId = PurchasedFactor.objects.filter(equipment_id=id, description=type, is_reference=True).first().id
-            self.reference = BareModule.objects.filter(equipment_id=refId).first().fbm
-        else:
-            self.reference = 1
-            constants = PurchasedFactor.objects.filter(equipment_id=id, description=type).first()
+        self.reference = 1
+        constants = PurchasedFactor.objects.filter(equipment_id=id, description=type).first()
         self.set_purchase_constants(type, constants)
 
     # Função para atribuição de variáveis
@@ -33,30 +28,23 @@ class Blender(BaseEquipment):
         # Verificar possibilidade de personalizar
         self.defaultUnity = EquipmentUnity.objects.filter(dimension=self.equipment.dimension, is_default=True).first()
         self.type = args["type"]
-        self.moc = None
-        self.pressure = None
+        self.spares = 0
+
         if "cepci" in args:
             self.cepci = args["cepci"]
 
         if "equipment_attribute" in args:
             self.specification = float(args["equipment_attribute"])
+
         if ("spares" in args and args["spares"] != ""):
             self.spares = int(args["spares"])
-        else:
-            self.spares = 0
         if "attribute_dimension" in args:
             self.selectedUnity = EquipmentUnity.objects.filter(id=args["attribute_dimension"]).first()
             self.conversor = (self.defaultUnity.convert_factor) / (self.selectedUnity.convert_factor)
 
-    def config_purchase_constants(self, id, type):
-        self.reference = 1
-        constants = PurchasedFactor.objects.filter(equipment_id=id, description=type).first()
-        self.set_purchase_constants(type, constants)
-
     # Calculo dos custos totais, incluindo o Bare Module
     def setCosts(self):
 
-        # pressureFactor = self.pressureFactorCalc(self.pressure)
         pressureFactor = 1
         self.baseCost = (self.baseCost * self.cepci) / self.reference_cepci
 
@@ -64,20 +52,19 @@ class Blender(BaseEquipment):
         bareModuleCost = self.baseCost * self.bareModuleFactor() * pressureFactor
 
         # Arredonda valores
-        # Blender
-        self.purchasedEquipmentCost = self.upRound(self.baseCost * self.reference)     # 1 trocado
-        self.bareModuleCost = self.upRound(bareModuleCost)                             # 2 ok
-        self.baseEquipmentCost = self.upRound(self.baseCost)                           # 3 ok
-        self.baseBaremoduleCost = self.upRound(bareModuleCost / self.reference)        # 4 trocado
+        self.purchasedEquipmentCost = self.upRound(self.baseCost)
+        self.bareModuleCost = self.upRound(bareModuleCost)
+        self.baseEquipmentCost = self.upRound(self.baseCost)
+        self.baseBaremoduleCost = self.upRound(bareModuleCost)
 
 
-class sketch(Blender):
+class sketch(Mixer):
 
     def __init__(self, equipment_id: int, args: dict):
         super().__init__(equipment_id, args)
 
 
-class FobCost(Blender):
+class FobCost(Mixer):
     def __init__(self, equipment_id: int, args: dict):
         super().__init__(equipment_id, args)
         # 2. Calculos de Custo

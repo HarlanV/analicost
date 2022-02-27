@@ -1,9 +1,10 @@
 # from turtonapp.models import BareModule, Equipment, PurchasedFactor, EquipmentUnity
-from turtonapp.models import BareModule, EquipmentUnity, PurchasedFactor
+import json
+from turtonapp.models import BareModule, Dimension, EquipmentUnity, MaterialFactor, PressureFactor, PurchasedFactor
 from capitalcost.equipments.equipments import BaseEquipment, teste_print
 
 
-class Blender(BaseEquipment):
+class Pump(BaseEquipment):
 
     def __init__(self, equipment_id: int, args: dict):
         # 1. Configuração das variáveis
@@ -19,65 +20,82 @@ class Blender(BaseEquipment):
 
     # Busca e configura as contantes de custo do equipamento
     def config_purchase_constants(self, id, type):
-        if self.moc is not None:
-            constants = PurchasedFactor.objects.filter(equipment_id=id, description=type, material=self.moc).first()
-            refId = PurchasedFactor.objects.filter(equipment_id=id, description=type, is_reference=True).first().id
-            self.reference = BareModule.objects.filter(equipment_id=refId).first().fbm
-        else:
-            self.reference = 1
-            constants = PurchasedFactor.objects.filter(equipment_id=id, description=type).first()
+        constants = PurchasedFactor.objects.filter(equipment_id=id, description=type, material=self.moc).first()
+        self.referenceEquipmentId = PurchasedFactor.objects.filter(equipment_id=id, description=type, is_reference=True).first()
+
         self.set_purchase_constants(type, constants)
 
     # Função para atribuição de variáveis
     def setIndividualConstants(self, equipment_id: int, args: dict):
-        # Verificar possibilidade de personalizar
         self.defaultUnity = EquipmentUnity.objects.filter(dimension=self.equipment.dimension, is_default=True).first()
         self.type = args["type"]
-        self.moc = None
-        self.pressure = None
+        self.moc = args["moc"]
+        self.pressure = 0
+        self.spares = 0
+        if "pressure" in args:
+            self.pressure = (float(args["pressure"]))
         if "cepci" in args:
             self.cepci = args["cepci"]
-
         if "equipment_attribute" in args:
             self.specification = float(args["equipment_attribute"])
         if ("spares" in args and args["spares"] != ""):
             self.spares = int(args["spares"])
-        else:
-            self.spares = 0
         if "attribute_dimension" in args:
             self.selectedUnity = EquipmentUnity.objects.filter(id=args["attribute_dimension"]).first()
             self.conversor = (self.defaultUnity.convert_factor) / (self.selectedUnity.convert_factor)
+        if "pressure_unity" in args:
+            self.pressureUnity = EquipmentUnity.objects.filter(id=args["pressure_unity"]).first()
+            defaultPressureFactor = EquipmentUnity.objects.filter(unity="barg").first()
+            self.pressureConversor = (defaultPressureFactor.convert_factor) / (self.pressureUnity.convert_factor)
 
-    def config_purchase_constants(self, id, type):
-        self.reference = 1
-        constants = PurchasedFactor.objects.filter(equipment_id=id, description=type).first()
-        self.set_purchase_constants(type, constants)
+    def bareModuleFactor(self, referenceId=False):
+        if referenceId is False:
+            fbm = self.roughFbm(self.purchase_id)
+        else:
+            fbm = self.roughFbm(self.referenceEquipmentId.id)
+        return fbm
 
     # Calculo dos custos totais, incluindo o Bare Module
     def setCosts(self):
 
-        # pressureFactor = self.pressureFactorCalc(self.pressure)
-        pressureFactor = 1
+        self.pressureFactor = 1
+        if self.pressure * self.pressureConversor > 10:
+            self.pressureFactor = self.pressureFactorCalc(self.pressure * self.pressureConversor)
+
         self.baseCost = (self.baseCost * self.cepci) / self.reference_cepci
 
+        # Para CS
+        self.reference = self.bareModuleFactor(True)
+
         # Fator BareMobule
-        bareModuleCost = self.baseCost * self.bareModuleFactor() * pressureFactor
+        bareModuleCost = self.baseCost * self.bareModuleFactor()
 
         # Arredonda valores
-        # Blender
-        self.purchasedEquipmentCost = self.upRound(self.baseCost * self.reference)     # 1 trocado
-        self.bareModuleCost = self.upRound(bareModuleCost)                             # 2 ok
-        self.baseEquipmentCost = self.upRound(self.baseCost)                           # 3 ok
-        self.baseBaremoduleCost = self.upRound(bareModuleCost / self.reference)        # 4 trocado
+        # fbm nas condições básicas (Fp e Fm unitários)
+        fbm0 = self.baseRoughFbm(self.purchase_id)
+
+        # Arredonda valores
+        self.purchasedEquipmentCost = self.upRound(self.baseCost * self.fM * self.pressureFactor)
+        self.bareModuleCost = self.upRound(self.baseCost * self.bareModuleFactor())
+        self.baseEquipmentCost = self.upRound(self.baseCost)
+        self.baseBaremoduleCost = self.upRound(self.baseCost * fbm0)
+
+        t1 = self.purchasedEquipmentCost
+        t2 = self.bareModuleCost
+        t3 = self.baseEquipmentCost
+        t4 = self.baseBaremoduleCost
+        teste = str(t1) + "//" + str(t2) + "//" + str(t3) + "//" + str(t4)
 
 
-class sketch(Blender):
+
+
+class sketch(Pump):
 
     def __init__(self, equipment_id: int, args: dict):
         super().__init__(equipment_id, args)
 
 
-class FobCost(Blender):
+class FobCost(Pump):
     def __init__(self, equipment_id: int, args: dict):
         super().__init__(equipment_id, args)
         # 2. Calculos de Custo
@@ -104,16 +122,28 @@ class EquipmentComplementData():
         self.equipmentForm["dimension"] = self.equipment.dimension
         self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
         self.equipmentForm["materials"] = self.q.values('material').distinct()
-        pressureDimension = Dimension.objects.get(dimension="Gauge Pressure")
+        pressureDimension = Dimension.objects.get(dimension="Pressão")
         self.equipmentForm["pressureUnity"] = EquipmentUnity.objects.filter(dimension=pressureDimension)
+        typesList = list(self.equipmentForm["types"].values_list("id", flat=True))
+        self.equipmentForm["pressureLimits"] = list(PressureFactor.objects.filter(equipment__in=typesList).values_list("equipment_id", "pressure_min", "pressure_max"))
+        mf = MaterialFactor.objects.filter(equipment__in=typesList).values_list("equipment__description", "material")
+        export = []
+        aux = []
+        for t in self.equipmentForm["types"]:
+            aux.append(t["description"])
+            for k, v in mf:
+                if k == t["description"]:
+                    aux.append(v)
+
+            export.append(tuple(aux))
+            aux = []
+
+        self.equipmentForm["typesAndMaterials"] = json.dumps(export)
+
+        self.equipmentForm["typesSubtitle"] = list(self.q.values_list('description', 'id', 'material'))
+        material = list(self.equipmentForm["materials"].values_list("material", flat=True))
+        types = list(self.equipmentForm["types"].values_list("description", flat=True))
+        self.equipmentForm["auxiliarLists"] = [material, types]
+        self.equipmentForm["conversores"] = dict(EquipmentUnity.objects.filter(dimension__dimension="Pressão").values_list("unity", "convert_factor"))
 
         return self.equipmentForm
-
-
-class FormData():
-
-    def __init__(self):
-        self.data = {}
-
-    def validate():
-        pass
