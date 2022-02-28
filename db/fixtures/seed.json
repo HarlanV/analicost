@@ -1,6 +1,6 @@
 [
     {
-        "model": "turtonapp.Dimension",
+        "model": "capex.Dimension",
         "pk": 1,
         "fields": {
             "dimension": "Volume",
@@ -9,7 +9,7 @@
         }
     },
     {
-        "model": "turtonapp.Dimension",
+        "model": "capex.Dimension",
         "pk": 2,
         "fields": {
             "dimension": "Diametro",
@@ -18,7 +18,7 @@
         }
     },
     {
-        "model": "turtonapp.Dimension",
+        "model": "capex.Dimension",
         "pk": 3,
         "fields": {
             "dimension": "Area",
@@ -27,7 +27,7 @@
         }
     },
     {
-        "model": "turtonapp.Dimension",
+        "model": "capex.Dimension",
         "pk": 4,
         "fields": {
             "dimension": "Potencia",
@@ -36,7 +36,7 @@
         }
     },
     {
-        "model": "turtonapp.Dimension",
+        "model": "capex.Dimension",
         "pk": 5,
         "fields": {
             "dimension": "Fluxo",
@@ -45,7 +45,7 @@
         }
     },
     {
-        "model": "turtonapp.Dimension",
+        "model": "capex.Dimension",
         "pk": 6,
         "fields": {
             "dimension": "Calor Fornecido",
@@ -299,7 +299,7 @@
     },
 
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 1,
         "fields": {
             "name": "Blender",
@@ -309,7 +309,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 2,
         "fields": {
             "name": "Centrifuge",
@@ -319,7 +319,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 3,
         "fields": {
             "name": "Compressor",
@@ -329,7 +329,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 4,
         "fields": {
             "name": "Conveyor",
@@ -339,7 +339,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 5,
         "fields": {
             "name": "Crystallizer",
@@ -349,7 +349,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 6,
         "fields": {
             "name": "Drive",
@@ -359,7 +359,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 7,
         "fields": {
             "name": "Dryer",
@@ -369,7 +369,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 8,
         "fields": {
             "name": "Dust Collectors",
@@ -379,7 +379,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 9,
         "fields": {
             "name": "Fan",
@@ -389,7 +389,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 10,
         "fields": {
             "name": "Filter",
@@ -399,7 +399,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 11,
         "fields": {
             "name": "Fired Heater",
@@ -409,7 +409,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 12,
         "fields": {
             "name": "Evaporator",
@@ -419,7 +419,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 13,
         "fields": {
             "name": "Mixer",
@@ -429,7 +429,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 14,
         "fields": {
             "name": "Pump",
@@ -439,7 +439,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 15,
         "fields": {
             "name": "Reactor",
@@ -449,7 +449,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 16,
         "fields": {
             "name": "Screen",
@@ -459,7 +459,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 17,
         "fields": {
             "name": "Tank",
@@ -469,7 +469,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 18,
         "fields": {
             "name": "Turbine",
@@ -479,7 +479,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 19,
         "fields": {
             "name": "Vaporizer",
@@ -489,7 +489,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 20,
         "fields": {
             "name": "Vessel",
@@ -499,7 +499,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 21,
         "fields": {
             "name": "Tower",
@@ -509,7 +509,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 22,
         "fields": {
             "name": "Heat Exchanger",
@@ -520,7 +520,7 @@
     },
 
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 1,
         "fields": {
             "material": "N/D",
@@ -537,7 +537,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 2,
         "fields": {
             "material": "N/D",
@@ -554,7 +554,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 3,
         "fields": {
             "material": "N/D",
@@ -571,7 +571,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 4,
         "fields": {
             "material": "N/D",
@@ -588,7 +588,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 5,
         "fields": {
             "material": "N/D",
@@ -605,7 +605,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 6,
         "fields": {
             "material": "N/D",
@@ -622,7 +622,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 7,
         "fields": {
             "material": "N/D",
@@ -639,7 +639,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 8,
         "fields": {
             "material": "CS",
@@ -656,7 +656,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 9,
         "fields": {
             "material": "CS",
@@ -673,7 +673,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 10,
         "fields": {
             "material": "CS",
@@ -690,7 +690,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 11,
         "fields": {
             "material": "CS",
@@ -707,7 +707,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 12,
         "fields": {
             "material": "MNi",
@@ -724,7 +724,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 13,
         "fields": {
             "material": "MNi",
@@ -741,7 +741,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 14,
         "fields": {
             "material": "MNi",
@@ -758,7 +758,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 15,
         "fields": {
             "material": "MNi",
@@ -775,7 +775,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 16,
         "fields": {
             "material": "SS",
@@ -792,7 +792,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 17,
         "fields": {
             "material": "SS",
@@ -809,7 +809,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 18,
         "fields": {
             "material": "SS",
@@ -826,7 +826,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 19,
         "fields": {
             "material": "SS",
@@ -843,7 +843,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 20,
         "fields": {
             "material": "N/D",
@@ -860,7 +860,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 21,
         "fields": {
             "material": "N/D",
@@ -877,7 +877,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 22,
         "fields": {
             "material": "N/D",
@@ -894,7 +894,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 23,
         "fields": {
             "material": "N/D",
@@ -911,7 +911,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 24,
         "fields": {
             "material": "N/D",
@@ -928,7 +928,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 25,
         "fields": {
             "material": "N/D",
@@ -945,7 +945,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 26,
         "fields": {
             "material": "N/D",
@@ -962,7 +962,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 27,
         "fields": {
             "material": "N/D",
@@ -979,7 +979,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 28,
         "fields": {
             "material": "N/D",
@@ -996,7 +996,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 29,
         "fields": {
             "material": "N/D",
@@ -1013,7 +1013,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 30,
         "fields": {
             "material": "N/D",
@@ -1030,7 +1030,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 31,
         "fields": {
             "material": "N/D",
@@ -1047,7 +1047,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 32,
         "fields": {
             "material": "N/D",
@@ -1064,7 +1064,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 33,
         "fields": {
             "material": "N/D",
@@ -1081,7 +1081,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 34,
         "fields": {
             "material": "N/D",
@@ -1098,7 +1098,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 35,
         "fields": {
             "material": "N/D",
@@ -1115,7 +1115,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 36,
         "fields": {
             "material": "N/D",
@@ -1132,7 +1132,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 37,
         "fields": {
             "material": "N/D",
@@ -1149,7 +1149,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 38,
         "fields": {
             "material": "CS",
@@ -1166,7 +1166,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 39,
         "fields": {
             "material": "CS",
@@ -1183,7 +1183,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 40,
         "fields": {
             "material": "CS",
@@ -1200,7 +1200,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 41,
         "fields": {
             "material": "CS",
@@ -1217,7 +1217,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 42,
         "fields": {
             "material": "FiberGlass",
@@ -1234,7 +1234,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 43,
         "fields": {
             "material": "FiberGlass",
@@ -1251,7 +1251,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 44,
         "fields": {
             "material": "FiberGlass",
@@ -1268,7 +1268,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 45,
         "fields": {
             "material": "FiberGlass",
@@ -1285,7 +1285,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 46,
         "fields": {
             "material": "SS",
@@ -1302,7 +1302,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 47,
         "fields": {
             "material": "SS",
@@ -1319,7 +1319,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 48,
         "fields": {
             "material": "SS",
@@ -1336,7 +1336,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 49,
         "fields": {
             "material": "SS",
@@ -1353,7 +1353,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 50,
         "fields": {
             "material": "MNi",
@@ -1370,7 +1370,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 51,
         "fields": {
             "material": "MNi",
@@ -1387,7 +1387,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 52,
         "fields": {
             "material": "MNi",
@@ -1404,7 +1404,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 53,
         "fields": {
             "material": "MNi",
@@ -1421,7 +1421,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 54,
         "fields": {
             "material": "N/D",
@@ -1438,7 +1438,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 55,
         "fields": {
             "material": "N/D",
@@ -1455,7 +1455,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 56,
         "fields": {
             "material": "N/D",
@@ -1472,7 +1472,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 57,
         "fields": {
             "material": "N/D",
@@ -1489,7 +1489,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 58,
         "fields": {
             "material": "N/D",
@@ -1506,7 +1506,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 59,
         "fields": {
             "material": "N/D",
@@ -1523,7 +1523,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 60,
         "fields": {
             "material": "N/D",
@@ -1540,7 +1540,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 61,
         "fields": {
             "material": "N/D",
@@ -1557,7 +1557,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 62,
         "fields": {
             "material": "N/D",
@@ -1574,7 +1574,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 63,
         "fields": {
             "material": "Alloy Steel",
@@ -1591,7 +1591,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 64,
         "fields": {
             "material": "Alloy Steel",
@@ -1608,7 +1608,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 65,
         "fields": {
             "material": "CS",
@@ -1625,7 +1625,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 66,
         "fields": {
             "material": "CS",
@@ -1642,7 +1642,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 67,
         "fields": {
             "material": "SS",
@@ -1659,7 +1659,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 68,
         "fields": {
             "material": "SS",
@@ -1676,7 +1676,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 69,
         "fields": {
             "material": "CS",
@@ -1693,7 +1693,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 70,
         "fields": {
             "material": "Alloy Steel",
@@ -1710,7 +1710,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 71,
         "fields": {
             "material": "SS",
@@ -1727,7 +1727,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 72,
         "fields": {
             "material": "N/D",
@@ -1744,7 +1744,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 73,
         "fields": {
             "material": "N/D",
@@ -1761,7 +1761,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 74,
         "fields": {
             "material": "N/D",
@@ -1778,7 +1778,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 75,
         "fields": {
             "material": "N/D",
@@ -1795,7 +1795,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 76,
         "fields": {
             "material": "CS",
@@ -1812,7 +1812,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 77,
         "fields": {
             "material": "CS",
@@ -1829,7 +1829,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 78,
         "fields": {
             "material": "CS",
@@ -1846,7 +1846,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 79,
         "fields": {
             "material": "CS",
@@ -1863,7 +1863,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 80,
         "fields": {
             "material": "CS",
@@ -1880,7 +1880,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 81,
         "fields": {
             "material": "Cu Alloy",
@@ -1897,7 +1897,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 82,
         "fields": {
             "material": "Cu Alloy",
@@ -1914,7 +1914,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 83,
         "fields": {
             "material": "Cu Alloy",
@@ -1931,7 +1931,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 84,
         "fields": {
             "material": "Cu Alloy",
@@ -1948,7 +1948,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 85,
         "fields": {
             "material": "Cu Alloy",
@@ -1965,7 +1965,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 86,
         "fields": {
             "material": "SS",
@@ -1982,7 +1982,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 87,
         "fields": {
             "material": "SS",
@@ -1999,7 +1999,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 88,
         "fields": {
             "material": "SS",
@@ -2016,7 +2016,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 89,
         "fields": {
             "material": "SS",
@@ -2033,7 +2033,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 90,
         "fields": {
             "material": "SS",
@@ -2050,7 +2050,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 91,
         "fields": {
             "material": "Ni Alloy",
@@ -2067,7 +2067,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 92,
         "fields": {
             "material": "Ni Alloy",
@@ -2084,7 +2084,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 93,
         "fields": {
             "material": "Ni Alloy",
@@ -2101,7 +2101,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 94,
         "fields": {
             "material": "Ni Alloy",
@@ -2118,7 +2118,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 95,
         "fields": {
             "material": "Ni Alloy",
@@ -2135,7 +2135,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 96,
         "fields": {
             "material": "Ti",
@@ -2152,7 +2152,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 97,
         "fields": {
             "material": "Ti",
@@ -2169,7 +2169,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 98,
         "fields": {
             "material": "Ti",
@@ -2186,7 +2186,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 99,
         "fields": {
             "material": "Ti",
@@ -2203,7 +2203,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 100,
         "fields": {
             "material": "Ti",
@@ -2220,7 +2220,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 101,
         "fields": {
             "material": "N/D",
@@ -2237,7 +2237,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 102,
         "fields": {
             "material": "N/D",
@@ -2254,7 +2254,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 103,
         "fields": {
             "material": "N/D",
@@ -2271,7 +2271,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 104,
         "fields": {
             "material": "CL",
@@ -2288,7 +2288,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 105,
         "fields": {
             "material": "CL",
@@ -2305,7 +2305,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 106,
         "fields": {
             "material": "CL",
@@ -2322,7 +2322,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 107,
         "fields": {
             "material": "CS",
@@ -2339,7 +2339,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 108,
         "fields": {
             "material": "CS",
@@ -2356,7 +2356,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 109,
         "fields": {
             "material": "CS",
@@ -2373,7 +2373,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 110,
         "fields": {
             "material": "CU",
@@ -2390,7 +2390,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 111,
         "fields": {
             "material": "CU",
@@ -2407,7 +2407,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 112,
         "fields": {
             "material": "CU",
@@ -2424,7 +2424,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 113,
         "fields": {
             "material": "SS",
@@ -2441,7 +2441,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 114,
         "fields": {
             "material": "SS",
@@ -2458,7 +2458,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 115,
         "fields": {
             "material": "SS",
@@ -2475,7 +2475,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 116,
         "fields": {
             "material": "Mni",
@@ -2492,7 +2492,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 117,
         "fields": {
             "material": "Mni",
@@ -2509,7 +2509,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 118,
         "fields": {
             "material": "Mni",
@@ -2526,7 +2526,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 119,
         "fields": {
             "material": "Ti",
@@ -2543,7 +2543,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 120,
         "fields": {
             "material": "Ti",
@@ -2560,7 +2560,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 121,
         "fields": {
             "material": "Ti",
@@ -2577,7 +2577,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 122,
         "fields": {
             "material": "N/D",
@@ -2594,7 +2594,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 123,
         "fields": {
             "material": "N/D",
@@ -2611,7 +2611,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 124,
         "fields": {
             "material": "N/D",
@@ -2628,7 +2628,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 125,
         "fields": {
             "material": "N/D",
@@ -2645,7 +2645,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 126,
         "fields": {
             "material": "N/D",
@@ -2662,7 +2662,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 127,
         "fields": {
             "material": "N/D",
@@ -2679,7 +2679,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 128,
         "fields": {
             "material": "N/D",
@@ -2696,7 +2696,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 129,
         "fields": {
             "material": "N/D",
@@ -2713,7 +2713,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 130,
         "fields": {
             "material": "N/D",
@@ -2730,7 +2730,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 131,
         "fields": {
             "material": "N/D",
@@ -2747,7 +2747,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 132,
         "fields": {
             "material": "N/D",
@@ -2764,7 +2764,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 133,
         "fields": {
             "material": "N/D",
@@ -2781,7 +2781,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 134,
         "fields": {
             "material": "Ti",
@@ -2798,7 +2798,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 135,
         "fields": {
             "material": "Ti",
@@ -2815,7 +2815,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 136,
         "fields": {
             "material": "Ni",
@@ -2832,7 +2832,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 137,
         "fields": {
             "material": "Ni",
@@ -2849,7 +2849,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 138,
         "fields": {
             "material": "SS",
@@ -2866,7 +2866,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 139,
         "fields": {
             "material": "SS",
@@ -2883,7 +2883,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 140,
         "fields": {
             "material": "Cu",
@@ -2900,7 +2900,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 141,
         "fields": {
             "material": "Cu",
@@ -2917,7 +2917,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 142,
         "fields": {
             "material": "CS",
@@ -2934,7 +2934,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 143,
         "fields": {
             "material": "CS",
@@ -2951,7 +2951,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 144,
         "fields": {
             "material": "CI",
@@ -2968,7 +2968,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 145,
         "fields": {
             "material": "CI",
@@ -2985,7 +2985,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 146,
         "fields": {
             "material": "Ti Clad",
@@ -3002,7 +3002,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 147,
         "fields": {
             "material": "Ti Clad",
@@ -3019,7 +3019,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 148,
         "fields": {
             "material": "Ti Clad",
@@ -3036,7 +3036,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 149,
         "fields": {
             "material": "Ni Alloy Clad",
@@ -3053,7 +3053,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 150,
         "fields": {
             "material": "Ni Alloy Clad",
@@ -3070,7 +3070,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 151,
         "fields": {
             "material": "Ni Alloy Clad",
@@ -3087,7 +3087,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 152,
         "fields": {
             "material": "Ti",
@@ -3104,7 +3104,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 153,
         "fields": {
             "material": "Ti",
@@ -3121,7 +3121,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 154,
         "fields": {
             "material": "Ti",
@@ -3138,7 +3138,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 155,
         "fields": {
             "material": "Ni Alloy",
@@ -3155,7 +3155,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 156,
         "fields": {
             "material": "Ni Alloy",
@@ -3172,7 +3172,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 157,
         "fields": {
             "material": "Ni Alloy",
@@ -3189,7 +3189,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 158,
         "fields": {
             "material": "SS Clad",
@@ -3206,7 +3206,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 159,
         "fields": {
             "material": "SS Clad",
@@ -3223,7 +3223,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 160,
         "fields": {
             "material": "SS Clad",
@@ -3240,7 +3240,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 161,
         "fields": {
             "material": "SS",
@@ -3257,7 +3257,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 162,
         "fields": {
             "material": "SS",
@@ -3274,7 +3274,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 163,
         "fields": {
             "material": "SS",
@@ -3291,7 +3291,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 164,
         "fields": {
             "material": "Glass Lined Ni Coils",
@@ -3308,7 +3308,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 165,
         "fields": {
             "material": "Glass Lined Ni Coils",
@@ -3325,7 +3325,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 166,
         "fields": {
             "material": "Glass Lined Ni Coils",
@@ -3342,7 +3342,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 167,
         "fields": {
             "material": "GL SS Coils",
@@ -3359,7 +3359,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 168,
         "fields": {
             "material": "GL SS Coils",
@@ -3376,7 +3376,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 169,
         "fields": {
             "material": "GL SS Coils",
@@ -3393,7 +3393,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 170,
         "fields": {
             "material": "Cu",
@@ -3410,7 +3410,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 171,
         "fields": {
             "material": "Cu",
@@ -3427,7 +3427,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 172,
         "fields": {
             "material": "Cu",
@@ -3444,7 +3444,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 173,
         "fields": {
             "material": "CS",
@@ -3461,7 +3461,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 174,
         "fields": {
             "material": "CS",
@@ -3478,7 +3478,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 175,
         "fields": {
             "material": "CS",
@@ -3495,7 +3495,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 176,
         "fields": {
             "material": "N/D",
@@ -3512,7 +3512,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 177,
         "fields": {
             "material": "N/D",
@@ -3529,7 +3529,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 178,
         "fields": {
             "material": "Ni-alloy",
@@ -3546,7 +3546,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 179,
         "fields": {
             "material": "Ni-alloy",
@@ -3563,7 +3563,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 180,
         "fields": {
             "material": "Ni-alloy",
@@ -3580,7 +3580,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 181,
         "fields": {
             "material": "Fluorocarbon",
@@ -3597,7 +3597,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 182,
         "fields": {
             "material": "Fluorocarbon",
@@ -3614,7 +3614,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 183,
         "fields": {
             "material": "Fluorocarbon",
@@ -3631,7 +3631,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 184,
         "fields": {
             "material": "SS",
@@ -3648,7 +3648,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 185,
         "fields": {
             "material": "SS",
@@ -3665,7 +3665,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 186,
         "fields": {
             "material": "SS",
@@ -3682,7 +3682,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 187,
         "fields": {
             "material": "CS",
@@ -3699,7 +3699,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 188,
         "fields": {
             "material": "CS",
@@ -3716,7 +3716,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 189,
         "fields": {
             "material": "CS",
@@ -3733,7 +3733,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 190,
         "fields": {
             "material": "N/D",
@@ -3750,7 +3750,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 191,
         "fields": {
             "material": "N/D",
@@ -3767,7 +3767,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 192,
         "fields": {
             "material": "N/D",
@@ -3784,7 +3784,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 193,
         "fields": {
             "material": "N/D",
@@ -3801,7 +3801,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 194,
         "fields": {
             "material": "N/D",
@@ -3818,7 +3818,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 195,
         "fields": {
             "material": "N/D",
@@ -3835,7 +3835,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 196,
         "fields": {
             "material": "N/D",
@@ -3852,7 +3852,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 197,
         "fields": {
             "material": "N/D",
@@ -3869,7 +3869,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 198,
         "fields": {
             "material": "N/D",
@@ -3886,7 +3886,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 199,
         "fields": {
             "material": "N/D",
@@ -3903,7 +3903,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 200,
         "fields": {
             "material": "N/D",
@@ -3920,7 +3920,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 201,
         "fields": {
             "material": "N/D",
@@ -3937,7 +3937,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 202,
         "fields": {
             "material": "N/D",
@@ -3954,7 +3954,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 203,
         "fields": {
             "material": "N/D",
@@ -3971,7 +3971,7 @@
         }
     },
     {
-        "model": "turtonapp.PurchasedFactor",
+        "model": "capex.PurchasedFactor",
         "pk": 204,
         "fields": {
             "material": "N/D",
@@ -3989,7 +3989,7 @@
     },
 
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 1,
         "fields": {
             "c1": 0,
@@ -4002,7 +4002,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 2,
         "fields": {
             "c1": 0,
@@ -4015,7 +4015,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 3,
         "fields": {
             "c1": 0,
@@ -4028,7 +4028,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 4,
         "fields": {
             "c1": 0,
@@ -4041,7 +4041,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 5,
         "fields": {
             "c1": 0,
@@ -4054,7 +4054,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 6,
         "fields": {
             "c1": 0,
@@ -4067,7 +4067,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 7,
         "fields": {
             "c1": 0,
@@ -4080,7 +4080,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 8,
         "fields": {
             "c1": 0,
@@ -4093,7 +4093,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 9,
         "fields": {
             "c1": 0,
@@ -4106,7 +4106,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 10,
         "fields": {
             "c1": 0,
@@ -4119,7 +4119,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 11,
         "fields": {
             "c1": 0,
@@ -4132,7 +4132,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 12,
         "fields": {
             "c1": 0,
@@ -4145,7 +4145,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 13,
         "fields": {
             "c1": 0,
@@ -4158,7 +4158,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 14,
         "fields": {
             "c1": 0,
@@ -4171,7 +4171,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 15,
         "fields": {
             "c1": 0,
@@ -4184,7 +4184,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 16,
         "fields": {
             "c1": 0,
@@ -4197,7 +4197,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 17,
         "fields": {
             "c1": 0.1405,
@@ -4210,7 +4210,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 18,
         "fields": {
             "c1": 0.1017,
@@ -4223,7 +4223,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 19,
         "fields": {
             "c1": 0.1405,
@@ -4236,7 +4236,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 20,
         "fields": {
             "c1": 0.1017,
@@ -4249,7 +4249,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 21,
         "fields": {
             "c1": 0.1405,
@@ -4262,7 +4262,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 22,
         "fields": {
             "c1": 0.1017,
@@ -4275,7 +4275,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 23,
         "fields": {
             "c1": 0.1347,
@@ -4288,7 +4288,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 24,
         "fields": {
             "c1": 0.1347,
@@ -4301,7 +4301,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 25,
         "fields": {
             "c1": 0.1347,
@@ -4314,7 +4314,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 26,
         "fields": {
             "c1": -0.01633,
@@ -4327,7 +4327,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 27,
         "fields": {
             "c1": -0.01633,
@@ -4340,7 +4340,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 28,
         "fields": {
             "c1": -0.01633,
@@ -4353,7 +4353,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 29,
         "fields": {
             "c1": 2.594072,
@@ -4366,7 +4366,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 30,
         "fields": {
             "c1": 0.1578,
@@ -4379,7 +4379,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 31,
         "fields": {
             "c1": 0.1578,
@@ -4392,7 +4392,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 32,
         "fields": {
             "c1": 0.1578,
@@ -4405,7 +4405,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 33,
         "fields": {
             "c1": 0.1578,
@@ -4418,7 +4418,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 34,
         "fields": {
             "c1": 0.1578,
@@ -4431,7 +4431,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 35,
         "fields": {
             "c1": 0.1578,
@@ -4444,7 +4444,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 36,
         "fields": {
             "c1": 0.1578,
@@ -4457,7 +4457,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 37,
         "fields": {
             "c1": 0.1578,
@@ -4470,7 +4470,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 38,
         "fields": {
             "c1": 0.1578,
@@ -4483,7 +4483,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 39,
         "fields": {
             "c1": 0.1578,
@@ -4496,7 +4496,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 40,
         "fields": {
             "c1": 0.1578,
@@ -4509,7 +4509,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 41,
         "fields": {
             "c1": 0.1578,
@@ -4522,7 +4522,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 42,
         "fields": {
             "c1": 0.1578,
@@ -4535,7 +4535,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 43,
         "fields": {
             "c1": 0.1578,
@@ -4548,7 +4548,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 44,
         "fields": {
             "c1": 0.1578,
@@ -4561,7 +4561,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 45,
         "fields": {
             "c1": 0.1578,
@@ -4574,7 +4574,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 46,
         "fields": {
             "c1": 0.1578,
@@ -4587,7 +4587,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 47,
         "fields": {
             "c1": 0.1578,
@@ -4600,7 +4600,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 48,
         "fields": {
             "c1": 0.1578,
@@ -4613,7 +4613,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 49,
         "fields": {
             "c1": 0.1578,
@@ -4626,7 +4626,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 50,
         "fields": {
             "c1": 0.1578,
@@ -4639,7 +4639,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 51,
         "fields": {
             "c1": 0.1578,
@@ -4652,7 +4652,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 52,
         "fields": {
             "c1": 0.1578,
@@ -4665,7 +4665,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 53,
         "fields": {
             "c1": 0.1578,
@@ -4678,7 +4678,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 54,
         "fields": {
             "c1": 0.1578,
@@ -4691,7 +4691,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 55,
         "fields": {
             "c1": -0.3935,
@@ -4704,7 +4704,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 56,
         "fields": {
             "c1": -0.245382,
@@ -4717,7 +4717,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 57,
         "fields": {
             "c1": -0.245382,
@@ -4730,7 +4730,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 58,
         "fields": {
             "c1": -0.3935,
@@ -4743,7 +4743,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 59,
         "fields": {
             "c1": -0.245382,
@@ -4756,7 +4756,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 60,
         "fields": {
             "c1": -0.245382,
@@ -4769,7 +4769,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 61,
         "fields": {
             "c1": -0.3935,
@@ -4782,7 +4782,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 62,
         "fields": {
             "c1": -0.245382,
@@ -4795,7 +4795,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 63,
         "fields": {
             "c1": -0.245382,
@@ -4808,7 +4808,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 64,
         "fields": {
             "c1": -0.3935,
@@ -4821,7 +4821,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 65,
         "fields": {
             "c1": -0.245382,
@@ -4834,7 +4834,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 66,
         "fields": {
             "c1": -0.245382,
@@ -4847,7 +4847,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 67,
         "fields": {
             "c1": -0.3935,
@@ -4860,7 +4860,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 68,
         "fields": {
             "c1": -0.245382,
@@ -4873,7 +4873,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 69,
         "fields": {
             "c1": -0.245382,
@@ -4886,7 +4886,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 70,
         "fields": {
             "c1": -0.3935,
@@ -4899,7 +4899,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 71,
         "fields": {
             "c1": -0.245382,
@@ -4912,7 +4912,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 72,
         "fields": {
             "c1": -0.245382,
@@ -4925,7 +4925,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 73,
         "fields": {
             "c1": 0.1578,
@@ -4938,7 +4938,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 74,
         "fields": {
             "c1": 0.1578,
@@ -4951,7 +4951,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 75,
         "fields": {
             "c1": 0.1578,
@@ -4964,7 +4964,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 76,
         "fields": {
             "c1": 0.1578,
@@ -4977,7 +4977,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 77,
         "fields": {
             "c1": 0.1578,
@@ -4990,7 +4990,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 78,
         "fields": {
             "c1": 0.1578,
@@ -5003,7 +5003,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 79,
         "fields": {
             "c1": 0.1578,
@@ -5016,7 +5016,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 80,
         "fields": {
             "c1": 0.1578,
@@ -5029,7 +5029,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 81,
         "fields": {
             "c1": 0.1578,
@@ -5042,7 +5042,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 82,
         "fields": {
             "c1": 0.1578,
@@ -5055,7 +5055,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 83,
         "fields": {
             "c1": 0.1578,
@@ -5068,7 +5068,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 84,
         "fields": {
             "c1": 0.1578,
@@ -5081,7 +5081,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 85,
         "fields": {
             "c1": 0.1578,
@@ -5094,7 +5094,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 86,
         "fields": {
             "c1": 0.1578,
@@ -5107,7 +5107,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 87,
         "fields": {
             "c1": 0.1578,
@@ -5120,7 +5120,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 88,
         "fields": {
             "c1": 0.1578,
@@ -5133,7 +5133,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 89,
         "fields": {
             "c1": 0.1578,
@@ -5146,7 +5146,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 90,
         "fields": {
             "c1": 0.1578,
@@ -5159,7 +5159,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 91,
         "fields": {
             "c1": 0.1578,
@@ -5172,7 +5172,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 92,
         "fields": {
             "c1": 0.1578,
@@ -5185,7 +5185,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 93,
         "fields": {
             "c1": 0.1578,
@@ -5198,7 +5198,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 94,
         "fields": {
             "c1": 0.1578,
@@ -5211,7 +5211,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 95,
         "fields": {
             "c1": 0.1578,
@@ -5224,7 +5224,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 96,
         "fields": {
             "c1": 0.1578,
@@ -5237,7 +5237,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 97,
         "fields": {
             "c1": 0.1578,
@@ -5250,7 +5250,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 98,
         "fields": {
             "c1": 0.1578,
@@ -5263,7 +5263,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 99,
         "fields": {
             "c1": 0.1578,
@@ -5276,7 +5276,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 100,
         "fields": {
             "c1": 0.1578,
@@ -5289,7 +5289,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 101,
         "fields": {
             "c1": 0.1578,
@@ -5302,7 +5302,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 102,
         "fields": {
             "c1": 0.1578,
@@ -5315,7 +5315,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 103,
         "fields": {
             "c1": 0,
@@ -5328,7 +5328,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 104,
         "fields": {
             "c1": 0,
@@ -5341,7 +5341,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 105,
         "fields": {
             "c1": 13.1467,
@@ -5354,7 +5354,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 106,
         "fields": {
             "c1": 0.6072,
@@ -5367,7 +5367,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 107,
         "fields": {
             "c1": 0,
@@ -5380,7 +5380,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 108,
         "fields": {
             "c1": 13.1467,
@@ -5393,7 +5393,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 109,
         "fields": {
             "c1": 0.6072,
@@ -5406,7 +5406,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 110,
         "fields": {
             "c1": 0,
@@ -5419,7 +5419,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 111,
         "fields": {
             "c1": 0.03881,
@@ -5432,7 +5432,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 112,
         "fields": {
             "c1": -0.00164,
@@ -5445,7 +5445,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 113,
         "fields": {
             "c1": 0.03881,
@@ -5458,7 +5458,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 114,
         "fields": {
             "c1": -0.00164,
@@ -5471,7 +5471,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 115,
         "fields": {
             "c1": 0.03881,
@@ -5484,7 +5484,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 116,
         "fields": {
             "c1": -0.00164,
@@ -5497,7 +5497,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 117,
         "fields": {
             "c1": 0.03881,
@@ -5510,7 +5510,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 118,
         "fields": {
             "c1": -0.00164,
@@ -5523,7 +5523,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 119,
         "fields": {
             "c1": 13.1467,
@@ -5536,7 +5536,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 120,
         "fields": {
             "c1": 0.6072,
@@ -5549,7 +5549,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 121,
         "fields": {
             "c1": 0,
@@ -5562,7 +5562,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 122,
         "fields": {
             "c1": 0,
@@ -5575,7 +5575,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 123,
         "fields": {
             "c1": -0.125,
@@ -5588,7 +5588,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 124,
         "fields": {
             "c1": -0.4045,
@@ -5601,7 +5601,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 125,
         "fields": {
             "c1": -0.2115,
@@ -5614,7 +5614,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 126,
         "fields": {
             "c1": 0,
@@ -5627,7 +5627,7 @@
         }
     },
     {
-        "model": "turtonapp.PressureFactor",
+        "model": "capex.PressureFactor",
         "pk": 127,
         "fields": {
             "c1": 0,
@@ -5641,7 +5641,7 @@
     },
 
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 1,
         "fields": {
             "b1": 1.89,
@@ -5653,7 +5653,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 2,
         "fields": {
             "b1": 1.89,
@@ -5665,7 +5665,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 3,
         "fields": {
             "b1": 1.89,
@@ -5677,7 +5677,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 4,
         "fields": {
             "b1": 1.89,
@@ -5689,7 +5689,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 5,
         "fields": {
             "b1": 1.89,
@@ -5701,7 +5701,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 6,
         "fields": {
             "b1": 1.89,
@@ -5713,7 +5713,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 7,
         "fields": {
             "b1": 1.89,
@@ -5725,7 +5725,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 8,
         "fields": {
             "b1": 1.89,
@@ -5737,7 +5737,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 9,
         "fields": {
             "b1": 1.89,
@@ -5749,7 +5749,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 10,
         "fields": {
             "b1": 1.89,
@@ -5761,7 +5761,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 11,
         "fields": {
             "b1": 1.89,
@@ -5773,7 +5773,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 12,
         "fields": {
             "b1": 1.89,
@@ -5785,7 +5785,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 13,
         "fields": {
             "b1": 1.89,
@@ -5797,7 +5797,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 14,
         "fields": {
             "b1": 1.89,
@@ -5809,7 +5809,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 15,
         "fields": {
             "b1": 1.89,
@@ -5821,7 +5821,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 16,
         "fields": {
             "b1": 1.89,
@@ -5833,7 +5833,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 17,
         "fields": {
             "b1": 1.1,
@@ -5845,7 +5845,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 18,
         "fields": {
             "b1": 1.1,
@@ -5857,7 +5857,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 19,
         "fields": {
             "b1": 2.25,
@@ -5869,7 +5869,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 20,
         "fields": {
             "b1": 2.25,
@@ -5881,7 +5881,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 21,
         "fields": {
             "b1": 2.25,
@@ -5893,7 +5893,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 22,
         "fields": {
             "b1": 2.25,
@@ -5905,7 +5905,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 23,
         "fields": {
             "b1": 2.25,
@@ -5917,7 +5917,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 24,
         "fields": {
             "b1": 2.25,
@@ -5929,7 +5929,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 25,
         "fields": {
             "b1": 2.25,
@@ -5941,7 +5941,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 26,
         "fields": {
             "b1": 1.49,
@@ -5953,7 +5953,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 27,
         "fields": {
             "b1": 1.49,
@@ -5965,7 +5965,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 28,
         "fields": {
             "b1": 1.49,
@@ -5977,7 +5977,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 29,
         "fields": {
             "b1": 1.49,
@@ -5989,7 +5989,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 30,
         "fields": {
             "b1": 1.49,
@@ -6001,7 +6001,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 31,
         "fields": {
             "b1": 1.49,
@@ -6013,7 +6013,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 32,
         "fields": {
             "b1": 1.49,
@@ -6025,7 +6025,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 33,
         "fields": {
             "b1": 1.74,
@@ -6037,7 +6037,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 34,
         "fields": {
             "b1": 1.74,
@@ -6049,7 +6049,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 35,
         "fields": {
             "b1": 1.74,
@@ -6061,7 +6061,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 36,
         "fields": {
             "b1": 1.74,
@@ -6073,7 +6073,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 37,
         "fields": {
             "b1": 1.74,
@@ -6085,7 +6085,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 38,
         "fields": {
             "b1": 1.74,
@@ -6097,7 +6097,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 39,
         "fields": {
             "b1": 1.74,
@@ -6109,7 +6109,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 40,
         "fields": {
             "b1": 1.74,
@@ -6121,7 +6121,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 41,
         "fields": {
             "b1": 1.74,
@@ -6133,7 +6133,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 42,
         "fields": {
             "b1": 1.74,
@@ -6145,7 +6145,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 43,
         "fields": {
             "b1": 1.74,
@@ -6157,7 +6157,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 44,
         "fields": {
             "b1": 1.74,
@@ -6169,7 +6169,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 45,
         "fields": {
             "b1": 1.74,
@@ -6181,7 +6181,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 46,
         "fields": {
             "b1": 1.74,
@@ -6193,7 +6193,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 47,
         "fields": {
             "b1": 1.74,
@@ -6205,7 +6205,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 48,
         "fields": {
             "b1": 1.74,
@@ -6217,7 +6217,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 49,
         "fields": {
             "b1": 1.74,
@@ -6229,7 +6229,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 50,
         "fields": {
             "b1": 1.74,
@@ -6241,7 +6241,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 51,
         "fields": {
             "b1": 1.63,
@@ -6253,7 +6253,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 52,
         "fields": {
             "b1": 1.63,
@@ -6265,7 +6265,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 53,
         "fields": {
             "b1": 1.63,
@@ -6277,7 +6277,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 54,
         "fields": {
             "b1": 1.63,
@@ -6289,7 +6289,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 55,
         "fields": {
             "b1": 1.63,
@@ -6301,7 +6301,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 56,
         "fields": {
             "b1": 1.63,
@@ -6313,7 +6313,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 57,
         "fields": {
             "b1": 1.63,
@@ -6325,7 +6325,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 58,
         "fields": {
             "b1": 1.63,
@@ -6337,7 +6337,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 59,
         "fields": {
             "b1": 1.63,
@@ -6349,7 +6349,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 60,
         "fields": {
             "b1": 1.63,
@@ -6361,7 +6361,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 61,
         "fields": {
             "b1": 1.63,
@@ -6373,7 +6373,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 62,
         "fields": {
             "b1": 1.63,
@@ -6385,7 +6385,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 63,
         "fields": {
             "b1": 1.63,
@@ -6397,7 +6397,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 64,
         "fields": {
             "b1": 1.63,
@@ -6409,7 +6409,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 65,
         "fields": {
             "b1": 1.63,
@@ -6421,7 +6421,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 66,
         "fields": {
             "b1": 1.63,
@@ -6433,7 +6433,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 67,
         "fields": {
             "b1": 1.63,
@@ -6445,7 +6445,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 68,
         "fields": {
             "b1": 1.63,
@@ -6457,7 +6457,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 69,
         "fields": {
             "b1": 1.63,
@@ -6469,7 +6469,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 70,
         "fields": {
             "b1": 1.63,
@@ -6481,7 +6481,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 71,
         "fields": {
             "b1": 1.63,
@@ -6493,7 +6493,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 72,
         "fields": {
             "b1": 1.63,
@@ -6505,7 +6505,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 73,
         "fields": {
             "b1": 1.63,
@@ -6517,7 +6517,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 74,
         "fields": {
             "b1": 1.63,
@@ -6529,7 +6529,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 75,
         "fields": {
             "b1": 1.63,
@@ -6541,7 +6541,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 76,
         "fields": {
             "b1": 1.63,
@@ -6553,7 +6553,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 77,
         "fields": {
             "b1": 1.63,
@@ -6565,7 +6565,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 78,
         "fields": {
             "b1": 1.63,
@@ -6577,7 +6577,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 79,
         "fields": {
             "b1": 1.63,
@@ -6589,7 +6589,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 80,
         "fields": {
             "b1": 1.63,
@@ -6601,7 +6601,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 81,
         "fields": {
             "b1": 1.63,
@@ -6613,7 +6613,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 82,
         "fields": {
             "b1": 1.63,
@@ -6625,7 +6625,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 83,
         "fields": {
             "b1": 1.63,
@@ -6637,7 +6637,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 84,
         "fields": {
             "b1": 1.63,
@@ -6649,7 +6649,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 85,
         "fields": {
             "b1": 1.63,
@@ -6661,7 +6661,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 86,
         "fields": {
             "b1": 1.63,
@@ -6673,7 +6673,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 87,
         "fields": {
             "b1": 1.74,
@@ -6685,7 +6685,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 88,
         "fields": {
             "b1": 1.74,
@@ -6697,7 +6697,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 89,
         "fields": {
             "b1": 1.74,
@@ -6709,7 +6709,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 90,
         "fields": {
             "b1": 1.74,
@@ -6721,7 +6721,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 91,
         "fields": {
             "b1": 1.74,
@@ -6733,7 +6733,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 92,
         "fields": {
             "b1": 1.74,
@@ -6745,7 +6745,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 93,
         "fields": {
             "b1": 1.74,
@@ -6757,7 +6757,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 94,
         "fields": {
             "b1": 1.74,
@@ -6769,7 +6769,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 95,
         "fields": {
             "b1": 1.74,
@@ -6781,7 +6781,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 96,
         "fields": {
             "b1": 1.63,
@@ -6793,7 +6793,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 97,
         "fields": {
             "b1": 1.63,
@@ -6805,7 +6805,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 98,
         "fields": {
             "b1": 1.63,
@@ -6817,7 +6817,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 99,
         "fields": {
             "b1": 1.63,
@@ -6829,7 +6829,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 100,
         "fields": {
             "b1": 1.63,
@@ -6841,7 +6841,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 101,
         "fields": {
             "b1": 0.96,
@@ -6853,7 +6853,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 102,
         "fields": {
             "b1": 0.96,
@@ -6865,7 +6865,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 103,
         "fields": {
             "b1": 0.96,
@@ -6877,7 +6877,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 104,
         "fields": {
             "b1": 1.74,
@@ -6889,7 +6889,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 105,
         "fields": {
             "b1": 1.74,
@@ -6901,7 +6901,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 106,
         "fields": {
             "b1": 1.74,
@@ -6913,7 +6913,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 107,
         "fields": {
             "b1": 1.74,
@@ -6925,7 +6925,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 108,
         "fields": {
             "b1": 1.74,
@@ -6937,7 +6937,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 109,
         "fields": {
             "b1": 1.74,
@@ -6949,7 +6949,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 110,
         "fields": {
             "b1": 1.74,
@@ -6961,7 +6961,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 111,
         "fields": {
             "b1": 1.74,
@@ -6973,7 +6973,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 112,
         "fields": {
             "b1": 1.74,
@@ -6985,7 +6985,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 113,
         "fields": {
             "b1": 0.96,
@@ -6997,7 +6997,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 114,
         "fields": {
             "b1": 0.96,
@@ -7009,7 +7009,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 115,
         "fields": {
             "b1": 0.96,
@@ -7021,7 +7021,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 116,
         "fields": {
             "b1": 0.96,
@@ -7033,7 +7033,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 117,
         "fields": {
             "b1": 0.96,
@@ -7045,7 +7045,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 118,
         "fields": {
             "b1": 0.96,
@@ -7057,7 +7057,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 119,
         "fields": {
             "b1": 0.96,
@@ -7069,7 +7069,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 120,
         "fields": {
             "b1": 0.96,
@@ -7081,7 +7081,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 121,
         "fields": {
             "b1": 0.96,
@@ -7093,7 +7093,7 @@
         }
     },
     {
-        "model": "turtonapp.MaterialFactor",
+        "model": "capex.MaterialFactor",
         "pk": 122,
         "fields": {
             "b1": 0.96,
@@ -7106,7 +7106,7 @@
     },
 
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 1,
         "fields": {
             "fbm": 1.12,
@@ -7115,7 +7115,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 2,
         "fields": {
             "fbm": 1.12,
@@ -7124,7 +7124,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 3,
         "fields": {
             "fbm": 1.12,
@@ -7133,7 +7133,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 4,
         "fields": {
             "fbm": 1.34,
@@ -7142,7 +7142,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 5,
         "fields": {
             "fbm": 1.57,
@@ -7151,7 +7151,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 6,
         "fields": {
             "fbm": 1.57,
@@ -7160,7 +7160,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 7,
         "fields": {
             "fbm": 1.57,
@@ -7169,7 +7169,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 8,
         "fields": {
             "fbm": 1.27,
@@ -7178,7 +7178,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 9,
         "fields": {
             "fbm": 2.74,
@@ -7187,7 +7187,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 10,
         "fields": {
             "fbm": 3.83,
@@ -7196,7 +7196,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 11,
         "fields": {
             "fbm": 2.41,
@@ -7205,7 +7205,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 12,
         "fields": {
             "fbm": 3.37,
@@ -7214,7 +7214,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 13,
         "fields": {
             "fbm": 11.45,
@@ -7223,7 +7223,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 14,
         "fields": {
             "fbm": 15.92,
@@ -7232,7 +7232,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 15,
         "fields": {
             "fbm": 9.85,
@@ -7241,7 +7241,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 16,
         "fields": {
             "fbm": 13.88,
@@ -7250,7 +7250,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 17,
         "fields": {
             "fbm": 5.75,
@@ -7259,7 +7259,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 18,
         "fields": {
             "fbm": 8.04,
@@ -7268,7 +7268,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 19,
         "fields": {
             "fbm": 5.04,
@@ -7277,7 +7277,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 20,
         "fields": {
             "fbm": 7,
@@ -7286,7 +7286,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 21,
         "fields": {
             "fbm": 2,
@@ -7295,7 +7295,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 22,
         "fields": {
             "fbm": 1.25,
@@ -7304,7 +7304,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 23,
         "fields": {
             "fbm": 1.25,
@@ -7313,7 +7313,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 24,
         "fields": {
             "fbm": 1.1,
@@ -7322,7 +7322,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 25,
         "fields": {
             "fbm": 1.6,
@@ -7331,7 +7331,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 26,
         "fields": {
             "fbm": 2600,
@@ -7340,7 +7340,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 27,
         "fields": {
             "fbm": 2600,
@@ -7349,7 +7349,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 28,
         "fields": {
             "fbm": 2600,
@@ -7358,7 +7358,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 29,
         "fields": {
             "fbm": 23000,
@@ -7367,7 +7367,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 30,
         "fields": {
             "fbm": 7500,
@@ -7376,7 +7376,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 31,
         "fields": {
             "fbm": 10000,
@@ -7385,7 +7385,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 32,
         "fields": {
             "fbm": 1.6,
@@ -7394,7 +7394,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 33,
         "fields": {
             "fbm": 1.25,
@@ -7403,7 +7403,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 34,
         "fields": {
             "fbm": 1.25,
@@ -7412,7 +7412,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 35,
         "fields": {
             "fbm": 2.86,
@@ -7421,7 +7421,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 36,
         "fields": {
             "fbm": 2.86,
@@ -7430,7 +7430,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 37,
         "fields": {
             "fbm": 2.86,
@@ -7439,7 +7439,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 38,
         "fields": {
             "fbm": 2.86,
@@ -7448,7 +7448,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 39,
         "fields": {
             "fbm": 2.74,
@@ -7457,7 +7457,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 40,
         "fields": {
             "fbm": 2.74,
@@ -7466,7 +7466,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 41,
         "fields": {
             "fbm": 2.74,
@@ -7475,7 +7475,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 42,
         "fields": {
             "fbm": 2.74,
@@ -7484,7 +7484,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 43,
         "fields": {
             "fbm": 4.97,
@@ -7493,7 +7493,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 44,
         "fields": {
             "fbm": 4.97,
@@ -7502,7 +7502,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 45,
         "fields": {
             "fbm": 4.97,
@@ -7511,7 +7511,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 46,
         "fields": {
             "fbm": 4.97,
@@ -7520,7 +7520,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 47,
         "fields": {
             "fbm": 5.75,
@@ -7529,7 +7529,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 48,
         "fields": {
             "fbm": 5.75,
@@ -7538,7 +7538,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 49,
         "fields": {
             "fbm": 5.75,
@@ -7547,7 +7547,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 50,
         "fields": {
             "fbm": 5.75,
@@ -7556,7 +7556,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 51,
         "fields": {
             "fbm": 11.45,
@@ -7565,7 +7565,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 52,
         "fields": {
             "fbm": 11.45,
@@ -7574,7 +7574,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 53,
         "fields": {
             "fbm": 11.45,
@@ -7583,7 +7583,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 54,
         "fields": {
             "fbm": 11.45,
@@ -7592,7 +7592,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 55,
         "fields": {
             "fbm": 1.65,
@@ -7601,7 +7601,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 56,
         "fields": {
             "fbm": 1.65,
@@ -7610,7 +7610,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 57,
         "fields": {
             "fbm": 1.65,
@@ -7619,7 +7619,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 58,
         "fields": {
             "fbm": 1.65,
@@ -7628,7 +7628,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 59,
         "fields": {
             "fbm": 1.65,
@@ -7637,7 +7637,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 60,
         "fields": {
             "fbm": 1.65,
@@ -7646,7 +7646,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 61,
         "fields": {
             "fbm": 1.8,
@@ -7655,7 +7655,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 62,
         "fields": {
             "fbm": 1.65,
@@ -7664,7 +7664,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 63,
         "fields": {
             "fbm": 1.54,
@@ -7673,7 +7673,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 64,
         "fields": {
             "fbm": 2.51,
@@ -7682,7 +7682,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 65,
         "fields": {
             "fbm": 2.51,
@@ -7691,7 +7691,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 66,
         "fields": {
             "fbm": 2.13,
@@ -7700,7 +7700,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 67,
         "fields": {
             "fbm": 2.13,
@@ -7709,7 +7709,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 68,
         "fields": {
             "fbm": 2.81,
@@ -7718,7 +7718,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 69,
         "fields": {
             "fbm": 2.81,
@@ -7727,7 +7727,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 70,
         "fields": {
             "fbm": 2.13,
@@ -7736,7 +7736,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 71,
         "fields": {
             "fbm": 2.51,
@@ -7745,7 +7745,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 72,
         "fields": {
             "fbm": 2.81,
@@ -7754,7 +7754,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 73,
         "fields": {
             "fbm": 2.17,
@@ -7763,7 +7763,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 74,
         "fields": {
             "fbm": 2.17,
@@ -7772,7 +7772,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 75,
         "fields": {
             "fbm": 2.17,
@@ -7781,7 +7781,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 76,
         "fields": {
             "fbm": 2.17,
@@ -7790,7 +7790,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 77,
         "fields": {
             "fbm": 2.9,
@@ -7799,7 +7799,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 78,
         "fields": {
             "fbm": 2.25,
@@ -7808,7 +7808,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 79,
         "fields": {
             "fbm": 2.25,
@@ -7817,7 +7817,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 80,
         "fields": {
             "fbm": 2.9,
@@ -7826,7 +7826,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 81,
         "fields": {
             "fbm": 2.9,
@@ -7835,7 +7835,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 82,
         "fields": {
             "fbm": 3.63,
@@ -7844,7 +7844,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 83,
         "fields": {
             "fbm": 2.81,
@@ -7853,7 +7853,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 84,
         "fields": {
             "fbm": 2.81,
@@ -7862,7 +7862,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 85,
         "fields": {
             "fbm": 3.63,
@@ -7871,7 +7871,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 86,
         "fields": {
             "fbm": 3.63,
@@ -7880,7 +7880,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 87,
         "fields": {
             "fbm": 5.08,
@@ -7889,7 +7889,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 88,
         "fields": {
             "fbm": 3.94,
@@ -7898,7 +7898,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 89,
         "fields": {
             "fbm": 3.94,
@@ -7907,7 +7907,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 90,
         "fields": {
             "fbm": 5.08,
@@ -7916,7 +7916,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 91,
         "fields": {
             "fbm": 5.08,
@@ -7925,7 +7925,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 92,
         "fields": {
             "fbm": 9.66,
@@ -7934,7 +7934,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 93,
         "fields": {
             "fbm": 7.49,
@@ -7943,7 +7943,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 94,
         "fields": {
             "fbm": 7.49,
@@ -7952,7 +7952,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 95,
         "fields": {
             "fbm": 9.66,
@@ -7961,7 +7961,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 96,
         "fields": {
             "fbm": 9.66,
@@ -7970,7 +7970,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 97,
         "fields": {
             "fbm": 14.5,
@@ -7979,7 +7979,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 98,
         "fields": {
             "fbm": 11.25,
@@ -7988,7 +7988,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 99,
         "fields": {
             "fbm": 11.25,
@@ -7997,7 +7997,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 100,
         "fields": {
             "fbm": 14.5,
@@ -8006,7 +8006,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 101,
         "fields": {
             "fbm": 14.5,
@@ -8015,7 +8015,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 102,
         "fields": {
             "fbm": 1.38,
@@ -8024,7 +8024,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 103,
         "fields": {
             "fbm": 1.38,
@@ -8033,7 +8033,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 104,
         "fields": {
             "fbm": 1.38,
@@ -8042,7 +8042,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 105,
         "fields": {
             "fbm": 1,
@@ -8051,7 +8051,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 106,
         "fields": {
             "fbm": 1,
@@ -8060,7 +8060,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 107,
         "fields": {
             "fbm": 1,
@@ -8069,7 +8069,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 108,
         "fields": {
             "fbm": 1.55,
@@ -8078,7 +8078,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 109,
         "fields": {
             "fbm": 1.41,
@@ -8087,7 +8087,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 110,
         "fields": {
             "fbm": 1.46,
@@ -8096,7 +8096,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 111,
         "fields": {
             "fbm": 1.28,
@@ -8105,7 +8105,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 112,
         "fields": {
             "fbm": 1.28,
@@ -8114,7 +8114,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 113,
         "fields": {
             "fbm": 2.28,
@@ -8123,7 +8123,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 114,
         "fields": {
             "fbm": 2.67,
@@ -8132,7 +8132,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 115,
         "fields": {
             "fbm": 2.35,
@@ -8141,7 +8141,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 116,
         "fields": {
             "fbm": 4.36,
@@ -8150,7 +8150,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 117,
         "fields": {
             "fbm": 4.74,
@@ -8159,7 +8159,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 118,
         "fields": {
             "fbm": 3.95,
@@ -8168,7 +8168,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 119,
         "fields": {
             "fbm": 10.66,
@@ -8177,7 +8177,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 120,
         "fields": {
             "fbm": 6.44,
@@ -8186,7 +8186,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 121,
         "fields": {
             "fbm": 4,
@@ -8195,7 +8195,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 122,
         "fields": {
             "fbm": 4,
@@ -8204,7 +8204,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 123,
         "fields": {
             "fbm": 4,
@@ -8213,7 +8213,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 124,
         "fields": {
             "fbm": 4,
@@ -8222,7 +8222,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 125,
         "fields": {
             "fbm": 4,
@@ -8231,7 +8231,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 126,
         "fields": {
             "fbm": 4,
@@ -8240,7 +8240,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 127,
         "fields": {
             "fbm": 1.34,
@@ -8249,7 +8249,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 128,
         "fields": {
             "fbm": 1.12,
@@ -8258,7 +8258,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 129,
         "fields": {
             "fbm": 1.34,
@@ -8267,7 +8267,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 130,
         "fields": {
             "fbm": 1.34,
@@ -8276,7 +8276,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 131,
         "fields": {
             "fbm": 1.34,
@@ -8285,7 +8285,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 132,
         "fields": {
             "fbm": 0,
@@ -8294,7 +8294,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 133,
         "fields": {
             "fbm": 0,
@@ -8303,7 +8303,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 134,
         "fields": {
             "fbm": 11.66,
@@ -8312,7 +8312,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 135,
         "fields": {
             "fbm": 11.66,
@@ -8321,7 +8321,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 136,
         "fields": {
             "fbm": 6.13,
@@ -8330,7 +8330,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 137,
         "fields": {
             "fbm": 6.13,
@@ -8339,7 +8339,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 138,
         "fields": {
             "fbm": 3.5,
@@ -8348,7 +8348,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 139,
         "fields": {
             "fbm": 3.5,
@@ -8357,7 +8357,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 140,
         "fields": {
             "fbm": 9.53,
@@ -8366,7 +8366,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 141,
         "fields": {
             "fbm": 10.61,
@@ -8375,7 +8375,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 142,
         "fields": {
             "fbm": 10.61,
@@ -8384,7 +8384,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 143,
         "fields": {
             "fbm": 5.93,
@@ -8393,7 +8393,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 144,
         "fields": {
             "fbm": 6.56,
@@ -8402,7 +8402,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 145,
         "fields": {
             "fbm": 6.56,
@@ -8411,7 +8411,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 146,
         "fields": {
             "fbm": 13.7,
@@ -8420,7 +8420,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 147,
         "fields": {
             "fbm": 15.15,
@@ -8429,7 +8429,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 148,
         "fields": {
             "fbm": 15.15,
@@ -8438,7 +8438,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 149,
         "fields": {
             "fbm": 9.12,
@@ -8447,7 +8447,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 150,
         "fields": {
             "fbm": 10.09,
@@ -8456,7 +8456,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 151,
         "fields": {
             "fbm": 10.09,
@@ -8465,7 +8465,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 152,
         "fields": {
             "fbm": 3.77,
@@ -8474,7 +8474,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 153,
         "fields": {
             "fbm": 4.09,
@@ -8483,7 +8483,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 154,
         "fields": {
             "fbm": 4.09,
@@ -8492,7 +8492,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 155,
         "fields": {
             "fbm": 4.8,
@@ -8501,7 +8501,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 156,
         "fields": {
             "fbm": 5.15,
@@ -8510,7 +8510,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 157,
         "fields": {
             "fbm": 5.15,
@@ -8519,7 +8519,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 158,
         "fields": {
             "fbm": 4.93,
@@ -8528,7 +8528,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 159,
         "fields": {
             "fbm": 5.45,
@@ -8537,7 +8537,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 160,
         "fields": {
             "fbm": 5.45,
@@ -8546,7 +8546,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 161,
         "fields": {
             "fbm": 4.66,
@@ -8555,7 +8555,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 162,
         "fields": {
             "fbm": 5.15,
@@ -8564,7 +8564,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 163,
         "fields": {
             "fbm": 5.15,
@@ -8573,7 +8573,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 164,
         "fields": {
             "fbm": 3.43,
@@ -8582,7 +8582,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 165,
         "fields": {
             "fbm": 3.79,
@@ -8591,7 +8591,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 166,
         "fields": {
             "fbm": 3.79,
@@ -8600,7 +8600,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 167,
         "fields": {
             "fbm": 2.74,
@@ -8609,7 +8609,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 168,
         "fields": {
             "fbm": 3.03,
@@ -8618,7 +8618,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 169,
         "fields": {
             "fbm": 3.03,
@@ -8627,7 +8627,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 170,
         "fields": {
             "fbm": 0,
@@ -8636,7 +8636,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 171,
         "fields": {
             "fbm": 0,
@@ -8645,7 +8645,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 172,
         "fields": {
             "fbm": 5.58,
@@ -8654,7 +8654,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 173,
         "fields": {
             "fbm": 5.58,
@@ -8663,7 +8663,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 174,
         "fields": {
             "fbm": 5.58,
@@ -8672,7 +8672,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 175,
         "fields": {
             "fbm": 0,
@@ -8681,7 +8681,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 176,
         "fields": {
             "fbm": 0,
@@ -8690,7 +8690,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 177,
         "fields": {
             "fbm": 1.83,
@@ -8699,7 +8699,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 178,
         "fields": {
             "fbm": 1.83,
@@ -8708,7 +8708,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 179,
         "fields": {
             "fbm": 1.83,
@@ -8717,7 +8717,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 180,
         "fields": {
             "fbm": 1,
@@ -8726,7 +8726,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 181,
         "fields": {
             "fbm": 1,
@@ -8735,7 +8735,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 182,
         "fields": {
             "fbm": 1,
@@ -8744,7 +8744,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 183,
         "fields": {
             "fbm": 1,
@@ -8753,7 +8753,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 184,
         "fields": {
             "fbm": 4.14,
@@ -8762,7 +8762,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 185,
         "fields": {
             "fbm": 7.09,
@@ -8771,7 +8771,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 186,
         "fields": {
             "fbm": 1,
@@ -8780,7 +8780,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 187,
         "fields": {
             "fbm": 0,
@@ -8789,7 +8789,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 188,
         "fields": {
             "fbm": 0,
@@ -8798,7 +8798,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 189,
         "fields": {
             "fbm": 0,
@@ -8807,7 +8807,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 190,
         "fields": {
             "fbm": 0,
@@ -8816,7 +8816,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 191,
         "fields": {
             "fbm": 0,
@@ -8825,7 +8825,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 192,
         "fields": {
             "fbm": 0,
@@ -8834,7 +8834,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 193,
         "fields": {
             "fbm": 0,
@@ -8843,7 +8843,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 194,
         "fields": {
             "fbm": 0,
@@ -8852,7 +8852,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 195,
         "fields": {
             "fbm": 0,
@@ -8861,7 +8861,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 196,
         "fields": {
             "fbm": 0,
@@ -8870,7 +8870,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 197,
         "fields": {
             "fbm": 0,
@@ -8879,7 +8879,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 198,
         "fields": {
             "fbm": 0,
@@ -8889,7 +8889,7 @@
     },
 
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 1,
         "fields": {
             "constant": "threshold",
@@ -8899,7 +8899,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 2,
         "fields": {
             "constant": "threshold",
@@ -8909,7 +8909,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 3,
         "fields": {
             "constant": "threshold",
@@ -8919,7 +8919,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 4,
         "fields": {
             "constant": "threshold",
@@ -8929,7 +8929,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 5,
         "fields": {
             "constant": "threshold",
@@ -8939,7 +8939,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 6,
         "fields": {
             "constant": "threshold",
@@ -8949,7 +8949,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 7,
         "fields": {
             "constant": "threshold",
@@ -8959,7 +8959,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 8,
         "fields": {
             "constant": "threshold",
@@ -8969,7 +8969,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 9,
         "fields": {
             "constant": "threshold",
@@ -8979,7 +8979,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 10,
         "fields": {
             "constant": "threshold",
@@ -8989,7 +8989,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 11,
         "fields": {
             "constant": "threshold",
@@ -8999,7 +8999,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 12,
         "fields": {
             "constant": "threshold",
@@ -9009,7 +9009,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 13,
         "fields": {
             "constant": "threshold",
@@ -9019,7 +9019,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 14,
         "fields": {
             "constant": "threshold",
@@ -9029,7 +9029,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 15,
         "fields": {
             "constant": "threshold",
@@ -9039,7 +9039,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 16,
         "fields": {
             "constant": "threshold",
@@ -9049,7 +9049,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 17,
         "fields": {
             "constant": "FT1",
@@ -9059,7 +9059,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 18,
         "fields": {
             "constant": "FT2",
@@ -9069,7 +9069,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 19,
         "fields": {
             "constant": "FT3",
@@ -9079,7 +9079,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 20,
         "fields": {
             "constant": "FT1",
@@ -9089,7 +9089,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 21,
         "fields": {
             "constant": "FT2",
@@ -9099,7 +9099,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 22,
         "fields": {
             "constant": "FT3",
@@ -9109,7 +9109,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 23,
         "fields": {
             "constant": "FT1",
@@ -9119,7 +9119,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 24,
         "fields": {
             "constant": "FT2",
@@ -9129,7 +9129,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 25,
         "fields": {
             "constant": "FT3",
@@ -9139,7 +9139,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 26,
         "fields": {
             "constant": "FT1",
@@ -9149,7 +9149,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 27,
         "fields": {
             "constant": "FT2",
@@ -9159,7 +9159,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 28,
         "fields": {
             "constant": "FT3",
@@ -9170,7 +9170,7 @@
     },
 
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 1,
         "fields": {
             "taxa": 73.9,
@@ -9179,7 +9179,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 2,
         "fields": {
             "taxa": 84.7,
@@ -9188,7 +9188,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 3,
         "fields": {
             "taxa": 88.3,
@@ -9197,7 +9197,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 4,
         "fields": {
             "taxa": 99.7,
@@ -9206,7 +9206,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 5,
         "fields": {
             "taxa": 101.8,
@@ -9215,7 +9215,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 6,
         "fields": {
             "taxa": 102,
@@ -9224,7 +9224,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 7,
         "fields": {
             "taxa": 101.5,
@@ -9233,7 +9233,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 8,
         "fields": {
             "taxa": 102,
@@ -9242,7 +9242,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 9,
         "fields": {
             "taxa": 102.4,
@@ -9251,7 +9251,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 10,
         "fields": {
             "taxa": 103.3,
@@ -9260,7 +9260,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 11,
         "fields": {
             "taxa": 104.2,
@@ -9269,7 +9269,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 12,
         "fields": {
             "taxa": 107.2,
@@ -9278,7 +9278,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 13,
         "fields": {
             "taxa": 109.7,
@@ -9287,7 +9287,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 14,
         "fields": {
             "taxa": 113.6,
@@ -9296,7 +9296,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 15,
         "fields": {
             "taxa": 119,
@@ -9305,7 +9305,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 16,
         "fields": {
             "taxa": 125.7,
@@ -9314,7 +9314,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 17,
         "fields": {
             "taxa": 132.3,
@@ -9323,7 +9323,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 18,
         "fields": {
             "taxa": 132.3,
@@ -9332,7 +9332,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 19,
         "fields": {
             "taxa": 144.1,
@@ -9341,7 +9341,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 20,
         "fields": {
             "taxa": 164.4,
@@ -9350,7 +9350,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 21,
         "fields": {
             "taxa": 182.4,
@@ -9359,7 +9359,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 22,
         "fields": {
             "taxa": 192.1,
@@ -9368,7 +9368,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 23,
         "fields": {
             "taxa": 204.1,
@@ -9377,7 +9377,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 24,
         "fields": {
             "taxa": 218.8,
@@ -9386,7 +9386,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 25,
         "fields": {
             "taxa": 238.7,
@@ -9395,7 +9395,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 26,
         "fields": {
             "taxa": 261.2,
@@ -9404,7 +9404,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 27,
         "fields": {
             "taxa": 297,
@@ -9413,7 +9413,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 28,
         "fields": {
             "taxa": 314,
@@ -9422,7 +9422,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 29,
         "fields": {
             "taxa": 316.9,
@@ -9431,7 +9431,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 30,
         "fields": {
             "taxa": 322.7,
@@ -9440,7 +9440,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 31,
         "fields": {
             "taxa": 325.3,
@@ -9449,7 +9449,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 32,
         "fields": {
             "taxa": 318.4,
@@ -9458,7 +9458,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 33,
         "fields": {
             "taxa": 323.8,
@@ -9467,7 +9467,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 34,
         "fields": {
             "taxa": 342.5,
@@ -9476,7 +9476,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 35,
         "fields": {
             "taxa": 355.4,
@@ -9485,7 +9485,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 36,
         "fields": {
             "taxa": 357.6,
@@ -9494,7 +9494,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 37,
         "fields": {
             "taxa": 361.3,
@@ -9503,7 +9503,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 38,
         "fields": {
             "taxa": 358.2,
@@ -9512,7 +9512,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 39,
         "fields": {
             "taxa": 359.2,
@@ -9521,7 +9521,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 40,
         "fields": {
             "taxa": 368.1,
@@ -9530,7 +9530,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 41,
         "fields": {
             "taxa": 381.1,
@@ -9539,7 +9539,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 42,
         "fields": {
             "taxa": 381.7,
@@ -9548,7 +9548,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 43,
         "fields": {
             "taxa": 386.5,
@@ -9557,7 +9557,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 44,
         "fields": {
             "taxa": 389.5,
@@ -9566,7 +9566,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 45,
         "fields": {
             "taxa": 390.6,
@@ -9575,7 +9575,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 46,
         "fields": {
             "taxa": 394.1,
@@ -9584,7 +9584,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 47,
         "fields": {
             "taxa": 394.3,
@@ -9593,7 +9593,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 48,
         "fields": {
             "taxa": 395.6,
@@ -9602,7 +9602,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 49,
         "fields": {
             "taxa": 401.7,
@@ -9611,7 +9611,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 50,
         "fields": {
             "taxa": 444.2,
@@ -9620,7 +9620,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 51,
         "fields": {
             "taxa": 468.2,
@@ -9629,7 +9629,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 52,
         "fields": {
             "taxa": 499.6,
@@ -9638,7 +9638,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 53,
         "fields": {
             "taxa": 525.4,
@@ -9647,7 +9647,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 54,
         "fields": {
             "taxa": 575.4,
@@ -9656,7 +9656,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 55,
         "fields": {
             "taxa": 521.9,
@@ -9665,7 +9665,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 56,
         "fields": {
             "taxa": 550.8,
@@ -9674,7 +9674,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 57,
         "fields": {
             "taxa": 585.7,
@@ -9683,7 +9683,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 58,
         "fields": {
             "taxa": 584.6,
@@ -9692,7 +9692,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 59,
         "fields": {
             "taxa": 567.3,
@@ -9701,7 +9701,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 60,
         "fields": {
             "taxa": 576.1,
@@ -9710,7 +9710,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 61,
         "fields": {
             "taxa": 556.8,

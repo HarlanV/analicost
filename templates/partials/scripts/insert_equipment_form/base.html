@@ -17,7 +17,7 @@
     });
 
     function updateBareFields() {
-        let endpoint = "{% url 'turton:calculateCost' project equipment_id %}";
+        let endpoint = "{% url 'capex:calculateCost' project equipment_id %}";
         if (checkMandatoryFields()) {
             checkCost(endpoint, getData())
         }
@@ -143,7 +143,7 @@
     function checkDataForm(data, attribute_dimension) {
         $.ajax({
             method: "GET",
-            url: "{% url 'turton:attributerange' equipment_id 999 %}".replace(999, attribute_dimension),
+            url: "{% url 'capex:attributerange' equipment_id 999 %}".replace(999, attribute_dimension),
             data: data,
             success: function (response) {
                 // checagem se o valor de atributo está dentro dos limites

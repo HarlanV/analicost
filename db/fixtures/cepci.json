@@ -1,6 +1,6 @@
 [
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 1,
         "fields": {
             "taxa": 73.9,
@@ -9,7 +9,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 2,
         "fields": {
             "taxa": 84.7,
@@ -18,7 +18,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 3,
         "fields": {
             "taxa": 88.3,
@@ -27,7 +27,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 4,
         "fields": {
             "taxa": 99.7,
@@ -36,7 +36,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 5,
         "fields": {
             "taxa": 101.8,
@@ -45,7 +45,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 6,
         "fields": {
             "taxa": 102,
@@ -54,7 +54,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 7,
         "fields": {
             "taxa": 101.5,
@@ -63,7 +63,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 8,
         "fields": {
             "taxa": 102,
@@ -72,7 +72,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 9,
         "fields": {
             "taxa": 102.4,
@@ -81,7 +81,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 10,
         "fields": {
             "taxa": 103.3,
@@ -90,7 +90,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 11,
         "fields": {
             "taxa": 104.2,
@@ -99,7 +99,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 12,
         "fields": {
             "taxa": 107.2,
@@ -108,7 +108,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 13,
         "fields": {
             "taxa": 109.7,
@@ -117,7 +117,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 14,
         "fields": {
             "taxa": 113.6,
@@ -126,7 +126,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 15,
         "fields": {
             "taxa": 119,
@@ -135,7 +135,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 16,
         "fields": {
             "taxa": 125.7,
@@ -144,7 +144,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 17,
         "fields": {
             "taxa": 132.3,
@@ -153,7 +153,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 18,
         "fields": {
             "taxa": 132.3,
@@ -162,7 +162,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 19,
         "fields": {
             "taxa": 144.1,
@@ -171,7 +171,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 20,
         "fields": {
             "taxa": 164.4,
@@ -180,7 +180,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 21,
         "fields": {
             "taxa": 182.4,
@@ -189,7 +189,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 22,
         "fields": {
             "taxa": 192.1,
@@ -198,7 +198,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 23,
         "fields": {
             "taxa": 204.1,
@@ -207,7 +207,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 24,
         "fields": {
             "taxa": 218.8,
@@ -216,7 +216,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 25,
         "fields": {
             "taxa": 238.7,
@@ -225,7 +225,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 26,
         "fields": {
             "taxa": 261.2,
@@ -234,7 +234,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 27,
         "fields": {
             "taxa": 297,
@@ -243,7 +243,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 28,
         "fields": {
             "taxa": 314,
@@ -252,7 +252,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 29,
         "fields": {
             "taxa": 316.9,
@@ -261,7 +261,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 30,
         "fields": {
             "taxa": 322.7,
@@ -270,7 +270,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 31,
         "fields": {
             "taxa": 325.3,
@@ -279,7 +279,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 32,
         "fields": {
             "taxa": 318.4,
@@ -288,7 +288,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 33,
         "fields": {
             "taxa": 323.8,
@@ -297,7 +297,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 34,
         "fields": {
             "taxa": 342.5,
@@ -306,7 +306,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 35,
         "fields": {
             "taxa": 355.4,
@@ -315,7 +315,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 36,
         "fields": {
             "taxa": 357.6,
@@ -324,7 +324,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 37,
         "fields": {
             "taxa": 361.3,
@@ -333,7 +333,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 38,
         "fields": {
             "taxa": 358.2,
@@ -342,7 +342,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 39,
         "fields": {
             "taxa": 359.2,
@@ -351,7 +351,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 40,
         "fields": {
             "taxa": 368.1,
@@ -360,7 +360,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 41,
         "fields": {
             "taxa": 381.1,
@@ -369,7 +369,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 42,
         "fields": {
             "taxa": 381.7,
@@ -378,7 +378,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 43,
         "fields": {
             "taxa": 386.5,
@@ -387,7 +387,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 44,
         "fields": {
             "taxa": 389.5,
@@ -396,7 +396,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 45,
         "fields": {
             "taxa": 390.6,
@@ -405,7 +405,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 46,
         "fields": {
             "taxa": 394.1,
@@ -414,7 +414,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 47,
         "fields": {
             "taxa": 394.3,
@@ -423,7 +423,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 48,
         "fields": {
             "taxa": 395.6,
@@ -432,7 +432,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 49,
         "fields": {
             "taxa": 401.7,
@@ -441,7 +441,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 50,
         "fields": {
             "taxa": 444.2,
@@ -450,7 +450,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 51,
         "fields": {
             "taxa": 468.2,
@@ -459,7 +459,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 52,
         "fields": {
             "taxa": 499.6,
@@ -468,7 +468,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 53,
         "fields": {
             "taxa": 525.4,
@@ -477,7 +477,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 54,
         "fields": {
             "taxa": 575.4,
@@ -486,7 +486,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 55,
         "fields": {
             "taxa": 521.9,
@@ -495,7 +495,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 56,
         "fields": {
             "taxa": 550.8,
@@ -504,7 +504,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 57,
         "fields": {
             "taxa": 585.7,
@@ -513,7 +513,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 58,
         "fields": {
             "taxa": 584.6,
@@ -522,7 +522,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 59,
         "fields": {
             "taxa": 567.3,
@@ -531,7 +531,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 60,
         "fields": {
             "taxa": 576.1,
@@ -540,7 +540,7 @@
         }
     },
     {
-        "model": "capitalcost.Cepci",
+        "model": "capex.Cepci",
         "pk": 61,
         "fields": {
             "taxa": 556.8,

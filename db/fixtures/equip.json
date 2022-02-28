@@ -1,6 +1,6 @@
 [
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 1,
         "fields": {
             "name": "Blender",
@@ -10,7 +10,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 2,
         "fields": {
             "name": "Centrifuge",
@@ -20,7 +20,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 3,
         "fields": {
             "name": "Compressor",
@@ -30,7 +30,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 4,
         "fields": {
             "name": "Conveyor",
@@ -40,7 +40,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 5,
         "fields": {
             "name": "Crystallizer",
@@ -50,7 +50,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 6,
         "fields": {
             "name": "Drive",
@@ -60,7 +60,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 7,
         "fields": {
             "name": "Dryer",
@@ -70,7 +70,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 8,
         "fields": {
             "name": "Dust Collectors",
@@ -80,7 +80,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 9,
         "fields": {
             "name": "Fan",
@@ -90,7 +90,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 10,
         "fields": {
             "name": "Filter",
@@ -100,7 +100,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 11,
         "fields": {
             "name": "Fired Heater",
@@ -110,7 +110,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 12,
         "fields": {
             "name": "Evaporator",
@@ -120,7 +120,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 13,
         "fields": {
             "name": "Mixer",
@@ -130,7 +130,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 14,
         "fields": {
             "name": "Pump",
@@ -140,7 +140,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 15,
         "fields": {
             "name": "Reactor",
@@ -150,7 +150,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 16,
         "fields": {
             "name": "Screen",
@@ -160,7 +160,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 17,
         "fields": {
             "name": "Tank",
@@ -170,7 +170,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 18,
         "fields": {
             "name": "Turbine",
@@ -180,7 +180,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 19,
         "fields": {
             "name": "Vaporizer",
@@ -190,7 +190,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 20,
         "fields": {
             "name": "Vessel",
@@ -200,7 +200,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 21,
         "fields": {
             "name": "Tower",
@@ -210,7 +210,7 @@
         }
     },
     {
-        "model": "turtonapp.Equipment",
+        "model": "capex.Equipment",
         "pk": 22,
         "fields": {
             "name": "Heat Exchanger",

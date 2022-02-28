@@ -37,9 +37,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'turtonapp',
+    'capital',
+    'opex',
     'usuarioapp',
-    'capitalcost',
+    'capex',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

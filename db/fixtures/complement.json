@@ -1,6 +1,6 @@
 [
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 1,
         "fields": {
             "constant": "threshold",
@@ -10,7 +10,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 2,
         "fields": {
             "constant": "threshold",
@@ -20,7 +20,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 3,
         "fields": {
             "constant": "threshold",
@@ -30,7 +30,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 4,
         "fields": {
             "constant": "threshold",
@@ -40,7 +40,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 5,
         "fields": {
             "constant": "threshold",
@@ -50,7 +50,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 6,
         "fields": {
             "constant": "threshold",
@@ -60,7 +60,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 7,
         "fields": {
             "constant": "threshold",
@@ -70,7 +70,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 8,
         "fields": {
             "constant": "threshold",
@@ -80,7 +80,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 9,
         "fields": {
             "constant": "threshold",
@@ -90,7 +90,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 10,
         "fields": {
             "constant": "threshold",
@@ -100,7 +100,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 11,
         "fields": {
             "constant": "threshold",
@@ -110,7 +110,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 12,
         "fields": {
             "constant": "threshold",
@@ -120,7 +120,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 13,
         "fields": {
             "constant": "threshold",
@@ -130,7 +130,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 14,
         "fields": {
             "constant": "threshold",
@@ -140,7 +140,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 15,
         "fields": {
             "constant": "threshold",
@@ -150,7 +150,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 16,
         "fields": {
             "constant": "threshold",
@@ -160,7 +160,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 17,
         "fields": {
             "constant": "FT1",
@@ -170,7 +170,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 18,
         "fields": {
             "constant": "FT2",
@@ -180,7 +180,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 19,
         "fields": {
             "constant": "FT3",
@@ -190,7 +190,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 20,
         "fields": {
             "constant": "FT1",
@@ -200,7 +200,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 21,
         "fields": {
             "constant": "FT2",
@@ -210,7 +210,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 22,
         "fields": {
             "constant": "FT3",
@@ -220,7 +220,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 23,
         "fields": {
             "constant": "FT1",
@@ -230,7 +230,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 24,
         "fields": {
             "constant": "FT2",
@@ -240,7 +240,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 25,
         "fields": {
             "constant": "FT3",
@@ -250,7 +250,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 26,
         "fields": {
             "constant": "FT1",
@@ -260,7 +260,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 27,
         "fields": {
             "constant": "FT2",
@@ -270,7 +270,7 @@
         }
     },
     {
-        "model": "turtonapp.ComplementConstants",
+        "model": "capex.ComplementConstants",
         "pk": 28,
         "fields": {
             "constant": "FT3",

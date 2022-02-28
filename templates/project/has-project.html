@@ -21,7 +21,7 @@
         <div class="dropdown-menu" aria-labelledby="addEquipment">
             {% for equipment in list_equipments %}
             <a class="dropdown-item"
-                href="{% url 'turton:equipment' project.project_number equipment.id %}">{{equipment}}</a>
+                href="{% url 'capex:equipment' project.project_number equipment.id %}">{{equipment}}</a>
             {% endfor %}
         </div>
     </div>
@@ -32,13 +32,13 @@
         </button>
         <div class="dropdown-menu" aria-labelledby="project">
             {% for project in list_projects %}
-            <a class="dropdown-item" href="{% url 'turton:project' project %}">{{project}}</a>
+            <a class="dropdown-item" href="{% url 'capex:project' project %}">{{project}}</a>
             {% endfor %}
         </div>
     </div>
 
     <div class="btn-group">
-        <a class="btn btn-secondary" href="{% url 'turton:createProject'  %}" role="button">New Project</a>
+        <a class="btn btn-secondary" href="{% url 'capex:createProject'  %}" role="button">New Project</a>
         <!--button type="button" href="#" class="btn btn-secondary">Editar Projeto</button-->
     </div>
 </div>
@@ -135,7 +135,7 @@
 <script>
     function removeEquipment(equipment_id) {
 
-        let url = "{% url 'turton:removeEquipment' project.project_number 999 %}".replace(999, equipment_id);
+        let url = "{% url 'capex:removeEquipment' project.project_number 999 %}".replace(999, equipment_id);
 
         $.ajax({
             method: "GET",
@@ -154,26 +154,26 @@
 
 
     function editEquipment(equipment_id) {
-        let url = "{% url 'turton:editEquipment' project.project_number 999 %}".replace(999, equipment_id);
+        let url = "{% url 'capex:editEquipment' project.project_number 999 %}".replace(999, equipment_id);
         window.location = url;
     }
 
     function configEquipment(equipment_id) {
         alert("Desabilitado Temporariamente")
-        // let url = "{% url 'turton:editEquipment' project.project_number 999 %}".replace(999, equipment_id);
+        // let url = "{% url 'capex:editEquipment' project.project_number 999 %}".replace(999, equipment_id);
         // window.location = url;
     }
 
     function deletarProjeto() {
-        let url = "{% url 'turton:deleteProject' project.project_number %}"
+        let url = "{% url 'capex:deleteProject' project.project_number %}"
         console.log(url)
 
         $.ajax({
             method: "GET",
-            url: "{% url 'turton:deleteProject' project.project_number %}",
+            url: "{% url 'capex:deleteProject' project.project_number %}",
             success: function (response) {
                 console.log(response)
-                window.location = "{% url 'turton:index' %}";
+                window.location = "{% url 'capex:index' %}";
 
             },
             error: function (error_data) {

@@ -1,6 +1,6 @@
 [
     {
-        "model": "turtonapp.Dimension",
+        "model": "capex.Dimension",
         "pk": 1,
         "fields": {
             "dimension": "Volume",
@@ -9,7 +9,7 @@
         }
     },
     {
-        "model": "turtonapp.Dimension",
+        "model": "capex.Dimension",
         "pk": 2,
         "fields": {
             "dimension": "Diametro",
@@ -18,7 +18,7 @@
         }
     },
     {
-        "model": "turtonapp.Dimension",
+        "model": "capex.Dimension",
         "pk": 3,
         "fields": {
             "dimension": "Area",
@@ -27,7 +27,7 @@
         }
     },
     {
-        "model": "turtonapp.Dimension",
+        "model": "capex.Dimension",
         "pk": 4,
         "fields": {
             "dimension": "Potencia",
@@ -36,7 +36,7 @@
         }
     },
     {
-        "model": "turtonapp.Dimension",
+        "model": "capex.Dimension",
         "pk": 5,
         "fields": {
             "dimension": "Fluxo",
@@ -45,7 +45,7 @@
         }
     },
     {
-        "model": "turtonapp.Dimension",
+        "model": "capex.Dimension",
         "pk": 6,
         "fields": {
             "dimension": "Calor Fornecido",

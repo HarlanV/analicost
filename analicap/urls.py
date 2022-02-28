@@ -19,8 +19,8 @@ from django.views.generic.base import TemplateView
 
 urlpatterns = [
     path('', include('usuarioapp.urls')),
-    path('financeiro/', include('capitalcost.urls')),
-    path('turton/', include('turtonapp.urls')),
+    path('financeiro/', include('opex.urls')),
+    path('capex/', include('capex.urls')),
     path('admin/', admin.site.urls),
     path('teste/', TemplateView.as_view(template_name="testes/index.html"), name='teste'),
 ]

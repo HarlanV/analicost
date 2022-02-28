@@ -12,7 +12,7 @@
                     <ul>
                         {% for equipamento in equipamentos %}
                         <!-- Single Best Receipe Area -->
-                            <li><a href="{% url 'turton:equipamento' equipamento.id %}">{{equipamento.name}} ( {{equipamento.id}} ) </a></li>
+                            <li><a href="{% url 'capex:equipamento' equipamento.id %}">{{equipamento.name}} ( {{equipamento.id}} ) </a></li>
                         {% endfor %}
                     </ul>
     

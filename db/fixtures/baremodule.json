@@ -1,6 +1,6 @@
 [
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 1,
         "fields": {
             "fbm": 1.12,
@@ -9,7 +9,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 2,
         "fields": {
             "fbm": 1.12,
@@ -18,7 +18,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 3,
         "fields": {
             "fbm": 1.12,
@@ -27,7 +27,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 4,
         "fields": {
             "fbm": 1.34,
@@ -36,7 +36,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 5,
         "fields": {
             "fbm": 1.57,
@@ -45,7 +45,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 6,
         "fields": {
             "fbm": 1.57,
@@ -54,7 +54,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 7,
         "fields": {
             "fbm": 1.57,
@@ -63,7 +63,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 8,
         "fields": {
             "fbm": 1.27,
@@ -72,7 +72,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 9,
         "fields": {
             "fbm": 2.74,
@@ -81,7 +81,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 10,
         "fields": {
             "fbm": 3.83,
@@ -90,7 +90,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 11,
         "fields": {
             "fbm": 2.41,
@@ -99,7 +99,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 12,
         "fields": {
             "fbm": 3.37,
@@ -108,7 +108,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 13,
         "fields": {
             "fbm": 11.45,
@@ -117,7 +117,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 14,
         "fields": {
             "fbm": 15.92,
@@ -126,7 +126,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 15,
         "fields": {
             "fbm": 9.85,
@@ -135,7 +135,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 16,
         "fields": {
             "fbm": 13.88,
@@ -144,7 +144,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 17,
         "fields": {
             "fbm": 5.75,
@@ -153,7 +153,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 18,
         "fields": {
             "fbm": 8.04,
@@ -162,7 +162,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 19,
         "fields": {
             "fbm": 5.04,
@@ -171,7 +171,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 20,
         "fields": {
             "fbm": 7,
@@ -180,7 +180,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 21,
         "fields": {
             "fbm": 2,
@@ -189,7 +189,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 22,
         "fields": {
             "fbm": 1.25,
@@ -198,7 +198,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 23,
         "fields": {
             "fbm": 1.25,
@@ -207,7 +207,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 24,
         "fields": {
             "fbm": 1.1,
@@ -216,7 +216,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 25,
         "fields": {
             "fbm": 1.6,
@@ -225,7 +225,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 26,
         "fields": {
             "fbm": 2600,
@@ -234,7 +234,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 27,
         "fields": {
             "fbm": 2600,
@@ -243,7 +243,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 28,
         "fields": {
             "fbm": 2600,
@@ -252,7 +252,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 29,
         "fields": {
             "fbm": 23000,
@@ -261,7 +261,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 30,
         "fields": {
             "fbm": 7500,
@@ -270,7 +270,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 31,
         "fields": {
             "fbm": 10000,
@@ -279,7 +279,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 32,
         "fields": {
             "fbm": 1.6,
@@ -288,7 +288,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 33,
         "fields": {
             "fbm": 1.25,
@@ -297,7 +297,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 34,
         "fields": {
             "fbm": 1.25,
@@ -306,7 +306,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 35,
         "fields": {
             "fbm": 2.86,
@@ -315,7 +315,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 36,
         "fields": {
             "fbm": 2.86,
@@ -324,7 +324,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 37,
         "fields": {
             "fbm": 2.86,
@@ -333,7 +333,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 38,
         "fields": {
             "fbm": 2.86,
@@ -342,7 +342,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 39,
         "fields": {
             "fbm": 2.74,
@@ -351,7 +351,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 40,
         "fields": {
             "fbm": 2.74,
@@ -360,7 +360,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 41,
         "fields": {
             "fbm": 2.74,
@@ -369,7 +369,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 42,
         "fields": {
             "fbm": 2.74,
@@ -378,7 +378,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 43,
         "fields": {
             "fbm": 4.97,
@@ -387,7 +387,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 44,
         "fields": {
             "fbm": 4.97,
@@ -396,7 +396,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 45,
         "fields": {
             "fbm": 4.97,
@@ -405,7 +405,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 46,
         "fields": {
             "fbm": 4.97,
@@ -414,7 +414,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 47,
         "fields": {
             "fbm": 5.75,
@@ -423,7 +423,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 48,
         "fields": {
             "fbm": 5.75,
@@ -432,7 +432,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 49,
         "fields": {
             "fbm": 5.75,
@@ -441,7 +441,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 50,
         "fields": {
             "fbm": 5.75,
@@ -450,7 +450,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 51,
         "fields": {
             "fbm": 11.45,
@@ -459,7 +459,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 52,
         "fields": {
             "fbm": 11.45,
@@ -468,7 +468,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 53,
         "fields": {
             "fbm": 11.45,
@@ -477,7 +477,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 54,
         "fields": {
             "fbm": 11.45,
@@ -486,7 +486,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 55,
         "fields": {
             "fbm": 1.65,
@@ -495,7 +495,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 56,
         "fields": {
             "fbm": 1.65,
@@ -504,7 +504,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 57,
         "fields": {
             "fbm": 1.65,
@@ -513,7 +513,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 58,
         "fields": {
             "fbm": 1.65,
@@ -522,7 +522,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 59,
         "fields": {
             "fbm": 1.65,
@@ -531,7 +531,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 60,
         "fields": {
             "fbm": 1.65,
@@ -540,7 +540,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 61,
         "fields": {
             "fbm": 1.8,
@@ -549,7 +549,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 62,
         "fields": {
             "fbm": 1.65,
@@ -558,7 +558,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 63,
         "fields": {
             "fbm": 1.54,
@@ -567,7 +567,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 64,
         "fields": {
             "fbm": 2.51,
@@ -576,7 +576,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 65,
         "fields": {
             "fbm": 2.51,
@@ -585,7 +585,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 66,
         "fields": {
             "fbm": 2.13,
@@ -594,7 +594,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 67,
         "fields": {
             "fbm": 2.13,
@@ -603,7 +603,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 68,
         "fields": {
             "fbm": 2.81,
@@ -612,7 +612,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 69,
         "fields": {
             "fbm": 2.81,
@@ -621,7 +621,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 70,
         "fields": {
             "fbm": 2.13,
@@ -630,7 +630,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 71,
         "fields": {
             "fbm": 2.51,
@@ -639,7 +639,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 72,
         "fields": {
             "fbm": 2.81,
@@ -648,7 +648,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 73,
         "fields": {
             "fbm": 2.17,
@@ -657,7 +657,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 74,
         "fields": {
             "fbm": 2.17,
@@ -666,7 +666,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 75,
         "fields": {
             "fbm": 2.17,
@@ -675,7 +675,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 76,
         "fields": {
             "fbm": 2.17,
@@ -684,7 +684,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 77,
         "fields": {
             "fbm": 2.9,
@@ -693,7 +693,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 78,
         "fields": {
             "fbm": 2.25,
@@ -702,7 +702,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 79,
         "fields": {
             "fbm": 2.25,
@@ -711,7 +711,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 80,
         "fields": {
             "fbm": 2.9,
@@ -720,7 +720,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 81,
         "fields": {
             "fbm": 2.9,
@@ -729,7 +729,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 82,
         "fields": {
             "fbm": 3.63,
@@ -738,7 +738,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 83,
         "fields": {
             "fbm": 2.81,
@@ -747,7 +747,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 84,
         "fields": {
             "fbm": 2.81,
@@ -756,7 +756,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 85,
         "fields": {
             "fbm": 3.63,
@@ -765,7 +765,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 86,
         "fields": {
             "fbm": 3.63,
@@ -774,7 +774,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 87,
         "fields": {
             "fbm": 5.08,
@@ -783,7 +783,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 88,
         "fields": {
             "fbm": 3.94,
@@ -792,7 +792,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 89,
         "fields": {
             "fbm": 3.94,
@@ -801,7 +801,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 90,
         "fields": {
             "fbm": 5.08,
@@ -810,7 +810,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 91,
         "fields": {
             "fbm": 5.08,
@@ -819,7 +819,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 92,
         "fields": {
             "fbm": 9.66,
@@ -828,7 +828,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 93,
         "fields": {
             "fbm": 7.49,
@@ -837,7 +837,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 94,
         "fields": {
             "fbm": 7.49,
@@ -846,7 +846,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 95,
         "fields": {
             "fbm": 9.66,
@@ -855,7 +855,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 96,
         "fields": {
             "fbm": 9.66,
@@ -864,7 +864,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 97,
         "fields": {
             "fbm": 14.5,
@@ -873,7 +873,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 98,
         "fields": {
             "fbm": 11.25,
@@ -882,7 +882,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 99,
         "fields": {
             "fbm": 11.25,
@@ -891,7 +891,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 100,
         "fields": {
             "fbm": 14.5,
@@ -900,7 +900,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 101,
         "fields": {
             "fbm": 14.5,
@@ -909,7 +909,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 102,
         "fields": {
             "fbm": 1.38,
@@ -918,7 +918,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 103,
         "fields": {
             "fbm": 1.38,
@@ -927,7 +927,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 104,
         "fields": {
             "fbm": 1.38,
@@ -936,7 +936,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 105,
         "fields": {
             "fbm": 1,
@@ -945,7 +945,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 106,
         "fields": {
             "fbm": 1,
@@ -954,7 +954,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 107,
         "fields": {
             "fbm": 1,
@@ -963,7 +963,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 108,
         "fields": {
             "fbm": 1.55,
@@ -972,7 +972,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 109,
         "fields": {
             "fbm": 1.41,
@@ -981,7 +981,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 110,
         "fields": {
             "fbm": 1.46,
@@ -990,7 +990,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 111,
         "fields": {
             "fbm": 1.28,
@@ -999,7 +999,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 112,
         "fields": {
             "fbm": 1.28,
@@ -1008,7 +1008,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 113,
         "fields": {
             "fbm": 2.28,
@@ -1017,7 +1017,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 114,
         "fields": {
             "fbm": 2.67,
@@ -1026,7 +1026,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 115,
         "fields": {
             "fbm": 2.35,
@@ -1035,7 +1035,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 116,
         "fields": {
             "fbm": 4.36,
@@ -1044,7 +1044,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 117,
         "fields": {
             "fbm": 4.74,
@@ -1053,7 +1053,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 118,
         "fields": {
             "fbm": 3.95,
@@ -1062,7 +1062,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 119,
         "fields": {
             "fbm": 10.66,
@@ -1071,7 +1071,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 120,
         "fields": {
             "fbm": 6.44,
@@ -1080,7 +1080,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 121,
         "fields": {
             "fbm": 4,
@@ -1089,7 +1089,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 122,
         "fields": {
             "fbm": 4,
@@ -1098,7 +1098,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 123,
         "fields": {
             "fbm": 4,
@@ -1107,7 +1107,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 124,
         "fields": {
             "fbm": 4,
@@ -1116,7 +1116,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 125,
         "fields": {
             "fbm": 4,
@@ -1125,7 +1125,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 126,
         "fields": {
             "fbm": 4,
@@ -1134,7 +1134,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 127,
         "fields": {
             "fbm": 1.34,
@@ -1143,7 +1143,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 128,
         "fields": {
             "fbm": 1.12,
@@ -1152,7 +1152,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 129,
         "fields": {
             "fbm": 1.34,
@@ -1161,7 +1161,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 130,
         "fields": {
             "fbm": 1.34,
@@ -1170,7 +1170,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 131,
         "fields": {
             "fbm": 1.34,
@@ -1179,7 +1179,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 132,
         "fields": {
             "fbm": 0,
@@ -1188,7 +1188,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 133,
         "fields": {
             "fbm": 0,
@@ -1197,7 +1197,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 134,
         "fields": {
             "fbm": 11.66,
@@ -1206,7 +1206,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 135,
         "fields": {
             "fbm": 11.66,
@@ -1215,7 +1215,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 136,
         "fields": {
             "fbm": 6.13,
@@ -1224,7 +1224,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 137,
         "fields": {
             "fbm": 6.13,
@@ -1233,7 +1233,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 138,
         "fields": {
             "fbm": 3.5,
@@ -1242,7 +1242,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 139,
         "fields": {
             "fbm": 3.5,
@@ -1251,7 +1251,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 140,
         "fields": {
             "fbm": 9.53,
@@ -1260,7 +1260,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 141,
         "fields": {
             "fbm": 10.61,
@@ -1269,7 +1269,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 142,
         "fields": {
             "fbm": 10.61,
@@ -1278,7 +1278,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 143,
         "fields": {
             "fbm": 5.93,
@@ -1287,7 +1287,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 144,
         "fields": {
             "fbm": 6.56,
@@ -1296,7 +1296,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 145,
         "fields": {
             "fbm": 6.56,
@@ -1305,7 +1305,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 146,
         "fields": {
             "fbm": 13.7,
@@ -1314,7 +1314,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 147,
         "fields": {
             "fbm": 15.15,
@@ -1323,7 +1323,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 148,
         "fields": {
             "fbm": 15.15,
@@ -1332,7 +1332,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 149,
         "fields": {
             "fbm": 9.12,
@@ -1341,7 +1341,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 150,
         "fields": {
             "fbm": 10.09,
@@ -1350,7 +1350,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 151,
         "fields": {
             "fbm": 10.09,
@@ -1359,7 +1359,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 152,
         "fields": {
             "fbm": 3.77,
@@ -1368,7 +1368,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 153,
         "fields": {
             "fbm": 4.09,
@@ -1377,7 +1377,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 154,
         "fields": {
             "fbm": 4.09,
@@ -1386,7 +1386,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 155,
         "fields": {
             "fbm": 4.8,
@@ -1395,7 +1395,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 156,
         "fields": {
             "fbm": 5.15,
@@ -1404,7 +1404,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 157,
         "fields": {
             "fbm": 5.15,
@@ -1413,7 +1413,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 158,
         "fields": {
             "fbm": 4.93,
@@ -1422,7 +1422,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 159,
         "fields": {
             "fbm": 5.45,
@@ -1431,7 +1431,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 160,
         "fields": {
             "fbm": 5.45,
@@ -1440,7 +1440,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 161,
         "fields": {
             "fbm": 4.66,
@@ -1449,7 +1449,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 162,
         "fields": {
             "fbm": 5.15,
@@ -1458,7 +1458,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 163,
         "fields": {
             "fbm": 5.15,
@@ -1467,7 +1467,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 164,
         "fields": {
             "fbm": 3.43,
@@ -1476,7 +1476,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 165,
         "fields": {
             "fbm": 3.79,
@@ -1485,7 +1485,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 166,
         "fields": {
             "fbm": 3.79,
@@ -1494,7 +1494,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 167,
         "fields": {
             "fbm": 2.74,
@@ -1503,7 +1503,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 168,
         "fields": {
             "fbm": 3.03,
@@ -1512,7 +1512,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 169,
         "fields": {
             "fbm": 3.03,
@@ -1521,7 +1521,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 170,
         "fields": {
             "fbm": 0,
@@ -1530,7 +1530,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 171,
         "fields": {
             "fbm": 0,
@@ -1539,7 +1539,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 172,
         "fields": {
             "fbm": 5.58,
@@ -1548,7 +1548,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 173,
         "fields": {
             "fbm": 5.58,
@@ -1557,7 +1557,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 174,
         "fields": {
             "fbm": 5.58,
@@ -1566,7 +1566,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 175,
         "fields": {
             "fbm": 0,
@@ -1575,7 +1575,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 176,
         "fields": {
             "fbm": 0,
@@ -1584,7 +1584,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 177,
         "fields": {
             "fbm": 1.83,
@@ -1593,7 +1593,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 178,
         "fields": {
             "fbm": 1.83,
@@ -1602,7 +1602,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 179,
         "fields": {
             "fbm": 1.83,
@@ -1611,7 +1611,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 180,
         "fields": {
             "fbm": 1,
@@ -1620,7 +1620,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 181,
         "fields": {
             "fbm": 1,
@@ -1629,7 +1629,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 182,
         "fields": {
             "fbm": 1,
@@ -1638,7 +1638,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 183,
         "fields": {
             "fbm": 1,
@@ -1647,7 +1647,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 184,
         "fields": {
             "fbm": 4.14,
@@ -1656,7 +1656,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 185,
         "fields": {
             "fbm": 7.09,
@@ -1665,7 +1665,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 186,
         "fields": {
             "fbm": 1,
@@ -1674,7 +1674,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 187,
         "fields": {
             "fbm": 0,
@@ -1683,7 +1683,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 188,
         "fields": {
             "fbm": 0,
@@ -1692,7 +1692,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 189,
         "fields": {
             "fbm": 0,
@@ -1701,7 +1701,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 190,
         "fields": {
             "fbm": 0,
@@ -1710,7 +1710,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 191,
         "fields": {
             "fbm": 0,
@@ -1719,7 +1719,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 192,
         "fields": {
             "fbm": 0,
@@ -1728,7 +1728,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 193,
         "fields": {
             "fbm": 0,
@@ -1737,7 +1737,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 194,
         "fields": {
             "fbm": 0,
@@ -1746,7 +1746,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 195,
         "fields": {
             "fbm": 0,
@@ -1755,7 +1755,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 196,
         "fields": {
             "fbm": 0,
@@ -1764,7 +1764,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 197,
         "fields": {
             "fbm": 0,
@@ -1773,7 +1773,7 @@
         }
     },
     {
-        "model": "turtonapp.BareModule",
+        "model": "capex.BareModule",
         "pk": 198,
         "fields": {
             "fbm": 0,

@@ -6,4 +6,7 @@ analicap/*.teste
 **/__pycache__
 /__pycache__/
 __pycache__/
-
+lixeira/
+analicap/__pycache__/*
+analicap/__pycache__/settings.cpython-38.pyc
+apps/usuarioapp/__pycache__/*
