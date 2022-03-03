@@ -3,7 +3,7 @@ from opex.economic import EconomicConfig
 from capex.equipments.equipments import teste_print
 from capex.services import ProjectServices
 from capex.models import EquipmentUnity
-from .models import CashFlow, OpexAuxiliateFactor, OpexProjectSettings, ProjectUtilitiesConstant, fcilSourceList, Opex
+from .models import CashFlow, MaterialCosts, OpexAuxiliateFactor, OpexProjectSettings, ProjectUtilitiesConstant, fcilSourceList, Opex
 
 
 class OpexServices():
@@ -126,6 +126,22 @@ class OpexServices():
             'material_flow_unity': EquipmentUnity.objects.filter(dimension__dimension='Mass Flow'),
         }
         return formValues
+
+    def formInsertMaterial(self, args):
+        args['project'] = self.project
+        args["unity"] = EquipmentUnity.objects.get(id=args["unity"])
+        args["flow_unity"] = EquipmentUnity.objects.get(id=args["flow_unity"])
+        material = MaterialCosts(**args)
+        material.save()
+        return material
+
+    def getAllMaterials(self):
+        return MaterialCosts.objects.filter(project=self.project).all()
+
+    def removeMaterial(self, idMaterial):
+        material = MaterialCosts.objects.get(id=idMaterial)
+        material.delete()
+        return True
 
 
 def parse_boolean(b):

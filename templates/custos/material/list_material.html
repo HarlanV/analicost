@@ -1,13 +1,49 @@
 {% if material %}
-    <p> teste </p>>
-    {% include 'custos/material/list_material.html'%}
 
+<div class="container-fluid mt-2">
+    <table class="table table-responsive table-sm table-centralized">
+        <thead class="thead-dark">
+            <tr class="d-flex table-reduced-head">
+                <th class="col-3" scope="col"> Options </th>
+                <th class="col-5" scope="col"> Name </th>
+                <th class="col-5" scope="col"> Classification </th>
+                <th class="col-5" scope="col"> Price (unity) </th>
+                <th class="col-5" scope="col"> Flow (unity) </th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for m in material %}
+            <tr class="d-flex">
+                <th class="col-3" scope="row">
+
+
+                    <a class="btn btn-outline-danger" href="{% url 'opex:removeMaterial' project m.id%}" role="button"><i class="fas fa-trash"></i></a>
+                </th>
+                <th class="col-5" scope="row">{{m.name}}</th>
+                <th class="col-5" scope="row">{{m.classification}}</th>
+                <td class="col-5" scope="row">{{m.price}} (m.unity) </td>
+                <td class="col-5" scope="row">{{m.flow}} ({{m.flow_unity}}) </td>
+
+
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+
+    <div class="btn-group">
+        <a class="btn btn-secondary" href="{% url 'opex:create_material' project  %}" role="button">New Material</a>
+        <!--button type="button" href="#" class="btn btn-secondary">Editar Projeto</button-->
+    </div>
     {% else %}
-        <h1>  There is no material at moment.  </h1>
+    <h1> There is no material at moment. </h1>
 
-        <div class="btn-group">
-            <a class="btn btn-secondary" href="{% url 'opex:create_material' project  %}" role="button">New Material</a>
-            <!--button type="button" href="#" class="btn btn-secondary">Editar Projeto</button-->
-        </div>
+    <div class="btn-group">
+        <a class="btn btn-secondary" href="{% url 'opex:create_material' project  %}" role="button">New Material</a>
+        <!--button type="button" href="#" class="btn btn-secondary">Editar Projeto</button-->
+    </div>
 
     {% endif %}

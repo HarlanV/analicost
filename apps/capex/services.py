@@ -135,9 +135,10 @@ class EquipmentServices():
         return range
 
     def getUtilitieEquipmentOptions(project, equipment):
+
         constants = ProjectUtilitiesConstant.objects.filter(project__project_number=project)
         values = EquipmentsUtilitiesSetting.objects.filter(equipment=equipment.id).first()
-        utility = None
+
         if values is not None:
             utility = values.utility
             
@@ -155,7 +156,7 @@ class EquipmentServices():
                 'Refrigeration': constants.filter(classification="Refrigeration").all(),
                 'UtilitiesTypes': ['Heating Utilities', 'Cooling Utilities', 'User Defined'],
                 'formsList': ['Steam', 'ThermalSystems', 'Water', 'Refrigeration'],
-                'values': utility,
+                'values': values,
                 'cost_unitys': EquipmentUnity.objects.filter(dimension__dimension="Energy Cost"),
                 'duty_unitys': EquipmentUnity.objects.filter(dimension__dimension="Power"),
             }
@@ -168,9 +169,12 @@ class EquipmentServices():
             dataForm = {
                 'Steam': constants.filter(classification="Steam from Boilers").all(),
                 'ThermalSystems': constants.filter(classification="Thermal Systems").all(),
-                'Eletricity': constants.filter(aka="Eletricity").all(),
-                'Values': utility
+                'UtilitiesTypes': ['User Defined'],
+                'values': values,
+                'cost_unitys': EquipmentUnity.objects.filter(dimension__dimension="Energy Cost"),
+                'duty_unitys': EquipmentUnity.objects.filter(dimension__dimension="Power"),
             }
+
         return dataForm
 
     def updateUtilitieEquipmentOptions(equipment, args):
@@ -181,18 +185,24 @@ class EquipmentServices():
         utilities = EquipmentsUtilitiesSetting.objects.filter(equipment=equipment.id)
         args["duty_unity"] = EquipmentUnity.objects.get(id=args["duty_unity"])
 
-        if args["utype"] != "User Defined":
-            args["utility"] = ProjectUtilitiesConstant.objects.get(id=args["utility"])
-            cost = self.calculateCost(float(args["duty"]), args["utility"].value, args["duty_unity"])
-            
-        else:
+        if 'utype' in args:
+            if args["utype"] == "User Defined":
+                args["utility"] = args["utype"]
+            args.pop('utype', None)
+
+        if args["utility"] == "User Defined":
             cost = self.calculateCost(float(args["duty"]), args["utility_cost"], args["duty_unity"])
             args["annual_cost"] = cost
-            args.pop('utility_cost', None)
+            args["utility"] = ProjectUtilitiesConstant.objects.filter(aka="Defined").first()
+            args["utility_cost"] = float(args["utility_cost"])
+
+        else:
+            args["utility"] = ProjectUtilitiesConstant.objects.get(id=args["utility"])
+            cost = self.calculateCost(float(args["duty"]), args["utility"].value, args["duty_unity"])
+            args.pop('utype', None)
 
         # em comum
-        args.pop('utype', None)
-        args["duty"] = args["duty"]
+        args["duty"] = float(args["duty"])
         args["cost_unity"] = EquipmentUnity.objects.filter(unity="GJ").first()
         args["equipment"] = equipment
         teste_print(args)

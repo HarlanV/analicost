@@ -10,19 +10,19 @@
         <h3> {{equipment.name}} </h3>
 
         <div class="container-fluid mb-2 mt-2" style="border:1px solid #cecece; padding-bottom: 10px;">
-
+            
             <fieldset class="form-group row" style="margin-top: 10px;">
                 <legend class="col-form-label col-sm-2 float-sm-left pt-0">Material Classification</legend>
                 <div class="col-sm-10" id="optionsForm">
                     {% for opt in options %}
                     {% if forloop.first is True %}
                     <div class="form-check" id="div{{opt}}}">
-                        <input class="form-check-input " type="radio" name="classification" id="{{opt}}" value="{{opt}}"
-                            checked required>
+                        <input class="form-check-input " type="radio" name="classification"
+                            id="{{opt}}" value="{{opt}}" checked required>
                         {% else %}
                         <div class="form-check" id="div{{opt}}">
-                            <input class="form-check-input" type="radio" name="classification" id="{{opt}}"
-                                value="{{opt}}" required>
+                            <input class="form-check-input" type="radio" name="classification"
+                                id="{{opt}}" value="{{opt}}" required>
                             {% endif %}
                             <label class="form-check-label" for="{{opt}}">
                                 {{opt}}
@@ -32,26 +32,17 @@
                     </div>
             </fieldset>
 
-            <fieldset class="form-group row">
-                <!-- Buying PRice -->
-                <div class="form-row ml-1">
-                    <div class="form-group col-md-7 ml:2">
-                        <label for="name">Name</label>
-                        <input type="text" class="form" id="name" name="name" required>
-                    </div>
-                </div>
-            </fieldset>
             <!-- Buying PRice -->
             <fieldset class="form-group row">
                 <div class="form-row ml-1">
                     <div class="form-group col-md-7 ml:2">
-                        <label for="price">Buying Priece</label>
-                        <input type="number" step="0.01" min="0.01" class="form-control" id="price"
-                            name="price" required>
+                        <label for="buying_price">Buying Priece</label>
+                        <input type="number" step="0.01" min="0.01" class="form-control" id="buying_price"
+                            name="buying_price" required>
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="unity">Unity</label>
-                        <select id="unity" class="form-control" name="unity" required>
+                        <label for="buying_price_unity">Unity</label>
+                        <select id="buying_price_unity" class="form-control" name="buying_price_unity" required>
                             {% for unity in buying_price_unity %}
                             {% if unity.is_default is True %}
                             <option value="{{unity.id}}" selected>{{unity.unity}}</option>
@@ -68,13 +59,13 @@
             <fieldset class="form-group row">
                 <div class="form-row ml-1">
                     <div class="form-group col-md-7 ml:2">
-                        <label for="flow">Material Flow </label>
-                        <input type="number" step="0.01" min="0.01" class="form-control" id="flow"
-                            name="flow" required>
+                        <label for="material_flow">Material Flow </label>
+                        <input type="number" step="0.01" min="0.01" class="form-control" id="material_flow"
+                            name="buying_price" required>
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="flow_unity"> Unity </label>
-                        <select id="flow_unity" class="form-control" name="flow_unity" required>
+                        <label for="material_flow_unity"> Unity </label>
+                        <select id="material_flow_unity" class="form-control" name="material_flow_unity" required>
                             {% for unity in material_flow_unity %}
                             {% if unity.is_default is True %}
                             <option value="{{unity.id}}" selected>{{unity.unity}}</option>
@@ -91,7 +82,7 @@
             <fieldset disabled hidden>
 
                 <input type="number" class="form-control" id="project" name="project" value="{{project}}" disabled>
-
+            
             </fieldset>
 
             <button type="submit" id="postButton" class="btn btn-primary mb-2">Submit</button>
@@ -101,9 +92,8 @@
 
 
 
-<a id="returnButton" href="{% url 'opex:index_material' %}" class="btn btn-outline-dark active" role="button"
-    aria-pressed="true">
-    <i class="fa-solid fa-circle-arrow-left"></i>
-</a>
+            <a id="returnButton" href="{% url 'opex:index_material' %}" class="btn btn-outline-dark active" role="button" aria-pressed="true">
+                <i class="fa-solid fa-circle-arrow-left"></i>
+            </a>
 
 {% endblock %}

@@ -25,8 +25,8 @@ class ListEquipmentCapex(admin.ModelAdmin):
 
 
 class ListandoEquipamentos(admin.ModelAdmin):
-    list_display = ('id', 'name', 'description', 'dimension')
-    list_display_links = ('id', 'name', 'description')
+    list_display = ('id', 'name', 'symbol', 'dimension')
+    list_display_links = ('id', 'name', 'symbol')
     search_fields = ('name',)
     list_filter = ('name',)
     list_per_page = 10

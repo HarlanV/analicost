@@ -85,7 +85,8 @@ class Material(View):
         # service auxiliar
         data = {
             'list_projects': list_projects,
-            'project': project
+            'project': project,
+            'material': services.OpexServices(project).getAllMaterials()
         }
 
         service = services.OpexServices(project)
@@ -103,8 +104,14 @@ class Material(View):
         return render(request, 'custos/material/formMaterial.html', data)
 
     def createFormPost(request, project):
+        args = dict(request.POST.items())
+        args.pop('csrfmiddlewaretoken', None)
+        teste_print(args)
+        service = services.OpexServices(project).formInsertMaterial(args)
+        return redirect('opex:opex_material', project=project)
 
-        # armazena aqui
+    def removeMaterial(request, project, material):
+        services.OpexServices(project).removeMaterial(material)
         return redirect('opex:opex_material', project=project)
 
 

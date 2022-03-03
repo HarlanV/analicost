@@ -1,6 +1,5 @@
-# from capex.models import BareModule, Equipment, PurchasedFactor, EquipmentUnity
-from capex.models import BareModule, EquipmentUnity, PurchasedFactor
-from capex.equipments.equipments import BaseEquipment, teste_print
+from capex.models import EquipmentUnity, PurchasedFactor
+from capex.equipments.equipments import BaseEquipment
 
 
 class Conveyor(BaseEquipment):

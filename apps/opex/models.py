@@ -110,6 +110,7 @@ class OpexProjectSettings(models.Model):
 
 
 class MaterialCosts(models.Model):
+    project = models.ForeignKey(CapexProject, on_delete=models.CASCADE, null=True)
     name = models.CharField(max_length=300)
     classification = models.CharField(max_length=300, blank=True, null=True)
     price = models.FloatField(default=0, blank=True, null=True)
@@ -128,10 +129,11 @@ class EquipmentsUtilitiesSetting (models.Model):
     equipment = models.ForeignKey(EquipmentProject, on_delete=models.CASCADE)
     cost_unity = models.ForeignKey(EquipmentUnity, on_delete=models.SET_NULL, blank=True, null=True, related_name="cost_unity_utilities")
     duty_unity = models.ForeignKey(EquipmentUnity, on_delete=models.SET_NULL, blank=True, null=True)
-    annual_cost = models.FloatField(default=0, blank=True, null=True)
-    duty = models.FloatField(default=0, blank=True, null=True)
-    efficiency = models.FloatField(default=0, blank=True, null=True)
+    annual_cost = models.FloatField(default=0.00, blank=True, null=True)
+    duty = models.FloatField(default=0.00, blank=True, null=True)
+    efficiency = models.FloatField(default=0.00, blank=True, null=True)
     utility = models.ForeignKey('ProjectUtilitiesConstant', on_delete=models.CASCADE, blank=True, null=True)
+    utility_cost = models.FloatField(default=0.00, blank=True, null=True)
 
     def __str__(self):
         return str(self.equipment) + "_utilities"

@@ -14,7 +14,7 @@ urlpatterns = [
     path('material/GET/<int:project>', views.Material.listMaterials, name='opex_material'),
     path('material/create/<int:project>', views.Material.createForm, name='create_material'),
     path('material/create/<int:project>/POST', views.Material.createFormPost, name='material_post'),
+    path('material/remove/<int:project>/<int:material>/', views.Material.removeMaterial, name='removeMaterial'),
     # path('datachar', views.HomeView.get_data, name='datachar'),
     # path('capex', views.HomeView.report, name='capex-report'),
-
 ]
