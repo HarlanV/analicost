@@ -42,11 +42,11 @@
         // console.log("min:"+pressureOp/(conversor[unity] +"//"+pressao[typeEquip][materialEquip]["min"]))
 
         if ((pressureOp/(conversor[unity])) > pressao[typeEquip][materialEquip]["max"]){
-            alert("A pressão está acima de " + ((pressao[typeEquip][materialEquip]["max"])*(conversor[unity])) +unity +". Reveja o valor inserido")
+            alert("The Pressure is above " + ((pressao[typeEquip][materialEquip]["max"])*(conversor[unity])) +unity +". Please, check the value.")
             return false
         }        
         if ((pressureOp/(conversor[unity])) < pressao[typeEquip][materialEquip]["min"]){
-            alert("A pressão está abaixo de " + ((pressao[typeEquip][materialEquip]["min"])*(conversor[unity])) +unity +". Reveja o valor inserido")
+            alert("The pressure is below " + ((pressao[typeEquip][materialEquip]["min"])*(conversor[unity])) +unity +". Please, check the value.")
              return false
         }
         return true

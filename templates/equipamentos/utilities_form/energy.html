@@ -1,0 +1,42 @@
+{% extends 'equipamentos/partials/add-equipment-form.html' %}
+{% block equipment_title %} Adiconar Blender {% endblock %}
+{% block equipment_content %}
+
+
+<form id="insertEquipmentForm" action="{% url 'capex:configEquipmentPost' project equipment_project_id %}"
+    method="POST">
+    {% csrf_token %}
+    <div class="form">
+
+        <h3> {{equipment_project}} - Efficience </h3>
+
+        <div class="container-fluid mb-2 mt-2" style="border:1px solid #cecece;">
+
+            <!-- Edit -->
+            <fieldset class="form-group row">
+                <legend class="col-form-label col-sm-2 float-sm-left pt-0">Material of Construction</legend>
+                <div class="col-sm-10" id="mocForm">
+                    {% for material in materials %}
+                    {% if equipment_data.purchased_factor.material == material.material %}
+                    <div class="form-check" id="div{{material.material}}">
+                        <input class="form-check-input mocEquipment " type="radio" name="moc" id="{{material.material}}"
+                            value="{{material.material}}" checked>
+                        {% else %}
+                        <div class="form-check" id="div{{material.material}}">
+                            <input class="form-check-input mocEquipment " type="radio" name="moc"
+                                id="{{material.material}}" value="{{material.material}}">
+                            {% endif %}
+                            <label class="form-check-label" for="{{material.material}}">
+                                {{material.material}}
+                            </label>
+                        </div>
+                        {% endfor %}
+                    </div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </div>
+    </div>
+</form>
+{% include 'equipamentos/partials/returnButton.html' %}
+
+{% endblock %}

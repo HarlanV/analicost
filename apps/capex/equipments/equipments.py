@@ -1,5 +1,5 @@
-from queue import Empty
-from capex.models import BareModule, Equipment, MaterialFactor, PressureFactor
+from opex.models import ProjectUtilitiesConstant
+from capex.models import BareModule, Equipment, EquipmentUnity, MaterialFactor, PressureFactor
 from capex.models import EquipmentProject
 import math
 
@@ -120,7 +120,11 @@ class BaseEquipment():
 
         equipment = project.insertEquipment(args)
 
-        equipment = project.updateCosts()
+        project.updateCosts()
+
+        # configura os gastos de utilidades do equipamento. Deve ser sobrescrito na instância do equipamento
+        self.setUtilitiesField(equipment)
+        # equipment
 
         return equipment
 
@@ -159,6 +163,20 @@ class BaseEquipment():
         query = EquipmentProject.objects.filter(equipment_code__contains=initial)
         code = equipmentLetter + str(numProject + query.count() + 1)
         return code
+
+    def setUtilitiesField(self, equipment=None):
+        pass
+
+    def calculateAnnualCut(self, duty: float, costUtility: ProjectUtilitiesConstant, cost_unity="GJ"):
+        """
+        setUtilitiesField
+        duty -> gasto já com a eficiência e na unidade default de Energia (kw)
+        """
+        timeWorked = ProjectUtilitiesConstant.objects.filter(aka="Hours in Year").first()
+        GJConversor = EquipmentUnity.objects.filter(unity=cost_unity).first().convert_factor
+        valueInGJ = duty * GJConversor
+        annual_cost = ((valueInGJ) * float(costUtility.value) * float(timeWorked.value))
+        return annual_cost
 
 
 def teste_print(dados):

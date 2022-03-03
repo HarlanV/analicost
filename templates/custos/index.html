@@ -13,6 +13,62 @@
     // });
 </script>
 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>HTML Table</h2>
+
+    <table id>
+        <tr>
+            <th>Year</th>
+            <th>Capex</th>
+            <th>Incoming</th>
+            <th>COM</th>
+            <th>Gross profit</th>
+            <th>Depreciation</th>
+            <th>Income Tax Base </th>
+            <th>FV</th>
+            <th>PV</th>
+
+            </select>
+
+        </tr>
+        {% for k, v in dados.items %}
+        <tr>
+            <td> {{v.year}} </td>
+            <td> {{v.CCF}} </td>
+            <td> {{Brasil}} </td>
+        </tr>
+    
+        {% endfor %}
+
+    </table>
+</body>
+
+</html>
 
 
 
@@ -20,5 +76,5 @@
 
 {% endblock %}
 {% block scripts %}
-    
+
 {% endblock %}

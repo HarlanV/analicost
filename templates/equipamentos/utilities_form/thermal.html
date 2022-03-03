@@ -1,0 +1,234 @@
+{% extends 'equipamentos/partials/add-equipment-form.html' %}
+{% block equipment_title %} Adiconar Blender {% endblock %}
+{% block equipment_content %}
+
+<form id="insertEquipmentForm" action="{% url 'capex:configEquipmentPost' project equipment_project_id %}"
+    method="POST">
+    {% csrf_token %}
+    <div class="form">
+
+        <h3> {{equipment_project}} - Utility Cost </h3>
+        {{values}}
+        <div class="container-fluid mb-2 mt-2" style="border:1px solid #cecece;">
+
+            <!-- Utility Type -->
+            <fieldset class="form-group row" id="UtilityFieldSet">
+                <legend class="col-form-label col-sm-2 float-sm-left pt-0"> Utility Type</legend>
+                <div class="col-sm-10" id="utypeForm">
+                    {% for utype in UtilitiesTypes %}
+                    <div class="form-check" id="div{{utilitiesl}}">
+                        <input class="form-check-input utilities " type="radio" name="utype" id="{{utype}}"
+                            value="{{utype}}" required>
+                        <label class="form-check-label" for="{{utype}}">
+                            {{utype}}
+                        </label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </fieldset>
+
+            <!-- Steam From Boilers -->
+            <fieldset class="form-group row notVisible" id="SteamFieldSet" disabled hidden >
+                <legend class="col-form-label col-sm-2 float-sm-left pt-0"> Steam from Boilers</legend>
+                <div class="col-sm-10 Steam Heating" id="Steam from Boilers">
+                    {% for utility in Steam %}
+
+                    <div class="form-check" id="div{{utility}}">
+                        <input class="form-check-input utility " type="radio" name="utility" id="{{utility}}"
+                            value="{{utility.id}}" required>
+
+                        <label class="form-check-label" for="{{utility}}">
+                            {{utility}}
+                        </label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </fieldset>
+
+            <!-- Thermal Systems -->
+            <fieldset class="form-group row notVisible" id="ThermalSystemsFieldSet" disabled hidden >
+                <legend class="col-form-label col-sm-2 float-sm-left pt-0"> Thermal Systems</legend>
+                <div class="col-sm-10" id="Thermal Systems">
+                    {% for utility in ThermalSystems %}
+
+                    <div class="form-check" id="div{{utility}}">
+                        <input class="form-check-input utility " type="radio" name="utility" id="{{utility}}"
+                            value="{{utility.id}}" required>
+
+                        <label class="form-check-label" for="{{utility}}">
+                            {{utility}}
+                        </label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </fieldset>
+
+            <!-- Water -->
+            <fieldset class="form-group row notVisible" id="WaterFieldSet" disabled hidden >
+                <legend class="col-form-label col-sm-2 float-sm-left pt-0"> Water Utilites</legend>
+                <div class="col-sm-10" id="Water Utilities">
+                    {% for utility in Water %}
+
+                    <div class="form-check" id="div{{utility}}">
+                        <input class="form-check-input utility " type="radio" name="utility" id="{{utility}}"
+                            value="{{utility.id}}" required>
+
+                        <label class="form-check-label" for="{{utility}}">
+                            {{utility}}
+                        </label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </fieldset>
+
+            <!-- Refrigeration -->
+            <fieldset class="form-group row notVisible" id="RefrigerationFieldSet" disabled hidden >
+                <legend class="col-form-label col-sm-2 float-sm-left pt-0"> Refrigeration</legend>
+                <div class="col-sm-10" id="Refrigerations">
+                    {% for utility in Refrigeration %}
+
+                    <div class="form-check" id="div{{utility}}">
+                        <input class="form-check-input utility " type="radio" name="utility" id="{{utility}}"
+                            value="{{utility.id}}" required>
+
+                        <label class="form-check-label" for="{{utility}}">
+                            {{utility}}
+                        </label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </fieldset>
+
+            <!-- Utility Cost -->
+            <fieldset class="form-group row " id="UserDefined" disabled hidden>
+                <div class="form-row ml-1">
+                    <div class="form-group col-md-7 ml:2">
+                        <label for="utility_cost">Utility Cost</label>
+                        <input type="number" step="0.01" min="0.01" class="form-control" id="utility_cost"
+                            name="utility_cost" value="{{equipment_data.specification}}">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="cost_unity">Unity</label>
+                        <select id="cost_unity" class="form-control" name="cost_unity">
+                            {% for unity in cost_unitys %}
+                            {% if equipment_data.preference_unity == unity %}
+                            <option value="{{unity.id}}" selected>{{unity.unity}}</option>
+                            {% else %}
+                            <option value="{{unity.id}}"> {{unity.unity}} </option>
+                            {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Utility Duty -->
+            <fieldset class="form-group row">
+                <div class="form-row ml-1">
+                    <div class="form-group col-md-7 ml:2">
+                        <label for="utility_duty">Utility Duty</label>
+                        <input type="number" step="0.01" min="0.01" class="form-control" id="utility_duty"
+                            name="duty" value="{{equipment_data.specification}}">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="duty_unitys">Unity</label>
+                        <select id="duty_unitys" class="form-control" name="duty_unity">
+                            {% for unity in duty_unitys %}
+                            {% if equipment_data.preference_unity == unity %}
+                            <option value="{{unity.id}}" selected>{{unity.unity}}</option>
+                            {% else %}
+                            <option value="{{unity.id}}"> {{unity.unity}} </option>
+                            {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </div>
+    </div>
+</form>
+{% include 'equipamentos/partials/returnButton.html' %}
+
+
+<script>
+
+    $('#UtilityFieldSet').change(function () {
+        checkFields()
+    });
+
+    function checkFields(){
+        let field = $('input[name=utype]:checked').val()
+        if (field == "Heating Utilities"){
+            hideCooling(true)
+            lockUserDefined(true)
+            hideHeating (false)
+        } else if(field == "Cooling Utilities"){
+            hideCooling(false)
+            lockUserDefined(true)
+            hideHeating (true)
+        } else{
+            hideCooling(true)
+            lockUserDefined(false)
+            hideHeating (true)
+        }
+        console.log(field)
+    }
+
+    function hideHeating(hide=true){
+        heating = ['SteamFieldSet', 'ThermalSystemsFieldSet']
+        if (hide == true){
+            for (var id of heating) {
+                field = document.getElementById(id)
+                field.disabled = true
+                field.setAttribute("hidden", true)
+            }
+        } else{
+            for (var id of heating) {
+                console.log(field)
+                field = document.getElementById(id)
+                field.disabled = false
+                field.removeAttribute("hidden");
+                console.log(field)
+            }
+        }
+    }
+    
+    function hideCooling(hide=true){
+        heating = ['WaterFieldSet', 'RefrigerationFieldSet']
+        if (hide == true){
+            for (var id of heating) {
+                field = document.getElementById(id)
+                field.disabled = true
+                field.setAttribute("hidden", true)
+            }
+        } else{
+            for (var id of heating) {
+                field = document.getElementById(id)
+                field.disabled = false
+                field.removeAttribute("hidden");
+            }
+        }
+    }
+
+
+    function lockUserDefined(hide=true){
+        id = 'UserDefined'
+
+        if (hide == true){
+            field = document.getElementById(id)
+            field.disabled = true
+            field.setAttribute("hidden", true)
+        } else {
+            field = document.getElementById(id)
+            field.disabled = false
+            field.removeAttribute("hidden"); 
+        }
+    }
+
+</script>
+
+
+{% endblock %}

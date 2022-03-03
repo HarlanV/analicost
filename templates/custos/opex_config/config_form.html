@@ -1,0 +1,614 @@
+<style>
+    .formBottomDivision {
+        border-bottom: 1px solid #adb6ad;
+        margin-bottom: 10px;
+    }
+
+    .formTopDivision {
+        border-top: 1px solid #adb6ad;
+        padding-top: 10px;
+    }
+
+    .titleFormSubSection {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .discreteEquationCentrlized {
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    .centered {
+        text-align: center;
+    }
+
+    .centered-hightlight {
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    .subsection-left {
+        margin-bottom: 3px;
+        text-align: left;
+        font-weight: bold;
+        text-decoration-line: underline;
+    }
+</style>
+
+
+<h2 class="centered-hightlight"> PROJECT OPEX SETTINGS</h2>
+<h4 class="centered"> Current Project: {{project}} </h4>
+
+<!-- OPÇÕES SUPERIORES -->
+<div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+
+    <div class="btn-group">
+        <button id="project" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+            aria-expanded="false">
+            Projects
+        </button>
+        <div class="dropdown-menu" aria-labelledby="project">
+            {% for project in list_projects %}
+            <a class="dropdown-item" href="{% url 'opex:opex_config' project %}">{{project}}</a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="btn-group">
+        <a class="btn btn-secondary" href="{% url 'capex:createProject'  %}" role="button">New Project</a>
+        <!--button type="button" href="#" class="btn btn-secondary">Editar Projeto</button-->
+    </div>
+</div>
+
+<!-- FORMULÁRIO -->
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <form action="{% url 'opex:postConfig' project %}" method="POST">
+                {% csrf_token %}
+
+                <!-- ECONOMIC SOURCE OPTIONS -->
+                <div class="formBottomDivision formTopDivision">
+                    <p class="titleFormSubSection"> Economic Sources Data </p>
+
+                    <!-- LINHA 1 - FCIL E REVENUE -->
+                    <div class="form-group row">
+
+                        <div class="col-sm-3">
+                            <label for="fcil_source">FCIL Source</label>
+                            <select class="form-control" name="fcil_source" id="fcil_source">
+                                {% for key, value in fcil_source.items %}
+                                {% if value == project_settings.capex_source %}
+                                <option value="{{value}}" selected> {{key}} </option>
+                                {% else %}
+                                <option value="{{value}}"> {{key}} </option>
+                                {% endif %}
+                                {{% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="fcil_value"> Input FCIL </label>
+                            {% if project_settings.capex_source == "input_source"%}
+
+                            <input type="number" class="form-control" id="fcil_value" name="fcil_value" value="{{opex.fcil}}">
+
+                            {% else%}
+                            <input type="number" class="form-control" id="fcil_value" name="fcil_value" value="{{opex.fcil}}"
+                                disabled>
+                            {% endif %}
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="revenue_source">Revenue Source</label>
+                            <select class="form-control" name="revenue_source" id="revenue_source">
+                                {% if project_settings.revenue_calculated is True %}
+                                <option value="True" selected> Calculate revenue from material table </option>
+                                <option value="False"> Input Revenue </option>
+                                {% else %}
+                                <option value="True"> Calculate revenue from material table </option>
+                                <option value="False" selected> Input Revenue </option>
+                                {% endif %}
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="revenue_value">Input Revenue</label>
+                            {% if project_settings.revenue_calculated is True %}
+                            <input type="number" class="form-control" id="revenue_value" name="revenue_value"
+                            value="{{opex.revenue}}" disabled>
+                            {% else %}
+                            <input type="number" class="form-control" id="revenue_value" name="revenue_value"
+                                value="{{opex.revenue}}">
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- LINHA 2 - CRM E SAVAGE-->
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <label for="crm_source">Raw Material Cost</label>
+                            <select class="form-control" name="crm_source" id="crm_source">
+                                {% if project_settings.crm_calculated is True %}
+                                <option value="True" selected> Calculate from material Table </option>
+                                <option value="False"> Input Raw Material Cost </option>
+
+                                {% else %}
+                                <option value="True"> Calculate from material Table </option>
+                                <option value="False" selected> Input Raw Material Cost </option>
+                                {% endif %}
+
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="crm_value">Input Raw Mat. Cost</label>
+                            {% if project_settings.crm_calculated is True %}
+                            <input type="number" class="form-control" id="crm_value" name="crm_value"
+                                value="{{opex.crm}}" disabled>
+                            {% else %}
+                            <input type="number" class="form-control" id="crm_value" name="crm_value"
+                                value="{{opex.crm}}">
+                            {% endif %}
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="salvage_source">Salvage Value Source</label>
+                            <select class="form-control" name="salvage_source" id="salvage_source">
+                                {% if project_settings.salvage_calculated is True %}
+                                <option value="True" selected> Calculate as percentage of FCIL </option>
+                                <option value="False"> Input Savage Value </option>
+
+                                {% else %}
+                                <option value="True"> Calculate as percentage of FCIL </option>
+                                <option value="False" selected> Input Savage Value </option>
+                                {% endif %}
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="salvage_value">Input Salvage Value</label>
+                            {% if project_settings.salvage_calculated is True %}
+                            <input type="number" class="form-control" id="salvage_value" name="salvage_value"
+                            value="{{opex.salvage}}" disabled>
+                            {% else %}
+                            <input type="number" class="form-control" id="salvage_value" name="salvage_value"
+                            value="{{opex.salvage}}">
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- LINHA 3 - CUT e WC-->
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <label for="cut_source">Utility Cost</label>
+                            <select class="form-control" name="cut_source" id="cut_source">
+                                {% if project_settings.crm_calculated is True %}
+                                <option value="True" selected> Calculated From Summary</option>
+                                <option value="False"> Input Utility Cost </option>
+
+
+                                {% else %}
+                                <option value="True"> Calculated From Summary </option>
+                                <option value="False" selected> Input Utility Cost </option>
+                                {% endif %}
+
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="cut_value">Input Utility Cost</label>
+                            {% if project_settings.crm_calculated is True %}
+                            <input type="number" class="form-control" id="cut_value" name="cut_value"
+                            value="{{opex.cut}}" disabled>
+                            {% else %}
+                            <input type="number" class="form-control" id="cut_value" name="cut_value"
+                            value="{{opex.cut}}">
+                            {% endif %}
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="wc_source">Working Capital Cost</label>
+                            <select class="form-control" name="wc_source" id="wc_source">
+                                {% if project_settings.salvage_calculated is True %}
+                                <option value="True" selected> Calculate from CRM, FCIL and COL </option>
+                                <option value="False"> Input Working Capital Cost</option>
+
+                                {% else %}
+                                <option value="True"> Calculate from CRM, FCIL and COL </option>
+                                <option value="False" selected> Input Working Capital Cost</option>
+                                {% endif %}
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="wc_value">Input Working Capital</label>
+                            {% if project_settings.salvage_calculated is True %}
+                            <input type="number" class="form-control" id="wc_value" name="wc_value"
+                            value="{{opex.working_capital}}" disabled>
+                            {% else %}
+                            <input type="number" class="form-control" id="wc_value" name="wc_value"
+                            value="{{opex.working_capital}}">
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- LINHA 4 - COL e CWT-->
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <label for="col_source">Operating Labor</label>
+                            <select class="form-control" name="col_source" id="col_source">
+                                {% if project_settings.crm_calculated is True %}
+                                <option value="True" selected> Based on number and type of Equipment </option>
+                                <option value="False"> Input Operating Labor Cost </option>
+
+                                {% else %}
+                                <option value="True"> Based on number and type of Equipment</option>
+                                <option value="False" selected> Input Operating Labor Cost </option>
+                                {% endif %}
+
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="col_value">Input Operating Labor</label>
+                            {% if project_settings.crm_calculated is True %}
+                            <input type="number" class="form-control" id="col_value" name="col_value"
+                            value="{{opex.col}}" disabled>
+                            {% else %}
+                            <input type="number" class="form-control" id="col_value" name="col_value"
+                            value="{{opex.col}}">
+                            {% endif %}
+                        </div>
+
+
+
+                        <div class="col-sm-3">
+                            <label for="cwt_source">Waste Treatment</label>
+                            <select class="form-control" name="cwt_source" id="cwt_source">
+                                {% if project_settings.salvage_calculated is True %}
+                                <option value="True" selected> Calculate from materials table </option>
+                                <option value="False"> Input Waste Treatment Cost </option>
+
+                                {% else %}
+                                <option value="True"> Calculate as percentage of FCIL </option>
+                                <option value="False" selected> Input Waste Treatment Cost </option>
+                                {% endif %}
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="cwt_value">Input Waste Treatment</label>
+                            {% if project_settings.salvage_calculated is True %}
+                            <input type="number" class="form-control" id="cwt_value" name="cwt_value"
+                            value="{{opex.cwt}}" disabled>
+                            {% else %}
+                            <input type="number" class="form-control" id="cwt_value" name="cwt_value"
+                            value="{{opex.cwt}}">
+                            {% endif %}
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- COST OF MANUFACTURING FACTORS (COMd factors) -->
+                <div class="formBottomDivision">
+                    <p class="titleFormSubSection"> Manufactoring Cost Factors </p>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="fcil_cost_factor">Multiplying factor for FCIL</label>
+                            <input type="number" class="form-control" id="fcil_cost_factor" name="fcil_cost_factor"
+                                value="{{auxiliate_factors.fcil}}" min="0" max="100" step="0.01">
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="col_cost_factor">Multiplying factor for COL</label>
+                            <input type="number" class="form-control" id="col_cost_factor" name="col_cost_factor"
+                                value="{{auxiliate_factors.col}}" min="0" max="100" step="0.01">
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="cut_cost_factor"> Facotrs for CUT, CWT, and CRM </label>
+                            <input type="number" class="form-control" id="cut_cost_factor" name="cut_cost_factor"
+                                value="{{auxiliate_factors.cut}}" min="0" max="100" step="0.01">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label for="equation">Current Cost of Manufacturing Equation</label>
+                            <input type="text" class="form-control" id="equation" name="equation" value="{{equation}}"
+                                disabled>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WORKING CAPITAL FACTORS -->
+                <div class="formBottomDivision">
+                    <p class="titleFormSubSection"> Working Capital Factors </p>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="factorA">Working Capital Factor A</label>
+                            <input type="number" class="form-control" id="factorA" name="factorA"
+                                value="{{auxiliate_factors.working_capital_a}}">
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="inputCity">Working Capital Factor B</label>
+                            <input type="number" class="form-control" id="factorB" name="factorB"
+                                value="{{auxiliate_factors.working_capital_b}}">
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="inputCity">Working Capital Factor C</label>
+                            <input type="number" class="form-control" id="factorC" name="factorC"
+                                value="{{auxiliate_factors.working_capital_c}}">
+                        </div>
+
+                    </div>
+                    <p class="discreteEquationCentrlized"> Working Capital = A*CRM + B*FCIL + C*COL </p>
+                </div>
+
+                <!-- UTILITIES COSTS -->
+                <div class="formBottomDivision">
+                    <p class="titleFormSubSection"> Utilities Costs (U$/GJ) </p>
+
+
+                    <p class="subsection-left"> Common Utilities </p>
+                    <!-- Common Utilites -->
+                    <div class="form-group row">
+                        {% for value in utilites_constants %}
+                            {% if value.classification == "Common Utilities" or value.classification == "Water"  %}
+                                <div class="col-sm-4">
+                                    <label for="{{value.aka}}">{{value.name}}</label>
+                                    <input type="number" class="form-control" id="{{value.aka}}" name="{{value.aka}}"
+                                        value="{{value.value}}" min="0" max="100" step="0.001">
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+
+
+                    <p class="subsection-left"> Steam from Boilers </p>
+                    <!-- Steam from Boilers -->
+
+                    <div class="form-group row">
+                        {% for value in utilites_constants %}
+                            {% if value.classification == "Steam from Boilers" %}
+                                <div class="col-sm-4">
+                                    <label for="{{value.aka}}">{{value.name}}</label>
+                                    <input type="number" class="form-control" id="{{value.aka}}" name="{{value.aka}}"
+                                        value="{{value.value}}" min="0" max="100" step="0.001">
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+
+
+                    <!-- Fuels -->
+                    <p class="subsection-left"> Fuels </p>
+                    <div class="form-group row">
+                        {% for value in utilites_constants %}
+                            {% if value.classification == "Fuels" %}
+                                <div class="col-sm-4">
+                                    <label for="{{value.aka}}">{{value.name}}</label>
+                                    <input type="number" class="form-control" id="{{value.aka}}" name="{{value.aka}}"
+                                        value="{{value.value}}" min="0" step="0.001">
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+
+
+                    <!-- Thermal Systems -->
+                    <p class="subsection-left"> Thermal Systems </p>
+                    <div class="form-group row">
+                        {% for value in utilites_constants %}
+                            {% if value.classification == "Thermal Systems" %}
+                                <div class="col-sm-4">
+                                    <label for="{{value.aka}}">{{value.name}}</label>
+                                    <input type="number" class="form-control" id="{{value.aka}}" name="{{value.aka}}"
+                                        value="{{value.value}}" min="0" step="0.001">
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+
+                    <!-- Refrigeration -->
+                    <p class="subsection-left"> Refrigeration </p>
+                    <div class="form-group row">
+                        {% for value in utilites_constants %}
+                            {% if value.classification == "Refrigeration" %}
+                                <div class="col-sm-4">
+                                    <label for="{{value.aka}}">{{value.name}}</label>
+                                    <input type="number" class="form-control" id="{{value.aka}}" name="{{value.aka}}"
+                                        value="{{value.value}}" min="0" step="0.001">
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    
+                    <!-- Waste Disposal  -->
+                    <p class="subsection-left"> Waste Disposal (Solid an Liquid) </p>
+
+                    <div class="form-group row">
+                        {% for value in utilites_constants %}
+                            {% if value.classification == "Waste Disposal (solid and liquid)" %}
+                                <div class="col-sm-6">
+                                    <label for="{{value.aka}}">{{value.name}}</label>
+                                    <input type="number" class="form-control" id="{{value.aka}}" name="{{value.aka}}"
+                                        value="{{value.value}}" min="0" step="0.001">
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+
+                    </div>
+                    <p class="subsection-left"> Equipments and Process </p>
+                    <div class="form-group row">
+                        {% for value in utilites_constants %}
+                        {% if value.classification == "Cost of Steam used in Steam Drives" %}
+                        <div class="col-sm-4">
+                            <label for="{{value.aka}}"> Steam used for steam-powered drives
+                            </label>
+                            <input type="number" class="form-control" id="{{value.aka}}" name="{{value.aka}}"
+                                value="{{value.value}}" min="0" step="0.001">
+                        </div>
+                        {% endif %}
+
+                        {% if value.classification == "Process Equipment" %}
+                        <div class="col-sm-4">
+                            <label for="{{value.aka}}"> Cost of Labor (per operator/year)
+                            </label>
+                            <input type="number" class="form-control" id="{{value.aka}}" name="{{value.aka}}"
+                                value="{{value.value}}" min="0" step="0.001">
+                        </div>
+                        {% endif %}
+
+                    {% endfor %}
+                    </div>
+
+
+                </div>
+
+                <!-- TIME FACTORS -->
+                <div class="formBottomDivision">
+                    <p class="titleFormSubSection"> Time Factors </p>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="construction_period">Contruction Time (Years)</label>
+                            <select class="form-control" name="construction_period" id="construction_period">
+                                {% for i in '12345'|make_list %}
+ 
+                                   {% if i == project_settings.construction_period %}
+                                        <option value="{{i}}" selected> {{i}} </option>
+                                    {% else %}
+                                        <option value="{{i}}"> {{i}} </option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="project_life">Project Life (years)</label>
+                            <input type="number" class="form-control" id="project_life" name="project_life"
+                                value="{{project_settings.project_life}}">
+                        </div>
+
+                    </div>
+
+                    <p class="subsection-left"> Distribution of Fixed Capital Investment (must sum to one) </p>
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="year1">1º Year</label>
+                            <input type="number" class="form-control" id="year1" name="year1"
+                                value="{{auxiliate_factors.year1}}" step="0.01">
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="year2">2º Year</label>
+                            <input type="number" class="form-control" id="year2" name="year2"
+                                value="{{auxiliate_factors.year2}}" step="0.01">
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="year3">3º Year</label>
+                            <input type="number" class="form-control" id="year3" name="year3"
+                                value="{{auxiliate_factors.year3}}" step="0.01">
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="year4">4º Year</label>
+                            <input type="number" class="form-control" id="year4" name="year4"
+                                value="{{auxiliate_factors.year4}}" step="0.01">
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="year5">5º Year</label>
+                            <input type="number" class="form-control" id="year5" name="year5"
+                                value="{{auxiliate_factors.year5}}" step="0.01">
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <button type="submit" id="postButton" class="btn btn-primary px-4 float-right">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#fcil_source').change(function () {
+        let blockValue = 'input_source'
+        let blockIdField = 'fcil_value'
+        let var1 = checkIfBlock(getFieldChanged('fcil_source'), blockValue)
+        blockAndUnblock(blockIdField, var1)
+    });
+
+    $('#revenue_source').change(function () {
+        let blockValue = 'False'
+        let blockIdField = 'revenue_value'
+        let var1 = checkIfBlock(getFieldChanged('revenue_source'), blockValue)
+        blockAndUnblock(blockIdField, var1)
+        console.log(getFieldChanged('revenue_source').value)
+    });
+    $('#salvage_source').change(function () {
+        let blockValue = 'False'
+        let blockIdField = 'salvage_value'
+        let var1 = checkIfBlock(getFieldChanged('salvage_source'), blockValue)
+        blockAndUnblock(blockIdField, var1)
+    });
+    $('#crm_source').change(function () {
+        let blockValue = 'False'
+        let blockIdField = 'crm_value'
+        let var1 = checkIfBlock(getFieldChanged('crm_source'), blockValue)
+        blockAndUnblock(blockIdField, var1)
+    });
+
+
+
+    $('#cwt_source').change(function () {
+        let blockValue = 'False'
+        let blockIdField = 'cwt_value'
+        let var1 = checkIfBlock(getFieldChanged('cwt_source'), blockValue)
+        blockAndUnblock(blockIdField, var1)
+    });
+
+    $('#col_source').change(function () {
+        let blockValue = 'False'
+        let blockIdField = 'col_value'
+        let var1 = checkIfBlock(getFieldChanged('col_source'), blockValue)
+        blockAndUnblock(blockIdField, var1)
+    });
+
+    $('#cut_source').change(function () {
+        let blockValue = 'False'
+        let blockIdField = 'cut_value'
+        let var1 = checkIfBlock(getFieldChanged('cut_source'), blockValue)
+        blockAndUnblock(blockIdField, var1)
+    });
+
+    $('#wc_source').change(function () {
+        let blockValue = 'False'
+        let blockIdField = 'wc_value'
+        let var1 = checkIfBlock(getFieldChanged('wc_source'), blockValue)
+        blockAndUnblock(blockIdField, var1)
+    });
+
+    function getFieldChanged(fieldId) {
+        let field = document.getElementById(fieldId)
+        return field
+    }
+
+    function blockAndUnblock(field, toBlock) {
+        if (toBlock == true) {
+            // document.getElementById('field').style.visibility = 'block';
+            document.getElementById(field).disabled = true;
+        } else {
+            document.getElementById(field).disabled = false;
+        }
+
+    }
+
+    function checkIfBlock(field, blockValue) {
+        if (field.value == blockValue) {
+            return false
+        } else {
+            return true
+        }
+    }
+</script>

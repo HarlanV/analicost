@@ -1,0 +1,13 @@
+{% if material %}
+    <p> teste </p>>
+    {% include 'custos/material/list_material.html'%}
+
+    {% else %}
+        <h1>  There is no material at moment.  </h1>
+
+        <div class="btn-group">
+            <a class="btn btn-secondary" href="{% url 'opex:create_material' project  %}" role="button">New Material</a>
+            <!--button type="button" href="#" class="btn btn-secondary">Editar Projeto</button-->
+        </div>
+
+    {% endif %}

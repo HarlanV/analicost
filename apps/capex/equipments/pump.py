@@ -1,5 +1,6 @@
 # from capex.models import BareModule, Equipment, PurchasedFactor, EquipmentUnity
 import json
+from opex.models import EquipmentsUtilitiesSetting, ProjectUtilitiesConstant
 from capex.models import BareModule, Dimension, EquipmentUnity, MaterialFactor, PressureFactor, PurchasedFactor
 from capex.equipments.equipments import BaseEquipment, teste_print
 
@@ -68,8 +69,6 @@ class Pump(BaseEquipment):
         self.reference = self.bareModuleFactor(True)
 
         # Fator BareMobule
-        bareModuleCost = self.baseCost * self.bareModuleFactor()
-
         # Arredonda valores
         # fbm nas condições básicas (Fp e Fm unitários)
         fbm0 = self.baseRoughFbm(self.purchase_id)
@@ -80,13 +79,27 @@ class Pump(BaseEquipment):
         self.baseEquipmentCost = self.upRound(self.baseCost)
         self.baseBaremoduleCost = self.upRound(self.baseCost * fbm0)
 
-        t1 = self.purchasedEquipmentCost
-        t2 = self.bareModuleCost
-        t3 = self.baseEquipmentCost
-        t4 = self.baseBaremoduleCost
-        teste = str(t1) + "//" + str(t2) + "//" + str(t3) + "//" + str(t4)
+    def setUtilitiesField(self, equipment):
 
+        efficiency = 0.86
+        costUtility = ProjectUtilitiesConstant.objects.filter(aka="Eletricity").first()
+        duty = (self.specification * self.conversor) / efficiency
+        utility = EquipmentsUtilitiesSetting()
+        utility.equipment = equipment
+        utility.utility = costUtility
+        utility.efficiency = efficiency
+        utility.duty = duty
+        utility.duty_unity = self.selectedUnity
+        # Considereando o default em kW
+        utility.annual_cost = self.calculateAnnualCut(duty, costUtility)
+        utility.save()
 
+    def calculateAnnualCut(self, duty, costUtility, cost_unity="GJ"):
+        timeWorked = ProjectUtilitiesConstant.objects.filter(aka="Hours in Year").first()
+        GJConversor = EquipmentUnity.objects.filter(unity=cost_unity).first().convert_factor
+        valueInGJ = duty * GJConversor
+        annual_cost = ((valueInGJ) * float(costUtility.value) * float(timeWorked.value))
+        return annual_cost
 
 
 class sketch(Pump):
@@ -122,7 +135,7 @@ class EquipmentComplementData():
         self.equipmentForm["dimension"] = self.equipment.dimension
         self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
         self.equipmentForm["materials"] = self.q.values('material').distinct()
-        pressureDimension = Dimension.objects.get(dimension="Pressão")
+        pressureDimension = Dimension.objects.get(dimension="Pressure")
         self.equipmentForm["pressureUnity"] = EquipmentUnity.objects.filter(dimension=pressureDimension)
         typesList = list(self.equipmentForm["types"].values_list("id", flat=True))
         self.equipmentForm["pressureLimits"] = list(PressureFactor.objects.filter(equipment__in=typesList).values_list("equipment_id", "pressure_min", "pressure_max"))
@@ -144,6 +157,6 @@ class EquipmentComplementData():
         material = list(self.equipmentForm["materials"].values_list("material", flat=True))
         types = list(self.equipmentForm["types"].values_list("description", flat=True))
         self.equipmentForm["auxiliarLists"] = [material, types]
-        self.equipmentForm["conversores"] = dict(EquipmentUnity.objects.filter(dimension__dimension="Pressão").values_list("unity", "convert_factor"))
+        self.equipmentForm["conversores"] = dict(EquipmentUnity.objects.filter(dimension__dimension="Pressure").values_list("unity", "convert_factor"))
 
         return self.equipmentForm

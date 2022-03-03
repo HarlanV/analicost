@@ -21,10 +21,11 @@
                         Project
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{% url 'capex:index' %}">Projetos</a>
-                        <a class="dropdown-item" href=" # ">Relatorio (desativado)</a>
+                        <a class="dropdown-item" href="{% url 'capex:index' %}">Equipments</a>
+                        <a class="dropdown-item" href=" # "> Operational Costs</a>
+                        <a class="dropdown-item" href="{% url 'opex:index_material' %}">Materials</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{% url 'opex:index' %}">Financeiro</a>
+                        <a class="dropdown-item" href="{% url 'opex:index' %}">Cash Flow</a>
                     </div>
                 </li>
 
@@ -35,9 +36,9 @@
                         Tools
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Variaveis</a>
+                        <a class="dropdown-item" href="{% url 'opex:index_config' %}">Operational Constants</a>
                         <a class="dropdown-item" href="/admin">Admin</a>
-                        <a class="dropdown-item" href="{% url 'usuarioapp:seedCreator' %}">Seed</a>
+                        <a class="dropdown-item" href="#">Data Export</a>
                     </div>
                 </li>
             </ul>

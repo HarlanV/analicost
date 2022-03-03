@@ -16,7 +16,3 @@ def home(request):
 
 def equacoes(request):
     return render(request, 'equacoes/index.html')
-
-
-def seedCreator(request):
-    pass

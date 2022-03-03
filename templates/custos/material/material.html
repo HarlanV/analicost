@@ -1,0 +1,45 @@
+{% extends 'partials/base.html' %}
+{% block title %} Graficos {% endblock %}
+{% block content %}
+
+
+
+<!-- OPÇÕES SUPERIORES -->
+{% if project %}
+{% include 'custos/material/list_material.html'%}
+{% else %}
+    <h1>  There is no Project at the Moment. Please, create a project  </h1>
+
+    <div class="btn-group">
+        <a class="btn btn-secondary" href="{% url 'capex:createProject'  %}" role="button">New Project</a>
+        <!--button type="button" href="#" class="btn btn-secondary">Editar Projeto</button-->
+    </div>
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+    
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+{% if project %}
+    
+{% else %}
+<h1>  NÃO HÁ MATERIAIS NO MOMENTO  </h1>
+
+<div class="btn-group">
+    <a class="btn btn-secondary" href="{% url 'capex:createProject'  %}" role="button">Novo Projeto</a>
+    <!--button type="button" href="#" class="btn btn-secondary">Editar Projeto</button-->
+</div>
+
+{% endif %}
+

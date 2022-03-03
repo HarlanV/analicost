@@ -56,6 +56,7 @@ class Equipment(models.Model):
     description = models.CharField(max_length=100, null=True, blank=True)
     dimension = models.ForeignKey(Dimension, on_delete=models.CASCADE)
     symbol = models.CharField(max_length=10, null=True, blank=True)
+    utility_form = models.CharField(max_length=30, null=True, blank=True)
 
     def __str__(self):
         return self.name

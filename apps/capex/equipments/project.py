@@ -1,3 +1,4 @@
+from opex.economic import EconomicConfig, ManufactoryCost
 from capex.models import CapexProject, EquipmentProject
 
 
@@ -6,18 +7,18 @@ class ProjectCost():
     Attributes: projectNum, project, equipments
     """
 
-    def __init__(self, num, noCreate=False):
+    def __init__(self, num=None):
+        if num is not None:
+            # Checa se projeto já existe...
+            hasProject = self.checkProject(num)
 
-        # Checa se projeto já existe...
-        hasProject = self.checkProject(num)
+            # Importa os dados do projeto para a instancia
+            if hasProject is True:
+                self.setProject(num)
+                self.equipments = self.listEquipmentsProject()
+                # self.createProject(num)
 
-        # caso seja solicitado para não criar ou já exista...
-        if noCreate is False and hasProject is False:
-            self.createProject(num)
-        else:
-            self.setProject(num)
-            self.equipments = self.listEquipmentsProject()
-
+    # define o projeto operando no momento. Caso não informado, irá buscar pelo número de projeto
     def setProject(self, num, project=None):
         if project:
             self.projectNum = num
@@ -26,19 +27,24 @@ class ProjectCost():
             self.projectNum = num
             self.project = self.getProject(num)
 
+    # Retorna um projeto pelo seu numero
     def getProject(self, num):
         project = CapexProject.objects.filter(project_number=num).first()
         return project
 
+    # Retorna qual o projeto sendo trabalho no momento
     def project(self):
         return self.project
 
-    def createProject(self, num):
-        project = CapexProject(project_number=num)
+    # Persiste um novo projeto
+    def createProject(self, num, cepci):
+        project = CapexProject(project_number=num, cepci=cepci)
         project.save()
         self.setProject(num, project)
+        self.configNewProject()
         return project
 
+    # Adiciona um novo equipamento ao projeto
     def insertEquipment(self, data):
         data['project'] = self.project
         equipment = EquipmentProject(**data)
@@ -46,6 +52,7 @@ class ProjectCost():
         self.equipments = self.listEquipmentsProject()
         return equipment
 
+    # Atualiza um equipamento no projeto
     def updateEquipment(self, data, equipmentProject):
 
         data['project'] = self.project
@@ -54,6 +61,7 @@ class ProjectCost():
         self.equipments = self.listEquipmentsProject()
         return equipment
 
+    # Atualiza as informações de capex do projeto
     def updateCosts(self):
 
         project = self.project
@@ -85,13 +93,16 @@ class ProjectCost():
         project.total_langfactor = project.lang_factor * purchased_equip_cost
         project.save()
         self.project = project
+        ManufactoryCost(self.project).updateAllCosts()
 
+    # Retorna todos os equipamentos atualmente no projeto
     def listEquipmentsProject(self):
         self.equipments = EquipmentProject.objects.filter(project=self.project)
         listDistinctEquipment = (EquipmentProject.objects.filter(project=self.project).values('equipment__name').distinct())
         self.listDistinctEquipment = list(map(lambda x: x["equipment__name"], listDistinctEquipment))
         return self.equipments
 
+    # funcao de arredondamento para valores significativos. Auxiliar.
     def upRound(self, value):
         if (value < 1):
             digits = 3
@@ -112,6 +123,7 @@ class ProjectCost():
         else:
             return False
 
+    # Altera os códigos de equipamentos no projeto
     def renumerar(self, symbol):
         num = self.projectNum
         equipmentLetter = symbol
@@ -125,6 +137,7 @@ class ProjectCost():
 
         return (equipmentLetter + str(num + it + 1))
 
+    # Remove um equipamento do projeto
     def removeEquipment(self, equipment_id):
         equipment = EquipmentProject.objects.filter(id=equipment_id)
         symbol = equipment.first().equipment.symbol
@@ -137,6 +150,7 @@ class ProjectCost():
         else:
             return False
 
+    # Deleta o projeto completo
     def removeProject(self):
         delete = self.project.delete()
 
@@ -145,10 +159,26 @@ class ProjectCost():
         else:
             return False
 
+    # Garante que existe um projeto com a numeração setado, ou retorna um erro.
+    def thisRequestAProject(self, num):
+        # Checa se projeto já existe...
+        hasProject = self.checkProject(num)
 
-def teste_print(dados):
-    print('--------------------------------------')
-    print('--------------------------------------')
-    print(dados)
-    print('--------------------------------------')
-    print('--------------------------------------')
+        # Caso exista, armazena nos atributos.
+        if hasProject is True:
+            self.setProject(num)
+            self.equipments = self.listEquipmentsProject()
+            self.createProject(num)
+            return True
+        else:
+            raise Exception("Project wasn't found.")
+
+    def configNewProject(self):
+
+        config = EconomicConfig(self.project)
+        config.setAuxiliarFactorsDefault()
+        config.setProjectSettingsDefautl()
+        config.setOpexDefault()
+        config.setUtilitiesConstantsDefault()
+
+        pass

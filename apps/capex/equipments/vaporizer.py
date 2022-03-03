@@ -104,7 +104,7 @@ class EquipmentComplementData():
         self.equipmentForm["dimension"] = self.equipment.dimension
         self.equipmentForm["unitys"] = EquipmentUnity.objects.filter(dimension=self.equipment.dimension)
         self.equipmentForm["materials"] = self.q.values('material').distinct()
-        pressureDimension = Dimension.objects.get(dimension="Pressão")
+        pressureDimension = Dimension.objects.get(dimension="Pressure")
         self.equipmentForm["pressureUnity"] = EquipmentUnity.objects.filter(dimension=pressureDimension)
         typesList = list(self.equipmentForm["types"].values_list("id", flat=True))
         self.equipmentForm["pressureLimits"] = list(PressureFactor.objects.filter(equipment__in=typesList).values_list("equipment_id", "pressure_min", "pressure_max"))
@@ -112,7 +112,7 @@ class EquipmentComplementData():
         material = list(self.equipmentForm["materials"].values_list("material", flat=True))
         types = list(self.equipmentForm["types"].values_list("description", flat=True))
         self.equipmentForm["auxiliarLists"] = [material, types]
-        self.equipmentForm["conversores"] = dict(EquipmentUnity.objects.filter(dimension__dimension="Pressão").values_list("unity", "convert_factor"))
+        self.equipmentForm["conversores"] = dict(EquipmentUnity.objects.filter(dimension__dimension="Pressure").values_list("unity", "convert_factor"))
         return self.equipmentForm
 
 
