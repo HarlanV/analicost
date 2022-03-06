@@ -68,6 +68,7 @@ def addEquipmentProject_POST(request, project, equipamento_id):
     }
 
     getattr(services.EquipmentServices, 'addEquipmentToProjec')(**data)
+
     return JsonResponse(status=201, data={'status': 'false', 'message': "Adicionado com sucesso"})
     # return redirect('capex:project', project=project)
 
@@ -141,34 +142,3 @@ def updateEquipment_GET(request, project, equipamento_id):
     url = "equipamentos/edit_form/" + equipmentUrl + ".html"
     return render(request, url, options)
 
-
-# Renderiza formulário de configuração das utilities do equipamento
-def configEquipment_GET(request, project, equipamento_id):
-    equipment = services.EquipmentServices.getEquipmentInProject(equipamento_id)
-    if equipment.equipment.utility_form is None:
-        return redirect('capex:project', project=project)
-
-    options = services.EquipmentServices.getUtilitieEquipmentOptions(project, equipment)
-    path = "equipamentos/utilities_form/"
-    form = str(equipment.equipment.utility_form).lower()
-    path = path + form + ".html"
-    options["project"] = project
-    options["equipment_project_id"] = equipamento_id
-    options["equipment_project"] = equipment
-    options["equipment"] = equipment.equipment
-
-    # return redirect('capex:project', project=project)
-    return render(request, path, options)
-
-
-# Salva as informações de Utilities do equipamento
-def configEquipment_POST(request, project, equipamento_id):
-    args = dict(request.POST.items())
-    args.pop('csrfmiddlewaretoken', None)
-    equipment = services.EquipmentServices.getEquipmentInProject(equipamento_id)
-    # Is efficiency
-    if len(args) == 1:
-        services.EquipmentServices.updateUtilitieEquipmentOptions(equipment, args)
-    else:
-        services.EquipmentServices().prepareUtilitiesValues(equipment, args)
-    return redirect('capex:project', project=project)

@@ -19,6 +19,5 @@ urlpatterns = [
     path('<int:project>/<int:equipamento_id>/equipment/edit', views.updateEquipment_GET, name='editEquipment'),
     path('<int:project>/<int:equipamento_id>/equipment/edit/POST', views.updateEquipment_POST, name='updateEquipment'),
     path('<int:equipamento_id>/<int:unity>/range/GET', views.attributeRange, name='attributerange'),
-    path('<int:project>/<int:equipamento_id>/equipment/config', views.configEquipment_GET, name='configEquipment'),
-    path('<int:project>/<int:equipamento_id>/equipment/config/POST', views.configEquipment_POST, name='configEquipmentPost'),
+
 ]

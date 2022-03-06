@@ -1,6 +1,6 @@
 from django.db.models import Q
 from django.shortcuts import get_object_or_404
-from opex.economic import CostCalculationTools
+from opex.economic import CostCalculationTools, UtilityCost
 from capex.equipments.equipments import teste_print
 from opex.models import EquipmentsUtilitiesSetting, ProjectUtilitiesConstant
 from capex.equipments.project import ProjectCost
@@ -69,6 +69,8 @@ class EquipmentServices():
         # equipment = EquipmentCosts(equipment_id, args, False) #fobCost
         equipment.insertIntoProject(project)
 
+        UtilityCost(project.project ).updateCut()
+
         return True
 
     def updateEquipmentInProjec(equipment_id: int, project: int, args: dict):
@@ -135,87 +137,6 @@ class EquipmentServices():
         }
         return range
 
-    # TODO: MOVER PARA OPEX
-    def getUtilitieEquipmentOptions(project, equipment):
-
-        constants = ProjectUtilitiesConstant.objects.filter(project__project_number=project)
-        values = EquipmentsUtilitiesSetting.objects.filter(equipment=equipment.id).first()
-
-        if values is not None:
-            utility = values.utility
-            
-        form = str(equipment.equipment.utility_form)
-        form = form.lower()
-        if form == "efficiency":
-            dataForm = {
-                'efficiency': values.efficiency
-            }
-        if form == "thermal":
-            dataForm = {
-                'Steam': constants.filter(classification="Steam from Boilers").all(),
-                'ThermalSystems': constants.filter(classification="Thermal Systems").all(),
-                'Water': constants.filter(classification="Water").all(),
-                'Refrigeration': constants.filter(classification="Refrigeration").all(),
-                'UtilitiesTypes': ['Heating Utilities', 'Cooling Utilities', 'User Defined'],
-                'formsList': ['Steam', 'ThermalSystems', 'Water', 'Refrigeration'],
-                'values': values,
-                'cost_unitys': EquipmentUnity.objects.filter(dimension__dimension="Energy Cost"),
-                'duty_unitys': EquipmentUnity.objects.filter(dimension__dimension="Power"),
-            }
-        # TODO: Opção para remoção futura do steam de Drives nas configurações.
-        if form == "steam":
-            dataForm = {
-            }
-
-        if form == "energy":
-            dataForm = {
-                'Steam': constants.filter(classification="Steam from Boilers").all(),
-                'ThermalSystems': constants.filter(classification="Thermal Systems").all(),
-                'UtilitiesTypes': ['User Defined'],
-                'values': values,
-                'cost_unitys': EquipmentUnity.objects.filter(dimension__dimension="Energy Cost"),
-                'duty_unitys': EquipmentUnity.objects.filter(dimension__dimension="Power"),
-            }
-
-        return dataForm
-
-    # TODO: MOVER PARA OPEX
-    def updateUtilitieEquipmentOptions(equipment, args):
-        utilities = EquipmentsUtilitiesSetting.objects.filter(equipment=equipment.id)
-        utilities.update(**args)
-
-    # TODO: MOVER PARA OPEX
-    def prepareUtilitiesValues(self, equipment, args):
-        utilities = EquipmentsUtilitiesSetting.objects.filter(equipment=equipment.id)
-        args["duty_unity"] = EquipmentUnity.objects.get(id=args["duty_unity"])
-
-        if 'utype' in args:
-            if args["utype"] == "User Defined":
-                args["utility"] = args["utype"]
-            args.pop('utype', None)
-
-        if args["utility"] == "User Defined":
-            cost = CostCalculationTools.calculateAnualCost(float(args["duty"]), args["utility_cost"], args["duty_unity"],"GJ")
-            args["annual_cost"] = cost
-            args["utility"] = ProjectUtilitiesConstant.objects.filter(aka="Defined").first()
-            args["utility_cost"] = float(args["utility_cost"])
-            # ATENÇÃO: ao reenviar para o economic, é possível utilizar dict para facilitar edição posterior
-        else:
-
-            args["utility"] = ProjectUtilitiesConstant.objects.get(id=args["utility"])
-            cost = CostCalculationTools.calculateAnualCost(float(args["duty"]), args["utility"].value, args["duty_unity"], "GJ",)
-
-            args.pop('utype', None)
-
-        # em comum
-        args["duty"] = float(args["duty"])
-        args["cost_unity"] = EquipmentUnity.objects.filter(unity="GJ").first()
-        args["equipment"] = equipment
-        if not utilities:
-            equipment = EquipmentsUtilitiesSetting(**args)
-            equipment.save()
-        else:
-            utilities.update(**args)
 
 
 

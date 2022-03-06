@@ -58,69 +58,70 @@
                 <th class="col-1" scope="col"># Spares</th>
                 <th class="col-2" scope="col">Pressure (unity)</th>
                 <th class="col-1" scope="col"> M.O.C.</th>
-                <th class="col-1" scope="col"> Sapce 1</th>
-                <th class="col-1" scope="col"> Space 2  </th>
+                <th class="col-1" scope="col">     </th>
+                <th class="col-1" scope="col">     </th>
                 <th class="col-2" scope="col">Purchased Equipment Cost</th>
                 <th class="col-2" scope="col">Bare Module Cost</th>
                 <th class="col-2" scope="col">Base Equipment Cost </th>
                 <th class="col-2" scope="col">Base Bare Module Cost</th>
+                <th class="col-2" scope="col">Annual Cost</th>
             </tr>
         </thead>
         <tbody id="blenderBody">
         {% for tbl in tables_list %}
             {% if tbl == "Blender" %}
-            {% include 'project/tables/blender.html'%}
+            {% include 'equipamentos/tables/blender.html'%}
             {% endif%}
             {% if tbl == "Centrifuge" %}
-            {% include 'project/tables/centrifuge.html'%}
+            {% include 'equipamentos/tables/centrifuge.html'%}
             {% endif%}
             {% if tbl == "Evaporator" %}
-            {% include 'project/tables/evaporator.html'%}
+            {% include 'equipamentos/tables/evaporator.html'%}
             {% endif%}
             {% if tbl == "Compressor" %}
-            {% include 'project/tables/compressor.html'%}
+            {% include 'equipamentos/tables/compressor.html'%}
             {% endif%}
             {% if tbl == "Conveyor" %}
-            {% include 'project/tables/conveyor.html'%}
+            {% include 'equipamentos/tables/conveyor.html'%}
             {% endif%}
             {% if tbl == "Crystallizer" %}
-            {% include 'project/tables/crystallizer.html'%} 
+            {% include 'equipamentos/tables/crystallizer.html'%} 
             {% endif%}     
             {% if tbl == "Drive" %}
-            {% include 'project/tables/driver.html'%}
+            {% include 'equipamentos/tables/driver.html'%}
             {% endif%}  
             {% if tbl == "Dryer" %}
-            {% include 'project/tables/dryer.html'%}
+            {% include 'equipamentos/tables/dryer.html'%}
             {% endif%}  
             {% if tbl == "Dust Collector" %}
-            {% include 'project/tables/dust_collector.html'%}
+            {% include 'equipamentos/tables/dust_collector.html'%}
             {% endif%}  
             {% if tbl == "Vaporizer" %}
-            {% include 'project/tables/vaporizer.html'%}
+            {% include 'equipamentos/tables/vaporizer.html'%}
             {% endif%} 
             {% if tbl == "Fan" %}
-            {% include 'project/tables/fan.html'%}
+            {% include 'equipamentos/tables/fan.html'%}
             {% endif%} 
             {% if tbl == "Filter" %}
-            {% include 'project/tables/filter.html'%}
+            {% include 'equipamentos/tables/filter.html'%}
             {% endif%} 
             {% if tbl == "Pump" %}
-            {% include 'project/tables/pump.html'%}
+            {% include 'equipamentos/tables/pump.html'%}
             {% endif%} 
             {% if tbl == "Mixer" %}
-            {% include 'project/tables/mixer.html'%}
+            {% include 'equipamentos/tables/mixer.html'%}
             {% endif%} 
             {% if tbl == "Reactor" %}
-            {% include 'project/tables/reactor.html'%}
+            {% include 'equipamentos/tables/reactor.html'%}
             {% endif%} 
             {% if tbl == "Screen" %}
-            {% include 'project/tables/screen.html'%}
+            {% include 'equipamentos/tables/screen.html'%}
             {% endif%} 
             {% if tbl == "Tank" %}
-            {% include 'project/tables/tank.html'%}
+            {% include 'equipamentos/tables/tank.html'%}
             {% endif%} 
             {% if tbl == "Turbine" %}
-            {% include 'project/tables/turbine.html'%}
+            {% include 'equipamentos/tables/turbine.html'%}
             {% endif%} 
             {% endfor %}
         </tbody>
@@ -129,7 +130,7 @@
 </div>
 
 
-{% include 'project/tables/total-capex-report.html' %}
+{% include 'equipamentos/tables/total-capex-report.html' %}
 
 <script>
     function removeEquipment(equipment_id) {
@@ -158,10 +159,8 @@
     }
 
     function configEquipment(equipment_id) {
-        let url = "{% url 'capex:configEquipment' project.project_number 999 %}".replace(999, equipment_id);
+        let url = "{% url 'opex:configEquipment' project.project_number 999 %}".replace(999, equipment_id);
         window.location = url;
-        // let url = "{% url 'capex:editEquipment' project.project_number 999 %}".replace(999, equipment_id);
-        // window.location = url;
     }
 
     function deletarProjeto() {

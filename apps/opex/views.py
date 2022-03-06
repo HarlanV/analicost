@@ -1,4 +1,3 @@
-from dataclasses import field
 from django.shortcuts import redirect, render
 from capex.equipments.equipments import teste_print
 from capex import services
@@ -115,6 +114,35 @@ class Material(View):
         service = services.OpexServices(project)
         service.removeMaterial(material)
         return redirect('opex:opex_material', project=project)
+
+
+class Utilities(View):
+
+    # Renderiza formulário de configuração das utilities do equipamento
+    def configEquipment_GET(request, project, equipamento_id):
+        equipment = capexServices.EquipmentServices.getEquipmentInProject(equipamento_id)
+        if equipment.equipment.utility_form is None:
+            return redirect('capex:project', project=project)
+
+        options = services.OpexServices(project).getUtilitieEquipmentOptions(project, equipment)
+        path = "equipamentos/utilities_form/"
+        form = str(equipment.equipment.utility_form).lower()
+        path = path + form + ".html"
+        options["project"] = project
+        options["equipment_project_id"] = equipamento_id
+        options["equipment_project"] = equipment
+        options["equipment"] = equipment.equipment 
+        teste_print(path)
+        # return redirect('capex:project', project=project)
+        return render(request, path, options)
+
+    # Salva as informações de Utilities do equipamento
+    def configEquipment_POST(request, project, equipamento_id):
+        args = dict(request.POST.items())
+        args.pop('csrfmiddlewaretoken', None)
+        equipment = capexServices.EquipmentServices.getEquipmentInProject(equipamento_id)
+        services.OpexServices(project).postUtilitesConfig(equipment, args)
+        return redirect('capex:project', project=project)
 
 
 # Reservado para a exibição do fluxo de caixa, bem como análise de viabilidade

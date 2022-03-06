@@ -9,7 +9,7 @@
 </style>
 
             {% for equipment in equipments %}
-            {% if equipment.equipment.name == "Evaporator" %}
+            {% include 'equipamentos/partials/table-tools.html'%}
             <tr class="d-flex">
                 {% include 'project/tables/table-tools.html'%}
                 <th class="col-1" scope="row">{{equipment.equipment_code}}</th>
@@ -26,6 +26,5 @@
                 <td class="col-2 money " scope="row">{{equipment.base_equipment_cost}}</td>
                 <td class="col-2 money " scope="row">{{equipment.base_baremodule_cost}}</td>
             </tr>
-
             {% endif%}
             {% endfor %}

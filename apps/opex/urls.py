@@ -13,8 +13,10 @@ urlpatterns = [
     path('material/', views.Material.index, name='index_material'),
     path('material/GET/<int:project>', views.Material.listMaterials, name='opex_material'),
     path('material/create/<int:project>', views.Material.createForm, name='create_material'),
-    path('material/create/<int:project>/POST', views.Material.createFormPost, name='material_post'),
+    path('material/create/<int:project>/POST', views.Material.createFormPost, name='material_post'),   
     path('material/remove/<int:project>/<int:material>/', views.Material.removeMaterial, name='removeMaterial'),
+    path('<int:project>/<int:equipamento_id>/equipment/config', views.Utilities.configEquipment_GET, name='configEquipment'),
+    path('<int:project>/<int:equipamento_id>/equipment/config/POST', views.Utilities.configEquipment_POST, name='configEquipmentPost'),
     # path('datachar', views.HomeView.get_data, name='datachar'),
     # path('capex', views.HomeView.report, name='capex-report'),
 ]

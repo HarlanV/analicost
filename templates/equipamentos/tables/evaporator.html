@@ -1,14 +1,24 @@
-{% for equipment in equipments %}
+<style>
+    .table-reduced-head {
+        font-size: 80% !important;
+    }
 
-{% if equipment.equipment.name == "Compressor" %}
+    .table-centralized {
+        text-align: center;
+    }
+</style>
+
+{% for equipment in equipments %}
+{% if equipment.equipment.name == "Evaporator" %}
 <tr class="d-flex">
-    {% include 'project/tables/table-tools.html'%}
+    {% include 'equipamentos/partials/table-tools.html'%}
+
     <th class="col-1" scope="row">{{equipment.equipment_code}}</th>
     <th class="col-2" scope="row">{{tbl}}</th>
     <td class="col-2" scope="row">{{equipment.purchased_factor.description}}</td>
     <td class="col-2" scope="row">{{equipment.specification}} ({{equipment.preference_unity}}) </td>
     <td class="col-1" scope="row">{{ equipment.spares }}</td>
-    <td class="col-2" scope="row"> - </td>
+    <td class="col-2" scope="row"> {{equipment.pressure}} </td>
     <td class="col-1" scope="row"> {{equipment.purchased_factor.material}} </td>
     <td class="col-1" scope="row"> - </td>
     <td class="col-1" scope="row"> - </td>
@@ -16,9 +26,7 @@
     <td class="col-2 money " scope="row">{{equipment.baremodule_cost}}</td>
     <td class="col-2 money " scope="row">{{equipment.base_equipment_cost}}</td>
     <td class="col-2 money " scope="row">{{equipment.base_baremodule_cost}}</td>
-
-
 </tr>
 
-    {% endif%}
-    {% endfor %}
+{% endif%}
+{% endfor %}

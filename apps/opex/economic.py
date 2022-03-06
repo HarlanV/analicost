@@ -1,6 +1,6 @@
 from capex.equipments.equipments import teste_print
 from capex.models import CapexProject, EquipmentUnity
-from .models import MaterialCosts, Opex, OpexAuxiliateFactor as AuxiliarFactor, OpexProjectSettings, ProjectUtilitiesConstant, DefaultConstants
+from .models import EquipmentsUtilitiesSetting, MaterialCosts, Opex, OpexAuxiliateFactor as AuxiliarFactor, OpexProjectSettings, ProjectUtilitiesConstant, DefaultConstants
 from django.db.models import Sum
 
 
@@ -69,8 +69,56 @@ class ManufactoryCost():
 
 
 class UtilityCost():
-    pass
 
+    def __init__(self, project: CapexProject):
+        self.project = project
+
+
+    # TODO: MOVER PARA OPEX
+    def updateUtilitesFromEquipemt(self, equipment, args):
+
+        # significa que é a bomba com a eficiência
+        if len(args) == 1:
+            utilities = EquipmentsUtilitiesSetting.objects.filter(equipment=equipment.id)
+            utilities.update(**args)
+            return
+
+        utilities = EquipmentsUtilitiesSetting.objects.filter(equipment=equipment.id)
+        args["duty_unity"] = EquipmentUnity.objects.get(id=args["duty_unity"])
+
+        if 'utype' in args:
+            if args["utype"] == "User Defined":
+                args["utility"] = args["utype"]
+            args.pop('utype', None)
+
+        if args["utility"] == "User Defined":
+            cost = CostCalculationTools.calculateAnualCost(float(args["duty"]), args["utility_cost"], args["duty_unity"],"GJ")
+            args["annual_cost"] = cost
+            args["utility"] = ProjectUtilitiesConstant.objects.filter(aka="Defined").first()
+            args["utility_cost"] = float(args["utility_cost"])
+        else:
+            args["utility"] = ProjectUtilitiesConstant.objects.get(id=args["utility"])
+            cost = CostCalculationTools.calculateAnualCost(float(args["duty"]), args["utility"].value, args["duty_unity"], "GJ",)
+            args["annual_cost"] = cost
+            args["utility_cost"] = float(args["utility"].value)
+            args.pop('utype', None)
+
+        args["duty"] = float(args["duty"])
+        args["cost_unity"] = EquipmentUnity.objects.filter(unity="GJ").first()
+        args["equipment"] = equipment
+        if not utilities:
+            equipment = EquipmentsUtilitiesSetting(**args)
+            equipment.save()
+        else:
+            utilities.update(**args)
+
+
+    def updateCut(self):
+        equipments = EquipmentsUtilitiesSetting.objects.filter(equipment__project=self.project).all()
+        opex = Opex.objects.filter(project=self.project).first()
+        opex.cut = equipments.aggregate(Sum('utility_cost'))["utility_cost__sum"]
+        opex.save()
+        pass
 
 # Classe a ser chamada sempre que houver atualização dos custos
 class EconomicConfig():
@@ -194,5 +242,4 @@ class CostCalculationTools():
         timeWorked = ProjectUtilitiesConstant.objects.filter(aka="Hours in Year").first()
 
         cost = float(hourBaseValue) * float(cost_unity) * (timeWorked.value)
-
         return (cost)

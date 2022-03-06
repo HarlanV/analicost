@@ -2,7 +2,8 @@
 
 {% if equipment.equipment.name == "Crystallizer" %}
 <tr class="d-flex">
-    {% include 'project/tables/table-tools.html'%}
+    {% include 'equipamentos/partials/table-tools.html'%}
+
     <th class="col-1" scope="row">{{equipment.equipment_code}}</th>
     <th class="col-2" scope="row">{{tbl}}</th>
     <td class="col-2" scope="row">{{equipment.purchased_factor.description}}</td>

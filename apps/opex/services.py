@@ -1,9 +1,9 @@
 
-from opex.economic import EconomicConfig, ManufactoryCost
+from opex.economic import EconomicConfig, ManufactoryCost, UtilityCost
 from capex.equipments.equipments import teste_print
 from capex.services import ProjectServices
 from capex.models import EquipmentUnity
-from .models import DefaultConstants, MaterialCosts, OpexAuxiliateFactor, OpexProjectSettings, ProjectUtilitiesConstant, Opex
+from .models import DefaultConstants, EquipmentsUtilitiesSetting, MaterialCosts, OpexAuxiliateFactor, OpexProjectSettings, ProjectUtilitiesConstant, Opex
 
 
 class OpexServices():
@@ -151,6 +151,55 @@ class OpexServices():
     def removeMaterial(self, idMaterial):
         ManufactoryCost(self.project).deleteMaterial(idMaterial)
         return True
+
+    def getUtilitieEquipmentOptions(self, project, equipment):
+
+        constants = ProjectUtilitiesConstant.objects.filter(project__project_number=project)
+        values = EquipmentsUtilitiesSetting.objects.filter(equipment=equipment.id).first()
+
+        if values is not None:
+            utility = values.utility
+            
+        form = str(equipment.equipment.utility_form)
+        form = form.lower()
+        if form == "efficiency":
+            dataForm = {
+                'efficiency': values.efficiency
+            }
+        if form == "thermal":
+            dataForm = {
+                'Steam': constants.filter(classification="Steam from Boilers").all(),
+                'ThermalSystems': constants.filter(classification="Thermal Systems").all(),
+                'Water': constants.filter(classification="Water").all(),
+                'Refrigeration': constants.filter(classification="Refrigeration").all(),
+                'UtilitiesTypes': ['Heating Utilities', 'Cooling Utilities', 'User Defined'],
+                'formsList': ['Steam', 'ThermalSystems', 'Water', 'Refrigeration'],
+                'values': values,
+                'cost_unitys': EquipmentUnity.objects.filter(dimension__dimension="Energy Cost"),
+                'duty_unitys': EquipmentUnity.objects.filter(dimension__dimension="Power"),
+            }
+        # TODO: Opção para remoção futura do steam de Drives nas configurações.
+        if form == "steam":
+            dataForm = {
+            }
+
+        if form == "energy":
+            dataForm = {
+                'Steam': constants.filter(classification="Steam from Boilers").all(),
+                'ThermalSystems': constants.filter(classification="Thermal Systems").all(),
+                'UtilitiesTypes': ['User Defined'],
+                'values': values,
+                'cost_unitys': EquipmentUnity.objects.filter(dimension__dimension="Energy Cost"),
+                'duty_unitys': EquipmentUnity.objects.filter(dimension__dimension="Power"),
+            }
+
+        return dataForm
+    
+
+    def postUtilitesConfig(self,equipment, args):
+        UtilityCost(self.project).updateUtilitesFromEquipemt(equipment, args)
+        UtilityCost(self.project).updateCut()
+
 
 
 # Função auxiliar na leitura de campos boolean enviados pelo front. Ainda não resolvido outro método melhor
