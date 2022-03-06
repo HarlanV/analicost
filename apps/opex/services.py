@@ -1,9 +1,9 @@
 
-from opex.economic import EconomicConfig
+from opex.economic import EconomicConfig, ManufactoryCost
 from capex.equipments.equipments import teste_print
 from capex.services import ProjectServices
 from capex.models import EquipmentUnity
-from .models import CashFlow, MaterialCosts, OpexAuxiliateFactor, OpexProjectSettings, ProjectUtilitiesConstant, fcilSourceList, Opex
+from .models import DefaultConstants, MaterialCosts, OpexAuxiliateFactor, OpexProjectSettings, ProjectUtilitiesConstant, Opex
 
 
 class OpexServices():
@@ -33,6 +33,8 @@ class OpexServices():
         equation = equation + (str(configs.cut) + "*(CUT + CWT + CRM) ")
         return equation
 
+    # Auxiliar
+    # TODO: remover daqui para um banco de constantes que deverá ser criado
     def formUtilitiesConstants(values):
         fields = [
             'Common Utilities',
@@ -47,7 +49,7 @@ class OpexServices():
     # Listas a serem exportadas para o form de configuração da OPEX
     def listForms(self):
         export = {
-            'fcilSource': fcilSourceList,
+            'fcilSource': DefaultConstants().fcilSourceList,
             'cut_constants': []
         }
         return export
@@ -96,7 +98,6 @@ class OpexServices():
             'cwt_calculated': parse_boolean(args['cwt_source']),
             'construction_period': args['construction_period'],
             'project_life': args['project_life'],
-            'cwt_calculated': args['construction_period'],
             'capex_source': args['fcil_source'],
         }
 
@@ -112,12 +113,13 @@ class OpexServices():
         opex.save()
 
         listOfFields = set(values) - set([*args])
+        EconomicConfig(self.project).updateAllOpexValues()
 
         # TODO: atualizar aqui com calculos... pendente de equipamentos e materiais
-        teste_print(listOfFields)
 
         return
 
+    # Importa informações necesárias para renderizar formulário de novo material
     def formCreateMaterial(self):
 
         formValues = {
@@ -127,22 +129,30 @@ class OpexServices():
         }
         return formValues
 
+    # Set as informações necessárias e armazena o novo material
     def formInsertMaterial(self, args):
+
         args['project'] = self.project
         args["unity"] = EquipmentUnity.objects.get(id=args["unity"])
         args["flow_unity"] = EquipmentUnity.objects.get(id=args["flow_unity"])
-        material = MaterialCosts(**args)
-        material.save()
+        
+        # Acessa opções de Manufactory Cost do Projeto especifico
+        costs = ManufactoryCost(self.project)
+        # Cria e atualiza os valores relacionados ao meterial
+        material = costs.createMaterial(args)
+
         return material
 
+    # Retorna a lista de materiais no projeto
     def getAllMaterials(self):
         return MaterialCosts.objects.filter(project=self.project).all()
 
+    # Remove material do banco de dados
     def removeMaterial(self, idMaterial):
-        material = MaterialCosts.objects.get(id=idMaterial)
-        material.delete()
+        ManufactoryCost(self.project).deleteMaterial(idMaterial)
         return True
 
 
+# Função auxiliar na leitura de campos boolean enviados pelo front. Ainda não resolvido outro método melhor
 def parse_boolean(b):
     return b == 'True'

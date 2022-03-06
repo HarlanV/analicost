@@ -52,7 +52,6 @@ class Tank(BaseEquipment):
         self.baseCost = (self.baseCost * self.cepci) / self.reference_cepci
         # Fator BareMobule (Eq.: A.4)
         bareModuleCost = self.baseCost * self.bareModuleFactor()
-        teste_print(bareModuleCost)
         # Arredonda valores
         self.purchasedEquipmentCost = self.upRound(self.baseCost)
         self.bareModuleCost = self.upRound(bareModuleCost)

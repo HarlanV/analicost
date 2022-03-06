@@ -1,5 +1,6 @@
 # from capex.models import BareModule, Equipment, PurchasedFactor, EquipmentUnity
 import json
+from opex import economic
 from opex.models import EquipmentsUtilitiesSetting, ProjectUtilitiesConstant
 from capex.models import BareModule, Dimension, EquipmentUnity, MaterialFactor, PressureFactor, PurchasedFactor
 from capex.equipments.equipments import BaseEquipment, teste_print
@@ -79,7 +80,7 @@ class Pump(BaseEquipment):
         self.baseEquipmentCost = self.upRound(self.baseCost)
         self.baseBaremoduleCost = self.upRound(self.baseCost * fbm0)
 
-    def setUtilitiesField(self, equipment):
+    def setUtilitiesField(self, equipment, project):
 
         efficiency = 0.86
         costUtility = ProjectUtilitiesConstant.objects.filter(aka="Eletricity").first()
@@ -91,6 +92,11 @@ class Pump(BaseEquipment):
         utility.duty = duty
         utility.duty_unity = self.selectedUnity
         # Considereando o default em kW
+        # tools = economic.CostCalculationTools()
+        # flow = tools.convertToDesiredUnit()
+        # cost = tools.convertToDesiredUnit()
+        # annual = tools.costInYear()
+
         utility.annual_cost = self.calculateAnnualCut(duty, costUtility)
         utility.save()
 

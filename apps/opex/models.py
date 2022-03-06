@@ -117,6 +117,7 @@ class MaterialCosts(models.Model):
     unity = models.ForeignKey(EquipmentUnity, on_delete=models.CASCADE, blank=True, null=True, related_name="buyed_materials")
     flow = models.FloatField(default=0, blank=True, null=True)
     flow_unity = models.ForeignKey(EquipmentUnity, on_delete=models.CASCADE, blank=True, null=True)
+    annual_cost = models.FloatField(default=0, blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -157,191 +158,194 @@ class ProjectUtilitiesConstant (models.Model):
         db_table = "utilities_constants"
 
 
-fcilSourceList = {
-    'Lang Factor': 'total_langfactor',
-    'Total Module Cost': 'total_module_cost',
-    'Grass Roots Cost': 'total_grassroot_cost',
-    'Input Fcil': 'input_source'
-}
+class DefaultConstants():
+    def __init__(self):
+        # fcilSourceList
+        self.fcilSourceList = {
+            'Lang Factor': 'total_langfactor',
+            'Total Module Cost': 'total_module_cost',
+            'Grass Roots Cost': 'total_grassroot_cost',
+            'Input Fcil': 'input_source'
+        }
 
-# TODO: Criar um banco para variáveis default
-initialUtilitiesConstans = [
-    {
-        'name': 'Electricity (110V - 440V)',
-        'value': 18.72,
-        'aka': 'Eletricity',
-        'classification': 'Common Utilities',
-        'unity': '$/GJ'
-    },
+        # TODO: Criar um banco para variáveis default
+        self.initialUtilitiesConstans = [
+            {
+                'name': 'Electricity (110V - 440V)',
+                'value': 18.72,
+                'aka': 'Eletricity',
+                'classification': 'Common Utilities',
+                'unity': '$/GJ'
+            },
 
-    {
-        'name': 'Cooling Water (30°C to 45°C)',
-        'value': 0.378,
-        'aka': 'Cooling Water',
-        'classification': 'Water',
-        'unity': '$/GJ'
-    },
+            {
+                'name': 'Cooling Water (30°C to 45°C)',
+                'value': 0.378,
+                'aka': 'Cooling Water',
+                'classification': 'Water',
+                'unity': '$/GJ'
+            },
 
-    {
-        'name': 'Refrigerated Water (15°C to 25°C)',
-        'value': 4.77,
-        'aka': 'Refrigerated Water',
-        'classification': 'Water',
-        'unity': '$/GJ'
-    },
-
-
-    {
-        'name': 'Low Pressure (5 barg, 160°C)',
-        'value': 2.03,
-        'aka': 'Low Pressure Steam',
-        'classification': 'Steam from Boilers',
-        'unity': '$/GJ'
-    },
-
-    {
-        'name': 'Medium Pressure (10 barg, 184°C)',
-        'value': 2.78,
-        'aka': 'Medium Pressure Steam',
-        'classification': 'Steam from Boilers',
-        'unity': '$/GJ'
-    },
-
-    {
-        'name': 'High Pressure (41 barg, 254°C)',
-        'value': 5.66,
-        'aka': 'High Pressure Steam',
-        'classification': 'Steam from Boilers',
-        'unity': '$/GJ'
-    },
-
-    {
-        'name': 'Fuel Oil (no. 2)',
-        'value': 10.3,
-        'aka': 'Fuel Oil',
-        'classification': 'Fuels',
-        'unity': '$/GJ'
-    },
-
-    {
-        'name': 'Natural Gas',
-        'value': 3.16,
-        'aka': 'Natural Gas',
-        'classification': 'Fuels',
-        'unity': '$/GJ'
-    },
-
-    {
-        'name': 'Coal (FOB mine mouth)',
-        'value': 2.04,
-        'aka': 'COAL',
-        'classification': 'Fuels',
-        'unity': '$/GJ'
-    },
-
-    {
-        'name': 'Moderately High (up to 330°C)',
-        'value': 3.95,
-        'aka': 'Moderately High',
-        'classification': 'Thermal Systems',
-        'unity': '$/GJ'
-    },
-
-    {
-        'name': 'High (up to 400°C)',
-        'value': 3.95,
-        'aka': 'High',
-        'classification': 'Thermal Systems',
-        'unity': '$/GJ'
-    },
-
-    {
-        'name': 'Very High (up to 600°C)',
-        'value': 3.95,
-        'aka': 'Very High',
-        'classification': 'Thermal Systems',
-        'unity': '$/GJ'
-    },
-
-    {
-        'name': 'Moderately Low (5°C)',
-        'value': 4.77,
-        'aka': 'Moderately Low',
-        'classification': 'Refrigeration',
-        'unity': '$/GJ'
-    },
-
-    {
-        'name': 'Low (-20°C)',
-        'value': 8.49,
-        'aka': 'Low',
-        'classification': 'Refrigeration',
-        'unity': '$/GJ'
-    },
-
-    {
-        'name': 'Very low (-50°C)',
-        'value': 14.12,
-        'aka': 'Very low',
-        'classification': 'Refrigeration',
-        'unity': '$/GJ'
-    },
-
-    {
-        'name': 'Non-Hazardous',
-        'value': 36,
-        'aka': 'Non-Hazardous',
-        'classification': 'Waste Disposal (solid and liquid)',
-        'unity': '$/GJ'
-    },
-
-    {
-        'name': 'Hazardous',
-        'value': 200,
-        'aka': 'Hazardous',
-        'classification': 'Waste Disposal (solid and liquid)',
-        'unity': '$/Tonne'
-    },
-
-    {
-        'name': 'Steam used for steam-powered drives',
-        'value': 5.66,
-        'aka': 'Steam for drives',
-        'classification': 'Cost of Steam used in Steam Drives',
-        'unity': '$/GJ'
-    },
-
-    {
-        'name': 'Cost of Labor (per operator/year)',
-        'value': 18.72,
-        'aka': 'Cost of Labor',
-        'classification': 'Process Equipment',
-        'unity': None,
-    },
-
-    {
-        'name': 'Hours per Operting Year',
-        'value': 8322.0,
-        'aka': 'Hours in Year',
-        'classification': 'Process Equipment',
-        'unity': None,
-    },
-
-    {
-        'name': 'Solids Handling Coefficient',
-        'value': 18.72,
-        'aka': 'Solids Handling Coefficient',
-        'classification': 'Miscellaneous Numebrs',
-        'unity': None,
-    },
-
-    {
-        'name': 'User Defined',
-        'value': 1,
-        'aka': 'Defined',
-        'classification': 'Inputed',
-        'unity': None,
-    },
+            {
+                'name': 'Refrigerated Water (15°C to 25°C)',
+                'value': 4.77,
+                'aka': 'Refrigerated Water',
+                'classification': 'Water',
+                'unity': '$/GJ'
+            },
 
 
-]
+            {
+                'name': 'Low Pressure (5 barg, 160°C)',
+                'value': 2.03,
+                'aka': 'Low Pressure Steam',
+                'classification': 'Steam from Boilers',
+                'unity': '$/GJ'
+            },
+
+            {
+                'name': 'Medium Pressure (10 barg, 184°C)',
+                'value': 2.78,
+                'aka': 'Medium Pressure Steam',
+                'classification': 'Steam from Boilers',
+                'unity': '$/GJ'
+            },
+
+            {
+                'name': 'High Pressure (41 barg, 254°C)',
+                'value': 5.66,
+                'aka': 'High Pressure Steam',
+                'classification': 'Steam from Boilers',
+                'unity': '$/GJ'
+            },
+
+            {
+                'name': 'Fuel Oil (no. 2)',
+                'value': 10.3,
+                'aka': 'Fuel Oil',
+                'classification': 'Fuels',
+                'unity': '$/GJ'
+            },
+
+            {
+                'name': 'Natural Gas',
+                'value': 3.16,
+                'aka': 'Natural Gas',
+                'classification': 'Fuels',
+                'unity': '$/GJ'
+            },
+
+            {
+                'name': 'Coal (FOB mine mouth)',
+                'value': 2.04,
+                'aka': 'COAL',
+                'classification': 'Fuels',
+                'unity': '$/GJ'
+            },
+
+            {
+                'name': 'Moderately High (up to 330°C)',
+                'value': 3.95,
+                'aka': 'Moderately High',
+                'classification': 'Thermal Systems',
+                'unity': '$/GJ'
+            },
+
+            {
+                'name': 'High (up to 400°C)',
+                'value': 3.95,
+                'aka': 'High',
+                'classification': 'Thermal Systems',
+                'unity': '$/GJ'
+            },
+
+            {
+                'name': 'Very High (up to 600°C)',
+                'value': 3.95,
+                'aka': 'Very High',
+                'classification': 'Thermal Systems',
+                'unity': '$/GJ'
+            },
+
+            {
+                'name': 'Moderately Low (5°C)',
+                'value': 4.77,
+                'aka': 'Moderately Low',
+                'classification': 'Refrigeration',
+                'unity': '$/GJ'
+            },
+
+            {
+                'name': 'Low (-20°C)',
+                'value': 8.49,
+                'aka': 'Low',
+                'classification': 'Refrigeration',
+                'unity': '$/GJ'
+            },
+
+            {
+                'name': 'Very low (-50°C)',
+                'value': 14.12,
+                'aka': 'Very low',
+                'classification': 'Refrigeration',
+                'unity': '$/GJ'
+            },
+
+            {
+                'name': 'Non-Hazardous',
+                'value': 36,
+                'aka': 'Non-Hazardous',
+                'classification': 'Waste Disposal (solid and liquid)',
+                'unity': '$/GJ'
+            },
+
+            {
+                'name': 'Hazardous',
+                'value': 200,
+                'aka': 'Hazardous',
+                'classification': 'Waste Disposal (solid and liquid)',
+                'unity': '$/Tonne'
+            },
+
+            {
+                'name': 'Steam used for steam-powered drives',
+                'value': 5.66,
+                'aka': 'Steam for drives',
+                'classification': 'Cost of Steam used in Steam Drives',
+                'unity': '$/GJ'
+            },
+
+            {
+                'name': 'Cost of Labor (per operator/year)',
+                'value': 18.72,
+                'aka': 'Cost of Labor',
+                'classification': 'Process Equipment',
+                'unity': None,
+            },
+
+            {
+                'name': 'Hours per Operting Year',
+                'value': 8322.0,
+                'aka': 'Hours in Year',
+                'classification': 'Process Equipment',
+                'unity': None,
+            },
+
+            {
+                'name': 'Solids Handling Coefficient',
+                'value': 18.72,
+                'aka': 'Solids Handling Coefficient',
+                'classification': 'Miscellaneous Numebrs',
+                'unity': None,
+            },
+
+            {
+                'name': 'User Defined',
+                'value': 1,
+                'aka': 'Defined',
+                'classification': 'Inputed',
+                'unity': None,
+            },
+
+
+        ]

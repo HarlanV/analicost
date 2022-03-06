@@ -5,7 +5,7 @@ from capex import services
 from capex.equipments.equipments import teste_print
 
 
-# Listagem do Equipamento
+# Busca todos os projetos e REDIRECIONA para a pagina do primerio projeto na lista, caso tenha algum
 def index(request):
 
     list_projects = services.ProjectServices.listProjects()
@@ -18,6 +18,7 @@ def index(request):
     return redirect('capex:project', project=num)
 
 
+# Renderiza pagina de criação do projeto
 def createProject(request):
     if request.method == "POST":
         num = int(request.POST["projectNum"])
@@ -57,7 +58,7 @@ def addEquipmentProjectForm_GET(request, project, equipamento_id):
     return render(request, url, options)
 
 
-# POST para insert de Equipamento no Projeto
+# Inserção de equipamentos no projeto
 def addEquipmentProject_POST(request, project, equipamento_id):
 
     data = {
@@ -71,7 +72,7 @@ def addEquipmentProject_POST(request, project, equipamento_id):
     # return redirect('capex:project', project=project)
 
 
-# POST para insert de Equipamento no Projeto
+# Armazena dados do equipamento no projeto
 def updateEquipment_POST(request, project, equipamento_id):
     data = {
         'equipment_id': equipamento_id,
@@ -94,7 +95,8 @@ def equipmentCost(request, project, equipamento_id):
     return JsonResponse(costs)
 
 
-# TODO: fazer retrocesso para remover unity das rotas chamadas. Não mais utilizado
+# TODO: fazer retrocesso para remover unity das rotas chamadas.
+# Função sendo desativada
 def attributeRange(request, equipamento_id, unity):
 
     data = {
@@ -107,6 +109,7 @@ def attributeRange(request, equipamento_id, unity):
     return JsonResponse(range)
 
 
+# Remove o equipamento do projeto
 def removeEquipment_DELETE(request, project, equipamento_id):
     sucesso = services.ProjectServices().removeEquipment(project, equipamento_id)
     data = {
@@ -115,6 +118,7 @@ def removeEquipment_DELETE(request, project, equipamento_id):
     return JsonResponse(data)
 
 
+# Remove o projeto atual completamente
 def deleteProject_DELETE(request, project):
     sucesso = services.ProjectServices().deleteProject(project)
     data = {
@@ -123,6 +127,7 @@ def deleteProject_DELETE(request, project):
     return JsonResponse(data)
 
 
+# Renderiza formuláio de atualização do equipamento
 def updateEquipment_GET(request, project, equipamento_id):
     equipment = services.EquipmentServices.getEquipmentInProject(equipamento_id)
     options = services.EquipmentServices.equiptmentFormOptions(equipment.equipment.id)
@@ -137,6 +142,7 @@ def updateEquipment_GET(request, project, equipamento_id):
     return render(request, url, options)
 
 
+# Renderiza formulário de configuração das utilities do equipamento
 def configEquipment_GET(request, project, equipamento_id):
     equipment = services.EquipmentServices.getEquipmentInProject(equipamento_id)
     if equipment.equipment.utility_form is None:
@@ -155,6 +161,7 @@ def configEquipment_GET(request, project, equipamento_id):
     return render(request, path, options)
 
 
+# Salva as informações de Utilities do equipamento
 def configEquipment_POST(request, project, equipamento_id):
     args = dict(request.POST.items())
     args.pop('csrfmiddlewaretoken', None)

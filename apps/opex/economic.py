@@ -1,22 +1,75 @@
 from capex.equipments.equipments import teste_print
 from capex.models import CapexProject, EquipmentUnity
-from .models import Opex, OpexAuxiliateFactor as AuxiliarFactor, OpexProjectSettings, ProjectUtilitiesConstant, initialUtilitiesConstans
+from .models import MaterialCosts, Opex, OpexAuxiliateFactor as AuxiliarFactor, OpexProjectSettings, ProjectUtilitiesConstant, DefaultConstants
+from django.db.models import Sum
 
 
+# TODO: Transferir essa classe para services
 class ManufactoryCost():
 
     def __init__(self, project: CapexProject):
         self.project = project
-        configs = EconomicConfig(project)
-        self.factorss = configs.getConfig()
+        # configs = EconomicConfig(project)
+        # self.factors = configs.getConfig()
         # capex = self.factor.capex_source
 
-    # apenas juros compostos no momento
-    def pmt(tax, n):
-        return (tax * ((tax + 1) ** n)) / (((1 + tax) ** n) - 1)
+    # Cria um novo material e chama as atualizações necessárias
+    def createMaterial(self, args: dict):
+        args["annual_cost"] = CostCalculationTools.calculateAnualCost(args["flow"], args["price"], args["flow_unity"], "kg/h")
+        material = MaterialCosts(**args)
+        material.save()
+        self.updateMaterialCosts(args['classification'])
+        # return material
+        return
 
+    # Remove um material do projeto
+    def deleteMaterial(self, idMaterial):
+        # consultar material armazenar os campos necessários para atualização posterior
+        material = MaterialCosts.objects.get(id=idMaterial)
+        classOfMaterial = material.classification
+        material.delete()
+        self.updateMaterialCosts(classOfMaterial)
+
+        # Atualizar os campos relevantes
+        return True
+
+    # Atualiza os valores
+    def updateMaterialCosts(self, classification: str):
+        """
+        for updade all material relational field, classification = "all"
+        """
+        materials = MaterialCosts.objects.filter(project=self.project)
+        opex = Opex.objects.filter(project=self.project).first()
+        config = self.checkFieldsUpdate().values()
+
+        if ("Waste" in classification or classification == 'all') and config.first()["cwt_calculated"] is True:
+            materialList = materials.filter(classification__contains="Waste")
+            opex.cwt = materialList.aggregate(Sum('annual_cost'))["annual_cost__sum"]
+        if (classification == "Product" or classification == 'all') and config.first()["revenue_calculated"] is True:
+            materialList = materials.filter(classification__contains="Product").all()
+            opex.revenue = materialList.aggregate(Sum('annual_cost'))["annual_cost__sum"]
+        if ("Raw" in classification or classification == 'all') and config.first()["crm_calculated"] is True:
+            materialList = materials.filter(classification__contains="Raw").all()
+            opex.crm = materialList.aggregate(Sum('annual_cost'))["annual_cost__sum"]
+        opex.save()
+        self.checkFieldsUpdate()
+
+    # Esta função checa se os campos devem ser atualizados ou estão como input
+    def checkFieldsUpdate(self, field="all"):
+        configs = OpexProjectSettings.objects.filter(project=self.project)
+        if field == "all":
+            return configs
+        else:
+            return configs.values(field)
+
+    # Armazenado para atualização de todos os custos de manufatura do projeto
     def updateAllCosts(self):
         pass
+        self.updateMaterialCosts("all")
+
+
+class UtilityCost():
+    pass
 
 
 # Classe a ser chamada sempre que houver atualização dos custos
@@ -53,7 +106,7 @@ class EconomicConfig():
     def setUtilitiesConstantsDefault(self):
         unity = EquipmentUnity.objects.filter(unity="$/GJ").first()
 
-        for v in initialUtilitiesConstans:
+        for v in DefaultConstants().initialUtilitiesConstans:
             if v["unity"]:
                 if v["unity"] == "$/GJ":
                     v["unity"] = unity
@@ -64,6 +117,9 @@ class EconomicConfig():
             p = ProjectUtilitiesConstant(**v)
             p.project = self.project
             p.save()
+
+    def updateAllOpexValues(self):
+        ManufactoryCost(self.project).updateAllCosts()
 
     # Busca e Define as variáveis auxiliares dentro da instância da classe
     def setAuxiliarFactor(self, project):
@@ -80,75 +136,63 @@ class EconomicConfig():
             return None
 
 
-class CashFlow():
-    def __init__(self):
-        pass
-
-    def getCashFlow():
-        pass
-
-    def setCashFlow():
-        pass
-
-
-# Custos de Utilidade (CUT)
-class UtilityCosts(ManufactoryCost):
+class CostCalculationTools():
 
     def __init__(self):
-        # esses valores devem ser calculados anteriormente em uma classe mãe
-        # TODO: criar classe mãe. Herança para calcular os atributos definidos abaixo
-        self.crm = 1
-        self.cwt = 1
-        self.cut = 1
-        self.col = 1
-        self.com = 1
-        self.fci = 1
-        individualFactors = {
-
-        }
-
-    def totalDirectCosts(self, individual=False):
-        if not individual:
-            cost = self.crm + self.cwt + self.cut
-            cost = cost + (1.33 * self.col) + (0.03 * self.com) + (0.069 * self.fci)
-
-    # lista de atributos que devem ser definidos individualmente
-    def setIndividualFactors(self):
         pass
 
-    def supervisionaryClericalWorker(self):
+    # apenas juros compostos no momento
+    def pmt(tax, n):
+        return (tax * ((tax + 1) ** n)) / (((1 + tax) ** n) - 1)
+
+    def costInYear(project, flow, price, flowConversor=1, priceConversor=1):
+        """
+        ATENTION: all unitys must be already converted and flow must be in HOUR unity
+        if can't be done, optional conversor [flowConversor and price Conversor] can
+        be set on arguments.
+        """
+        hourPrice = (flow * flowConversor) * (price * priceConversor)
+        hourYear = ProjectUtilitiesConstant.objects.filter(aka="Hours in Year", project=project).first()
+        return (hourPrice * hourYear)
+
+    def convertToDefaultUnity(value: float, unity: EquipmentUnity):
+        defaultUnity = EquipmentUnity.objects.filter(dimension=unity.dimension, is_default=True).first()
+        return ((defaultUnity.convert_factor) / (unity.convert_factor))
+
+    def convertToDesiredUnit(value: float, unity: EquipmentUnity, desired: str):
+        # timeWorked = ProjectUtilitiesConstant.objects.filter(aka="Hours in Year").first()
+        defaultPressureFactor = EquipmentUnity.objects.filter(unity=desired).first()
+        conversor = (defaultPressureFactor.convert_factor) / (unity.convert_factor)
+        converted = conversor * value
+        return (converted)
+
+    def convertEnergyUnity(self, unity: EquipmentUnity, reference: str, value: float):
+        defaultPressureFactor = EquipmentUnity.objects.filter(unity=reference).first()
+
+        return ((defaultPressureFactor.convert_factor) / (unity.convert_factor))
+
         pass
 
+    def calculateCost(self, duty: float, utility_cost: float, duty_unity: EquipmentUnity):
+        timeWorked = ProjectUtilitiesConstant.objects.filter(aka="Hours in Year").first()
+        valueInGJ = CostCalculationTools.convertEnergyUnity(duty_unity, "GJ", duty)
+        return (float(valueInGJ) * float(utility_cost) * (timeWorked.value))
 
-# Custos de Capital de Giro
-class WorkingCapitalCost(ManufactoryCost):
-    pass
+    def calculateAnualCost(value: float, cost_unity: float, value_unity: EquipmentUnity, valueHourUnity='unecessary'):
+        """
+        value: unit module.
+        cost_unity: cost in ($/und)
+        value_unit: value unity. Must be a Equipmentunity instance
+        hourUnity: default is the value is already converted. Otherwise, fill with the hour base unit(Ex.: 'GJ')
+        """
 
+        hourBaseValue = value
 
-# Custos de Mão de Obra (COL)
-class OperatingLaborCost(ManufactoryCost):
-    pass
+        if valueHourUnity != "unecessary":
+            hourBaseValue = CostCalculationTools.convertToDesiredUnit(float(value), value_unity, valueHourUnity)
 
+        timeWorked = ProjectUtilitiesConstant.objects.filter(aka="Hours in Year").first()
 
-# Custos de Resíduos (CWT)
-class WasteTreatmentCost(ManufactoryCost):
-    pass
+        cost = float(hourBaseValue) * float(cost_unity) * (timeWorked.value)
 
-
-# class Opex():
-#     def __init__(self, project):
-#         self.project = project
-#         self.cwt = WasteTreatmentCost()
-#         self.col = OperatingLaborCost()
-#         self.cut = UtilityCosts()
-#         self.fci = self.getCapex()
-#         self.factors = AuxiliarFactor.objects.filter(project=project).first()
-# 
-#     def getCapex(self):
-#         source = self.factors.capex_source
-#         if source == 'input_source':
-#             pass
-#         else:
-#             project = CapexProject.objects.filter(id=self.project).first()
-#             capex = project[source]
-#         return capex
+        return (cost)

@@ -1,5 +1,6 @@
 from django.db.models import Q
 from django.shortcuts import get_object_or_404
+from opex.economic import CostCalculationTools
 from capex.equipments.equipments import teste_print
 from opex.models import EquipmentsUtilitiesSetting, ProjectUtilitiesConstant
 from capex.equipments.project import ProjectCost
@@ -13,7 +14,7 @@ class EquipmentServices():
 
     # Listagem do Equipamento
     def allEquipments():
-        equipamento = Equipment.objects.all()
+        equipamento = Equipment.objects.filter(active=True).all()
         return equipamento
 
     def getEquipmentFromId(id):
@@ -134,6 +135,7 @@ class EquipmentServices():
         }
         return range
 
+    # TODO: MOVER PARA OPEX
     def getUtilitieEquipmentOptions(project, equipment):
 
         constants = ProjectUtilitiesConstant.objects.filter(project__project_number=project)
@@ -177,10 +179,12 @@ class EquipmentServices():
 
         return dataForm
 
+    # TODO: MOVER PARA OPEX
     def updateUtilitieEquipmentOptions(equipment, args):
         utilities = EquipmentsUtilitiesSetting.objects.filter(equipment=equipment.id)
         utilities.update(**args)
 
+    # TODO: MOVER PARA OPEX
     def prepareUtilitiesValues(self, equipment, args):
         utilities = EquipmentsUtilitiesSetting.objects.filter(equipment=equipment.id)
         args["duty_unity"] = EquipmentUnity.objects.get(id=args["duty_unity"])
@@ -191,39 +195,29 @@ class EquipmentServices():
             args.pop('utype', None)
 
         if args["utility"] == "User Defined":
-            cost = self.calculateCost(float(args["duty"]), args["utility_cost"], args["duty_unity"])
+            cost = CostCalculationTools.calculateAnualCost(float(args["duty"]), args["utility_cost"], args["duty_unity"],"GJ")
             args["annual_cost"] = cost
             args["utility"] = ProjectUtilitiesConstant.objects.filter(aka="Defined").first()
             args["utility_cost"] = float(args["utility_cost"])
-
+            # ATENÇÃO: ao reenviar para o economic, é possível utilizar dict para facilitar edição posterior
         else:
+
             args["utility"] = ProjectUtilitiesConstant.objects.get(id=args["utility"])
-            cost = self.calculateCost(float(args["duty"]), args["utility"].value, args["duty_unity"])
+            cost = CostCalculationTools.calculateAnualCost(float(args["duty"]), args["utility"].value, args["duty_unity"], "GJ",)
+
             args.pop('utype', None)
 
         # em comum
         args["duty"] = float(args["duty"])
         args["cost_unity"] = EquipmentUnity.objects.filter(unity="GJ").first()
         args["equipment"] = equipment
-        teste_print(args)
         if not utilities:
-            teste_print("entrou 01")
             equipment = EquipmentsUtilitiesSetting(**args)
             equipment.save()
         else:
-            teste_print("entrou 02")
             utilities.update(**args)
 
-    def convertEnergyUnity(self, unity: EquipmentUnity, reference: str, value: float):
-        defaultPressureFactor = EquipmentUnity.objects.filter(unity=reference).first()
-        return ((defaultPressureFactor.convert_factor) / (unity.convert_factor))
 
-        pass
-
-    def calculateCost(self, duty: float, utility_cost: float, duty_unity: EquipmentUnity):
-        timeWorked = ProjectUtilitiesConstant.objects.filter(aka="Hours in Year").first()
-        valueInGJ = self.convertEnergyUnity(duty_unity, "GJ", duty)
-        return (float(valueInGJ) * float(utility_cost) * (timeWorked.value))
 
 
 # Auxilia na busca de informações necessárias na montagem de formulário dos equipamentos

@@ -123,7 +123,7 @@ class BaseEquipment():
         project.updateCosts()
 
         # configura os gastos de utilidades do equipamento. Deve ser sobrescrito na instância do equipamento
-        self.setUtilitiesField(equipment)
+        self.setUtilitiesField(equipment, project)
         # equipment
 
         return equipment
@@ -164,7 +164,7 @@ class BaseEquipment():
         code = equipmentLetter + str(numProject + query.count() + 1)
         return code
 
-    def setUtilitiesField(self, equipment=None):
+    def setUtilitiesField(self, equipment=None, projec=None):
         pass
 
     def calculateAnnualCut(self, duty: float, costUtility: ProjectUtilitiesConstant, cost_unity="GJ"):

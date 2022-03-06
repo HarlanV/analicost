@@ -182,7 +182,7 @@
                         <div class="col-sm-3">
                             <label for="cut_source">Utility Cost</label>
                             <select class="form-control" name="cut_source" id="cut_source">
-                                {% if project_settings.crm_calculated is True %}
+                                {% if project_settings.cut_calculated is True %}
                                 <option value="True" selected> Calculated From Summary</option>
                                 <option value="False"> Input Utility Cost </option>
 
@@ -197,7 +197,7 @@
 
                         <div class="col-sm-3">
                             <label for="cut_value">Input Utility Cost</label>
-                            {% if project_settings.crm_calculated is True %}
+                            {% if project_settings.cut_calculated is True %}
                             <input type="number" class="form-control" id="cut_value" name="cut_value"
                             value="{{opex.cut}}" disabled>
                             {% else %}
@@ -209,7 +209,7 @@
                         <div class="col-sm-3">
                             <label for="wc_source">Working Capital Cost</label>
                             <select class="form-control" name="wc_source" id="wc_source">
-                                {% if project_settings.salvage_calculated is True %}
+                                {% if project_settings.wc_calculated is True %}
                                 <option value="True" selected> Calculate from CRM, FCIL and COL </option>
                                 <option value="False"> Input Working Capital Cost</option>
 
@@ -222,7 +222,7 @@
 
                         <div class="col-sm-3">
                             <label for="wc_value">Input Working Capital</label>
-                            {% if project_settings.salvage_calculated is True %}
+                            {% if project_settings.wc_calculated is True %}
                             <input type="number" class="form-control" id="wc_value" name="wc_value"
                             value="{{opex.working_capital}}" disabled>
                             {% else %}
@@ -237,7 +237,7 @@
                         <div class="col-sm-3">
                             <label for="col_source">Operating Labor</label>
                             <select class="form-control" name="col_source" id="col_source">
-                                {% if project_settings.crm_calculated is True %}
+                                {% if project_settings.col_calculated is True %}
                                 <option value="True" selected> Based on number and type of Equipment </option>
                                 <option value="False"> Input Operating Labor Cost </option>
 
@@ -251,7 +251,7 @@
 
                         <div class="col-sm-3">
                             <label for="col_value">Input Operating Labor</label>
-                            {% if project_settings.crm_calculated is True %}
+                            {% if project_settings.col_calculated is True %}
                             <input type="number" class="form-control" id="col_value" name="col_value"
                             value="{{opex.col}}" disabled>
                             {% else %}
@@ -265,7 +265,7 @@
                         <div class="col-sm-3">
                             <label for="cwt_source">Waste Treatment</label>
                             <select class="form-control" name="cwt_source" id="cwt_source">
-                                {% if project_settings.salvage_calculated is True %}
+                                {% if project_settings.cwt_calculated is True %}
                                 <option value="True" selected> Calculate from materials table </option>
                                 <option value="False"> Input Waste Treatment Cost </option>
 
@@ -278,7 +278,7 @@
 
                         <div class="col-sm-3">
                             <label for="cwt_value">Input Waste Treatment</label>
-                            {% if project_settings.salvage_calculated is True %}
+                            {% if project_settings.cwt_calculated is True %}
                             <input type="number" class="form-control" id="cwt_value" name="cwt_value"
                             value="{{opex.cwt}}" disabled>
                             {% else %}

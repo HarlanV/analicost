@@ -7,7 +7,7 @@ from opex import services
 from capex import services as capexServices
 
 
-# Create your views here.
+# Referente à tela de Constantes Operacionais e suas opções
 class ConstantsConfig(View):
 
     def index(request):
@@ -59,12 +59,14 @@ class ConstantsConfig(View):
         }
 
         service = services.OpexServices(project)
+        
         service.updateOpexConfig(**data)
         # getattr(services.OpexServices(project), 'updateOpexConfig')(**data)
 
         return redirect('opex:opex_config', project=project)
 
 
+# Referente à tela de materiais e suas opções
 class Material(View):
     def index(request):
 
@@ -106,15 +108,16 @@ class Material(View):
     def createFormPost(request, project):
         args = dict(request.POST.items())
         args.pop('csrfmiddlewaretoken', None)
-        teste_print(args)
         service = services.OpexServices(project).formInsertMaterial(args)
         return redirect('opex:opex_material', project=project)
 
     def removeMaterial(request, project, material):
-        services.OpexServices(project).removeMaterial(material)
+        service = services.OpexServices(project)
+        service.removeMaterial(material)
         return redirect('opex:opex_material', project=project)
 
 
+# Reservado para a exibição do fluxo de caixa, bem como análise de viabilidade
 def index(request):
     # tabela = CashFlow .objects.values('descricao', 'valor')
     # data = list(tabela)
@@ -133,33 +136,3 @@ def index(request):
 
     # return JsonResponse(data, safe=False)
     return render(request, 'custos/index.html', data)
-
-
-def configGET(request):
-    data = {}
-    return render(request, 'custos/opex_config/auxiliar_factors.html', data)
-#     return render(request, 'custos/relatorios/capex.html', dados)
-
-
-def configWithProject(resquest):
-    pass
-
-
-# return render(request, 'custos/relatorios/capex.html', dados)
-def materialGET(request, id):
-    if id == "*":
-        pass
-    else:
-        pass
-
-
-def materialPOST(request, id):
-    pass
-
-
-def materialUPDATE(request, id):
-    pass
-
-
-def materialDELETE(request, id):
-    pass

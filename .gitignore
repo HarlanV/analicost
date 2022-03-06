@@ -10,3 +10,5 @@ lixeira/
 analicap/__pycache__/*
 analicap/__pycache__/settings.cpython-38.pyc
 apps/usuarioapp/__pycache__/*
+apps/capex/migrations/*
+apps/opex/migrations/*
