@@ -1,5 +1,5 @@
 
-from opex.economic import EconomicConfig, ManufactoryCost, UtilityCost
+from opex.economic import EconomicConfig, MaterialCost, UtilityCost
 from capex.equipments.equipments import teste_print
 from capex.services import ProjectServices
 from capex.models import EquipmentUnity
@@ -135,9 +135,9 @@ class OpexServices():
         args['project'] = self.project
         args["unity"] = EquipmentUnity.objects.get(id=args["unity"])
         args["flow_unity"] = EquipmentUnity.objects.get(id=args["flow_unity"])
-        
+
         # Acessa opções de Manufactory Cost do Projeto especifico
-        costs = ManufactoryCost(self.project)
+        costs = MaterialCost(self.project)
         # Cria e atualiza os valores relacionados ao meterial
         material = costs.createMaterial(args)
 
@@ -149,7 +149,7 @@ class OpexServices():
 
     # Remove material do banco de dados
     def removeMaterial(self, idMaterial):
-        ManufactoryCost(self.project).deleteMaterial(idMaterial)
+        MaterialCost(self.project).deleteMaterial(idMaterial)
         return True
 
     def getUtilitieEquipmentOptions(self, project, equipment):
@@ -159,7 +159,7 @@ class OpexServices():
 
         if values is not None:
             utility = values.utility
-            
+
         form = str(equipment.equipment.utility_form)
         form = form.lower()
         if form == "efficiency":
@@ -194,12 +194,10 @@ class OpexServices():
             }
 
         return dataForm
-    
 
-    def postUtilitesConfig(self,equipment, args):
+    def postUtilitesConfig(self, equipment, args):
         UtilityCost(self.project).updateUtilitesFromEquipemt(equipment, args)
         UtilityCost(self.project).updateCut()
-
 
 
 # Função auxiliar na leitura de campos boolean enviados pelo front. Ainda não resolvido outro método melhor

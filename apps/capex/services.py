@@ -69,7 +69,7 @@ class EquipmentServices():
         # equipment = EquipmentCosts(equipment_id, args, False) #fobCost
         equipment.insertIntoProject(project)
 
-        UtilityCost(project.project ).updateCut()
+        UtilityCost(project.project).updateCut()
 
         return True
 
@@ -138,9 +138,6 @@ class EquipmentServices():
         return range
 
 
-
-
-
 # Auxilia na busca de informações necessárias na montagem de formulário dos equipamentos
 class infoReport():
 
@@ -179,12 +176,15 @@ class ProjectServices():
         projectCost = ProjectCost(n)
         equipments = projectCost.equipments
         equipmentsDetails = list(map(lambda x: [x.equipment, x.equipment.dimension], equipments))
+
+        utilities = EquipmentsUtilitiesSetting.objects.filter(equipment__project=projectCost.project).values("annual_cost", "equipment")
         info = {
             'project': projectCost.project,
             'equipments': list(projectCost.equipments),
             'list_equipmments': projectCost.listDistinctEquipment,
             'equipmentsDetails': equipmentsDetails,
-            'dimension_unity': ''
+            'dimension_unity': '',
+            'utilities': utilities
         }
 
         return info
@@ -211,7 +211,7 @@ class ProjectServices():
         project.update(**data)
 
 
-# Função auxiliar para chamar dinamicamente os modulos de equipamentos 
+# Função auxiliar para chamar dinamicamente os modulos de equipamentos
 def findEquipmentPath(equipment, equipmentClass, args=None, genericEquipment=None):
     """
     equipment:Equipment, equipmentClass:string, args=None

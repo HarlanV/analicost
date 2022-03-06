@@ -44,7 +44,6 @@ def projectReport_GET(request, project):
         'equipments': report["equipments"],
         'equipmentsDetails': report["equipmentsDetails"],
     }
-
     return render(request, 'project/index.html', dados)
 
 
@@ -53,6 +52,7 @@ def addEquipmentProjectForm_GET(request, project, equipamento_id):
 
     options = services.EquipmentServices.equiptmentFormOptions(equipamento_id)
     options["project"] = project
+
     equipmentUrl = options["equipment"].name.lower().replace(" ", "_")
     url = "equipamentos/equipment-form/" + equipmentUrl + ".html"
     return render(request, url, options)
@@ -70,7 +70,6 @@ def addEquipmentProject_POST(request, project, equipamento_id):
     getattr(services.EquipmentServices, 'addEquipmentToProjec')(**data)
 
     return JsonResponse(status=201, data={'status': 'false', 'message': "Adicionado com sucesso"})
-    # return redirect('capex:project', project=project)
 
 
 # Armazena dados do equipamento no projeto
@@ -96,8 +95,7 @@ def equipmentCost(request, project, equipamento_id):
     return JsonResponse(costs)
 
 
-# TODO: fazer retrocesso para remover unity das rotas chamadas.
-# Função sendo desativada
+# Função chamada assincrona. Retorna os ranges limites dos campos de atributo
 def attributeRange(request, equipamento_id, unity):
 
     data = {

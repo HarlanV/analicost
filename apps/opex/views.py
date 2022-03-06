@@ -131,8 +131,7 @@ class Utilities(View):
         options["project"] = project
         options["equipment_project_id"] = equipamento_id
         options["equipment_project"] = equipment
-        options["equipment"] = equipment.equipment 
-        teste_print(path)
+        options["equipment"] = equipment.equipment
         # return redirect('capex:project', project=project)
         return render(request, path, options)
 

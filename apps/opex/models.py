@@ -30,33 +30,33 @@ class Opex(models.Model):
     direct_costs = models.FloatField(default=0.00, null=True, blank=True)
 
     # Cost Raw Material
-    crm = models.FloatField(default=0.00, null=True, blank=True)
+    crm = models.FloatField(default=0.00)
 
     # Cosw Waste Treatment
-    cwt = models.FloatField(default=0.00, null=True, blank=True)
+    cwt = models.FloatField(default=0.00)
 
     # Cost Utilities
-    cut = models.FloatField(default=0.00, null=True, blank=True)
+    cut = models.FloatField(default=0.00)
 
     # Cost Operational Labor
-    col = models.FloatField(default=0.00, null=True, blank=True)
+    col = models.FloatField(default=0.00)
 
     # Operational Cost
-    com = models.FloatField(default=0.00, null=True, blank=True)
+    com = models.FloatField(default=0.00)
 
     # fixed capital Investiment (capex)
-    fcil = models.FloatField(default=0.00, null=True, blank=True)
+    fcil = models.FloatField(default=0.00)
 
     # Cash In
-    revenue = models.FloatField(default=0.00, blank=True, null=True)
+    revenue = models.FloatField(default=0.00)
 
     # CashBack when the plant is sold
-    salvage = models.FloatField(default=0.00, blank=True, null=True)
+    salvage = models.FloatField(default=0.00)
 
     # Initial investiment on opex (not capex!)
-    working_capital = models.FloatField(default=0.00, blank=True, null=True)
+    working_capital = models.FloatField(default=0.00)
 
-    depreciation = models.FloatField(default=0.00, null=True, blank=True)
+    depreciation = models.FloatField(default=0.00)
     project = models.ForeignKey(CapexProject, on_delete=models.CASCADE)
 
     def __str__(self):

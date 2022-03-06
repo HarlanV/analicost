@@ -58,6 +58,7 @@ class Equipment(models.Model):
     symbol = models.CharField(max_length=10, null=True, blank=True)
     utility_form = models.CharField(max_length=30, null=True, blank=True)
     active = models.BooleanField(default=True)
+    isSolid = models.BooleanField(default=True, null=True, blank=True)
 
     def __str__(self):
         return self.name

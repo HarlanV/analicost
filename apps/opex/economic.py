@@ -1,11 +1,11 @@
 from capex.equipments.equipments import teste_print
-from capex.models import CapexProject, EquipmentUnity
+from capex.models import CapexProject, EquipmentProject, EquipmentUnity
 from .models import EquipmentsUtilitiesSetting, MaterialCosts, Opex, OpexAuxiliateFactor as AuxiliarFactor, OpexProjectSettings, ProjectUtilitiesConstant, DefaultConstants
 from django.db.models import Sum
 
 
 # TODO: Transferir essa classe para services
-class ManufactoryCost():
+class MaterialCost():
 
     def __init__(self, project: CapexProject):
         self.project = project
@@ -73,7 +73,6 @@ class UtilityCost():
     def __init__(self, project: CapexProject):
         self.project = project
 
-
     # TODO: MOVER PARA OPEX
     def updateUtilitesFromEquipemt(self, equipment, args):
 
@@ -92,7 +91,7 @@ class UtilityCost():
             args.pop('utype', None)
 
         if args["utility"] == "User Defined":
-            cost = CostCalculationTools.calculateAnualCost(float(args["duty"]), args["utility_cost"], args["duty_unity"],"GJ")
+            cost = CostCalculationTools.calculateAnualCost(float(args["duty"]), args["utility_cost"], args["duty_unity"], "GJ")
             args["annual_cost"] = cost
             args["utility"] = ProjectUtilitiesConstant.objects.filter(aka="Defined").first()
             args["utility_cost"] = float(args["utility_cost"])
@@ -112,13 +111,74 @@ class UtilityCost():
         else:
             utilities.update(**args)
 
-
     def updateCut(self):
         equipments = EquipmentsUtilitiesSetting.objects.filter(equipment__project=self.project).all()
         opex = Opex.objects.filter(project=self.project).first()
         opex.cut = equipments.aggregate(Sum('utility_cost'))["utility_cost__sum"]
         opex.save()
         pass
+
+
+class WorkingCapital():
+    def __init__(self, project: CapexProject):
+        self.project = project
+
+    def updateWorkingCapital(self):
+        auxiliar = AuxiliarFactor.objects.filter(project=self.project).first()
+        opex = Opex.objects.filter(project=self.project).first()
+
+        auxiliar = AuxiliarFactor.objects.filter(project=self.project).first()
+        opex = Opex.objects.filter(project=self.project).first()
+        wc = auxiliar.working_capital_a * opex.crm
+        wc = wc + (auxiliar.working_capital_b * opex.fcil)
+        wc = wc + (auxiliar.working_capital_c * opex.col)
+        opex.working_capital = wc
+        opex.save()
+
+        # wc = auxiliar.crm * (opex.crm + opex.cwt + opex.cut)
+        # wc = wc + (auxiliar.col * opex.col)
+        # wc = wc + (auxiliar.fcil * opex.fcil)
+        # opex.working_capital = wc
+        # opex.save()
+
+
+class OperatingLabor():
+    def __init__(self, project: CapexProject):
+        self.project = project
+
+    def updateOperatingLabor(self):
+
+        opex = Opex.objects.filter(project=self.project).first()
+        equipments = EquipmentProject.objects.filter(project=self.project)
+        Pp = 0
+        Nnp = 0
+        for e in equipments:
+            if e.equipment.isSolid is True:
+                Pp = Pp + 1
+            elif e.equipment.isSolid is False:
+                Nnp = Nnp + 1
+        Nol = (6.29 + (31.7 * (Pp**2)) + (0.23 * Nnp))**0.5
+        Col = Nol * (1095 / 240)
+        opex.col = Col
+        opex.save()
+
+
+class ManufactoringCost():
+    def __init__(self, project: CapexProject):
+        self.project = project
+
+    def updateWorkingCapital(self):
+        auxiliar = AuxiliarFactor.objects.filter(project=self.project).first()
+        opex = Opex.objects.filter(project=self.project).first()
+
+        auxiliar = AuxiliarFactor.objects.filter(project=self.project).first()
+        opex = Opex.objects.filter(project=self.project).first()
+        mc = auxiliar.crm * (opex.crm + opex.cwt + opex.cut)
+        mc = mc + (auxiliar.col * opex.col)
+        mc = mc + (auxiliar.fcil * opex.fcil)
+        opex.com == mc
+        opex.save()
+
 
 # Classe a ser chamada sempre que houver atualização dos custos
 class EconomicConfig():
@@ -130,7 +190,7 @@ class EconomicConfig():
     def updateConfig(self, data):
         config = AuxiliarFactor.objects.filter(project=self.project)
         config.update(**data)
-        ManufactoryCost(self.project).updateAllCosts()
+        MaterialCost(self.project).updateAllCosts()
         return config
 
     # Config criada automaticamente na criação do projeto usa valores default
@@ -167,7 +227,38 @@ class EconomicConfig():
             p.save()
 
     def updateAllOpexValues(self):
-        ManufactoryCost(self.project).updateAllCosts()
+
+        config = self.checkFieldsUpdate().values()
+        
+        MaterialCost(self.project).updateAllCosts()
+        self.updateFcilValue(config)
+        if config.first()["col_calculated"] is True:
+            OperatingLabor(self.project).updateOperatingLabor()
+        if config.first()["cut_calculated"] is True:
+            UtilityCost(self.project).updateCut()
+        if config.first()["wc_calculated"] is True:
+            WorkingCapital(self.project).updateWorkingCapital()
+        if config.first()["salvage_calculated"] is True:
+            opex = Opex.objects.filter(project=self.project).first()
+            opex.salvage = 0.1 * opex.fcil
+            opex.save()
+
+    def updateFcilValue(self,config):
+
+        if "input" not in config.first()["capex_source"]:
+            project = self.project
+            opex = Opex.objects.filter(project=self.project).first()
+            fcil = getattr(project,config.first()["capex_source"])
+            opex.fcil = fcil
+            opex.save()
+
+
+    def checkFieldsUpdate(self, field="all"):
+        configs = OpexProjectSettings.objects.filter(project=self.project)
+        if field == "all":
+            return configs
+        else:
+            return configs.values(field)
 
     # Busca e Define as variáveis auxiliares dentro da instância da classe
     def setAuxiliarFactor(self, project):
@@ -216,10 +307,7 @@ class CostCalculationTools():
 
     def convertEnergyUnity(self, unity: EquipmentUnity, reference: str, value: float):
         defaultPressureFactor = EquipmentUnity.objects.filter(unity=reference).first()
-
         return ((defaultPressureFactor.convert_factor) / (unity.convert_factor))
-
-        pass
 
     def calculateCost(self, duty: float, utility_cost: float, duty_unity: EquipmentUnity):
         timeWorked = ProjectUtilitiesConstant.objects.filter(aka="Hours in Year").first()

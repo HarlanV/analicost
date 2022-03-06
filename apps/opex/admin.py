@@ -31,9 +31,10 @@ class ListandoUtilitiesSettings(admin.ModelAdmin):
     search_fields = ('equipment',)
     list_per_page = 10
 
+
 class ListandoMaterialsInProject(admin.ModelAdmin):
-    list_display = ('project', 'name', 'classification', 'price','unity','flow','flow_unity','annual_cost')
-    list_display_links = ('project', 'name', 'classification', 'price','unity','flow','flow_unity','annual_cost')
+    list_display = ('project', 'name', 'classification', 'price', 'unity', 'flow', 'flow_unity', 'annual_cost')
+    list_display_links = ('project', 'name', 'classification', 'price', 'unity', 'flow', 'flow_unity', 'annual_cost')
     search_fields = ('name',)
     list_per_page = 10
 
@@ -44,14 +45,12 @@ class OpexValues(admin.ModelAdmin):
     search_fields = ('name',)
     list_per_page = 10
 
+
 class ListandoOpexConfig(admin.ModelAdmin):
     list_display = ('project', )
     list_display_links = ('project',)
     search_fields = ('name',)
     list_per_page = 10
-
-
-
 
 
 admin.site.register(CashFlow, ListandoFluxoCaixa)

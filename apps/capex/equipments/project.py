@@ -1,4 +1,4 @@
-from opex.economic import EconomicConfig, ManufactoryCost
+from opex.economic import EconomicConfig, MaterialCost
 from capex.models import CapexProject, EquipmentProject
 
 
@@ -93,7 +93,7 @@ class ProjectCost():
         project.total_langfactor = project.lang_factor * purchased_equip_cost
         project.save()
         self.project = project
-        ManufactoryCost(self.project).updateAllCosts()
+        MaterialCost(self.project).updateAllCosts()
 
     # Retorna todos os equipamentos atualmente no projeto
     def listEquipmentsProject(self):
