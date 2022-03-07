@@ -123,7 +123,6 @@ class Utilities(View):
         equipment = capexServices.EquipmentServices.getEquipmentInProject(equipamento_id)
         if equipment.equipment.utility_form is None:
             return redirect('capex:project', project=project)
-
         options = services.OpexServices(project).getUtilitieEquipmentOptions(project, equipment)
         path = "equipamentos/utilities_form/"
         form = str(equipment.equipment.utility_form).lower()
@@ -146,10 +145,14 @@ class Utilities(View):
 
 # Reservado para a exibição do fluxo de caixa, bem como análise de viabilidade
 def index(request):
+    project = 300
+    data = services.CashFlow(project).getCashFlowData()
+    teste_print(data)
     # tabela = CashFlow .objects.values('descricao', 'valor')
     # data = list(tabela)
     years = [0, 0, 1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-    ccf = [0.00, -10.00, -91.82, -141.40, -166.20, 37.45, 228.11, 396.08, 545.84, 681.99, 803.97, 913.20, 1012.49, 1102.76, 1187.46, 1200.20]
+    ccf = years
+    # ccf = [0.00, -10.00, -91.82, -141.40, -166.20, 37.45, 228.11, 396.08, 545.84, 681.99, 803.97, 913.20, 1012.49, 1102.76, 1187.46, 1200.20]
     dados = {}
     for y in range(len(years)):
         dados[y] = {
@@ -158,7 +161,8 @@ def index(request):
         }
     # dados = dict(zip(years))
     data = {
-        'dados': dados
+        'dados': dados,
+        'data' : data
     }
 
     # return JsonResponse(data, safe=False)

@@ -167,16 +167,17 @@ class ManufactoringCost():
     def __init__(self, project: CapexProject):
         self.project = project
 
-    def updateWorkingCapital(self):
+    def updateManufactoringCost(self):
+        teste_print("chegou aqui!!")
         auxiliar = AuxiliarFactor.objects.filter(project=self.project).first()
         opex = Opex.objects.filter(project=self.project).first()
-
         auxiliar = AuxiliarFactor.objects.filter(project=self.project).first()
         opex = Opex.objects.filter(project=self.project).first()
         mc = auxiliar.crm * (opex.crm + opex.cwt + opex.cut)
         mc = mc + (auxiliar.col * opex.col)
         mc = mc + (auxiliar.fcil * opex.fcil)
-        opex.com == mc
+        teste_print(mc)
+        opex.com = mc
         opex.save()
 
 
@@ -242,16 +243,15 @@ class EconomicConfig():
             opex = Opex.objects.filter(project=self.project).first()
             opex.salvage = 0.1 * opex.fcil
             opex.save()
+        ManufactoringCost(self.project).updateManufactoringCost()
 
-    def updateFcilValue(self,config):
-
+    def updateFcilValue(self, config):
         if "input" not in config.first()["capex_source"]:
             project = self.project
             opex = Opex.objects.filter(project=self.project).first()
-            fcil = getattr(project,config.first()["capex_source"])
+            fcil = getattr(project, config.first()["capex_source"])
             opex.fcil = fcil
             opex.save()
-
 
     def checkFieldsUpdate(self, field="all"):
         configs = OpexProjectSettings.objects.filter(project=self.project)

@@ -3,9 +3,11 @@
 {% block content %}
 
 {{ dados|json_script:"fluxo-caixa" }}
+{{ data|json_script:"data"}}
 <h1> Fluxo de Caixa (criando) </h1>
 <script>
-    // var fluxo_caixa = JSON.parse(document.getElementById('fluxo-caixa').textContent);
+    // var data = JSON.parse(document.getElementById('data').textContent);
+    // console.log(data)
     // var labels = []
     // var data = fluxo_caixa.map(function(item, indice){
     //         labels.push(item.descricao)
@@ -41,7 +43,7 @@
 
     <h2>HTML Table</h2>
 
-    <table id>
+    <table id="cashFlowTable">
         <tr>
             <th>Year</th>
             <th>Capex</th>
@@ -66,13 +68,46 @@
         {% endfor %}
 
     </table>
+
+
+<script>
+
+updateTableValues()
+function updateTableValues(){
+    var data = JSON.parse(document.getElementById('data').textContent);
+    console.log(data)
+    var tbl =  document.getElementById("cashFlowTable")
+    var row = tbl.insertRow(2);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = "NEW CELL1";
+    cell2.innerHTML = "NEW CELL2";
+}
+
+function appendTr(tbl){
+    var tbl =  document.getElementById("cashFlowTable")
+
+
+
+
+}
+
+function appendTd(tr){
+
+}
+
+
+</script>
+
+
+
 </body>
 
 </html>
 
 
 
-{% include 'graphics/char.html' %}
+<!-- {% include 'graphics/char.html' %} -->
 
 {% endblock %}
 {% block scripts %}

@@ -200,6 +200,33 @@ class OpexServices():
         UtilityCost(self.project).updateCut()
 
 
+
+class CashFlow():
+    def __init__(self, projectNumber):
+        self.project = ProjectServices.getProjectFromNum(projectNumber)
+        pass
+    
+    def getCashFlowData(self):
+        opex = Opex.objects.filter(project=self.project).first()
+        auxiliate = OpexAuxiliateFactor.objects.filter(project=self.project).first()
+        settings = OpexProjectSettings.objects.filter(project=self.project).first()
+        data = {
+            'fcil': opex.fcil,
+            'salvage': opex.salvage,
+            'y1': auxiliate.year1,
+            'y2': auxiliate.year2,
+            'y3': auxiliate.year3,
+            'y4': auxiliate.year4,
+            'y5': auxiliate.year5,
+            'contruct_period': settings.construction_period,
+            'project_life': settings.project_life,
+            'dSL':(1/settings.project_life)
+        }
+
+        return data
+
+
+
 # Função auxiliar na leitura de campos boolean enviados pelo front. Ainda não resolvido outro método melhor
 def parse_boolean(b):
     return b == 'True'
