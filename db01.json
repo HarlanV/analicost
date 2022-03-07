@@ -1,0 +1,7177 @@
+[
+{
+    "model": "capex.cepci",
+    "pk": 1,
+    "fields": {
+        "taxa": 73.9,
+        "ano": 1950,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 2,
+    "fields": {
+        "taxa": 84.7,
+        "ano": 1953,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 3,
+    "fields": {
+        "taxa": 88.3,
+        "ano": 1955,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 4,
+    "fields": {
+        "taxa": 99.7,
+        "ano": 1958,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 5,
+    "fields": {
+        "taxa": 101.8,
+        "ano": 1959,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 6,
+    "fields": {
+        "taxa": 102.0,
+        "ano": 1960,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 7,
+    "fields": {
+        "taxa": 101.5,
+        "ano": 1961,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 8,
+    "fields": {
+        "taxa": 102.0,
+        "ano": 1962,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 9,
+    "fields": {
+        "taxa": 102.4,
+        "ano": 1963,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 10,
+    "fields": {
+        "taxa": 103.3,
+        "ano": 1964,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 11,
+    "fields": {
+        "taxa": 104.2,
+        "ano": 1965,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 12,
+    "fields": {
+        "taxa": 107.2,
+        "ano": 1966,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 13,
+    "fields": {
+        "taxa": 109.7,
+        "ano": 1967,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 14,
+    "fields": {
+        "taxa": 113.6,
+        "ano": 1968,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 15,
+    "fields": {
+        "taxa": 119.0,
+        "ano": 1969,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 16,
+    "fields": {
+        "taxa": 125.7,
+        "ano": 1970,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 17,
+    "fields": {
+        "taxa": 132.3,
+        "ano": 1971,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 18,
+    "fields": {
+        "taxa": 132.3,
+        "ano": 1972,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 19,
+    "fields": {
+        "taxa": 144.1,
+        "ano": 1973,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 20,
+    "fields": {
+        "taxa": 164.4,
+        "ano": 1974,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 21,
+    "fields": {
+        "taxa": 182.4,
+        "ano": 1975,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 22,
+    "fields": {
+        "taxa": 192.1,
+        "ano": 1976,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 23,
+    "fields": {
+        "taxa": 204.1,
+        "ano": 1977,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 24,
+    "fields": {
+        "taxa": 218.8,
+        "ano": 1978,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 25,
+    "fields": {
+        "taxa": 238.7,
+        "ano": 1979,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 26,
+    "fields": {
+        "taxa": 261.2,
+        "ano": 1980,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 27,
+    "fields": {
+        "taxa": 297.0,
+        "ano": 1981,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 28,
+    "fields": {
+        "taxa": 314.0,
+        "ano": 1982,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 29,
+    "fields": {
+        "taxa": 316.9,
+        "ano": 1983,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 30,
+    "fields": {
+        "taxa": 322.7,
+        "ano": 1984,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 31,
+    "fields": {
+        "taxa": 325.3,
+        "ano": 1985,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 32,
+    "fields": {
+        "taxa": 318.4,
+        "ano": 1986,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 33,
+    "fields": {
+        "taxa": 323.8,
+        "ano": 1987,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 34,
+    "fields": {
+        "taxa": 342.5,
+        "ano": 1988,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 35,
+    "fields": {
+        "taxa": 355.4,
+        "ano": 1989,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 36,
+    "fields": {
+        "taxa": 357.6,
+        "ano": 1990,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 37,
+    "fields": {
+        "taxa": 361.3,
+        "ano": 1991,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 38,
+    "fields": {
+        "taxa": 358.2,
+        "ano": 1992,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 39,
+    "fields": {
+        "taxa": 359.2,
+        "ano": 1993,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 40,
+    "fields": {
+        "taxa": 368.1,
+        "ano": 1994,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 41,
+    "fields": {
+        "taxa": 381.1,
+        "ano": 1995,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 42,
+    "fields": {
+        "taxa": 381.7,
+        "ano": 1996,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 43,
+    "fields": {
+        "taxa": 386.5,
+        "ano": 1997,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 44,
+    "fields": {
+        "taxa": 389.5,
+        "ano": 1998,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 45,
+    "fields": {
+        "taxa": 390.6,
+        "ano": 1999,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 46,
+    "fields": {
+        "taxa": 394.1,
+        "ano": 2000,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 47,
+    "fields": {
+        "taxa": 394.3,
+        "ano": 2001,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 48,
+    "fields": {
+        "taxa": 395.6,
+        "ano": 2002,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 49,
+    "fields": {
+        "taxa": 401.7,
+        "ano": 2003,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 50,
+    "fields": {
+        "taxa": 444.2,
+        "ano": 2004,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 51,
+    "fields": {
+        "taxa": 468.2,
+        "ano": 2005,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 52,
+    "fields": {
+        "taxa": 499.6,
+        "ano": 2006,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 53,
+    "fields": {
+        "taxa": 525.4,
+        "ano": 2007,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 54,
+    "fields": {
+        "taxa": 575.4,
+        "ano": 2008,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 55,
+    "fields": {
+        "taxa": 521.9,
+        "ano": 2009,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 56,
+    "fields": {
+        "taxa": 550.8,
+        "ano": 2010,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 57,
+    "fields": {
+        "taxa": 585.7,
+        "ano": 2011,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 58,
+    "fields": {
+        "taxa": 584.6,
+        "ano": 2012,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 59,
+    "fields": {
+        "taxa": 567.3,
+        "ano": 2013,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 60,
+    "fields": {
+        "taxa": 576.1,
+        "ano": 2014,
+        "data": null
+    }
+}, {
+    "model": "capex.cepci",
+    "pk": 61,
+    "fields": {
+        "taxa": 556.8,
+        "ano": 2015,
+        "data": null
+    }
+}, {
+    "model": "capex.dimension",
+    "pk": 1,
+    "fields": {
+        "dimension": "Volume",
+        "symbol": "V",
+        "unity": "m^3"
+    }
+}, {
+    "model": "capex.dimension",
+    "pk": 2,
+    "fields": {
+        "dimension": "Diameter",
+        "symbol": "D",
+        "unity": "m"
+    }
+}, {
+    "model": "capex.dimension",
+    "pk": 3,
+    "fields": {
+        "dimension": "Area",
+        "symbol": "A",
+        "unity": "m^2"
+    }
+}, {
+    "model": "capex.dimension",
+    "pk": 4,
+    "fields": {
+        "dimension": "Power",
+        "symbol": "W",
+        "unity": "kW"
+    }
+}, {
+    "model": "capex.dimension",
+    "pk": 5,
+    "fields": {
+        "dimension": "Volumetric Flow",
+        "symbol": "V.",
+        "unity": "m^3/s"
+    }
+}, {
+    "model": "capex.dimension",
+    "pk": 6,
+    "fields": {
+        "dimension": "Heat Power",
+        "symbol": "Q",
+        "unity": "kW"
+    }
+}, {
+    "model": "capex.dimension",
+    "pk": 7,
+    "fields": {
+        "dimension": "Pressure",
+        "symbol": "P",
+        "unity": "barg"
+    }
+}, {
+    "model": "capex.dimension",
+    "pk": 9,
+    "fields": {
+        "dimension": "Mass Flow",
+        "symbol": "m.",
+        "unity": "kg/h"
+    }
+}, {
+    "model": "capex.dimension",
+    "pk": 10,
+    "fields": {
+        "dimension": "Energy Cost",
+        "symbol": "$/GJ",
+        "unity": "$/GJ"
+    }
+}, {
+    "model": "capex.dimension",
+    "pk": 11,
+    "fields": {
+        "dimension": "Mass Cost",
+        "symbol": "$/kg",
+        "unity": "$/kg"
+    }
+}, {
+    "model": "capex.dimension",
+    "pk": 12,
+    "fields": {
+        "dimension": "Energy",
+        "symbol": "E",
+        "unity": "Joule"
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 1,
+    "fields": {
+        "name": "Blender",
+        "description": null,
+        "dimension": 1,
+        "symbol": "B",
+        "utility_form": null,
+        "active": true,
+        "isSolid": false
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 2,
+    "fields": {
+        "name": "Centrifuge",
+        "description": null,
+        "dimension": 2,
+        "symbol": "Ct",
+        "utility_form": null,
+        "active": true,
+        "isSolid": true
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 3,
+    "fields": {
+        "name": "Compressor",
+        "description": null,
+        "dimension": 4,
+        "symbol": "C",
+        "utility_form": null,
+        "active": true,
+        "isSolid": false
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 4,
+    "fields": {
+        "name": "Conveyor",
+        "description": null,
+        "dimension": 3,
+        "symbol": "Cv",
+        "utility_form": null,
+        "active": true,
+        "isSolid": true
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 5,
+    "fields": {
+        "name": "Crystallizer",
+        "description": null,
+        "dimension": 1,
+        "symbol": "Cr",
+        "utility_form": null,
+        "active": true,
+        "isSolid": true
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 6,
+    "fields": {
+        "name": "Drive",
+        "description": null,
+        "dimension": 4,
+        "symbol": "D",
+        "utility_form": null,
+        "active": true,
+        "isSolid": true
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 7,
+    "fields": {
+        "name": "Dryer",
+        "description": null,
+        "dimension": 3,
+        "symbol": "Dy",
+        "utility_form": "Energy",
+        "active": true,
+        "isSolid": true
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 8,
+    "fields": {
+        "name": "Dust Collector",
+        "description": null,
+        "dimension": 5,
+        "symbol": "Dc",
+        "utility_form": null,
+        "active": true,
+        "isSolid": true
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 9,
+    "fields": {
+        "name": "Fan",
+        "description": null,
+        "dimension": 5,
+        "symbol": "F",
+        "utility_form": null,
+        "active": true,
+        "isSolid": true
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 10,
+    "fields": {
+        "name": "Filter",
+        "description": null,
+        "dimension": 3,
+        "symbol": "Fr",
+        "utility_form": null,
+        "active": true,
+        "isSolid": true
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 11,
+    "fields": {
+        "name": "Fired Heater",
+        "description": null,
+        "dimension": 6,
+        "symbol": null,
+        "utility_form": null,
+        "active": false,
+        "isSolid": true
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 12,
+    "fields": {
+        "name": "Evaporator",
+        "description": null,
+        "dimension": 3,
+        "symbol": "K",
+        "utility_form": "Thermal",
+        "active": true,
+        "isSolid": false
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 13,
+    "fields": {
+        "name": "Mixer",
+        "description": null,
+        "dimension": 4,
+        "symbol": "M",
+        "utility_form": null,
+        "active": true,
+        "isSolid": true
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 14,
+    "fields": {
+        "name": "Pump",
+        "description": null,
+        "dimension": 4,
+        "symbol": "P",
+        "utility_form": "efficiency",
+        "active": true,
+        "isSolid": null
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 15,
+    "fields": {
+        "name": "Reactor",
+        "description": null,
+        "dimension": 1,
+        "symbol": "R",
+        "utility_form": null,
+        "active": true,
+        "isSolid": false
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 16,
+    "fields": {
+        "name": "Screen",
+        "description": null,
+        "dimension": 3,
+        "symbol": "S",
+        "utility_form": null,
+        "active": true,
+        "isSolid": true
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 17,
+    "fields": {
+        "name": "Tank",
+        "description": null,
+        "dimension": 1,
+        "symbol": "Tk",
+        "utility_form": null,
+        "active": true,
+        "isSolid": true
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 18,
+    "fields": {
+        "name": "Turbine",
+        "description": null,
+        "dimension": 4,
+        "symbol": "J",
+        "utility_form": null,
+        "active": true,
+        "isSolid": true
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 19,
+    "fields": {
+        "name": "Vaporizer",
+        "description": null,
+        "dimension": 1,
+        "symbol": "K",
+        "utility_form": "Thermal",
+        "active": true,
+        "isSolid": true
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 20,
+    "fields": {
+        "name": "Vessel",
+        "description": null,
+        "dimension": 1,
+        "symbol": null,
+        "utility_form": null,
+        "active": false,
+        "isSolid": null
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 21,
+    "fields": {
+        "name": "Tower",
+        "description": null,
+        "dimension": 1,
+        "symbol": "T",
+        "utility_form": null,
+        "active": false,
+        "isSolid": true
+    }
+}, {
+    "model": "capex.equipment",
+    "pk": 22,
+    "fields": {
+        "name": "Heat Exchanger",
+        "description": null,
+        "dimension": 3,
+        "symbol": null,
+        "utility_form": null,
+        "active": false,
+        "isSolid": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 1,
+    "fields": {
+        "material": "N/D",
+        "description": "Kneader",
+        "k1": 5.0141,
+        "k2": 0.5867,
+        "k3": 0.3224,
+        "max_dimension": 3.0,
+        "min_dimension": 0.14,
+        "fixed_value": 0.0,
+        "equipment": 1,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 2,
+    "fields": {
+        "material": "N/D",
+        "description": "Ribbon",
+        "k1": 4.1366,
+        "k2": 0.5072,
+        "k3": 0.007,
+        "max_dimension": 11.0,
+        "min_dimension": 0.7,
+        "fixed_value": 0.0,
+        "equipment": 1,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 3,
+    "fields": {
+        "material": "N/D",
+        "description": "Rotary",
+        "k1": 4.1366,
+        "k2": 0.5072,
+        "k3": 0.007,
+        "max_dimension": 11.0,
+        "min_dimension": 0.7,
+        "fixed_value": 0.0,
+        "equipment": 1,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 4,
+    "fields": {
+        "material": "N/D",
+        "description": "Auto Batch Seperator",
+        "k1": 4.7681,
+        "k2": 0.974,
+        "k3": 0.024,
+        "max_dimension": 1.7,
+        "min_dimension": 0.5,
+        "fixed_value": 0.0,
+        "equipment": 2,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 5,
+    "fields": {
+        "material": "N/D",
+        "description": "Centrifugal Seperator",
+        "k1": 4.3612,
+        "k2": 0.8764,
+        "k3": -0.0049,
+        "max_dimension": 1.0,
+        "min_dimension": 0.5,
+        "fixed_value": 0.0,
+        "equipment": 2,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 6,
+    "fields": {
+        "material": "N/D",
+        "description": "Oscillating Screen",
+        "k1": 4.86,
+        "k2": 0.334,
+        "k3": 0.1063,
+        "max_dimension": 1.1,
+        "min_dimension": 0.5,
+        "fixed_value": 0.0,
+        "equipment": 2,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 7,
+    "fields": {
+        "material": "N/D",
+        "description": "Solid Bowl w/o Motor",
+        "k1": 4.9697,
+        "k2": 1.1689,
+        "k3": 0.0038,
+        "max_dimension": 2.0,
+        "min_dimension": 0.3,
+        "fixed_value": 0.0,
+        "equipment": 2,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 8,
+    "fields": {
+        "material": "CS",
+        "description": "Centrifugal - without electric motors",
+        "k1": 2.2891,
+        "k2": 1.3604,
+        "k3": -0.1027,
+        "max_dimension": 3000.0,
+        "min_dimension": 450.0,
+        "fixed_value": 0.0,
+        "equipment": 3,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 9,
+    "fields": {
+        "material": "CS",
+        "description": "Axial - without electric motors",
+        "k1": 2.2891,
+        "k2": 1.3604,
+        "k3": -0.1027,
+        "max_dimension": 3000.0,
+        "min_dimension": 450.0,
+        "fixed_value": 0.0,
+        "equipment": 3,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 10,
+    "fields": {
+        "material": "CS",
+        "description": "Rotary - without electric motors",
+        "k1": 5.0355,
+        "k2": -1.8002,
+        "k3": 0.8253,
+        "max_dimension": 950.0,
+        "min_dimension": 18.0,
+        "fixed_value": 0.0,
+        "equipment": 3,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 11,
+    "fields": {
+        "material": "CS",
+        "description": "Reciprocating - without electric motors",
+        "k1": 2.2891,
+        "k2": 1.3604,
+        "k3": -0.1027,
+        "max_dimension": 3000.0,
+        "min_dimension": 450.0,
+        "fixed_value": 0.0,
+        "equipment": 3,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 12,
+    "fields": {
+        "material": "MNi",
+        "description": "Centrifugal - without electric motors",
+        "k1": 2.2891,
+        "k2": 1.3604,
+        "k3": -0.1027,
+        "max_dimension": 3000.0,
+        "min_dimension": 450.0,
+        "fixed_value": 0.0,
+        "equipment": 3,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 13,
+    "fields": {
+        "material": "MNi",
+        "description": "Axial - without electric motors",
+        "k1": 2.2891,
+        "k2": 1.3604,
+        "k3": -0.1027,
+        "max_dimension": 3000.0,
+        "min_dimension": 450.0,
+        "fixed_value": 0.0,
+        "equipment": 3,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 14,
+    "fields": {
+        "material": "MNi",
+        "description": "Rotary - without electric motors",
+        "k1": 5.0355,
+        "k2": -1.8002,
+        "k3": 0.8253,
+        "max_dimension": 950.0,
+        "min_dimension": 18.0,
+        "fixed_value": 0.0,
+        "equipment": 3,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 15,
+    "fields": {
+        "material": "MNi",
+        "description": "Reciprocating - without electric motors",
+        "k1": 2.2891,
+        "k2": 1.3604,
+        "k3": -0.1027,
+        "max_dimension": 3000.0,
+        "min_dimension": 450.0,
+        "fixed_value": 0.0,
+        "equipment": 3,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 16,
+    "fields": {
+        "material": "SS",
+        "description": "Centrifugal - without electric motors",
+        "k1": 2.2891,
+        "k2": 1.3604,
+        "k3": -0.1027,
+        "max_dimension": 3000.0,
+        "min_dimension": 450.0,
+        "fixed_value": 0.0,
+        "equipment": 3,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 17,
+    "fields": {
+        "material": "SS",
+        "description": "Axial - without electric motors",
+        "k1": 2.2891,
+        "k2": 1.3604,
+        "k3": -0.1027,
+        "max_dimension": 3000.0,
+        "min_dimension": 450.0,
+        "fixed_value": 0.0,
+        "equipment": 3,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 18,
+    "fields": {
+        "material": "SS",
+        "description": "Rotary - without electric motors",
+        "k1": 5.0355,
+        "k2": -1.8002,
+        "k3": 0.8253,
+        "max_dimension": 950.0,
+        "min_dimension": 18.0,
+        "fixed_value": 0.0,
+        "equipment": 3,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 19,
+    "fields": {
+        "material": "SS",
+        "description": "Reciprocating - without electric motors",
+        "k1": 2.2891,
+        "k2": 1.3604,
+        "k3": -0.1027,
+        "max_dimension": 3000.0,
+        "min_dimension": 450.0,
+        "fixed_value": 0.0,
+        "equipment": 3,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 20,
+    "fields": {
+        "material": "N/D",
+        "description": "Apron",
+        "k1": 3.9255,
+        "k2": 0.5039,
+        "k3": 0.1506,
+        "max_dimension": 15.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 4,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 21,
+    "fields": {
+        "material": "N/D",
+        "description": "Belt",
+        "k1": 4.0637,
+        "k2": 0.2584,
+        "k3": 0.155,
+        "max_dimension": 325.0,
+        "min_dimension": 0.5,
+        "fixed_value": 0.0,
+        "equipment": 4,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 22,
+    "fields": {
+        "material": "N/D",
+        "description": "Pneumatic",
+        "k1": 4.6616,
+        "k2": 0.3205,
+        "k3": 0.0638,
+        "max_dimension": 65.0,
+        "min_dimension": 0.75,
+        "fixed_value": 0.0,
+        "equipment": 4,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 23,
+    "fields": {
+        "material": "N/D",
+        "description": "Screw",
+        "k1": 3.6062,
+        "k2": 0.2659,
+        "k3": 0.1982,
+        "max_dimension": 30.0,
+        "min_dimension": 0.5,
+        "fixed_value": 0.0,
+        "equipment": 4,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 24,
+    "fields": {
+        "material": "N/D",
+        "description": "Batch",
+        "k1": 4.5097,
+        "k2": 0.1731,
+        "k3": 0.1344,
+        "max_dimension": 30.0,
+        "min_dimension": 1.5,
+        "fixed_value": 0.0,
+        "equipment": 5,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 25,
+    "fields": {
+        "material": "N/D",
+        "description": "Electric - Explosion Proof",
+        "k1": 2.4604,
+        "k2": 1.4191,
+        "k3": -0.1798,
+        "max_dimension": 2600.0,
+        "min_dimension": 75.0,
+        "fixed_value": 0.0,
+        "equipment": 6,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 26,
+    "fields": {
+        "material": "N/D",
+        "description": "Electric - Totally Enclosed",
+        "k1": 1.956,
+        "k2": 1.7142,
+        "k3": -0.2282,
+        "max_dimension": 2600.0,
+        "min_dimension": 75.0,
+        "fixed_value": 0.0,
+        "equipment": 6,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 27,
+    "fields": {
+        "material": "N/D",
+        "description": "Electric - Open/Drip Proof",
+        "k1": 2.9508,
+        "k2": 1.0688,
+        "k3": -0.1315,
+        "max_dimension": 2600.0,
+        "min_dimension": 75.0,
+        "fixed_value": 0.0,
+        "equipment": 6,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 28,
+    "fields": {
+        "material": "N/D",
+        "description": "Non-Electric - Gas Turbine",
+        "k1": -21.7702,
+        "k2": 13.2175,
+        "k3": -1.5279,
+        "max_dimension": 23000.0,
+        "min_dimension": 7500.0,
+        "fixed_value": 0.0,
+        "equipment": 6,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 29,
+    "fields": {
+        "material": "N/D",
+        "description": "Non-Electric - Steam Turbine",
+        "k1": 2.6259,
+        "k2": 1.4398,
+        "k3": -0.1776,
+        "max_dimension": 7500.0,
+        "min_dimension": 70.0,
+        "fixed_value": 0.0,
+        "equipment": 6,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 30,
+    "fields": {
+        "material": "N/D",
+        "description": "Non-Electric - Internal Combustion",
+        "k1": 2.7635,
+        "k2": 0.8574,
+        "k3": -0.0098,
+        "max_dimension": 10000.0,
+        "min_dimension": 10.0,
+        "fixed_value": 0.0,
+        "equipment": 6,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 31,
+    "fields": {
+        "material": "N/D",
+        "description": "Drum",
+        "k1": 4.5472,
+        "k2": 0.2731,
+        "k3": 0.134,
+        "max_dimension": 50.0,
+        "min_dimension": 0.5,
+        "fixed_value": 0.0,
+        "equipment": 7,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 32,
+    "fields": {
+        "material": "N/D",
+        "description": "Rotary, Gas Fired",
+        "k1": 3.5645,
+        "k2": 1.1118,
+        "k3": -0.0777,
+        "max_dimension": 100.0,
+        "min_dimension": 5.0,
+        "fixed_value": 0.0,
+        "equipment": 7,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 33,
+    "fields": {
+        "material": "N/D",
+        "description": "Tray",
+        "k1": 3.6951,
+        "k2": 0.5442,
+        "k3": -0.1248,
+        "max_dimension": 20.0,
+        "min_dimension": 1.8,
+        "fixed_value": 0.0,
+        "equipment": 7,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 34,
+    "fields": {
+        "material": "N/D",
+        "description": "Baghouse",
+        "k1": 4.5007,
+        "k2": 0.4182,
+        "k3": 0.0813,
+        "max_dimension": 350.0,
+        "min_dimension": 0.08,
+        "fixed_value": 0.0,
+        "equipment": 8,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 35,
+    "fields": {
+        "material": "N/D",
+        "description": "Cyclone Scrubbers ( Centrifugal, Gravity Spray, Impingement,and Wet Dynamic)",
+        "k1": 3.6298,
+        "k2": 0.5009,
+        "k3": 0.0411,
+        "max_dimension": 200.0,
+        "min_dimension": 0.06,
+        "fixed_value": 0.0,
+        "equipment": 8,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 36,
+    "fields": {
+        "material": "N/D",
+        "description": "Electrostatic Precipitator",
+        "k1": 3.6298,
+        "k2": 0.5009,
+        "k3": 0.0411,
+        "max_dimension": 200.0,
+        "min_dimension": 0.06,
+        "fixed_value": 0.0,
+        "equipment": 8,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 37,
+    "fields": {
+        "material": "N/D",
+        "description": "Venturi",
+        "k1": 3.6298,
+        "k2": 0.5009,
+        "k3": 0.0411,
+        "max_dimension": 200.0,
+        "min_dimension": 0.06,
+        "fixed_value": 0.0,
+        "equipment": 8,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 38,
+    "fields": {
+        "material": "CS",
+        "description": "Centrifugal Radial - include electric motors",
+        "k1": 3.5391,
+        "k2": -0.3533,
+        "k3": 0.4477,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 9,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 39,
+    "fields": {
+        "material": "CS",
+        "description": "Centrifugal Backward curved - include electric motors",
+        "k1": 3.3471,
+        "k2": -0.0734,
+        "k3": 0.309,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 9,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 40,
+    "fields": {
+        "material": "CS",
+        "description": "Axial Tube - include electric motors",
+        "k1": 3.0414,
+        "k2": -0.3375,
+        "k3": 0.4722,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 9,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 41,
+    "fields": {
+        "material": "CS",
+        "description": "Axial Vane - include electric motors",
+        "k1": 3.1761,
+        "k2": -0.1373,
+        "k3": 0.3414,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 9,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 42,
+    "fields": {
+        "material": "FiberGlass",
+        "description": "Centrifugal Radial - include electric motors",
+        "k1": 3.5391,
+        "k2": -0.3533,
+        "k3": 0.4477,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 9,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 43,
+    "fields": {
+        "material": "FiberGlass",
+        "description": "Centrifugal Backward curved - include electric motors",
+        "k1": 3.3471,
+        "k2": -0.0734,
+        "k3": 0.309,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 9,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 44,
+    "fields": {
+        "material": "FiberGlass",
+        "description": "Axial Tube - include electric motors",
+        "k1": 3.0414,
+        "k2": -0.3375,
+        "k3": 0.4722,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 9,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 45,
+    "fields": {
+        "material": "FiberGlass",
+        "description": "Axial Vane - include electric motors",
+        "k1": 3.1761,
+        "k2": -0.1373,
+        "k3": 0.3414,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 9,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 46,
+    "fields": {
+        "material": "SS",
+        "description": "Centrifugal Radial - include electric motors",
+        "k1": 3.5391,
+        "k2": -0.3533,
+        "k3": 0.4477,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 9,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 47,
+    "fields": {
+        "material": "SS",
+        "description": "Centrifugal Backward curved - include electric motors",
+        "k1": 3.3471,
+        "k2": -0.0734,
+        "k3": 0.309,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 9,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 48,
+    "fields": {
+        "material": "SS",
+        "description": "Axial Tube - include electric motors",
+        "k1": 3.0414,
+        "k2": -0.3375,
+        "k3": 0.4722,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 9,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 49,
+    "fields": {
+        "material": "SS",
+        "description": "Axial Vane - include electric motors",
+        "k1": 3.1761,
+        "k2": -0.1373,
+        "k3": 0.3414,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 9,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 50,
+    "fields": {
+        "material": "MNi",
+        "description": "Centrifugal Radial - include electric motors",
+        "k1": 3.5391,
+        "k2": -0.3533,
+        "k3": 0.4477,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 9,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 51,
+    "fields": {
+        "material": "MNi",
+        "description": "Centrifugal Backward curved - include electric motors",
+        "k1": 3.3471,
+        "k2": -0.0734,
+        "k3": 0.309,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 9,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 52,
+    "fields": {
+        "material": "MNi",
+        "description": "Axial Tube - include electric motors",
+        "k1": 3.0414,
+        "k2": -0.3375,
+        "k3": 0.4722,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 9,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 53,
+    "fields": {
+        "material": "MNi",
+        "description": "Axial Vane - include electric motors",
+        "k1": 3.1761,
+        "k2": -0.1373,
+        "k3": 0.3414,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 9,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 54,
+    "fields": {
+        "material": "N/D",
+        "description": "Bent",
+        "k1": 5.1055,
+        "k2": 0.4999,
+        "k3": 0.0001,
+        "max_dimension": 115.0,
+        "min_dimension": 0.9,
+        "fixed_value": 0.0,
+        "equipment": 10,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 55,
+    "fields": {
+        "material": "N/D",
+        "description": "Cartridge",
+        "k1": 3.2107,
+        "k2": 0.7597,
+        "k3": 0.0027,
+        "max_dimension": 200.0,
+        "min_dimension": 15.0,
+        "fixed_value": 0.0,
+        "equipment": 10,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 56,
+    "fields": {
+        "material": "N/D",
+        "description": "Disc and Drum",
+        "k1": 4.8123,
+        "k2": 0.2858,
+        "k3": 0.042,
+        "max_dimension": 300.0,
+        "min_dimension": 0.9,
+        "fixed_value": 0.0,
+        "equipment": 10,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 57,
+    "fields": {
+        "material": "N/D",
+        "description": "Gravity",
+        "k1": 4.2756,
+        "k2": 0.352,
+        "k3": 0.0714,
+        "max_dimension": 80.0,
+        "min_dimension": 0.5,
+        "fixed_value": 0.0,
+        "equipment": 10,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 58,
+    "fields": {
+        "material": "N/D",
+        "description": "Leaf",
+        "k1": 3.8187,
+        "k2": 0.6235,
+        "k3": 0.0176,
+        "max_dimension": 235.0,
+        "min_dimension": 0.6,
+        "fixed_value": 0.0,
+        "equipment": 10,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 59,
+    "fields": {
+        "material": "N/D",
+        "description": "Pan",
+        "k1": 4.8123,
+        "k2": 0.2858,
+        "k3": 0.042,
+        "max_dimension": 300.0,
+        "min_dimension": 0.9,
+        "fixed_value": 0.0,
+        "equipment": 10,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 60,
+    "fields": {
+        "material": "N/D",
+        "description": "Plate and Frame",
+        "k1": 4.2756,
+        "k2": 0.352,
+        "k3": 0.0714,
+        "max_dimension": 80.0,
+        "min_dimension": 0.5,
+        "fixed_value": 0.0,
+        "equipment": 10,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 61,
+    "fields": {
+        "material": "N/D",
+        "description": "Table",
+        "k1": 5.1055,
+        "k2": 0.4999,
+        "k3": 0.0001,
+        "max_dimension": 115.0,
+        "min_dimension": 0.9,
+        "fixed_value": 0.0,
+        "equipment": 10,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 62,
+    "fields": {
+        "material": "N/D",
+        "description": "Tube",
+        "k1": 5.1055,
+        "k2": 0.4999,
+        "k3": 0.0001,
+        "max_dimension": 115.0,
+        "min_dimension": 0.9,
+        "fixed_value": 0.0,
+        "equipment": 10,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 63,
+    "fields": {
+        "material": "Alloy Steel",
+        "description": "Reactive - Reformer Furnace",
+        "k1": 3.068,
+        "k2": 0.6597,
+        "k3": 0.0194,
+        "max_dimension": 100000.0,
+        "min_dimension": 3000.0,
+        "fixed_value": 0.0,
+        "equipment": 11,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 64,
+    "fields": {
+        "material": "Alloy Steel",
+        "description": "Reactive - Pyrolysis Furnace",
+        "k1": 2.3859,
+        "k2": 0.9721,
+        "k3": -0.0206,
+        "max_dimension": 100000.0,
+        "min_dimension": 3000.0,
+        "fixed_value": 0.0,
+        "equipment": 11,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 65,
+    "fields": {
+        "material": "CS",
+        "description": "Reactive - Reformer Furnace",
+        "k1": 3.068,
+        "k2": 0.6597,
+        "k3": 0.0194,
+        "max_dimension": 100000.0,
+        "min_dimension": 3000.0,
+        "fixed_value": 0.0,
+        "equipment": 11,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 66,
+    "fields": {
+        "material": "CS",
+        "description": "Reactive - Pyrolysis Furnace",
+        "k1": 2.3859,
+        "k2": 0.9721,
+        "k3": -0.0206,
+        "max_dimension": 100000.0,
+        "min_dimension": 3000.0,
+        "fixed_value": 0.0,
+        "equipment": 11,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 67,
+    "fields": {
+        "material": "SS",
+        "description": "Reactive - Reformer Furnace",
+        "k1": 3.068,
+        "k2": 0.6597,
+        "k3": 0.0194,
+        "max_dimension": 100000.0,
+        "min_dimension": 3000.0,
+        "fixed_value": 0.0,
+        "equipment": 11,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 68,
+    "fields": {
+        "material": "SS",
+        "description": "Reactive - Pyrolysis Furnace",
+        "k1": 2.3859,
+        "k2": 0.9721,
+        "k3": -0.0206,
+        "max_dimension": 100000.0,
+        "min_dimension": 3000.0,
+        "fixed_value": 0.0,
+        "equipment": 11,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 69,
+    "fields": {
+        "material": "CS",
+        "description": "Non-reactive - Process Heater",
+        "k1": 7.3488,
+        "k2": -1.1666,
+        "k3": 0.2028,
+        "max_dimension": 100000.0,
+        "min_dimension": 1000.0,
+        "fixed_value": 0.0,
+        "equipment": 11,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 70,
+    "fields": {
+        "material": "Alloy Steel",
+        "description": "Non-reactive - Process Heater",
+        "k1": 7.3488,
+        "k2": -1.1666,
+        "k3": 0.2028,
+        "max_dimension": 100000.0,
+        "min_dimension": 1000.0,
+        "fixed_value": 0.0,
+        "equipment": 11,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 71,
+    "fields": {
+        "material": "SS",
+        "description": "Non-reactive - Process Heater",
+        "k1": 7.3488,
+        "k2": -1.1666,
+        "k3": 0.2028,
+        "max_dimension": 100000.0,
+        "min_dimension": 1000.0,
+        "fixed_value": 0.0,
+        "equipment": 11,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 72,
+    "fields": {
+        "material": "N/D",
+        "description": "Thermal Fluid - Hot Water",
+        "k1": 2.0829,
+        "k2": 0.9074,
+        "k3": -0.0243,
+        "max_dimension": 10750.0,
+        "min_dimension": 650.0,
+        "fixed_value": 0.0,
+        "equipment": 11,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 73,
+    "fields": {
+        "material": "N/D",
+        "description": "Thermal Fluid - Molten Salt, Mineral Oil,",
+        "k1": 1.1979,
+        "k2": 1.4782,
+        "k3": -0.0958,
+        "max_dimension": 10750.0,
+        "min_dimension": 650.0,
+        "fixed_value": 0.0,
+        "equipment": 11,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 74,
+    "fields": {
+        "material": "N/D",
+        "description": "Thermal Fluid - Diphenyl Based Oils",
+        "k1": 2.2628,
+        "k2": 0.8581,
+        "k3": 0.0003,
+        "max_dimension": 10750.0,
+        "min_dimension": 650.0,
+        "fixed_value": 0.0,
+        "equipment": 11,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 75,
+    "fields": {
+        "material": "N/D",
+        "description": "Thermal Fluid - Packaged Steam Boilers",
+        "k1": 6.9617,
+        "k2": -1.48,
+        "k3": 0.3161,
+        "max_dimension": 9400.0,
+        "min_dimension": 1200.0,
+        "fixed_value": 0.0,
+        "equipment": 11,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 76,
+    "fields": {
+        "material": "CS",
+        "description": "Forced Circulation",
+        "k1": 5.0238,
+        "k2": 0.3475,
+        "k3": 0.0703,
+        "max_dimension": 1000.0,
+        "min_dimension": 5.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 77,
+    "fields": {
+        "material": "CS",
+        "description": "Falling Film",
+        "k1": 3.9119,
+        "k2": 0.8627,
+        "k3": -0.0088,
+        "max_dimension": 500.0,
+        "min_dimension": 50.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 78,
+    "fields": {
+        "material": "CS",
+        "description": "Agitated (Scraped Wall)",
+        "k1": 5.0,
+        "k2": 0.149,
+        "k3": -0.0134,
+        "max_dimension": 5.0,
+        "min_dimension": 0.5,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 79,
+    "fields": {
+        "material": "CS",
+        "description": "Short Tube",
+        "k1": 5.2366,
+        "k2": -0.6572,
+        "k3": 0.35,
+        "max_dimension": 100.0,
+        "min_dimension": 10.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 80,
+    "fields": {
+        "material": "CS",
+        "description": "Long Tube",
+        "k1": 4.642,
+        "k2": 0.3698,
+        "k3": 0.0025,
+        "max_dimension": 10000.0,
+        "min_dimension": 100.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 81,
+    "fields": {
+        "material": "Cu Alloy",
+        "description": "Forced Circulation",
+        "k1": 5.0238,
+        "k2": 0.3475,
+        "k3": 0.0703,
+        "max_dimension": 1000.0,
+        "min_dimension": 5.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 82,
+    "fields": {
+        "material": "Cu Alloy",
+        "description": "Falling Film",
+        "k1": 3.9119,
+        "k2": 0.8627,
+        "k3": -0.0088,
+        "max_dimension": 500.0,
+        "min_dimension": 50.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 83,
+    "fields": {
+        "material": "Cu Alloy",
+        "description": "Agitated (Scraped Wall)",
+        "k1": 5.0,
+        "k2": 0.149,
+        "k3": -0.0134,
+        "max_dimension": 5.0,
+        "min_dimension": 0.5,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 84,
+    "fields": {
+        "material": "Cu Alloy",
+        "description": "Short Tube",
+        "k1": 5.2366,
+        "k2": -0.6572,
+        "k3": 0.35,
+        "max_dimension": 100.0,
+        "min_dimension": 10.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 85,
+    "fields": {
+        "material": "Cu Alloy",
+        "description": "Long Tube",
+        "k1": 4.642,
+        "k2": 0.3698,
+        "k3": 0.0025,
+        "max_dimension": 10000.0,
+        "min_dimension": 100.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 86,
+    "fields": {
+        "material": "SS",
+        "description": "Forced Circulation",
+        "k1": 5.0238,
+        "k2": 0.3475,
+        "k3": 0.0703,
+        "max_dimension": 1000.0,
+        "min_dimension": 5.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 87,
+    "fields": {
+        "material": "SS",
+        "description": "Falling Film",
+        "k1": 3.9119,
+        "k2": 0.8627,
+        "k3": -0.0088,
+        "max_dimension": 500.0,
+        "min_dimension": 50.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 88,
+    "fields": {
+        "material": "SS",
+        "description": "Agitated (Scraped Wall)",
+        "k1": 5.0,
+        "k2": 0.149,
+        "k3": -0.0134,
+        "max_dimension": 5.0,
+        "min_dimension": 0.5,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 89,
+    "fields": {
+        "material": "SS",
+        "description": "Short Tube",
+        "k1": 5.2366,
+        "k2": -0.6572,
+        "k3": 0.35,
+        "max_dimension": 100.0,
+        "min_dimension": 10.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 90,
+    "fields": {
+        "material": "SS",
+        "description": "Long Tube",
+        "k1": 4.642,
+        "k2": 0.3698,
+        "k3": 0.0025,
+        "max_dimension": 10000.0,
+        "min_dimension": 100.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 91,
+    "fields": {
+        "material": "Ni Alloy",
+        "description": "Forced Circulation",
+        "k1": 5.0238,
+        "k2": 0.3475,
+        "k3": 0.0703,
+        "max_dimension": 1000.0,
+        "min_dimension": 5.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 92,
+    "fields": {
+        "material": "Ni Alloy",
+        "description": "Falling Film",
+        "k1": 3.9119,
+        "k2": 0.8627,
+        "k3": -0.0088,
+        "max_dimension": 500.0,
+        "min_dimension": 50.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 93,
+    "fields": {
+        "material": "Ni Alloy",
+        "description": "Agitated (Scraped Wall)",
+        "k1": 5.0,
+        "k2": 0.149,
+        "k3": -0.0134,
+        "max_dimension": 5.0,
+        "min_dimension": 0.5,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 94,
+    "fields": {
+        "material": "Ni Alloy",
+        "description": "Short Tube",
+        "k1": 5.2366,
+        "k2": -0.6572,
+        "k3": 0.35,
+        "max_dimension": 100.0,
+        "min_dimension": 10.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 95,
+    "fields": {
+        "material": "Ni Alloy",
+        "description": "Long Tube",
+        "k1": 4.642,
+        "k2": 0.3698,
+        "k3": 0.0025,
+        "max_dimension": 10000.0,
+        "min_dimension": 100.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 96,
+    "fields": {
+        "material": "Ti",
+        "description": "Forced Circulation",
+        "k1": 5.0238,
+        "k2": 0.3475,
+        "k3": 0.0703,
+        "max_dimension": 1000.0,
+        "min_dimension": 5.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 97,
+    "fields": {
+        "material": "Ti",
+        "description": "Falling Film",
+        "k1": 3.9119,
+        "k2": 0.8627,
+        "k3": -0.0088,
+        "max_dimension": 500.0,
+        "min_dimension": 50.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 98,
+    "fields": {
+        "material": "Ti",
+        "description": "Agitated (Scraped Wall)",
+        "k1": 5.0,
+        "k2": 0.149,
+        "k3": -0.0134,
+        "max_dimension": 5.0,
+        "min_dimension": 0.5,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 99,
+    "fields": {
+        "material": "Ti",
+        "description": "Short Tube",
+        "k1": 5.2366,
+        "k2": -0.6572,
+        "k3": 0.35,
+        "max_dimension": 100.0,
+        "min_dimension": 10.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 100,
+    "fields": {
+        "material": "Ti",
+        "description": "Long Tube",
+        "k1": 4.642,
+        "k2": 0.3698,
+        "k3": 0.0025,
+        "max_dimension": 10000.0,
+        "min_dimension": 100.0,
+        "fixed_value": 0.0,
+        "equipment": 12,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 101,
+    "fields": {
+        "material": "N/D",
+        "description": "Impeller",
+        "k1": 3.8511,
+        "k2": 0.7009,
+        "k3": -0.0003,
+        "max_dimension": 150.0,
+        "min_dimension": 5.0,
+        "fixed_value": 0.0,
+        "equipment": 13,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 102,
+    "fields": {
+        "material": "N/D",
+        "description": "Propeller",
+        "k1": 4.3207,
+        "k2": 0.0359,
+        "k3": 0.1346,
+        "max_dimension": 500.0,
+        "min_dimension": 5.0,
+        "fixed_value": 0.0,
+        "equipment": 13,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 103,
+    "fields": {
+        "material": "N/D",
+        "description": "Turbine",
+        "k1": 3.4092,
+        "k2": 0.4896,
+        "k3": 0.003,
+        "max_dimension": 150.0,
+        "min_dimension": 5.0,
+        "fixed_value": 0.0,
+        "equipment": 13,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 104,
+    "fields": {
+        "material": "CL",
+        "description": "Centrifugal pump - including electric drives",
+        "k1": 3.3892,
+        "k2": 0.0536,
+        "k3": 0.1538,
+        "max_dimension": 300.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 105,
+    "fields": {
+        "material": "CL",
+        "description": "Positive Displacement - including electric drives",
+        "k1": 3.4771,
+        "k2": 0.135,
+        "k3": 0.1438,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 106,
+    "fields": {
+        "material": "CL",
+        "description": "Reciprocating pump - including electric drives",
+        "k1": 3.8696,
+        "k2": 0.3161,
+        "k3": 0.122,
+        "max_dimension": 200.0,
+        "min_dimension": 0.1,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 107,
+    "fields": {
+        "material": "CS",
+        "description": "Centrifugal pump - including electric drives",
+        "k1": 3.3892,
+        "k2": 0.0536,
+        "k3": 0.1538,
+        "max_dimension": 300.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 108,
+    "fields": {
+        "material": "CS",
+        "description": "Positive Displacement - including electric drives",
+        "k1": 3.4771,
+        "k2": 0.135,
+        "k3": 0.1438,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 109,
+    "fields": {
+        "material": "CS",
+        "description": "Reciprocating pump - including electric drives",
+        "k1": 3.8696,
+        "k2": 0.3161,
+        "k3": 0.122,
+        "max_dimension": 200.0,
+        "min_dimension": 0.1,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 110,
+    "fields": {
+        "material": "CU",
+        "description": "Centrifugal pump - including electric drives",
+        "k1": 3.3892,
+        "k2": 0.0536,
+        "k3": 0.1538,
+        "max_dimension": 300.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 111,
+    "fields": {
+        "material": "CU",
+        "description": "Positive Displacement - including electric drives",
+        "k1": 3.4771,
+        "k2": 0.135,
+        "k3": 0.1438,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 112,
+    "fields": {
+        "material": "CU",
+        "description": "Reciprocating pump - including electric drives",
+        "k1": 3.8696,
+        "k2": 0.3161,
+        "k3": 0.122,
+        "max_dimension": 200.0,
+        "min_dimension": 0.1,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 113,
+    "fields": {
+        "material": "SS",
+        "description": "Centrifugal pump - including electric drives",
+        "k1": 3.3892,
+        "k2": 0.0536,
+        "k3": 0.1538,
+        "max_dimension": 300.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 114,
+    "fields": {
+        "material": "SS",
+        "description": "Positive Displacement - including electric drives",
+        "k1": 3.4771,
+        "k2": 0.135,
+        "k3": 0.1438,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 115,
+    "fields": {
+        "material": "SS",
+        "description": "Reciprocating pump - including electric drives",
+        "k1": 3.8696,
+        "k2": 0.3161,
+        "k3": 0.122,
+        "max_dimension": 200.0,
+        "min_dimension": 0.1,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 116,
+    "fields": {
+        "material": "Mni",
+        "description": "Centrifugal pump - including electric drives",
+        "k1": 3.3892,
+        "k2": 0.0536,
+        "k3": 0.1538,
+        "max_dimension": 300.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 117,
+    "fields": {
+        "material": "Mni",
+        "description": "Positive Displacement - including electric drives",
+        "k1": 3.4771,
+        "k2": 0.135,
+        "k3": 0.1438,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 118,
+    "fields": {
+        "material": "Mni",
+        "description": "Reciprocating pump - including electric drives",
+        "k1": 3.8696,
+        "k2": 0.3161,
+        "k3": 0.122,
+        "max_dimension": 200.0,
+        "min_dimension": 0.1,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 119,
+    "fields": {
+        "material": "Ti",
+        "description": "Centrifugal pump - including electric drives",
+        "k1": 3.3892,
+        "k2": 0.0536,
+        "k3": 0.1538,
+        "max_dimension": 300.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 120,
+    "fields": {
+        "material": "Ti",
+        "description": "Positive Displacement - including electric drives",
+        "k1": 3.4771,
+        "k2": 0.135,
+        "k3": 0.1438,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 121,
+    "fields": {
+        "material": "Ti",
+        "description": "Reciprocating pump - including electric drives",
+        "k1": 3.8696,
+        "k2": 0.3161,
+        "k3": 0.122,
+        "max_dimension": 200.0,
+        "min_dimension": 0.1,
+        "fixed_value": 0.0,
+        "equipment": 14,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 122,
+    "fields": {
+        "material": "N/D",
+        "description": "Autoclave",
+        "k1": 4.5587,
+        "k2": 0.2986,
+        "k3": 0.002,
+        "max_dimension": 15.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 15,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 123,
+    "fields": {
+        "material": "N/D",
+        "description": "Fermenter",
+        "k1": 4.1052,
+        "k2": 0.532,
+        "k3": -0.0005,
+        "max_dimension": 35.0,
+        "min_dimension": 0.1,
+        "fixed_value": 0.0,
+        "equipment": 15,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 124,
+    "fields": {
+        "material": "N/D",
+        "description": "Inoculum Tank",
+        "k1": 3.7957,
+        "k2": 0.4593,
+        "k3": 0.016,
+        "max_dimension": 1.0,
+        "min_dimension": 0.07,
+        "fixed_value": 0.0,
+        "equipment": 15,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 125,
+    "fields": {
+        "material": "N/D",
+        "description": "Jacketed Agitated",
+        "k1": 4.1052,
+        "k2": 0.532,
+        "k3": -0.0005,
+        "max_dimension": 35.0,
+        "min_dimension": 0.1,
+        "fixed_value": 0.0,
+        "equipment": 15,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 126,
+    "fields": {
+        "material": "N/D",
+        "description": "Jacketed Non-Agitated",
+        "k1": 3.3496,
+        "k2": 0.7235,
+        "k3": 0.0025,
+        "max_dimension": 45.0,
+        "min_dimension": 5.0,
+        "fixed_value": 0.0,
+        "equipment": 15,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 127,
+    "fields": {
+        "material": "N/D",
+        "description": "Mixer/Settler",
+        "k1": 4.7116,
+        "k2": 0.4479,
+        "k3": 0.0004,
+        "max_dimension": 6.0,
+        "min_dimension": 0.04,
+        "fixed_value": 0.0,
+        "equipment": 15,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 128,
+    "fields": {
+        "material": "N/D",
+        "description": "DSM",
+        "k1": 3.805,
+        "k2": 0.5856,
+        "k3": 0.212,
+        "max_dimension": 6.0,
+        "min_dimension": 0.3,
+        "fixed_value": 0.0,
+        "equipment": 16,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 129,
+    "fields": {
+        "material": "N/D",
+        "description": "Rotary",
+        "k1": 4.0485,
+        "k2": 0.1118,
+        "k3": 0.326,
+        "max_dimension": 15.0,
+        "min_dimension": 0.3,
+        "fixed_value": 0.0,
+        "equipment": 16,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 130,
+    "fields": {
+        "material": "N/D",
+        "description": "Stationary",
+        "k1": 3.8219,
+        "k2": 1.0368,
+        "k3": -0.605,
+        "max_dimension": 11.0,
+        "min_dimension": 2.0,
+        "fixed_value": 0.0,
+        "equipment": 16,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 131,
+    "fields": {
+        "material": "N/D",
+        "description": "Vibrating",
+        "k1": 4.0485,
+        "k2": 0.1118,
+        "k3": 0.326,
+        "max_dimension": 15.0,
+        "min_dimension": 0.3,
+        "fixed_value": 0.0,
+        "equipment": 16,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 132,
+    "fields": {
+        "material": "N/D",
+        "description": "Fixed Roof",
+        "k1": 4.8509,
+        "k2": -0.3973,
+        "k3": 0.1445,
+        "max_dimension": 30000.0,
+        "min_dimension": 90.0,
+        "fixed_value": 0.0,
+        "equipment": 17,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 133,
+    "fields": {
+        "material": "N/D",
+        "description": "Floating Roof",
+        "k1": 5.9567,
+        "k2": -0.7585,
+        "k3": 0.1749,
+        "max_dimension": 40000.0,
+        "min_dimension": 1000.0,
+        "fixed_value": 0.0,
+        "equipment": 17,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 134,
+    "fields": {
+        "material": "Ti",
+        "description": "Axial",
+        "k1": 2.7051,
+        "k2": 1.4398,
+        "k3": -0.1776,
+        "max_dimension": 4000.0,
+        "min_dimension": 100.0,
+        "fixed_value": 0.0,
+        "equipment": 18,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 135,
+    "fields": {
+        "material": "Ti",
+        "description": "Radial",
+        "k1": 2.2476,
+        "k2": 1.4965,
+        "k3": -0.1618,
+        "max_dimension": 1500.0,
+        "min_dimension": 100.0,
+        "fixed_value": 0.0,
+        "equipment": 18,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 136,
+    "fields": {
+        "material": "Ni",
+        "description": "Axial",
+        "k1": 2.7051,
+        "k2": 1.4398,
+        "k3": -0.1776,
+        "max_dimension": 4000.0,
+        "min_dimension": 100.0,
+        "fixed_value": 0.0,
+        "equipment": 18,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 137,
+    "fields": {
+        "material": "Ni",
+        "description": "Radial",
+        "k1": 2.2476,
+        "k2": 1.4965,
+        "k3": -0.1618,
+        "max_dimension": 1500.0,
+        "min_dimension": 100.0,
+        "fixed_value": 0.0,
+        "equipment": 18,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 138,
+    "fields": {
+        "material": "SS",
+        "description": "Axial",
+        "k1": 2.7051,
+        "k2": 1.4398,
+        "k3": -0.1776,
+        "max_dimension": 4000.0,
+        "min_dimension": 100.0,
+        "fixed_value": 0.0,
+        "equipment": 18,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 139,
+    "fields": {
+        "material": "SS",
+        "description": "Radial",
+        "k1": 2.2476,
+        "k2": 1.4965,
+        "k3": -0.1618,
+        "max_dimension": 1500.0,
+        "min_dimension": 100.0,
+        "fixed_value": 0.0,
+        "equipment": 18,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 140,
+    "fields": {
+        "material": "Cu",
+        "description": "Axial",
+        "k1": 2.7051,
+        "k2": 1.4398,
+        "k3": -0.1776,
+        "max_dimension": 4000.0,
+        "min_dimension": 100.0,
+        "fixed_value": 0.0,
+        "equipment": 18,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 141,
+    "fields": {
+        "material": "Cu",
+        "description": "Radial",
+        "k1": 2.2476,
+        "k2": 1.4965,
+        "k3": -0.1618,
+        "max_dimension": 1500.0,
+        "min_dimension": 100.0,
+        "fixed_value": 0.0,
+        "equipment": 18,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 142,
+    "fields": {
+        "material": "CS",
+        "description": "Axial",
+        "k1": 2.7051,
+        "k2": 1.4398,
+        "k3": -0.1776,
+        "max_dimension": 4000.0,
+        "min_dimension": 100.0,
+        "fixed_value": 0.0,
+        "equipment": 18,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 143,
+    "fields": {
+        "material": "CS",
+        "description": "Radial",
+        "k1": 2.2476,
+        "k2": 1.4965,
+        "k3": -0.1618,
+        "max_dimension": 1500.0,
+        "min_dimension": 100.0,
+        "fixed_value": 0.0,
+        "equipment": 18,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 144,
+    "fields": {
+        "material": "CI",
+        "description": "Axial",
+        "k1": 2.7051,
+        "k2": 1.4398,
+        "k3": -0.1776,
+        "max_dimension": 4000.0,
+        "min_dimension": 100.0,
+        "fixed_value": 0.0,
+        "equipment": 18,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 145,
+    "fields": {
+        "material": "CI",
+        "description": "Radial",
+        "k1": 2.2476,
+        "k2": 1.4965,
+        "k3": -0.1618,
+        "max_dimension": 1500.0,
+        "min_dimension": 100.0,
+        "fixed_value": 0.0,
+        "equipment": 18,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 146,
+    "fields": {
+        "material": "Ti Clad",
+        "description": "Jacketed Vessel",
+        "k1": 3.8751,
+        "k2": 0.3328,
+        "k3": 0.1901,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 147,
+    "fields": {
+        "material": "Ti Clad",
+        "description": "Internal Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 148,
+    "fields": {
+        "material": "Ti Clad",
+        "description": "Jacketed Vessel w/ Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 149,
+    "fields": {
+        "material": "Ni Alloy Clad",
+        "description": "Jacketed Vessel",
+        "k1": 3.8751,
+        "k2": 0.3328,
+        "k3": 0.1901,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 150,
+    "fields": {
+        "material": "Ni Alloy Clad",
+        "description": "Internal Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 151,
+    "fields": {
+        "material": "Ni Alloy Clad",
+        "description": "Jacketed Vessel w/ Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 152,
+    "fields": {
+        "material": "Ti",
+        "description": "Jacketed Vessel",
+        "k1": 3.8751,
+        "k2": 0.3328,
+        "k3": 0.1901,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 153,
+    "fields": {
+        "material": "Ti",
+        "description": "Internal Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 154,
+    "fields": {
+        "material": "Ti",
+        "description": "Jacketed Vessel w/ Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 155,
+    "fields": {
+        "material": "Ni Alloy",
+        "description": "Jacketed Vessel",
+        "k1": 3.8751,
+        "k2": 0.3328,
+        "k3": 0.1901,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 156,
+    "fields": {
+        "material": "Ni Alloy",
+        "description": "Internal Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 157,
+    "fields": {
+        "material": "Ni Alloy",
+        "description": "Jacketed Vessel w/ Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 158,
+    "fields": {
+        "material": "SS Clad",
+        "description": "Jacketed Vessel",
+        "k1": 3.8751,
+        "k2": 0.3328,
+        "k3": 0.1901,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 159,
+    "fields": {
+        "material": "SS Clad",
+        "description": "Internal Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 160,
+    "fields": {
+        "material": "SS Clad",
+        "description": "Jacketed Vessel w/ Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 161,
+    "fields": {
+        "material": "SS",
+        "description": "Jacketed Vessel",
+        "k1": 3.8751,
+        "k2": 0.3328,
+        "k3": 0.1901,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 162,
+    "fields": {
+        "material": "SS",
+        "description": "Internal Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 163,
+    "fields": {
+        "material": "SS",
+        "description": "Jacketed Vessel w/ Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 164,
+    "fields": {
+        "material": "Glass Lined Ni Coils",
+        "description": "Jacketed Vessel",
+        "k1": 3.8751,
+        "k2": 0.3328,
+        "k3": 0.1901,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 165,
+    "fields": {
+        "material": "Glass Lined Ni Coils",
+        "description": "Internal Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 166,
+    "fields": {
+        "material": "Glass Lined Ni Coils",
+        "description": "Jacketed Vessel w/ Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 167,
+    "fields": {
+        "material": "GL SS Coils",
+        "description": "Jacketed Vessel",
+        "k1": 3.8751,
+        "k2": 0.3328,
+        "k3": 0.1901,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 168,
+    "fields": {
+        "material": "GL SS Coils",
+        "description": "Internal Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 169,
+    "fields": {
+        "material": "GL SS Coils",
+        "description": "Jacketed Vessel w/ Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 170,
+    "fields": {
+        "material": "Cu",
+        "description": "Jacketed Vessel",
+        "k1": 3.8751,
+        "k2": 0.3328,
+        "k3": 0.1901,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 171,
+    "fields": {
+        "material": "Cu",
+        "description": "Internal Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 172,
+    "fields": {
+        "material": "Cu",
+        "description": "Jacketed Vessel w/ Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 173,
+    "fields": {
+        "material": "CS",
+        "description": "Jacketed Vessel",
+        "k1": 3.8751,
+        "k2": 0.3328,
+        "k3": 0.1901,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 174,
+    "fields": {
+        "material": "CS",
+        "description": "Internal Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 175,
+    "fields": {
+        "material": "CS",
+        "description": "Jacketed Vessel w/ Coil",
+        "k1": 4.038,
+        "k2": 0.09142,
+        "k3": 0.2766,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 19,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 176,
+    "fields": {
+        "material": "N/D",
+        "description": "Vertical Vessels",
+        "k1": 3.4974,
+        "k2": 0.4485,
+        "k3": 0.1074,
+        "max_dimension": 520.0,
+        "min_dimension": 0.3,
+        "fixed_value": 0.0,
+        "equipment": 20,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 177,
+    "fields": {
+        "material": "N/D",
+        "description": "Horizontal Vessels",
+        "k1": 3.5565,
+        "k2": 0.3776,
+        "k3": 0.0905,
+        "max_dimension": 628.0,
+        "min_dimension": 0.1,
+        "fixed_value": 0.0,
+        "equipment": 20,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 178,
+    "fields": {
+        "material": "Ni-alloy",
+        "description": "Tray Type - Sieve",
+        "k1": 2.9949,
+        "k2": 0.4465,
+        "k3": 0.3961,
+        "max_dimension": 12.3,
+        "min_dimension": 0.07,
+        "fixed_value": 0.0,
+        "equipment": 21,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 179,
+    "fields": {
+        "material": "Ni-alloy",
+        "description": "Tray Type - Valve",
+        "k1": 3.3322,
+        "k2": 0.4838,
+        "k3": 0.3434,
+        "max_dimension": 10.5,
+        "min_dimension": 0.7,
+        "fixed_value": 0.0,
+        "equipment": 21,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 180,
+    "fields": {
+        "material": "Ni-alloy",
+        "description": "Tray Type - Demister",
+        "k1": 3.2353,
+        "k2": 0.4838,
+        "k3": 0.3434,
+        "max_dimension": 10.5,
+        "min_dimension": 0.7,
+        "fixed_value": 0.0,
+        "equipment": 21,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 181,
+    "fields": {
+        "material": "Fluorocarbon",
+        "description": "Tray Type - Sieve",
+        "k1": 2.9949,
+        "k2": 0.4465,
+        "k3": 0.3961,
+        "max_dimension": 12.3,
+        "min_dimension": 0.07,
+        "fixed_value": 0.0,
+        "equipment": 21,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 182,
+    "fields": {
+        "material": "Fluorocarbon",
+        "description": "Tray Type - Valve",
+        "k1": 3.3322,
+        "k2": 0.4838,
+        "k3": 0.3434,
+        "max_dimension": 10.5,
+        "min_dimension": 0.7,
+        "fixed_value": 0.0,
+        "equipment": 21,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 183,
+    "fields": {
+        "material": "Fluorocarbon",
+        "description": "Tray Type - Demister",
+        "k1": 3.2353,
+        "k2": 0.4838,
+        "k3": 0.3434,
+        "max_dimension": 10.5,
+        "min_dimension": 0.7,
+        "fixed_value": 0.0,
+        "equipment": 21,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 184,
+    "fields": {
+        "material": "SS",
+        "description": "Tray Type - Sieve",
+        "k1": 2.9949,
+        "k2": 0.4465,
+        "k3": 0.3961,
+        "max_dimension": 12.3,
+        "min_dimension": 0.07,
+        "fixed_value": 0.0,
+        "equipment": 21,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 185,
+    "fields": {
+        "material": "SS",
+        "description": "Tray Type - Valve",
+        "k1": 3.3322,
+        "k2": 0.4838,
+        "k3": 0.3434,
+        "max_dimension": 10.5,
+        "min_dimension": 0.7,
+        "fixed_value": 0.0,
+        "equipment": 21,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 186,
+    "fields": {
+        "material": "SS",
+        "description": "Tray Type - Demister",
+        "k1": 3.2353,
+        "k2": 0.4838,
+        "k3": 0.3434,
+        "max_dimension": 10.5,
+        "min_dimension": 0.7,
+        "fixed_value": 0.0,
+        "equipment": 21,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 187,
+    "fields": {
+        "material": "CS",
+        "description": "Tray Type - Sieve",
+        "k1": 2.9949,
+        "k2": 0.4465,
+        "k3": 0.3961,
+        "max_dimension": 12.3,
+        "min_dimension": 0.07,
+        "fixed_value": 0.0,
+        "equipment": 21,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 188,
+    "fields": {
+        "material": "CS",
+        "description": "Tray Type - Valve",
+        "k1": 3.3322,
+        "k2": 0.4838,
+        "k3": 0.3434,
+        "max_dimension": 10.5,
+        "min_dimension": 0.7,
+        "fixed_value": 0.0,
+        "equipment": 21,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 189,
+    "fields": {
+        "material": "CS",
+        "description": "Tray Type - Demister",
+        "k1": 3.2353,
+        "k2": 0.4838,
+        "k3": 0.3434,
+        "max_dimension": 10.5,
+        "min_dimension": 0.7,
+        "fixed_value": 0.0,
+        "equipment": 21,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": true
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 190,
+    "fields": {
+        "material": "N/D",
+        "description": "Packing - Ceramic",
+        "k1": 2.4493,
+        "k2": 0.9744,
+        "k3": 0.0055,
+        "max_dimension": 628.0,
+        "min_dimension": 0.03,
+        "fixed_value": 0.0,
+        "equipment": 21,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 191,
+    "fields": {
+        "material": "N/D",
+        "description": "Packing - 304 SS",
+        "k1": 2.4493,
+        "k2": 0.9744,
+        "k3": 0.0055,
+        "max_dimension": 628.0,
+        "min_dimension": 0.03,
+        "fixed_value": 0.0,
+        "equipment": 21,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 192,
+    "fields": {
+        "material": "N/D",
+        "description": "Packing - Plastic Saddle",
+        "k1": 2.4493,
+        "k2": 0.9744,
+        "k3": 0.0055,
+        "max_dimension": 628.0,
+        "min_dimension": 0.03,
+        "fixed_value": 0.0,
+        "equipment": 21,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 193,
+    "fields": {
+        "material": "N/D",
+        "description": "Double Pipe",
+        "k1": 3.3444,
+        "k2": 0.2745,
+        "k3": -0.0472,
+        "max_dimension": 10.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 22,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 194,
+    "fields": {
+        "material": "N/D",
+        "description": "Multiple Pipe",
+        "k1": 2.7652,
+        "k2": 0.7282,
+        "k3": 0.0783,
+        "max_dimension": 100.0,
+        "min_dimension": 10.0,
+        "fixed_value": 0.0,
+        "equipment": 22,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 195,
+    "fields": {
+        "material": "N/D",
+        "description": "Fixed tube, sheet, or U tube",
+        "k1": 4.3247,
+        "k2": -0.303,
+        "k3": 0.1634,
+        "max_dimension": 1000.0,
+        "min_dimension": 10.0,
+        "fixed_value": 0.0,
+        "equipment": 22,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 196,
+    "fields": {
+        "material": "N/D",
+        "description": "Floating Head",
+        "k1": 4.8306,
+        "k2": -0.8509,
+        "k3": 0.3187,
+        "max_dimension": 1000.0,
+        "min_dimension": 10.0,
+        "fixed_value": 0.0,
+        "equipment": 22,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 197,
+    "fields": {
+        "material": "N/D",
+        "description": "Bayonet",
+        "k1": 4.2768,
+        "k2": -0.0495,
+        "k3": 0.1431,
+        "max_dimension": 1000.0,
+        "min_dimension": 10.0,
+        "fixed_value": 0.0,
+        "equipment": 22,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 198,
+    "fields": {
+        "material": "N/D",
+        "description": "Kettle Reboiler",
+        "k1": 4.4646,
+        "k2": -0.5277,
+        "k3": 0.3955,
+        "max_dimension": 100.0,
+        "min_dimension": 10.0,
+        "fixed_value": 0.0,
+        "equipment": 22,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 199,
+    "fields": {
+        "material": "N/D",
+        "description": "Scraped Wall",
+        "k1": 3.7803,
+        "k2": 0.8569,
+        "k3": 0.0349,
+        "max_dimension": 20.0,
+        "min_dimension": 2.0,
+        "fixed_value": 0.0,
+        "equipment": 22,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 200,
+    "fields": {
+        "material": "N/D",
+        "description": "Teflon Tube",
+        "k1": 3.8062,
+        "k2": 0.8924,
+        "k3": -0.1671,
+        "max_dimension": 10.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 22,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 201,
+    "fields": {
+        "material": "N/D",
+        "description": "Air Cooler",
+        "k1": 4.0336,
+        "k2": 0.2341,
+        "k3": 0.0497,
+        "max_dimension": 10000.0,
+        "min_dimension": 10.0,
+        "fixed_value": 0.0,
+        "equipment": 22,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 202,
+    "fields": {
+        "material": "N/D",
+        "description": "Spiral Tube",
+        "k1": 3.9912,
+        "k2": 0.0668,
+        "k3": 0.243,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 22,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 203,
+    "fields": {
+        "material": "N/D",
+        "description": "Spiral Plate",
+        "k1": 4.6561,
+        "k2": -0.2947,
+        "k3": 0.2207,
+        "max_dimension": 100.0,
+        "min_dimension": 1.0,
+        "fixed_value": 0.0,
+        "equipment": 22,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.purchasedfactor",
+    "pk": 204,
+    "fields": {
+        "material": "N/D",
+        "description": "Flat Plate",
+        "k1": 4.6656,
+        "k2": -0.1557,
+        "k3": 0.1547,
+        "max_dimension": 1000.0,
+        "min_dimension": 10.0,
+        "fixed_value": 0.0,
+        "equipment": 22,
+        "reference_year": 2007,
+        "cepci": 397.0,
+        "is_reference": false
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 1,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.20899,
+        "c3": -0.0328,
+        "pressure_min": 0.0,
+        "pressure_max": 0.16,
+        "condition": null,
+        "equipment": 38
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 2,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.20899,
+        "c3": -0.0328,
+        "pressure_min": 0.0,
+        "pressure_max": 0.16,
+        "condition": null,
+        "equipment": 39
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 3,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.20899,
+        "c3": -0.0328,
+        "pressure_min": 0.0,
+        "pressure_max": 0.16,
+        "condition": null,
+        "equipment": 40
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 4,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.20899,
+        "c3": -0.0328,
+        "pressure_min": 0.0,
+        "pressure_max": 0.16,
+        "condition": null,
+        "equipment": 41
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 5,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.20899,
+        "c3": -0.0328,
+        "pressure_min": 0.0,
+        "pressure_max": 0.16,
+        "condition": null,
+        "equipment": 42
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 6,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.20899,
+        "c3": -0.0328,
+        "pressure_min": 0.0,
+        "pressure_max": 0.16,
+        "condition": null,
+        "equipment": 43
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 7,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.20899,
+        "c3": -0.0328,
+        "pressure_min": 0.0,
+        "pressure_max": 0.16,
+        "condition": null,
+        "equipment": 44
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 8,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.20899,
+        "c3": -0.0328,
+        "pressure_min": 0.0,
+        "pressure_max": 0.16,
+        "condition": null,
+        "equipment": 45
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 9,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.20899,
+        "c3": -0.0328,
+        "pressure_min": 0.0,
+        "pressure_max": 0.16,
+        "condition": null,
+        "equipment": 46
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 10,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.20899,
+        "c3": -0.0328,
+        "pressure_min": 0.0,
+        "pressure_max": 0.16,
+        "condition": null,
+        "equipment": 47
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 11,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.20899,
+        "c3": -0.0328,
+        "pressure_min": 0.0,
+        "pressure_max": 0.16,
+        "condition": null,
+        "equipment": 48
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 12,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.20899,
+        "c3": -0.0328,
+        "pressure_min": 0.0,
+        "pressure_max": 0.16,
+        "condition": null,
+        "equipment": 49
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 13,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.20899,
+        "c3": -0.0328,
+        "pressure_min": 0.0,
+        "pressure_max": 0.16,
+        "condition": null,
+        "equipment": 50
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 14,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.20899,
+        "c3": -0.0328,
+        "pressure_min": 0.0,
+        "pressure_max": 0.16,
+        "condition": null,
+        "equipment": 51
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 15,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.20899,
+        "c3": -0.0328,
+        "pressure_min": 0.0,
+        "pressure_max": 0.16,
+        "condition": null,
+        "equipment": 52
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 16,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.20899,
+        "c3": -0.0328,
+        "pressure_min": 0.0,
+        "pressure_max": 0.16,
+        "condition": null,
+        "equipment": 53
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 17,
+    "fields": {
+        "c1": 0.1405,
+        "c2": -0.2698,
+        "c3": 0.1293,
+        "pressure_min": 0.0,
+        "pressure_max": 200.0,
+        "condition": null,
+        "equipment": 63
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 18,
+    "fields": {
+        "c1": 0.1017,
+        "c2": -0.1957,
+        "c3": 0.09403,
+        "pressure_min": 0.0,
+        "pressure_max": 200.0,
+        "condition": null,
+        "equipment": 64
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 19,
+    "fields": {
+        "c1": 0.1405,
+        "c2": -0.2698,
+        "c3": 0.1293,
+        "pressure_min": 0.0,
+        "pressure_max": 200.0,
+        "condition": null,
+        "equipment": 65
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 20,
+    "fields": {
+        "c1": 0.1017,
+        "c2": -0.1957,
+        "c3": 0.09403,
+        "pressure_min": 0.0,
+        "pressure_max": 200.0,
+        "condition": null,
+        "equipment": 66
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 21,
+    "fields": {
+        "c1": 0.1405,
+        "c2": -0.2698,
+        "c3": 0.1293,
+        "pressure_min": 0.0,
+        "pressure_max": 200.0,
+        "condition": null,
+        "equipment": 67
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 22,
+    "fields": {
+        "c1": 0.1017,
+        "c2": -0.1957,
+        "c3": 0.09403,
+        "pressure_min": 0.0,
+        "pressure_max": 200.0,
+        "condition": null,
+        "equipment": 68
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 23,
+    "fields": {
+        "c1": 0.1347,
+        "c2": -0.2368,
+        "c3": 0.1021,
+        "pressure_min": 0.0,
+        "pressure_max": 200.0,
+        "condition": null,
+        "equipment": 69
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 24,
+    "fields": {
+        "c1": 0.1347,
+        "c2": -0.2368,
+        "c3": 0.1021,
+        "pressure_min": 0.0,
+        "pressure_max": 200.0,
+        "condition": null,
+        "equipment": 70
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 25,
+    "fields": {
+        "c1": 0.1347,
+        "c2": -0.2368,
+        "c3": 0.1021,
+        "pressure_min": 0.0,
+        "pressure_max": 200.0,
+        "condition": null,
+        "equipment": 71
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 26,
+    "fields": {
+        "c1": -0.01633,
+        "c2": 0.056875,
+        "c3": -0.00876,
+        "pressure_min": 0.0,
+        "pressure_max": 200.0,
+        "condition": null,
+        "equipment": 72
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 27,
+    "fields": {
+        "c1": -0.01633,
+        "c2": 0.056875,
+        "c3": -0.00876,
+        "pressure_min": 0.0,
+        "pressure_max": 200.0,
+        "condition": null,
+        "equipment": 73
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 28,
+    "fields": {
+        "c1": -0.01633,
+        "c2": 0.056875,
+        "c3": -0.00876,
+        "pressure_min": 0.0,
+        "pressure_max": 200.0,
+        "condition": null,
+        "equipment": 74
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 29,
+    "fields": {
+        "c1": 2.594072,
+        "c2": -4.23476,
+        "c3": 1.722404,
+        "pressure_min": 0.0,
+        "pressure_max": 40.0,
+        "condition": null,
+        "equipment": 75
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 30,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 76
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 31,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 77
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 32,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 78
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 33,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 79
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 34,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 80
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 35,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 81
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 36,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 82
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 37,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 83
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 38,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 84
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 39,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 85
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 40,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 86
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 41,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 87
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 42,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 88
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 43,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 89
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 44,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 90
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 45,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 91
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 46,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 92
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 47,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 93
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 48,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 94
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 49,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 95
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 50,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 96
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 51,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 97
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 52,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 98
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 53,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 99
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 54,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 150.0,
+        "condition": null,
+        "equipment": 100
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 55,
+    "fields": {
+        "c1": -0.3935,
+        "c2": 0.3957,
+        "c3": -0.00226,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 104
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 56,
+    "fields": {
+        "c1": -0.245382,
+        "c2": 0.259016,
+        "c3": -0.01363,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 105
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 57,
+    "fields": {
+        "c1": -0.245382,
+        "c2": 0.259016,
+        "c3": -0.01363,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 106
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 58,
+    "fields": {
+        "c1": -0.3935,
+        "c2": 0.3957,
+        "c3": -0.00226,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 107
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 59,
+    "fields": {
+        "c1": -0.245382,
+        "c2": 0.259016,
+        "c3": -0.01363,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 108
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 60,
+    "fields": {
+        "c1": -0.245382,
+        "c2": 0.259016,
+        "c3": -0.01363,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 109
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 61,
+    "fields": {
+        "c1": -0.3935,
+        "c2": 0.3957,
+        "c3": -0.00226,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 110
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 62,
+    "fields": {
+        "c1": -0.245382,
+        "c2": 0.259016,
+        "c3": -0.01363,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 111
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 63,
+    "fields": {
+        "c1": -0.245382,
+        "c2": 0.259016,
+        "c3": -0.01363,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 112
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 64,
+    "fields": {
+        "c1": -0.3935,
+        "c2": 0.3957,
+        "c3": -0.00226,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 113
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 65,
+    "fields": {
+        "c1": -0.245382,
+        "c2": 0.259016,
+        "c3": -0.01363,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 114
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 66,
+    "fields": {
+        "c1": -0.245382,
+        "c2": 0.259016,
+        "c3": -0.01363,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 115
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 67,
+    "fields": {
+        "c1": -0.3935,
+        "c2": 0.3957,
+        "c3": -0.00226,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 116
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 68,
+    "fields": {
+        "c1": -0.245382,
+        "c2": 0.259016,
+        "c3": -0.01363,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 117
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 69,
+    "fields": {
+        "c1": -0.245382,
+        "c2": 0.259016,
+        "c3": -0.01363,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 118
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 70,
+    "fields": {
+        "c1": -0.3935,
+        "c2": 0.3957,
+        "c3": -0.00226,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 119
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 71,
+    "fields": {
+        "c1": -0.245382,
+        "c2": 0.259016,
+        "c3": -0.01363,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 120
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 72,
+    "fields": {
+        "c1": -0.245382,
+        "c2": 0.259016,
+        "c3": -0.01363,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 121
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 73,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 146
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 74,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 147
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 75,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 148
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 76,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 149
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 77,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 150
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 78,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 151
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 79,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 152
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 80,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 153
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 81,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 154
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 82,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 155
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 83,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 156
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 84,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 157
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 85,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 158
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 86,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 159
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 87,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 160
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 88,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 161
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 89,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 162
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 90,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 163
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 91,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 164
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 92,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 165
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 93,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 166
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 94,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 167
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 95,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 168
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 96,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 169
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 97,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 170
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 98,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 171
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 99,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 172
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 100,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 173
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 101,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 174
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 102,
+    "fields": {
+        "c1": 0.1578,
+        "c2": -0.2992,
+        "c3": 0.1413,
+        "pressure_min": 0.0,
+        "pressure_max": 320.0,
+        "condition": null,
+        "equipment": 175
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 103,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.0,
+        "c3": 0.0,
+        "pressure_min": 0.0,
+        "pressure_max": 400.0,
+        "condition": null,
+        "equipment": 176
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 104,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.0,
+        "c3": 0.0,
+        "pressure_min": 0.0,
+        "pressure_max": 400.0,
+        "condition": null,
+        "equipment": 177
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 105,
+    "fields": {
+        "c1": 13.1467,
+        "c2": -12.6574,
+        "c3": 3.0705,
+        "pressure_min": 100.0,
+        "pressure_max": 300.0,
+        "condition": null,
+        "equipment": 193
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 106,
+    "fields": {
+        "c1": 0.6072,
+        "c2": -0.912,
+        "c3": 0.3327,
+        "pressure_min": 40.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 193
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 107,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.0,
+        "c3": 0.0,
+        "pressure_min": 0.0,
+        "pressure_max": 300.0,
+        "condition": null,
+        "equipment": 193
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 108,
+    "fields": {
+        "c1": 13.1467,
+        "c2": -12.6574,
+        "c3": 3.0705,
+        "pressure_min": 100.0,
+        "pressure_max": 300.0,
+        "condition": null,
+        "equipment": 194
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 109,
+    "fields": {
+        "c1": 0.6072,
+        "c2": -0.912,
+        "c3": 0.3327,
+        "pressure_min": 40.0,
+        "pressure_max": 300.0,
+        "condition": null,
+        "equipment": 194
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 110,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.0,
+        "c3": 0.0,
+        "pressure_min": 0.0,
+        "pressure_max": 300.0,
+        "condition": null,
+        "equipment": 194
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 111,
+    "fields": {
+        "c1": 0.03881,
+        "c2": -0.11272,
+        "c3": 0.08183,
+        "pressure_min": 5.0,
+        "pressure_max": 140.0,
+        "condition": null,
+        "equipment": 195
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 112,
+    "fields": {
+        "c1": -0.00164,
+        "c2": -0.00627,
+        "c3": 0.0123,
+        "pressure_min": 5.0,
+        "pressure_max": 140.0,
+        "condition": null,
+        "equipment": 195
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 113,
+    "fields": {
+        "c1": 0.03881,
+        "c2": -0.11272,
+        "c3": 0.08183,
+        "pressure_min": 5.0,
+        "pressure_max": 140.0,
+        "condition": null,
+        "equipment": 196
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 114,
+    "fields": {
+        "c1": -0.00164,
+        "c2": -0.00627,
+        "c3": 0.0123,
+        "pressure_min": 5.0,
+        "pressure_max": 140.0,
+        "condition": null,
+        "equipment": 196
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 115,
+    "fields": {
+        "c1": 0.03881,
+        "c2": -0.11272,
+        "c3": 0.08183,
+        "pressure_min": 5.0,
+        "pressure_max": 140.0,
+        "condition": null,
+        "equipment": 197
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 116,
+    "fields": {
+        "c1": -0.00164,
+        "c2": -0.00627,
+        "c3": 0.0123,
+        "pressure_min": 5.0,
+        "pressure_max": 140.0,
+        "condition": null,
+        "equipment": 197
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 117,
+    "fields": {
+        "c1": 0.03881,
+        "c2": -0.11272,
+        "c3": 0.08183,
+        "pressure_min": 5.0,
+        "pressure_max": 140.0,
+        "condition": null,
+        "equipment": 198
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 118,
+    "fields": {
+        "c1": -0.00164,
+        "c2": -0.00627,
+        "c3": 0.0123,
+        "pressure_min": 5.0,
+        "pressure_max": 140.0,
+        "condition": null,
+        "equipment": 198
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 119,
+    "fields": {
+        "c1": 13.1467,
+        "c2": -12.6574,
+        "c3": 3.0705,
+        "pressure_min": 100.0,
+        "pressure_max": 300.0,
+        "condition": null,
+        "equipment": 199
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 120,
+    "fields": {
+        "c1": 0.6072,
+        "c2": -0.912,
+        "c3": 0.3327,
+        "pressure_min": 40.0,
+        "pressure_max": 300.0,
+        "condition": null,
+        "equipment": 199
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 121,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.0,
+        "c3": 0.0,
+        "pressure_min": 0.0,
+        "pressure_max": 300.0,
+        "condition": null,
+        "equipment": 199
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 122,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.0,
+        "c3": 0.0,
+        "pressure_min": 0.0,
+        "pressure_max": 15.0,
+        "condition": null,
+        "equipment": 200
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 123,
+    "fields": {
+        "c1": -0.125,
+        "c2": 0.15361,
+        "c3": -0.02861,
+        "pressure_min": 0.0,
+        "pressure_max": 100.0,
+        "condition": null,
+        "equipment": 201
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 124,
+    "fields": {
+        "c1": -0.4045,
+        "c2": 0.1859,
+        "c3": 0.0,
+        "pressure_min": 5.0,
+        "pressure_max": 400.0,
+        "condition": null,
+        "equipment": 202
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 125,
+    "fields": {
+        "c1": -0.2115,
+        "c2": 0.09717,
+        "c3": 0.0,
+        "pressure_min": 5.0,
+        "pressure_max": 400.0,
+        "condition": null,
+        "equipment": 202
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 126,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.0,
+        "c3": 0.0,
+        "pressure_min": 0.0,
+        "pressure_max": 19.0,
+        "condition": null,
+        "equipment": 203
+    }
+}, {
+    "model": "capex.pressurefactor",
+    "pk": 127,
+    "fields": {
+        "c1": 0.0,
+        "c2": 0.0,
+        "c3": 0.0,
+        "pressure_min": 0.0,
+        "pressure_max": 19.0,
+        "condition": null,
+        "equipment": 204
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 1,
+    "fields": {
+        "b1": 1.89,
+        "b2": 1.35,
+        "fm": 1.0,
+        "material": "CL",
+        "condition": null,
+        "equipment": 104
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 2,
+    "fields": {
+        "b1": 1.89,
+        "b2": 1.35,
+        "fm": 1.55,
+        "material": "CS",
+        "condition": null,
+        "equipment": 107
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 3,
+    "fields": {
+        "b1": 1.89,
+        "b2": 1.35,
+        "fm": 2.28,
+        "material": "SS",
+        "condition": null,
+        "equipment": 113
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 4,
+    "fields": {
+        "b1": 1.89,
+        "b2": 1.35,
+        "fm": 4.36,
+        "material": "Mni",
+        "condition": null,
+        "equipment": 116
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 5,
+    "fields": {
+        "b1": 1.89,
+        "b2": 1.35,
+        "fm": 1.0,
+        "material": "CL",
+        "condition": null,
+        "equipment": 105
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 6,
+    "fields": {
+        "b1": 1.89,
+        "b2": 1.35,
+        "fm": 1.41,
+        "material": "CS",
+        "condition": null,
+        "equipment": 108
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 7,
+    "fields": {
+        "b1": 1.89,
+        "b2": 1.35,
+        "fm": 1.28,
+        "material": "CU",
+        "condition": null,
+        "equipment": 111
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 8,
+    "fields": {
+        "b1": 1.89,
+        "b2": 1.35,
+        "fm": 2.67,
+        "material": "SS",
+        "condition": null,
+        "equipment": 114
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 9,
+    "fields": {
+        "b1": 1.89,
+        "b2": 1.35,
+        "fm": 4.74,
+        "material": "Mni",
+        "condition": null,
+        "equipment": 117
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 10,
+    "fields": {
+        "b1": 1.89,
+        "b2": 1.35,
+        "fm": 10.66,
+        "material": "Ti",
+        "condition": null,
+        "equipment": 120
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 11,
+    "fields": {
+        "b1": 1.89,
+        "b2": 1.35,
+        "fm": 1.0,
+        "material": "CL",
+        "condition": null,
+        "equipment": 106
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 12,
+    "fields": {
+        "b1": 1.89,
+        "b2": 1.35,
+        "fm": 1.46,
+        "material": "CS",
+        "condition": null,
+        "equipment": 109
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 13,
+    "fields": {
+        "b1": 1.89,
+        "b2": 1.35,
+        "fm": 1.28,
+        "material": "CU",
+        "condition": null,
+        "equipment": 112
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 14,
+    "fields": {
+        "b1": 1.89,
+        "b2": 1.35,
+        "fm": 2.35,
+        "material": "SS",
+        "condition": null,
+        "equipment": 115
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 15,
+    "fields": {
+        "b1": 1.89,
+        "b2": 1.35,
+        "fm": 3.95,
+        "material": "Mni",
+        "condition": null,
+        "equipment": 118
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 16,
+    "fields": {
+        "b1": 1.89,
+        "b2": 1.35,
+        "fm": 6.44,
+        "material": "Ti",
+        "condition": null,
+        "equipment": 121
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 17,
+    "fields": {
+        "b1": 1.1,
+        "b2": 0.0,
+        "fm": 0.0,
+        "material": "N/D",
+        "condition": null,
+        "equipment": 132
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 18,
+    "fields": {
+        "b1": 1.1,
+        "b2": 0.0,
+        "fm": 0.0,
+        "material": "N/D",
+        "condition": null,
+        "equipment": 133
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 19,
+    "fields": {
+        "b1": 2.25,
+        "b2": 1.82,
+        "fm": 1.0,
+        "material": "CS",
+        "condition": null,
+        "equipment": 176
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 20,
+    "fields": {
+        "b1": 2.25,
+        "b2": 1.82,
+        "fm": 1.74,
+        "material": "SS Clad",
+        "condition": null,
+        "equipment": 176
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 21,
+    "fields": {
+        "b1": 2.25,
+        "b2": 1.82,
+        "fm": 3.11,
+        "material": "SS",
+        "condition": null,
+        "equipment": 176
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 22,
+    "fields": {
+        "b1": 2.25,
+        "b2": 1.82,
+        "fm": 3.62,
+        "material": "Ni Clad",
+        "condition": null,
+        "equipment": 176
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 23,
+    "fields": {
+        "b1": 2.25,
+        "b2": 1.82,
+        "fm": 7.07,
+        "material": "Ni",
+        "condition": null,
+        "equipment": 176
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 24,
+    "fields": {
+        "b1": 2.25,
+        "b2": 1.82,
+        "fm": 4.68,
+        "material": "Ti Clad",
+        "condition": null,
+        "equipment": 176
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 25,
+    "fields": {
+        "b1": 2.25,
+        "b2": 1.82,
+        "fm": 9.4,
+        "material": "Ti",
+        "condition": null,
+        "equipment": 176
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 26,
+    "fields": {
+        "b1": 1.49,
+        "b2": 1.52,
+        "fm": 1.0,
+        "material": "CS",
+        "condition": null,
+        "equipment": 177
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 27,
+    "fields": {
+        "b1": 1.49,
+        "b2": 1.52,
+        "fm": 1.74,
+        "material": "SS Clad",
+        "condition": null,
+        "equipment": 177
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 28,
+    "fields": {
+        "b1": 1.49,
+        "b2": 1.52,
+        "fm": 3.11,
+        "material": "SS",
+        "condition": null,
+        "equipment": 177
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 29,
+    "fields": {
+        "b1": 1.49,
+        "b2": 1.52,
+        "fm": 3.62,
+        "material": "Ni Clad",
+        "condition": null,
+        "equipment": 177
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 30,
+    "fields": {
+        "b1": 1.49,
+        "b2": 1.52,
+        "fm": 7.07,
+        "material": "Ni",
+        "condition": null,
+        "equipment": 177
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 31,
+    "fields": {
+        "b1": 1.49,
+        "b2": 1.52,
+        "fm": 4.68,
+        "material": "Ti Clad",
+        "condition": null,
+        "equipment": 177
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 32,
+    "fields": {
+        "b1": 1.49,
+        "b2": 1.52,
+        "fm": 9.4,
+        "material": "Ti",
+        "condition": null,
+        "equipment": 177
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 33,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 1.0,
+        "material": "Shell(CS) - Tube(CS)",
+        "condition": null,
+        "equipment": 193
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 34,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 1.35,
+        "material": "Shell(CS) - Tube(Cu)",
+        "condition": null,
+        "equipment": 193
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 35,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 1.69,
+        "material": "Shell(Cu) - Tube(Cu)",
+        "condition": null,
+        "equipment": 193
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 36,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 1.81,
+        "material": "Shell(CS) - Tube(SS)",
+        "condition": null,
+        "equipment": 193
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 37,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 2.73,
+        "material": "Shell(SS) - Tube(SS)",
+        "condition": null,
+        "equipment": 193
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 38,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 2.68,
+        "material": "Shell(CS) - Tube(Ni)",
+        "condition": null,
+        "equipment": 193
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 39,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 3.73,
+        "material": "Shell(Ni) - Tube(Ni)",
+        "condition": null,
+        "equipment": 193
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 40,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 4.63,
+        "material": "Shell(CS) - Tube(Ti)",
+        "condition": null,
+        "equipment": 193
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 41,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 11.38,
+        "material": "Shell(Ti) - Tube(Ti)",
+        "condition": null,
+        "equipment": 193
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 42,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 1.0,
+        "material": "Shell(CS) - Tube(CS)",
+        "condition": null,
+        "equipment": 194
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 43,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 1.35,
+        "material": "Shell(CS) - Tube(Cu)",
+        "condition": null,
+        "equipment": 194
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 44,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 1.69,
+        "material": "Shell(Cu) - Tube(Cu)",
+        "condition": null,
+        "equipment": 194
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 45,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 1.81,
+        "material": "Shell(CS) - Tube(SS)",
+        "condition": null,
+        "equipment": 194
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 46,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 2.73,
+        "material": "Shell(SS) - Tube(SS)",
+        "condition": null,
+        "equipment": 194
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 47,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 2.68,
+        "material": "Shell(CS) - Tube(Ni)",
+        "condition": null,
+        "equipment": 194
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 48,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 3.73,
+        "material": "Shell(Ni) - Tube(Ni)",
+        "condition": null,
+        "equipment": 194
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 49,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 4.63,
+        "material": "Shell(CS) - Tube(Ti)",
+        "condition": null,
+        "equipment": 194
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 50,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 11.38,
+        "material": "Shell(Ti) - Tube(Ti)",
+        "condition": null,
+        "equipment": 194
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 51,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.0,
+        "material": "Shell(CS) - Tube(CS)",
+        "condition": null,
+        "equipment": 195
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 52,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.35,
+        "material": "Shell(CS) - Tube(Cu)",
+        "condition": null,
+        "equipment": 195
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 53,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.69,
+        "material": "Shell(Cu) - Tube(Cu)",
+        "condition": null,
+        "equipment": 195
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 54,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.81,
+        "material": "Shell(CS) - Tube(SS)",
+        "condition": null,
+        "equipment": 195
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 55,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 2.73,
+        "material": "Shell(SS) - Tube(SS)",
+        "condition": null,
+        "equipment": 195
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 56,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 2.68,
+        "material": "Shell(CS) - Tube(Ni)",
+        "condition": null,
+        "equipment": 195
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 57,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 3.73,
+        "material": "Shell(Ni) - Tube(Ni)",
+        "condition": null,
+        "equipment": 195
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 58,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 4.63,
+        "material": "Shell(CS) - Tube(Ti)",
+        "condition": null,
+        "equipment": 195
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 59,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 11.38,
+        "material": "Shell(Ti) - Tube(Ti)",
+        "condition": null,
+        "equipment": 195
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 60,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.0,
+        "material": "Shell(CS) - Tube(CS)",
+        "condition": null,
+        "equipment": 196
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 61,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.35,
+        "material": "Shell(CS) - Tube(Cu)",
+        "condition": null,
+        "equipment": 196
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 62,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.69,
+        "material": "Shell(Cu) - Tube(Cu)",
+        "condition": null,
+        "equipment": 196
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 63,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.81,
+        "material": "Shell(CS) - Tube(SS)",
+        "condition": null,
+        "equipment": 196
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 64,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 2.73,
+        "material": "Shell(SS) - Tube(SS)",
+        "condition": null,
+        "equipment": 196
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 65,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 2.68,
+        "material": "Shell(CS) - Tube(Ni)",
+        "condition": null,
+        "equipment": 196
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 66,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 3.73,
+        "material": "Shell(Ni) - Tube(Ni)",
+        "condition": null,
+        "equipment": 196
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 67,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 4.63,
+        "material": "Shell(CS) - Tube(Ti)",
+        "condition": null,
+        "equipment": 196
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 68,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 11.38,
+        "material": "Shell(Ti) - Tube(Ti)",
+        "condition": null,
+        "equipment": 196
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 69,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.0,
+        "material": "Shell(CS) - Tube(CS)",
+        "condition": null,
+        "equipment": 197
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 70,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.35,
+        "material": "Shell(CS) - Tube(Cu)",
+        "condition": null,
+        "equipment": 197
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 71,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.69,
+        "material": "Shell(Cu) - Tube(Cu)",
+        "condition": null,
+        "equipment": 197
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 72,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.81,
+        "material": "Shell(CS) - Tube(SS)",
+        "condition": null,
+        "equipment": 197
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 73,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 2.73,
+        "material": "Shell(SS) - Tube(SS)",
+        "condition": null,
+        "equipment": 197
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 74,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 2.68,
+        "material": "Shell(CS) - Tube(Ni)",
+        "condition": null,
+        "equipment": 197
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 75,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 3.73,
+        "material": "Shell(Ni) - Tube(Ni)",
+        "condition": null,
+        "equipment": 197
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 76,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 4.63,
+        "material": "Shell(CS) - Tube(Ti)",
+        "condition": null,
+        "equipment": 197
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 77,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 11.38,
+        "material": "Shell(Ti) - Tube(Ti)",
+        "condition": null,
+        "equipment": 197
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 78,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.0,
+        "material": "Shell(CS) - Tube(CS)",
+        "condition": null,
+        "equipment": 198
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 79,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.35,
+        "material": "Shell(CS) - Tube(Cu)",
+        "condition": null,
+        "equipment": 198
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 80,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.69,
+        "material": "Shell(Cu) - Tube(Cu)",
+        "condition": null,
+        "equipment": 198
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 81,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.81,
+        "material": "Shell(CS) - Tube(SS)",
+        "condition": null,
+        "equipment": 198
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 82,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 2.73,
+        "material": "Shell(SS) - Tube(SS)",
+        "condition": null,
+        "equipment": 198
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 83,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 2.68,
+        "material": "Shell(CS) - Tube(Ni)",
+        "condition": null,
+        "equipment": 198
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 84,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 3.73,
+        "material": "Shell(Ni) - Tube(Ni)",
+        "condition": null,
+        "equipment": 198
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 85,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 4.63,
+        "material": "Shell(CS) - Tube(Ti)",
+        "condition": null,
+        "equipment": 198
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 86,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 11.38,
+        "material": "Shell(Ti) - Tube(Ti)",
+        "condition": null,
+        "equipment": 198
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 87,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 1.0,
+        "material": "Shell(CS) - Tube(CS)",
+        "condition": null,
+        "equipment": 199
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 88,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 1.35,
+        "material": "Shell(CS) - Tube(Cu)",
+        "condition": null,
+        "equipment": 199
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 89,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 1.69,
+        "material": "Shell(Cu) - Tube(Cu)",
+        "condition": null,
+        "equipment": 199
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 90,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 1.81,
+        "material": "Shell(CS) - Tube(SS)",
+        "condition": null,
+        "equipment": 199
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 91,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 2.73,
+        "material": "Shell(SS) - Tube(SS)",
+        "condition": null,
+        "equipment": 199
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 92,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 2.68,
+        "material": "Shell(CS) - Tube(Ni)",
+        "condition": null,
+        "equipment": 199
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 93,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 3.73,
+        "material": "Shell(Ni) - Tube(Ni)",
+        "condition": null,
+        "equipment": 199
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 94,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 4.63,
+        "material": "Shell(CS) - Tube(Ti)",
+        "condition": null,
+        "equipment": 199
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 95,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 11.38,
+        "material": "Shell(Ti) - Tube(Ti)",
+        "condition": null,
+        "equipment": 199
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 96,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.0,
+        "material": "Shell (CS)",
+        "condition": null,
+        "equipment": 200
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 97,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.2,
+        "material": "Shell (Cu)",
+        "condition": null,
+        "equipment": 200
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 98,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.3,
+        "material": "Shell (SS)",
+        "condition": null,
+        "equipment": 200
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 99,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 1.4,
+        "material": "Shell (Ni)",
+        "condition": null,
+        "equipment": 200
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 100,
+    "fields": {
+        "b1": 1.63,
+        "b2": 1.66,
+        "fm": 3.3,
+        "material": "Shell (Ti)",
+        "condition": null,
+        "equipment": 200
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 101,
+    "fields": {
+        "b1": 0.96,
+        "b2": 1.21,
+        "fm": 1.0,
+        "material": "Tube (CS)",
+        "condition": null,
+        "equipment": 201
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 102,
+    "fields": {
+        "b1": 0.96,
+        "b2": 1.21,
+        "fm": 1.42,
+        "material": "Tube (Al)",
+        "condition": null,
+        "equipment": 201
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 103,
+    "fields": {
+        "b1": 0.96,
+        "b2": 1.21,
+        "fm": 2.93,
+        "material": "Tube (SS)",
+        "condition": null,
+        "equipment": 201
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 104,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 1.0,
+        "material": "Shell(CS) - Tube(CS)",
+        "condition": null,
+        "equipment": 202
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 105,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 1.35,
+        "material": "Shell(CS) - Tube(Cu)",
+        "condition": null,
+        "equipment": 202
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 106,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 1.69,
+        "material": "Shell(Cu) - Tube(Cu)",
+        "condition": null,
+        "equipment": 202
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 107,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 1.81,
+        "material": "Shell(CS) - Tube(SS)",
+        "condition": null,
+        "equipment": 202
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 108,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 2.73,
+        "material": "Shell(SS) - Tube(SS)",
+        "condition": null,
+        "equipment": 202
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 109,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 2.68,
+        "material": "Shell(CS) - Tube(Ni)",
+        "condition": null,
+        "equipment": 202
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 110,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 3.73,
+        "material": "Shell(Ni) - Tube(Ni)",
+        "condition": null,
+        "equipment": 202
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 111,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 4.63,
+        "material": "Shell(CS) - Tube(Ti)",
+        "condition": null,
+        "equipment": 202
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 112,
+    "fields": {
+        "b1": 1.74,
+        "b2": 1.55,
+        "fm": 11.38,
+        "material": "Shell(Ti) - Tube(Ti)",
+        "condition": null,
+        "equipment": 202
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 113,
+    "fields": {
+        "b1": 0.96,
+        "b2": 1.21,
+        "fm": 1.0,
+        "material": "Material In Contact with Process Fluid (CS)",
+        "condition": null,
+        "equipment": 203
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 114,
+    "fields": {
+        "b1": 0.96,
+        "b2": 1.21,
+        "fm": 1.35,
+        "material": "Material In Contact with Process Fluid (Cu)",
+        "condition": null,
+        "equipment": 203
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 115,
+    "fields": {
+        "b1": 0.96,
+        "b2": 1.21,
+        "fm": 2.45,
+        "material": "Material In Contact with Process Fluid (SS)",
+        "condition": null,
+        "equipment": 203
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 116,
+    "fields": {
+        "b1": 0.96,
+        "b2": 1.21,
+        "fm": 2.68,
+        "material": "Material In Contact with Process Fluid (Ni)",
+        "condition": null,
+        "equipment": 203
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 117,
+    "fields": {
+        "b1": 0.96,
+        "b2": 1.21,
+        "fm": 4.63,
+        "material": "Material In Contact with Process Fluid (Ti)",
+        "condition": null,
+        "equipment": 203
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 118,
+    "fields": {
+        "b1": 0.96,
+        "b2": 1.21,
+        "fm": 1.0,
+        "material": "Material In Contact with Process Fluid (CS)",
+        "condition": null,
+        "equipment": 204
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 119,
+    "fields": {
+        "b1": 0.96,
+        "b2": 1.21,
+        "fm": 1.35,
+        "material": "Material In Contact with Process Fluid (Cu)",
+        "condition": null,
+        "equipment": 204
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 120,
+    "fields": {
+        "b1": 0.96,
+        "b2": 1.21,
+        "fm": 2.45,
+        "material": "Material In Contact with Process Fluid (SS)",
+        "condition": null,
+        "equipment": 204
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 121,
+    "fields": {
+        "b1": 0.96,
+        "b2": 1.21,
+        "fm": 2.68,
+        "material": "Material In Contact with Process Fluid (Ni)",
+        "condition": null,
+        "equipment": 204
+    }
+}, {
+    "model": "capex.materialfactor",
+    "pk": 122,
+    "fields": {
+        "b1": 0.96,
+        "b2": 1.21,
+        "fm": 4.63,
+        "material": "Material In Contact with Process Fluid (Ti)",
+        "condition": null,
+        "equipment": 204
+    }
+}
+]
