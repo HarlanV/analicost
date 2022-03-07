@@ -20,9 +20,10 @@ o gerenciador de ambientes virtuais do python.
 ## Instalação em ambiente Windows
 1 - Criar o ambiente virtual
   > python -m venv [nome do seu ambiente virtual]
+2 - Ativar o ambiente virtual 
   > $pathDoArquivo/[seu ambiente]/Scripts/Activate.ps1
-2 - Instalar as dependencias
+3 - Instalar as dependencias
 
-3 - Configurar as variáveis de ambiente
-4 - Rodas as migrations
-5 - Inserir os dados no banco de dados
+4 - Configurar as variáveis de ambiente
+5 - Rodas as migrations
+6 - Inserir os dados no banco de dados
