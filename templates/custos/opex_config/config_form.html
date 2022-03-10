@@ -347,9 +347,8 @@
                 <div class="formBottomDivision">
                     <p class="titleFormSubSection"> Utilities Costs (U$/GJ) </p>
 
-
-                    <p class="subsection-left"> Common Utilities </p>
                     <!-- Common Utilites -->
+                    <p class="subsection-left"> Common Utilities </p>
                     <div class="form-group row">
                         {% for value in utilites_constants %}
                             {% if value.classification == "Common Utilities" or value.classification == "Water"  %}
@@ -362,10 +361,8 @@
                         {% endfor %}
                     </div>
 
-
-                    <p class="subsection-left"> Steam from Boilers </p>
                     <!-- Steam from Boilers -->
-
+                    <p class="subsection-left"> Steam from Boilers </p>
                     <div class="form-group row">
                         {% for value in utilites_constants %}
                             {% if value.classification == "Steam from Boilers" %}
@@ -377,7 +374,6 @@
                             {% endif %}
                         {% endfor %}
                     </div>
-
 
                     <!-- Fuels -->
                     <p class="subsection-left"> Fuels </p>
@@ -392,7 +388,6 @@
                             {% endif %}
                         {% endfor %}
                     </div>
-
 
                     <!-- Thermal Systems -->
                     <p class="subsection-left"> Thermal Systems </p>
@@ -423,8 +418,7 @@
                     </div>
                     
                     <!-- Waste Disposal  -->
-                    <p class="subsection-left"> Waste Disposal (Solid an Liquid) </p>
-
+                    <p class="subsection-left"> Waste Disposal - Solid an Liquid ($/Tonne) </p>
                     <div class="form-group row">
                         {% for value in utilites_constants %}
                             {% if value.classification == "Waste Disposal (solid and liquid)" %}
@@ -437,7 +431,10 @@
                         {% endfor %}
 
                     </div>
-                    <p class="subsection-left"> Equipments and Process </p>
+                </div>
+
+                <div class="formBottomDivision">
+                    <p class="titleFormSubSection"> General Costs </p>
                     <div class="form-group row">
                         {% for value in utilites_constants %}
                         {% if value.classification == "Cost of Steam used in Steam Drives" %}
@@ -451,17 +448,33 @@
 
                         {% if value.classification == "Process Equipment" %}
                         <div class="col-sm-4">
-                            <label for="{{value.aka}}"> Cost of Labor (per operator/year)
+                            <label for="{{value.aka}}"> {{value.name}}
                             </label>
                             <input type="number" class="form-control" id="{{value.aka}}" name="{{value.aka}}"
                                 value="{{value.value}}" min="0" step="0.001">
                         </div>
                         {% endif %}
-
                     {% endfor %}
                     </div>
 
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="land_cost">Land Cost</label>
+                            <input type="number" class="form-control" id="land_cost" name="land_cost" step="0.1"
+                                value="{{project_settings.land_cost}}">
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="tax_rate">Taxation Rate</label>
+                            <input type="number" class="form-control" id="tax_rate" name="tax_rate" step="0.001"
+                                value="{{project_settings.tax_rate}}">
+                        </div>
 
+                        <div class="col-sm-4">
+                            <label for="annual_interest_rate">Annual Interest Rate</label>
+                            <input type="number" class="form-control" id="annual_interest_rate" name="annual_interest_rate" step="0.001"
+                                value="{{project_settings.annual_interest_rate}}">
+                        </div>
+                    </div>
                 </div>
 
                 <!-- TIME FACTORS -->
@@ -473,6 +486,62 @@
                             <select class="form-control" name="construction_period" id="construction_period">
                                 {% for i in '12345'|make_list %}
  
+                                   {% if i == project_settings.construction_period %}
+                                        <option value="{{i}}" selected> {{i}} </option>
+                                    {% else %}
+                                        <option value="{{i}}"> {{i}} </option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="project_life">Project Life (years)</label>
+                            <input type="number" class="form-control" id="project_life" name="project_life"
+                                value="{{project_settings.project_life}}">
+                        </div>
+
+                    </div>
+
+                    <p class="subsection-left"> Distribution of Fixed Capital Investment (must sum to one) </p>
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="year1">1º Year</label>
+                            <input type="number" class="form-control" id="year1" name="year1"
+                                value="{{auxiliate_factors.year1}}" step="0.01">
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="year2">2º Year</label>
+                            <input type="number" class="form-control" id="year2" name="year2"
+                                value="{{auxiliate_factors.year2}}" step="0.01">
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="year3">3º Year</label>
+                            <input type="number" class="form-control" id="year3" name="year3"
+                                value="{{auxiliate_factors.year3}}" step="0.01">
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="year4">4º Year</label>
+                            <input type="number" class="form-control" id="year4" name="year4"
+                                value="{{auxiliate_factors.year4}}" step="0.01">
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="year5">5º Year</label>
+                            <input type="number" class="form-control" id="year5" name="year5"
+                                value="{{auxiliate_factors.year5}}" step="0.01">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Complement Cost Information  -->
+                <div class="formBottomDivision">
+                    <p class="titleFormSubSection"> Complement Cost Information </p>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="construction_period">Contruction Time (Years)</label>
+                            <select class="form-control" name="construction_period" id="construction_period">
+                                {% for i in '12345'|make_list %} 
                                    {% if i == project_settings.construction_period %}
                                         <option value="{{i}}" selected> {{i}} </option>
                                     {% else %}

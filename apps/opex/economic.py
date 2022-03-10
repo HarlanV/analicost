@@ -135,12 +135,6 @@ class WorkingCapital():
         opex.working_capital = wc
         opex.save()
 
-        # wc = auxiliar.crm * (opex.crm + opex.cwt + opex.cut)
-        # wc = wc + (auxiliar.col * opex.col)
-        # wc = wc + (auxiliar.fcil * opex.fcil)
-        # opex.working_capital = wc
-        # opex.save()
-
 
 class OperatingLabor():
     def __init__(self, project: CapexProject):
@@ -331,3 +325,154 @@ class CostCalculationTools():
 
         cost = float(hourBaseValue) * float(cost_unity) * (timeWorked.value)
         return (cost)
+
+
+class CashFlow():
+    def __init__(self, project: CapexProject):
+        self.project = project
+
+    def calculate(self, depreciation_method: str, depreciation_time: int):
+        export_data = {}
+        data = self.getData()
+        years = list(self.timeInterval(data))
+        export_data["years"] = years.copy()
+        export_data["investiment"] = self.investiment(data.copy(), years.copy())
+        export_data["dk"] = self.dk(data, years.copy(), depreciation_method, depreciation_time)
+        self.netProfit(data, years, export_data["dk"])
+        export_data["revenue"] = self.revenueValues
+        export_data["comd"] = self.comValues
+        export_data["netprofit"] = self.netProfitValues
+        export_data["CashFlowNonDisconted"] = self.nonDiscountedCF(export_data.copy(), years)
+        export_data["CashFlowDisconted"] = self.discountedCF(export_data["CashFlowNonDisconted"], years, data["annual_interest_rate"])
+        export_data["CumulativeNonDiscontedCF"] = self.cumulativeNonDiscount(export_data["CashFlowNonDisconted"], years)
+        export_data["CumulativeDiscontedCF"] = self.cumulativeNonDiscount(export_data["CashFlowDisconted"], years)
+        return export_data
+
+    def getData(self):
+        opex = Opex.objects.filter(project=self.project).first()
+        auxiliate = AuxiliarFactor.objects.filter(project=self.project).first()
+        settings = OpexProjectSettings.objects.filter(project=self.project).first()
+        data = {
+            'fcil': opex.fcil,
+            'salvage': opex.salvage,
+            'revenue': opex.revenue,
+            'com': opex.com,
+            'y1': auxiliate.year1,
+            'y2': auxiliate.year2,
+            'y3': auxiliate.year3,
+            'y4': auxiliate.year4,
+            'y5': auxiliate.year5,
+            'construction_period': settings.construction_period,
+            'project_life': settings.project_life,
+            'dSL': (1 / settings.project_life),
+            'land_cost': settings.land_cost,
+            'tax_rate': settings.tax_rate,
+            'annual_interest_rate': settings.annual_interest_rate,
+            'working_capital': opex.working_capital,
+            'tax': settings.tax_rate,
+            'annual_interest_rate': settings.annual_interest_rate
+        }
+        return data
+
+    def timeInterval(self, data):
+        years = data["construction_period"] + data["project_life"] + 1
+        return (range(years))
+
+    def investiment(self, data, interval):
+        investiment = []
+        investiment.append(data["land_cost"])
+        interval.pop()
+
+        for y in range(data["construction_period"]):
+            # Na ultima iteração, acrescentamos o Working Capital
+            if y == data["construction_period"] + 1:
+                value = data["fcil"] * (data["y" + str(y + 1)])
+                value = data + data["working_capital"]
+            else:
+                value = data["fcil"] * (data["y" + str(y + 1)])
+
+            investiment.append(round(value, 2))
+            interval.pop()
+
+        # Após os investimentos iniciais, o valor de investimento é 0
+        for i in interval:
+            investiment.append(0)
+        return investiment
+
+    # taxa de desconto
+    def dk(self, data, interval, method, years):
+        dk = []
+        if method == "MACRS":
+            rate = DefaultConstants().macrs
+            rate = rate[years]
+            for y in interval:
+                if y <= data["construction_period"] or len(rate) == 0:
+                    dk.append(0)
+                else:
+                    value = rate[0] * data["fcil"]
+                    dk.append(round(value, 2))
+                    rate.pop(0)
+        elif method == "STR":
+            rate = (data["fcil"] - data["salvage"]) / years
+
+            for y in interval:
+                if y <= data["construction_period"] or len(rate) == 0:
+                    dk.append(0)
+                else:
+                    value = rate * data["fcil"]
+                    dk.append(round(value, 2))
+                    rate.pop(0)
+        teste_print(dk)
+        return dk
+
+    def netProfit(self, data, interval, dk):
+        revenue = []
+        comd = []
+        netProfit = []
+        for y in interval:
+            if y <= data["construction_period"]:
+                revenue.append(0)
+                comd.append(0)
+                netProfit.append(0)
+            else:
+                revenueValue = data["revenue"]
+                comValue = data["com"]
+                # teste_print(dk)
+                # teste = dk[y]
+                value = (revenueValue - comValue - dk[y]) * (1 + data['tax']) + dk[0]
+                revenue.append(round(revenueValue, 2))
+                comd.append(round(comValue, 2))
+                netProfit.append(round(value, 2))
+        self.netProfitValues = netProfit
+        self.revenueValues = revenue
+        self.comValues = comd
+
+    def nonDiscountedCF(self, calculated_data, interval):
+        ndcf = []
+        for y in interval:
+            value = calculated_data["netprofit"][y] - calculated_data["investiment"][y]
+            ndcf.append(round(value, 2))
+        return ndcf
+
+    def discountedCF(self, ndcf, interval, itax):
+        dcf = []
+        for y in interval:
+            value = ndcf[y] / ((1 + itax)**y)
+            dcf.append(round(value, 2))
+        return dcf
+
+    def cumulativeDiscounted(self, cFlow, interval):
+        cdcf = []
+        value = 0
+        for y in interval:
+            value = value + cFlow[y]
+            cdcf.append(round(value, 2))
+        return cdcf
+
+    def cumulativeNonDiscount(self, cFlow, interval):
+        cndcf = []
+        value = 0
+        for y in interval:
+            value = value + cFlow[y]
+            cndcf.append(round(value, 2))
+        return cndcf

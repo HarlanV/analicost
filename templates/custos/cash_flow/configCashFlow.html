@@ -1,0 +1,56 @@
+{% extends 'equipamentos/partials/add-equipment-form.html' %}
+{% block equipment_title %} Adiconar Blender {% endblock %}
+{% block equipment_content %}
+
+
+<form action="{% url 'opex:index' %}"  method="POST">
+    {% csrf_token %}
+    <div class="form">
+
+        <h3> Criar projeto </h3>
+
+        <div class="container-fluid mb-2 mt-2" style="border:1px solid #cecece;">
+
+
+
+            <fieldset class="form-group row">
+
+
+
+                <div class="form-row ml-1">
+
+                    <div class="form-group col-md-7 ml:2" >
+                        <label for="project">Unity Number</label>
+                        <select class="form-control" name="project" id="project" required>
+                        {% for project in list_projects %}
+                        <option value="{{project}}"> {{project}} </option>
+                        {% endfor %}
+                        </select>
+                    </div>
+    
+                    <div class="form-group col-md-7 ml:2" >
+                        <label for="cepci">Deprecition Method</label>
+                        <select class="form-control" name="depreciationMethod" id="depreciationMethod" required>
+                            <option value="MACRS" selected> MACRS </option>
+                            <option value="STR"> Straight </option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-7 ml:2" >
+                        <label for="projectNum">DepreciationTime</label>
+                        <select class="form-control" name="depreciationTime" id="depreciationTime" required>
+                            <option value=3 selected> 3 years </option>
+                            <option value=5> 5 years </option>
+                            <option value=7> 7 years </option>
+                        </select>
+                    </div>
+
+                </div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </div>
+    </div>
+</form>
+
+
+{% endblock %}

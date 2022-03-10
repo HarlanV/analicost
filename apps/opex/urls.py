@@ -6,7 +6,7 @@ app_name = 'opex'
 
 urlpatterns = [
     # path('', views.HomeView.index, name='index'),
-    path('', views.index, name='index'),
+
     path('configs/GET', views.ConstantsConfig.index, name='index_config'),
     path('configs/GET/<int:project>', views.ConstantsConfig.formConstants, name='opex_config'),
     path('configs/POST/<int:project>', views.ConstantsConfig.configPOST, name='postConfig'),
@@ -17,6 +17,7 @@ urlpatterns = [
     path('material/remove/<int:project>/<int:material>/', views.Material.removeMaterial, name='removeMaterial'),
     path('<int:project>/<int:equipamento_id>/equipment/config', views.Utilities.configEquipment_GET, name='configEquipment'),
     path('<int:project>/<int:equipamento_id>/equipment/config/POST', views.Utilities.configEquipment_POST, name='configEquipmentPost'),
+    path('CashFlow/', views.CashFlow.index, name='index'),
     # path('datachar', views.HomeView.get_data, name='datachar'),
     # path('capex', views.HomeView.report, name='capex-report'),
 ]

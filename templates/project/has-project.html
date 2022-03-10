@@ -28,7 +28,7 @@
     <div class="btn-group">
         <button id="project" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
             aria-expanded="false">
-            Projects
+            Unity Project
         </button>
         <div class="dropdown-menu" aria-labelledby="project">
             {% for project in list_projects %}
@@ -38,14 +38,12 @@
     </div>
 
     <div class="btn-group">
-        <a class="btn btn-secondary" href="{% url 'capex:createProject'  %}" role="button">New Project</a>
-        <!--button type="button" href="#" class="btn btn-secondary">Editar Projeto</button-->
+        <a class="btn btn-secondary" href="{% url 'capex:createProject'  %}" role="button">New Unity</a>
     </div>
 </div>
 
 
 <!-- TODO: Pensar em uma maneira mais eficiente de chamar os includes necessários -->
-
 <div class="container-fluid mt-2">
     <table id="tableblender" class="table table-responsive table-sm table-centralized">
         <thead class="thead-dark">

@@ -58,7 +58,7 @@ class ConstantsConfig(View):
         }
 
         service = services.OpexServices(project)
-        
+
         service.updateOpexConfig(**data)
         # getattr(services.OpexServices(project), 'updateOpexConfig')(**data)
 
@@ -143,27 +143,48 @@ class Utilities(View):
         return redirect('capex:project', project=project)
 
 
-# Reservado para a exibição do fluxo de caixa, bem como análise de viabilidade
-def index(request):
-    project = 300
-    data = services.CashFlow(project).getCashFlowData()
-    teste_print(data)
-    # tabela = CashFlow .objects.values('descricao', 'valor')
-    # data = list(tabela)
-    years = [0, 0, 1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-    ccf = years
-    # ccf = [0.00, -10.00, -91.82, -141.40, -166.20, 37.45, 228.11, 396.08, 545.84, 681.99, 803.97, 913.20, 1012.49, 1102.76, 1187.46, 1200.20]
-    dados = {}
-    for y in range(len(years)):
-        dados[y] = {
-            "year": years[y],
-            "CCF": ccf[y]
-        }
-    # dados = dict(zip(years))
-    data = {
-        'dados': dados,
-        'data' : data
-    }
+class CashFlow(View):
 
-    # return JsonResponse(data, safe=False)
-    return render(request, 'custos/index.html', data)
+    def index(request):
+        list_projects = capexServices.ProjectServices.listProjects()
+        if request.method == 'POST':
+            project = int(request.POST["project"])
+            method = request.POST["depreciationMethod"]
+            dTime = int(request.POST["depreciationTime"])
+            data = CashFlow.cashFlowGenerate(project, method, dTime)
+            teste_print(data)
+            return render(request, 'custos/cash_flow/index.html', data)
+
+        else:
+            data = {
+                'list_projects': list_projects,
+                'dkOptions': ["MACRS", "Straight"]
+            }
+            return render(request, 'custos/cash_flow/configCashFlow.html', data)
+
+    # Pode ser remanejado para services.
+    def cashFlowGenerate(project, depreciationMethod, depreciationTime):
+        data = services.CashFlowService(project).getCashFlowData(depreciationMethod, depreciationTime)
+
+        values = data.copy()
+        values = zip(
+            values['years'],
+            values['investiment'],
+            values['dk'],
+            values['revenue'],
+            values['comd'],
+            values['netprofit'],
+            values['CashFlowNonDisconted'],
+            values['CashFlowDisconted'],
+            values['CumulativeNonDiscontedCF'],
+            values['CumulativeDiscontedCF']
+        )
+        data = {
+            'values': values,
+            'render': True,
+            'chartYValues': data['CumulativeDiscontedCF'],
+            'chartXValues': data['years'],
+
+        }
+
+        return data

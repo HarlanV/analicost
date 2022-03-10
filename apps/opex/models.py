@@ -66,6 +66,7 @@ class Opex(models.Model):
         db_table = "opex_factors"
 
 
+# Constantes utilizadas em equações e correlações.
 class OpexAuxiliateFactor(models.Model):
     project = models.ForeignKey(CapexProject, on_delete=models.CASCADE)
     crm = models.FloatField(default=1.23)
@@ -101,6 +102,9 @@ class OpexProjectSettings(models.Model):
     cwt_calculated = models.BooleanField(default=True, blank=True)
     construction_period = models.IntegerField(default=2, blank=True, null=True)
     project_life = models.IntegerField(default=10, blank=True, null=True)
+    land_cost = models.FloatField(default=0.00)
+    tax_rate = models.FloatField(default=0.00)
+    annual_interest_rate = models.FloatField(default=0.00)
 
     def __str__(self):
         return "project_" + str(self.project.project_number)
@@ -349,3 +353,10 @@ class DefaultConstants():
 
 
         ]
+
+        self.macrs = {
+            3: [0.3333, 0.4445, 0.1481, 0.0741],
+            5: [0.2, 0.32, 0.1920, 0.1152, 0.1152, 0.0576],
+            7: [0.1429, 0.2449, 0.1749, 0.1249, 0.0893, 0.0893, 0.0893, 0.0446],
+            10: [0.1, 0.18, 0.1440, 0.1152, 0.0922, 0.0737, 0.0655, 0.0655, 0.0656, 0.0655, 0.0328]
+        }
