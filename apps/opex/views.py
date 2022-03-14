@@ -167,6 +167,7 @@ class CashFlow(View):
         data = services.CashFlowService(project).getCashFlowData(depreciationMethod, depreciationTime)
 
         values = data.copy()
+        # CashFlow facilitador
         values = zip(
             values['years'],
             values['investiment'],
@@ -184,6 +185,9 @@ class CashFlow(View):
             'render': True,
             'chartYValues': data['CumulativeDiscontedCF'],
             'chartXValues': data['years'],
+            'pbtime': data['pb'],
+            'irr': data['irr'],
+            'npv': data['npv'],
 
         }
 

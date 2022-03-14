@@ -6,108 +6,83 @@
 {{ data|json_script:"data"}}
 
 
-<!DOCTYPE html>
-<html>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
 
-<head>
-    <style>
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
 
-        td,
-        th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #dddddd;
-        }
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
 
 
-        .hideValue0{
-            opacity: 0;
-        
-        }
+    .hideValue0 {
+        opacity: 0;
 
-        th{
-            text-align: center;
-        }
-    </style>
-</head>
+    }
 
-<body>
+    th {
+        text-align: center;
+    }
+</style>
 
-    <h2>Cash Flow Table</h2>
 
-    <table id="cashFlowTable">
+
+
+<div>
+    <table id="teste">
         <tr>
-            <th>Year</th>
-            <th>Investiment</th>
-            <th>dK</th>
-            <th>Revenue</th>
-            <th>COMd</th>
-            <th>Net Profit</th>
-            <th>Cash Flow - Non Disconted </th>
-            <th>Cash Flow Disconted</th>
-            <th>Cumulative Non Discounted</th>
-            <th>Cumulative Discounted</th>
-            </select>
+            <th>Net Present Value: {{npv}}</th>
+            <th> Payback Discounted Value: {{pbtime.0}} years and {{pbtime.1}} days</th>
+            <th>Internal Rate of Return - IRR {{irr}}</th>
         </tr>
-        {% for a, b,c,d,e,f,g,h,i,j in values %}
-        <tr>
-            <td> {{a}} </td>
-            <td class="hideValue{{b}}" > {{b}} </td>
-            <td class="hideValue{{c}}" > {{c}} </td>
-            <td class="hideValue{{d}}" > {{d}} </td>
-            <td class="hideValue{{e}}" > {{e}} </td>
-            <td class="hideValue{{f}}" > {{f}} </td>
-            <td class="hideValue{{g}}" > {{g}} </td>
-            <td class="hideValue{{h}}" > {{h}} </td>
-            <td class="hideValue{{i}}" > {{i}} </td>
-            <td class="hideValue{{j}}" > {{j}} </td>
-        </tr>
-    
-        {% endfor %}
-
     </table>
-
-
-<script>
-
-function iterateTable(){
-    var data = JSON.parse(document.getElementById('data').textContent);
-    console.log(data)
-    var tbl =  document.getElementById("cashFlowTable")
-    var row = tbl.insertRow(2);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    cell1.innerHTML = "NEW CELL1";
-    cell2.innerHTML = "NEW CELL2";
-}
-
-function formatValue(tbl){
-    var tbl =  document.getElementById("cashFlowTable")
-}
-
-function appendTd(tr){
-
-}
-
-
-</script>
+</div>
 
 
 
-</body>
 
-</html>
+<h2>Cash Flow Table</h2>
+<table id="cashFlowTable">
+    <tr>
+        <th>Year</th>
+        <th>Investiment</th>
+        <th>dK</th>
+        <th>Revenue</th>
+        <th>COMd</th>
+        <th>Net Profit</th>
+        <th>Cash Flow - Non Disconted </th>
+        <th>Cash Flow Disconted</th>
+        <th>Cumulative Non Discounted</th>
+        <th>Cumulative Discounted</th>
+        </select>
+    </tr>
+    {% for a, b,c,d,e,f,g,h,i,j in values %}
+    <tr>
+        <td> {{a}} </td>
+        <td class="hideValue{{b}}"> {{b}} </td>
+        <td class="hideValue{{c}}"> {{c}} </td>
+        <td class="hideValue{{d}}"> {{d}} </td>
+        <td class="hideValue{{e}}"> {{e}} </td>
+        <td class="hideValue{{f}}"> {{f}} </td>
+        <td class="hideValue{{g}}"> {{g}} </td>
+        <td class="hideValue{{h}}"> {{h}} </td>
+        <td class="hideValue{{i}}"> {{i}} </td>
+        <td class="hideValue{{j}}"> {{j}} </td>
+    </tr>
 
+    {% endfor %}
 
+</table>
 
 {% include 'graphics/char.html' %}
 

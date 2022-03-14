@@ -2,6 +2,7 @@ from capex.equipments.equipments import teste_print
 from capex.models import CapexProject, EquipmentProject, EquipmentUnity
 from .models import EquipmentsUtilitiesSetting, MaterialCosts, Opex, OpexAuxiliateFactor as AuxiliarFactor, OpexProjectSettings, ProjectUtilitiesConstant, DefaultConstants
 from django.db.models import Sum
+import numpy_financial as npf
 
 
 # TODO: Transferir essa classe para services
@@ -162,7 +163,6 @@ class ManufactoringCost():
         self.project = project
 
     def updateManufactoringCost(self):
-        teste_print("chegou aqui!!")
         auxiliar = AuxiliarFactor.objects.filter(project=self.project).first()
         opex = Opex.objects.filter(project=self.project).first()
         auxiliar = AuxiliarFactor.objects.filter(project=self.project).first()
@@ -170,7 +170,6 @@ class ManufactoringCost():
         mc = auxiliar.crm * (opex.crm + opex.cwt + opex.cut)
         mc = mc + (auxiliar.col * opex.col)
         mc = mc + (auxiliar.fcil * opex.fcil)
-        teste_print(mc)
         opex.com = mc
         opex.save()
 
@@ -224,7 +223,7 @@ class EconomicConfig():
     def updateAllOpexValues(self):
 
         config = self.checkFieldsUpdate().values()
-        
+
         MaterialCost(self.project).updateAllCosts()
         self.updateFcilValue(config)
         if config.first()["col_calculated"] is True:
@@ -346,7 +345,26 @@ class CashFlow():
         export_data["CashFlowDisconted"] = self.discountedCF(export_data["CashFlowNonDisconted"], years, data["annual_interest_rate"])
         export_data["CumulativeNonDiscontedCF"] = self.cumulativeNonDiscount(export_data["CashFlowNonDisconted"], years)
         export_data["CumulativeDiscontedCF"] = self.cumulativeNonDiscount(export_data["CashFlowDisconted"], years)
+
+        export_data["npv"] = export_data["CumulativeDiscontedCF"][-1]
+        export_data["irr"] = round(npf.irr(export_data["CashFlowNonDisconted"]) * 100, 2)
+        export_data["pb"] = self.payback(export_data["CashFlowDisconted"])
         return export_data
+
+    def payback(self, cashFlow):
+        pbd = 0
+        # já que o primeiro ano será zero
+        pby = -1
+        for cash in cashFlow:
+            if cash < 0:
+                v1 = cash
+                pby += 1
+            else:
+                v2 = cash
+                pbd = abs((365 * v1) / (v2 - 365))
+                break
+
+        return [pby, int(round(pbd, 0))]
 
     def getData(self):
         opex = Opex.objects.filter(project=self.project).first()
@@ -422,7 +440,6 @@ class CashFlow():
                     value = rate * data["fcil"]
                     dk.append(round(value, 2))
                     rate.pop(0)
-        teste_print(dk)
         return dk
 
     def netProfit(self, data, interval, dk):
@@ -437,9 +454,8 @@ class CashFlow():
             else:
                 revenueValue = data["revenue"]
                 comValue = data["com"]
-                # teste_print(dk)
-                # teste = dk[y]
-                value = (revenueValue - comValue - dk[y]) * (1 + data['tax']) + dk[0]
+                # (R - COMd - dk)*(1- IRenda) + dk
+                value = (revenueValue - comValue - dk[y]) * (1 - data['tax']) + dk[0]
                 revenue.append(round(revenueValue, 2))
                 comd.append(round(comValue, 2))
                 netProfit.append(round(value, 2))
