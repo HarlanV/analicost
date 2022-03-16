@@ -76,7 +76,9 @@ class Pump(BaseEquipment):
 
         # Arredonda valores
         self.purchasedEquipmentCost = self.upRound(self.baseCost * self.fM * self.pressureFactor)
-        self.bareModuleCost = self.upRound(self.baseCost * self.bareModuleFactor())
+        teste_print(self.baseCost * self.reference)
+        # self.bareModuleCost = self.upRound()
+        self.bareModuleCost = self.upRound(self.baseCost * self.reference)
         self.baseEquipmentCost = self.upRound(self.baseCost)
         self.baseBaremoduleCost = self.upRound(self.baseCost * fbm0)
 
@@ -91,11 +93,7 @@ class Pump(BaseEquipment):
         utility.efficiency = efficiency
         utility.duty = duty
         utility.duty_unity = self.selectedUnity
-        # Considereando o default em kW
-        # tools = economic.CostCalculationTools()
-        # flow = tools.convertToDesiredUnit()
-        # cost = tools.convertToDesiredUnit()
-        # annual = tools.costInYear()
+
 
         utility.annual_cost = self.calculateAnnualCut(duty, costUtility)
         utility.save()

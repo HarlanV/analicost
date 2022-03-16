@@ -45,13 +45,22 @@ class MaterialCost():
 
         if ("Waste" in classification or classification == 'all') and config.first()["cwt_calculated"] is True:
             materialList = materials.filter(classification__contains="Waste")
-            opex.cwt = materialList.aggregate(Sum('annual_cost'))["annual_cost__sum"]
+            cwt = materialList.aggregate(Sum('annual_cost'))["annual_cost__sum"]
+            if cwt is None:
+                cwt = 0
+            opex.cwt = cwt
         if (classification == "Product" or classification == 'all') and config.first()["revenue_calculated"] is True:
             materialList = materials.filter(classification__contains="Product").all()
-            opex.revenue = materialList.aggregate(Sum('annual_cost'))["annual_cost__sum"]
+            revenue = materialList.aggregate(Sum('annual_cost'))["annual_cost__sum"]
+            if revenue is None:
+                revenue = 0
+            opex.revenue = revenue
         if ("Raw" in classification or classification == 'all') and config.first()["crm_calculated"] is True:
             materialList = materials.filter(classification__contains="Raw").all()
-            opex.crm = materialList.aggregate(Sum('annual_cost'))["annual_cost__sum"]
+            crm = materialList.aggregate(Sum('annual_cost'))["annual_cost__sum"]
+            if crm is None:
+                crm = 0
+            opex.crm = crm
         opex.save()
         self.checkFieldsUpdate()
 

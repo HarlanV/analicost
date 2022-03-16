@@ -72,16 +72,6 @@ class Evaporator(BaseEquipment):
         self.baseEquipmentCost = self.upRound(self.baseCost)
         self.baseBaremoduleCost = self.upRound(self.baseCost * self.reference)
 
-        t1 = self.purchasedEquipmentCost
-        t2 = self.bareModuleCost
-        t3 = self.baseEquipmentCost
-        t4 = self.baseBaremoduleCost
-        teste = str(t1) + "//" + str(t2) + "//" + str(t3) + "//" + str(t4)
-        teste2 = str(self.bareModuleFactor()) + "//" + str(self.reference) + "//" + str(pressureFactor) + "//" + str(self.pressureConversor)
-
-        # teste_print(teste)
-        # teste_print(teste2)
-
 
 class sketch(Evaporator):
 
