@@ -49,7 +49,7 @@ class Dryer(BaseEquipment):
         # Arredonda valores
         self.purchasedEquipmentCost = self.upRound(self.baseCost)
         self.bareModuleCost = self.upRound(bareModuleCost)
-        self.baseEquipmentCost = self.upRound(self.baseCost) 
+        self.baseEquipmentCost = self.upRound(self.baseCost)
         self.baseBaremoduleCost = self.upRound(bareModuleCost)
 
 

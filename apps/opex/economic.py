@@ -367,7 +367,7 @@ class CashFlow():
         # já que o primeiro ano será zero
         pby = -1
         for cash in cashFlow:
-            if cash < 0:
+            if cash <= 0:
                 v1 = cash
                 pby += 1
             else:
@@ -414,15 +414,16 @@ class CashFlow():
 
         for y in range(data["construction_period"]):
             # Na ultima iteração, acrescentamos o Working Capital
-            if y == data["construction_period"] + 1:
+            if y == data["construction_period"] -1:
                 value = data["fcil"] * (data["y" + str(y + 1)])
-                value = data + data["working_capital"]
+                teste_print(value)
+                teste_print(data["working_capital"])
+                value = value  +  data["working_capital"]
             else:
                 value = data["fcil"] * (data["y" + str(y + 1)])
 
             investiment.append(round(value, 2))
             interval.pop()
-
         # Após os investimentos iniciais, o valor de investimento é 0
         for i in interval:
             investiment.append(0)

@@ -2,7 +2,7 @@
 {% block equipment_title %} Adiconar Blender {% endblock %}
 {% block equipment_content %}
 
-<form id="insertEquipmentForm" action="{% url 'capex:configEquipmentPost' project equipment_project_id %}"
+<form id="insertEquipmentForm" action="{% url 'opex:configEquipmentPost' project equipment_project_id %}"
     method="POST">
     {% csrf_token %}
     <div class="form">

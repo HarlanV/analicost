@@ -51,10 +51,10 @@ class Filter(BaseEquipment):
         bareModuleCost = self.baseCost * self.bareModuleFactor() * pressureFactor
 
         # Arredonda valores
-        self.purchasedEquipmentCost = self.upRound(self.baseCost * self.reference)     # 1 trocado
-        self.bareModuleCost = self.upRound(bareModuleCost)                             # 2 ok
-        self.baseEquipmentCost = self.upRound(self.baseCost)                           # 3 ok
-        self.baseBaremoduleCost = self.upRound(bareModuleCost / self.reference)        # 4 trocado
+        self.purchasedEquipmentCost = self.upRound(self.baseCost * self.reference)
+        self.bareModuleCost = self.upRound(bareModuleCost)
+        self.baseEquipmentCost = self.upRound(self.baseCost)
+        self.baseBaremoduleCost = self.upRound(bareModuleCost / self.reference)
 
 
 class sketch(Filter):

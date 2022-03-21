@@ -153,7 +153,6 @@ class CashFlow(View):
             method = request.POST["depreciationMethod"]
             dTime = int(request.POST["depreciationTime"])
             data = CashFlow.cashFlowGenerate(project, method, dTime)
-            teste_print(data)
             return render(request, 'custos/cash_flow/index.html', data)
 
         else:

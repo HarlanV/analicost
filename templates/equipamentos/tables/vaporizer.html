@@ -1,17 +1,9 @@
-<style>
-    .table-reduced-head {
-        font-size: 80% !important;
-    }
+{% for equipment in equipments %}
 
-    .table-centralized {
-        text-align: center;
-    }
-</style>
+{% if equipment.equipment.name == "Vaporizer" %}
+<tr class="d-flex">
+    {% include 'equipamentos/partials/table-tools.html'%}
 
-            {% for equipment in equipments %}
-            {% include 'equipamentos/partials/table-tools.html'%}
-            <tr class="d-flex">
-                {% include 'project/tables/table-tools.html'%}
                 <th class="col-1" scope="row">{{equipment.equipment_code}}</th>
                 <th class="col-2" scope="row">{{tbl}}</th>
                 <td class="col-2" scope="row">{{equipment.purchased_factor.description}}</td>
