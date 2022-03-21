@@ -48,19 +48,19 @@ class MaterialCost():
             cwt = materialList.aggregate(Sum('annual_cost'))["annual_cost__sum"]
             if cwt is None:
                 cwt = 0
-            opex.cwt = cwt
+            opex.cwt = round(cwt, 2)
         if (classification == "Product" or classification == 'all') and config.first()["revenue_calculated"] is True:
             materialList = materials.filter(classification__contains="Product").all()
             revenue = materialList.aggregate(Sum('annual_cost'))["annual_cost__sum"]
             if revenue is None:
                 revenue = 0
-            opex.revenue = revenue
+            opex.revenue = round(revenue, 2)
         if ("Raw" in classification or classification == 'all') and config.first()["crm_calculated"] is True:
             materialList = materials.filter(classification__contains="Raw").all()
             crm = materialList.aggregate(Sum('annual_cost'))["annual_cost__sum"]
             if crm is None:
                 crm = 0
-            opex.crm = crm
+            opex.crm = round(crm, 2)
         opex.save()
         self.checkFieldsUpdate()
 
@@ -83,7 +83,6 @@ class UtilityCost():
     def __init__(self, project: CapexProject):
         self.project = project
 
-    # TODO: MOVER PARA OPEX
     def updateUtilitesFromEquipemt(self, equipment, args):
 
         # significa que é a bomba com a eficiência
@@ -124,7 +123,10 @@ class UtilityCost():
     def updateCut(self):
         equipments = EquipmentsUtilitiesSetting.objects.filter(equipment__project=self.project).all()
         opex = Opex.objects.filter(project=self.project).first()
-        opex.cut = equipments.aggregate(Sum('utility_cost'))["utility_cost__sum"]
+        cut = equipments.aggregate(Sum('utility_cost'))["utility_cost__sum"]
+        if cut is None:
+            cut = 0
+        opex.cut = cut
         opex.save()
         pass
 
@@ -142,7 +144,7 @@ class WorkingCapital():
         wc = auxiliar.working_capital_a * opex.crm
         wc = wc + (auxiliar.working_capital_b * opex.fcil)
         wc = wc + (auxiliar.working_capital_c * opex.col)
-        opex.working_capital = wc
+        opex.working_capital = round(wc, 2)
         opex.save()
 
 
@@ -163,7 +165,7 @@ class OperatingLabor():
                 Nnp = Nnp + 1
         Nol = (6.29 + (31.7 * (Pp**2)) + (0.23 * Nnp))**0.5
         Col = Nol * (1095 / 240)
-        opex.col = Col
+        opex.col = round(Col, 2)
         opex.save()
 
 
@@ -179,7 +181,7 @@ class ManufactoringCost():
         mc = auxiliar.crm * (opex.crm + opex.cwt + opex.cut)
         mc = mc + (auxiliar.col * opex.col)
         mc = mc + (auxiliar.fcil * opex.fcil)
-        opex.com = mc
+        opex.com = round(mc,  2)
         opex.save()
 
 

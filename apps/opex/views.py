@@ -46,7 +46,8 @@ class ConstantsConfig(View):
             'cut_constants': service.listForms()["cut_constants"],
             'opex': opex,
             'project_settings': project_settings,
-            'utilites_constants': utilities_constants
+            'utilites_constants': utilities_constants,
+            'list_years': [1, 2, 3, 4, 5],
         }
 
         return render(request, 'custos/opex_config/auxiliar_factors.html', dados)

@@ -103,12 +103,11 @@ class OpexServices():
             'tax_rate': args['tax_rate'],
             'annual_interest_rate': args['annual_interest_rate'],
         }
-
         settings.update(**listOfFields)
 
         opex = Opex.objects.filter(project__project_number=project).first()
 
-        values = ['fcil_value', 'revenue_value', 'crm_value', 'salvage_value', 'cut_value', 'wc_value', 'col_value', 'cwt_value']
+        values = ['fcil_value', 'revenue_value', 'crm_value', 'salvage_value', 'cut_value', 'working_capital_value', 'col_value', 'cwt_value']
         listOfFields = set([*args]) & set(values)
         for lists in listOfFields:
             field = lists.replace("_value", "")

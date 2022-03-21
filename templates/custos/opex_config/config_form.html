@@ -60,7 +60,7 @@
         <!--button type="button" href="#" class="btn btn-secondary">Editar Projeto</button-->
     </div>
 </div>
-
+{{ project_settings.construction_period|json_script:"construction"}}
 <!-- FORMULÁRIO -->
 <div class="container py-5">
     <div class="row">
@@ -221,13 +221,13 @@
                         </div>
 
                         <div class="col-sm-3">
-                            <label for="wc_value">Input Working Capital</label>
+                            <label for="working_capital_value">Input Working Capital</label>
                             {% if project_settings.wc_calculated is True %}
-                            <input type="number" class="form-control" id="wc_value" name="wc_value"
-                            value="{{opex.working_capital}}" disabled>
+                            <input type="number" class="form-control" id="working_capital_value" name="working_capital_value"
+                            value="{{opex.working_capital}}" min="0" step="0.01"disabled>
                             {% else %}
-                            <input type="number" class="form-control" id="wc_value" name="wc_value"
-                            value="{{opex.working_capital}}">
+                            <input type="number" class="form-control" id="working_capital_value" name="working_capital_value"
+                            value="{{opex.working_capital}}" min="0" step="0.01">
                             {% endif %}
                         </div>
                     </div>
@@ -484,8 +484,7 @@
                         <div class="col-sm-6">
                             <label for="construction_period">Contruction Time (Years)</label>
                             <select class="form-control" name="construction_period" id="construction_period">
-                                {% for i in '12345'|make_list %}
- 
+                                {% for i in list_years %}
                                    {% if i == project_settings.construction_period %}
                                         <option value="{{i}}" selected> {{i}} </option>
                                     {% else %}
@@ -532,67 +531,6 @@
                         </div>
                     </div>
                 </div>
-
-
-                <!-- Complement Cost Information  -->
-                <div class="formBottomDivision">
-                    <p class="titleFormSubSection"> Complement Cost Information </p>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label for="construction_period">Contruction Time (Years)</label>
-                            <select class="form-control" name="construction_period" id="construction_period">
-                                {% for i in '12345'|make_list %} 
-                                   {% if i == project_settings.construction_period %}
-                                        <option value="{{i}}" selected> {{i}} </option>
-                                    {% else %}
-                                        <option value="{{i}}"> {{i}} </option>
-                                    {% endif %}
-                                {% endfor %}
-                            </select>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <label for="project_life">Project Life (years)</label>
-                            <input type="number" class="form-control" id="project_life" name="project_life"
-                                value="{{project_settings.project_life}}">
-                        </div>
-
-                    </div>
-
-                    <p class="subsection-left"> Distribution of Fixed Capital Investment (must sum to one) </p>
-                    <div class="form-group row">
-                        <div class="col-sm-2">
-                            <label for="year1">1º Year</label>
-                            <input type="number" class="form-control" id="year1" name="year1"
-                                value="{{auxiliate_factors.year1}}" step="0.01">
-                        </div>
-                        <div class="col-sm-2">
-                            <label for="year2">2º Year</label>
-                            <input type="number" class="form-control" id="year2" name="year2"
-                                value="{{auxiliate_factors.year2}}" step="0.01">
-                        </div>
-                        <div class="col-sm-2">
-                            <label for="year3">3º Year</label>
-                            <input type="number" class="form-control" id="year3" name="year3"
-                                value="{{auxiliate_factors.year3}}" step="0.01">
-                        </div>
-                        <div class="col-sm-2">
-                            <label for="year4">4º Year</label>
-                            <input type="number" class="form-control" id="year4" name="year4"
-                                value="{{auxiliate_factors.year4}}" step="0.01">
-                        </div>
-                        <div class="col-sm-2">
-                            <label for="year5">5º Year</label>
-                            <input type="number" class="form-control" id="year5" name="year5"
-                                value="{{auxiliate_factors.year5}}" step="0.01">
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
 
                 <button type="submit" id="postButton" class="btn btn-primary px-4 float-right">Save</button>
             </form>
@@ -601,6 +539,12 @@
 </div>
 
 <script>
+
+    function checktime(){
+        var ctime = document.getElementById('cashFlow').value;
+
+    }
+
     $('#fcil_source').change(function () {
         let blockValue = 'input_source'
         let blockIdField = 'fcil_value'
@@ -653,7 +597,7 @@
 
     $('#wc_source').change(function () {
         let blockValue = 'False'
-        let blockIdField = 'wc_value'
+        let blockIdField = 'working_capital_value'
         let var1 = checkIfBlock(getFieldChanged('wc_source'), blockValue)
         blockAndUnblock(blockIdField, var1)
     });

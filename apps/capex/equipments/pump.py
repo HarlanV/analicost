@@ -93,8 +93,6 @@ class Pump(BaseEquipment):
         utility.efficiency = efficiency
         utility.duty = duty
         utility.duty_unity = self.selectedUnity
-
-
         utility.annual_cost = self.calculateAnnualCut(duty, costUtility)
         utility.save()
 
