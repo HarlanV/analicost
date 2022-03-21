@@ -88,6 +88,15 @@ class UtilityCost():
         # significa que é a bomba com a eficiência
         if len(args) == 1:
             utilities = EquipmentsUtilitiesSetting.objects.filter(equipment=equipment.id)
+
+            cost = utilities.first().utility.value
+            duty_unity = utilities.first().duty_unity
+            equipment_energy = utilities.first().equipment.specification
+            utility_cost = utilities.first().utility.value
+            args["duty"] = round(equipment_energy / float(args["efficiency"]), 2)
+            cost = CostCalculationTools.calculateAnualCost(float(args["duty"]), utility_cost, duty_unity, "GJ")
+            args["utility_cost"] = utility_cost
+            args["annual_cost"] = round(cost, 2)
             utilities.update(**args)
             return
 
@@ -101,13 +110,14 @@ class UtilityCost():
 
         if args["utility"] == "User Defined":
             cost = CostCalculationTools.calculateAnualCost(float(args["duty"]), args["utility_cost"], args["duty_unity"], "GJ")
-            args["annual_cost"] = cost
+            args["annual_cost"] = round(cost, 2)
             args["utility"] = ProjectUtilitiesConstant.objects.filter(aka="Defined").first()
             args["utility_cost"] = float(args["utility_cost"])
         else:
             args["utility"] = ProjectUtilitiesConstant.objects.get(id=args["utility"])
+            teste_print(args["utility"].value)
             cost = CostCalculationTools.calculateAnualCost(float(args["duty"]), args["utility"].value, args["duty_unity"], "GJ",)
-            args["annual_cost"] = cost
+            args["annual_cost"] = round(cost, 2)
             args["utility_cost"] = float(args["utility"].value)
             args.pop('utype', None)
 
@@ -123,10 +133,11 @@ class UtilityCost():
     def updateCut(self):
         equipments = EquipmentsUtilitiesSetting.objects.filter(equipment__project=self.project).all()
         opex = Opex.objects.filter(project=self.project).first()
-        cut = equipments.aggregate(Sum('utility_cost'))["utility_cost__sum"]
+        cut = equipments.aggregate(Sum('annual_cost'))["annual_cost__sum"]
+
         if cut is None:
             cut = 0
-        opex.cut = cut
+        opex.cut = round(cut, 2)
         opex.save()
         pass
 
@@ -156,6 +167,7 @@ class OperatingLabor():
 
         opex = Opex.objects.filter(project=self.project).first()
         equipments = EquipmentProject.objects.filter(project=self.project)
+        constants = ProjectUtilitiesConstant.objects.filter(project__project_number=self.project.project_number, aka="Cost of Labor").first()
         Pp = 0
         Nnp = 0
         for e in equipments:
@@ -164,7 +176,7 @@ class OperatingLabor():
             elif e.equipment.isSolid is False:
                 Nnp = Nnp + 1
         Nol = (6.29 + (31.7 * (Pp**2)) + (0.23 * Nnp))**0.5
-        Col = Nol * (1095 / 240)
+        Col = Nol * (1095 / 240) * constants.value
         opex.col = round(Col, 2)
         opex.save()
 
@@ -179,6 +191,7 @@ class ManufactoringCost():
         auxiliar = AuxiliarFactor.objects.filter(project=self.project).first()
         opex = Opex.objects.filter(project=self.project).first()
         mc = auxiliar.crm * (opex.crm + opex.cwt + opex.cut)
+        teste_print(mc)
         mc = mc + (auxiliar.col * opex.col)
         mc = mc + (auxiliar.fcil * opex.fcil)
         opex.com = round(mc,  2)
@@ -245,7 +258,7 @@ class EconomicConfig():
             WorkingCapital(self.project).updateWorkingCapital()
         if config.first()["salvage_calculated"] is True:
             opex = Opex.objects.filter(project=self.project).first()
-            opex.salvage = 0.1 * opex.fcil
+            opex.salvage = round(0.1 * opex.fcil, 2)
             opex.save()
         ManufactoringCost(self.project).updateManufactoringCost()
 
@@ -333,6 +346,9 @@ class CostCalculationTools():
 
         timeWorked = ProjectUtilitiesConstant.objects.filter(aka="Hours in Year").first()
 
+        teste_print(hourBaseValue)
+        teste_print(timeWorked.value)
+        teste_print(cost_unity)
         cost = float(hourBaseValue) * float(cost_unity) * (timeWorked.value)
         return (cost)
 
@@ -352,7 +368,7 @@ class CashFlow():
         export_data["revenue"] = self.revenueValues
         export_data["comd"] = self.comValues
         export_data["netprofit"] = self.netProfitValues
-        export_data["CashFlowNonDisconted"] = self.nonDiscountedCF(export_data.copy(), years)
+        export_data["CashFlowNonDisconted"] = self.nonDiscountedCF(export_data.copy(), years, data.copy())
         export_data["CashFlowDisconted"] = self.discountedCF(export_data["CashFlowNonDisconted"], years, data["annual_interest_rate"])
         export_data["CumulativeNonDiscontedCF"] = self.cumulativeNonDiscount(export_data["CashFlowNonDisconted"], years)
         export_data["CumulativeDiscontedCF"] = self.cumulativeNonDiscount(export_data["CashFlowDisconted"], years)
@@ -416,8 +432,6 @@ class CashFlow():
             # Na ultima iteração, acrescentamos o Working Capital
             if y == data["construction_period"] -1:
                 value = data["fcil"] * (data["y" + str(y + 1)])
-                teste_print(value)
-                teste_print(data["working_capital"])
                 value = value  +  data["working_capital"]
             else:
                 value = data["fcil"] * (data["y" + str(y + 1)])
@@ -475,11 +489,12 @@ class CashFlow():
         self.revenueValues = revenue
         self.comValues = comd
 
-    def nonDiscountedCF(self, calculated_data, interval):
+    def nonDiscountedCF(self, calculated_data, interval, data):
         ndcf = []
         for y in interval:
             value = calculated_data["netprofit"][y] - calculated_data["investiment"][y]
             ndcf.append(round(value, 2))
+        ndcf[-1] = ndcf[-1] + data["working_capital"] + data["land_cost"]
         return ndcf
 
     def discountedCF(self, ndcf, interval, itax):
