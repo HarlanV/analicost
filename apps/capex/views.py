@@ -102,7 +102,6 @@ def attributeRange(request, equipamento_id, unity):
         'equipment_id': equipamento_id,
         'args': dict(request.GET.items())
     }
-    teste_print(data['args'])
     range = getattr(services.EquipmentServices, 'getRangeAttributes')(**data)
 
     return JsonResponse(range)
