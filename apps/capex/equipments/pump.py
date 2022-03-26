@@ -76,8 +76,6 @@ class Pump(BaseEquipment):
 
         # Arredonda valores
         self.purchasedEquipmentCost = self.upRound(self.baseCost * self.fM * self.pressureFactor)
-        # teste_print(self.baseCost * self.reference)
-        # self.bareModuleCost = self.upRound()
         self.bareModuleCost = self.upRound(self.baseCost * self.reference)
         self.baseEquipmentCost = self.upRound(self.baseCost)
         self.baseBaremoduleCost = self.upRound(self.baseCost * fbm0)

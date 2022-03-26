@@ -115,7 +115,6 @@ class UtilityCost():
             args["utility_cost"] = float(args["utility_cost"])
         else:
             args["utility"] = ProjectUtilitiesConstant.objects.get(id=args["utility"])
-            teste_print(args["utility"].value)
             cost = CostCalculationTools.calculateAnualCost(float(args["duty"]), args["utility"].value, args["duty_unity"], "GJ",)
             args["annual_cost"] = round(cost, 2)
             args["utility_cost"] = float(args["utility"].value)
@@ -191,10 +190,9 @@ class ManufactoringCost():
         auxiliar = AuxiliarFactor.objects.filter(project=self.project).first()
         opex = Opex.objects.filter(project=self.project).first()
         mc = auxiliar.crm * (opex.crm + opex.cwt + opex.cut)
-        teste_print(mc)
         mc = mc + (auxiliar.col * opex.col)
         mc = mc + (auxiliar.fcil * opex.fcil)
-        opex.com = round(mc,  2)
+        opex.com = round(mc, 2)
         opex.save()
 
 
@@ -345,10 +343,6 @@ class CostCalculationTools():
             hourBaseValue = CostCalculationTools.convertToDesiredUnit(float(value), value_unity, valueHourUnity)
 
         timeWorked = ProjectUtilitiesConstant.objects.filter(aka="Hours in Year").first()
-
-        teste_print(hourBaseValue)
-        teste_print(timeWorked.value)
-        teste_print(cost_unity)
         cost = float(hourBaseValue) * float(cost_unity) * (timeWorked.value)
         return (cost)
 
@@ -430,9 +424,9 @@ class CashFlow():
 
         for y in range(data["construction_period"]):
             # Na ultima iteração, acrescentamos o Working Capital
-            if y == data["construction_period"] -1:
+            if y == data["construction_period"] - 1:
                 value = data["fcil"] * (data["y" + str(y + 1)])
-                value = value  +  data["working_capital"]
+                value = value + data["working_capital"]
             else:
                 value = data["fcil"] * (data["y" + str(y + 1)])
 
