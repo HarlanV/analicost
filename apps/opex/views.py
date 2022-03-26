@@ -78,7 +78,6 @@ class Material(View):
 
         num = list_projects[0]
         return redirect('opex:opex_material', project=num)
-        pass
 
     def listMaterials(request, project):
         # lista todos os projetos atualmente

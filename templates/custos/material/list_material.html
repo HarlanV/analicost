@@ -1,3 +1,26 @@
+<h4 class="centered"> Current Project: {{project}} </h4>
+
+<!-- OPÇÕES SUPERIORES -->
+<div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+
+    <div class="btn-group">
+        <button id="project" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+            aria-expanded="false">
+            Projects
+        </button>
+        <div class="dropdown-menu" aria-labelledby="project">
+            {% for project in list_projects %}
+            <a class="dropdown-item" href="{% url 'opex:opex_material' project %}">{{project}}</a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="btn-group">
+        <a class="btn btn-secondary" href="{% url 'capex:createProject'  %}" role="button">New Project</a>
+        <!--button type="button" href="#" class="btn btn-secondary">Editar Projeto</button-->
+    </div>
+</div>
+
 {% if material %}
 
 <div class="container-fluid mt-2">
