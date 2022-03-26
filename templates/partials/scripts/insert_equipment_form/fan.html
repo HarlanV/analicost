@@ -32,12 +32,6 @@
         const conversor = JSON.parse(document.getElementById('conversores').textContent);
         const u = document.getElementById("pressure_unity");
         const unity= u.options[u.selectedIndex].text;
-        //console.log("max:"+pressureOp/(conversor[unity] +"//"+pressao[typeEquip][materialEquip]["max"]))
-        console.log("pressao:" + pressureOp/(conversor[unity]))
-        console.log("max:"+pressureOp/(conversor[unity]) +"//"+pressao[typeEquip][materialEquip]["max"])
-        
-        console.log("min:"+pressureOp/(conversor[unity]) +"//"+pressao[typeEquip][materialEquip]["min"])
-        // console.log("min:"+pressureOp/(conversor[unity] +"//"+pressao[typeEquip][materialEquip]["min"]))
 
         if ((pressureOp/(conversor[unity])) > pressao[typeEquip][materialEquip]["max"]){
             alert("The Pressure is above " + ((pressao[typeEquip][materialEquip]["max"])*(conversor[unity])) +unity +". Please, check the value.")

@@ -65,7 +65,6 @@
     });
 
     $('.mocEquipment').change(function () {
-        console.log( $('input[name=moc]:checked').val())
         updateBareFields()
     });
 
@@ -82,11 +81,9 @@
                 console.log(error_data)
             },
         });
-
     }
 
     function isBetweenRanges(range, value, name) {
-        console.log(range)
         ordermax = Math.log10(range["max"])
         ordermin = Math.log10(range["min"])
         if (ordermax > 0) {
@@ -147,11 +144,10 @@
             data: data,
             success: function (response) {
                 // checagem se o valor de atributo está dentro dos limites
-                range = isBetweenRanges(response, data["equipment_attribute"], data["attribute_name"])            
+                range = isBetweenRanges(response, data["equipment_attribute"], data["attribute_name"])
                        
                 // Caso Não tenha a função OU a pressão esteja ok, prosseguimos a execução
                 if ( (typeof isInPressureRange === "function") && (isInPressureRange() === false )){
-                    console.log("Problema na pressao")
                     return
                 }
 
@@ -167,7 +163,7 @@
                 }
             },
             error: function (error_data) {
-                alert("Ops, houve algum erro. Por favor, verifique os campos e tente novamente")
+                alert("Ops, there was a problem. Pleace, contact your service manager")
                 console.log("Ajax request error: attribute dimension couldn't be confirmed.")
             },
         })
@@ -180,11 +176,11 @@
             url: $("form").attr("action"),
             data: $("form").serialize(),
             success: function (response) {
-                alert("Equipamento inserido com sucesso")
+                alert("The equipment was successfully created!")
                 document.getElementById("returnButton").click()
             },
             error: function (error_data) {
-                alert("Houve algum problema durante o envio, favor entrar em contato com administrador")
+                alert("Ops, there was a problem. Pleace, contact your service manager")
             }
         })
     }
