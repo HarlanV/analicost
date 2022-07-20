@@ -23,13 +23,14 @@ ADD . /analicap/
 # RUN pip install mysql-connector-python
 # RUN pip install -r requirements.txt
 
-COPY run_app.sh .
-RUN ./run_app.sh
+# COPY run_app.sh .
+# RUN ./run_app.sh
 
 # Django service
 EXPOSE 8000
 
-COPY run_app.sh .
-RUN ./run_app.sh
+
+# COPY run_app.sh .
+# RUN ./run_app.sh
 
 # RUN python manage.py runserver 0.0.0.0:8000
