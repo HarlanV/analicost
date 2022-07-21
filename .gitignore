@@ -16,3 +16,5 @@ venv/
 venv/*
 run_app.sh
 db/dockerdb
+docker-compose.yml
+Dockerfile
